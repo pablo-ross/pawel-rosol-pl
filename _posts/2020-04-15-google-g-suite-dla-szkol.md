@@ -11,7 +11,7 @@ tags:
   - Domyślna ochrona danych
   - Google Classroom
   - Homeschool
-description: Ze względu na światową pandemię zakaźnej choroby COVID-19 wywoływanej przez koronawirusa SARS-CoV-2 wprowadzono w wielu krajach różnego rodzaju środki bezpieczeństwa. Jednym z nich jest okresowe zamknięcie szkół i wprowadzenie obowiązku nauki zdalnej z wykorzystaniem narzędzi online. Przy tej okazji ważny temat to ochrona prywatności i bezpieczeństwo użytkowników korzystających z narzędzi ułatwiających zdalne nauczanie.
+description: Ze względu na światową pandemię zakaźnej choroby COVID-19 wywoływanej przez koronawirusa SARS-CoV-2 wprowadzono w wielu krajach różnego rodzaju środki bezpieczeństwa. Jednym z nich jest okresowe zamknięcie szkół i wprowadzenie obowiązku nauki zdalnej z wykorzystaniem narzędzi online.
 ---
 
 Ze względu na światową **pandemię** zakaźnej choroby **COVID-19** wywoływanej przez koronawirusa **SARS-CoV-2** wprowadzono w wielu krajach różnego rodzaju środki bezpieczeństwa. Jednym z nich jest **okresowe zamknięcie szkół** i wprowadzenie obowiązku **nauki zdalnej** z wykorzystaniem narzędzi online.

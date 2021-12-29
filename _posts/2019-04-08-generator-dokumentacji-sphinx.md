@@ -11,7 +11,7 @@ tags:
   - "Instrukcja zarządzania zasobami informatycznymi"
   - "Analiza ryzyka"
   - "Rejestry i ewidencje"
-description: "Tytuł może być nieco mylący. Nie jest to bowiem narzędzie, które stworzy za Inspektora Ochrony Danych całą niezbędną dokumentację. Jest to system tworzenia i generowania dokumentacji, w oparciu o konwersję tekstowych plików w formacie reST (reStructuredText). W mojej codziennej pracy Inspektora jest to absolutny numer jeden jeśli chodzi o narzędzia wspomagające zarządzanie dokumentacją."
+description: "Tytuł może być nieco mylący. Nie jest to bowiem narzędzie, które stworzy za Inspektora Ochrony Danych całą niezbędną dokumentację. Jest to system tworzenia i generowania dokumentacji, w oparciu o konwersję tekstowych plików w formacie reST (reStructuredText)."
 ---
 
 Tytuł może być nieco mylący 🙂 Nie jest to bowiem narzędzie, które stworzy za Inspektora Ochrony Danych całą niezbędną dokumentację. Jest to system tworzenia i generowania dokumentacji, w oparciu o konwersję tekstowych plików w formacie **reST** ([reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText)). W mojej codziennej pracy Inspektora jest to absolutny numer jeden jeśli chodzi o narzędzia wspomagające zarządzanie dokumentacją.
@@ -24,7 +24,7 @@ Ponieważ już dużo wcześniej zajmowałem się programowaniem i przygotowywani
 
 Mając powyższe na uwadze wybór był oczywisty czyli [**Sphinx**](https://www.sphinx-doc.org/en/master/index.html). W dużym uproszczeniu praca z jakąkolwiek dokumentacją polega na utrzymywaniu repozytorium wersji plików źródłowych reST, natomiast Sphinx konwertuje te pliki źródłowe najczęściej do dokumentu HTML, ale możliwe jest również określenie innych formatów wyjściowych, np.: LaTeX, PDF, ePUB, man. Tym samym otwiera się prosta droga do posiadania **tej samej dokumentacji w wielu formatach**. W mojej pracy Inspektora Ochrony Danych pozwala to na posiadanie najnowszej wersji dokumentacji dostępnej w wersji HTML np. w lokalnej sieci **intranet**, co umożliwia dostęp do niezbędnej dokumentacji przez osoby zainteresowane i jednocześnie udaje się uniknąć zbędnego drukowania na papierze ciągle zmienianej dokumentacji. W razie potrzeby przygotowanie wyjściowego dokumentu do druku w wersji PDF zajmuje kilka sekund, w oparciu o ten sam kod źródłowy.
 
-System Sphinx jest rozwijany w oparciu o licencję BSD. Posiada wiele rozszerzeń i możliwości konfiguracji. W celu łatwiejszego zarządzania stworzoną dokumentacją używam także rozwiązania [Read the Docs](https://readthedocs.org/) (RTD). Projekt sponsorowany jest m.in. przez: Python Software Foundation, Django Software Foundation, Mozilla Webdev.
+System Sphinx jest rozwijany w oparciu o licencję BSD. Posiada wiele rozszerzeń i możliwości konfiguracji. W celu łatwiejszego zarządzania stworzoną dokumentacją używam także rozwiązania [Read the Docs](https://readthedocs.org/){:target="_blank"} (RTD). Projekt sponsorowany jest m.in. przez: Python Software Foundation, Django Software Foundation, Mozilla Webdev.
 
 Integralną częścią dokumentacji związanej z ochroną danych osobowych, co wynika z ogólnie obowiązujących przepisów prawa oraz dobryk praktyk, są m.in. takie elementy jak:
 * polityki i instrukcje,
