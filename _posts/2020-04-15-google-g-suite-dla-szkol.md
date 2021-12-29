@@ -112,8 +112,6 @@ W kwestii organizacyjnej powinien niewątpliwie zostać opracowany **regulamin u
 
 Do niemal codziennych obowiązków osób administrujących będzie należało m.in. przeglądanie **dzienników zdarzeń i raportów**. Z analizy tych informacji będą pojawić się kolejne wnioski wymagające dalszych zmian i usprawnień.
 
-___
-> W razie potrzeby dalszego skonsultowania kwestii związanych z wdrażaniem narzędzi do prowadzenia zdalnego trybu nauczania, zapraszam serdecznie do [kontaktu ze mną](/about).
-___
+> W razie potrzeby dalszego skonsultowania kwestii związanych z wdrażaniem narzędzi do prowadzenia zdalnego trybu nauczania, zapraszam serdecznie do [kontaktu ze mną](/contact).
 
 <blockquote class="twitter-tweet"><p lang="pl" dir="ltr">Przyspieszone wdrożenie <a href="https://twitter.com/hashtag/cyfrowaszko%C5%82a?src=hash&amp;ref_src=twsrc%5Etfw">#cyfrowaszkoła</a> w efekcie pandemii <a href="https://twitter.com/hashtag/Covid_19?src=hash&amp;ref_src=twsrc%5Etfw">#Covid_19</a> niesie za sobą konieczność analizy ochrony prywatności i bezpieczeństwa nauczycieli i uczniów w narzędziach <a href="https://twitter.com/hashtag/zdalnaedukacja?src=hash&amp;ref_src=twsrc%5Etfw">#zdalnaedukacja</a>. Kilka słów z własnych obserwacji 👇<a href="https://t.co/nFAM0jxLd0">https://t.co/nFAM0jxLd0</a></p>&mdash; Paweł IOD (@pawel_iod) <a href="https://twitter.com/pawel_iod/status/1250406500448813057?ref_src=twsrc%5Etfw">April 15, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
