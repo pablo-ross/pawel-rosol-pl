@@ -158,6 +158,9 @@ exclude:
   - node_modules
   - package*.json
 
+include:
+  - google7ccb7976466cc251.html
+
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
