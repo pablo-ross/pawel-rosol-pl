@@ -26,11 +26,12 @@
 
   {% seo title=false %}
 
+
   <title>
   {%- unless page.layout == "home" -%}
     {{ page.title | append: " | "}}
   {%- endunless -%}
-    {{ site.title }}</title>
+    {{ site.title }} | {{ site.tagline }}</title>
 
   {% include favicons.html %}
 
