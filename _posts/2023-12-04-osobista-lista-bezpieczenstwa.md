@@ -1,6 +1,7 @@
 ---
 title: 'Osobista lista bezpieczeństwa'
-date: '2023-12-04T16:42:23.27Z'
+date: '2023-11-29T15:12:22.22Z'
+last_modified_at: '2023-12-04T16:42:23.27Z'
 categories:
   - Bezpieczeństwo
 tags:
