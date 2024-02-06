@@ -23,4 +23,4 @@ Pierwsza debata tego dnia dotyczyła najczęstszych problemów z jakimi w swojej
 Drugi panel dyskusyjny dotyczył kwestii udostępniania danych dzieci w Internecie. W tej rozmowie wiedzą i doświadczeniem podzielili się eksperci: dr Aleksandra Piotrowska, psycholog dziecięcy, pracownik naukowy Uniwersytetu Warszawskiego, dr Szymon Wójcik z Fundacji Dajemy Dzieciom Siłę, Anna Lewandowska ze Szkoły Podstawowej nr 360 w Warszawie oraz Paulina Dawidczyk, zastępca dyrektora Departament Skarg w UODO. Rozmowie przysłuchiwali się uczniowie jednej ze szkół uczestniczących w programie edukacyjnym „Twoje dane -Twoja sprawa”.
 
 Dodatkowe informacje na stronie UODO:
-**uodo.gov.pl** ([link](https://uodo.gov.pl/pl/138/1328))
+**uodo.gov.pl** ([link](https://archiwum.uodo.gov.pl/pl/138/1328))

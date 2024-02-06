@@ -63,13 +63,13 @@ Należy rozważyć, czy jest konieczne nagrywanie lekcji. Często nie ma takiej 
 
 ## Dodatkowe materiały
 
-- Dane osobowe bezpieczne podczas zdalnego nauczania – poradnik UODO dla szkół ([link](https://uodo.gov.pl/pl/383/1475))
-- Ochrona danych osobowych podczas pracy zdalnej ([link](https://uodo.gov.pl/pl/138/1459))
-- Jak bezpiecznie korzystać z wideokonferencji? ([link](https://uodo.gov.pl/pl/138/1525))
-- Dokumentacja papierowa zawierająca dane osobowe a praca zdalna ([link](https://uodo.gov.pl/pl/138/1513))
+- Dane osobowe bezpieczne podczas zdalnego nauczania – poradnik UODO dla szkół ([link](https://archiwum.uodo.gov.pl/pl/383/1475))
+- Ochrona danych osobowych podczas pracy zdalnej ([link](https://archiwum.uodo.gov.pl/pl/138/1459))
+- Jak bezpiecznie korzystać z wideokonferencji? ([link](https://archiwum.uodo.gov.pl/pl/138/1525))
+- Dokumentacja papierowa zawierająca dane osobowe a praca zdalna ([link](https://archiwum.uodo.gov.pl/pl/138/1513))
 
 Dostępne są prezentacje z szkolenia dla IOD:
 - [PDF](https://docdro.id/gHQZlvM) - Natalia Paciorek, Departament Orzecznictwa i Legislacji UODO
 - [PDF](https://docdro.id/46CngVU) - Rafał Lew-Starowicz, Departament Podręczników, Programów i Innowacji MEN
 
-Strona źródłowa: **uodo.gov.pl** ([link](https://uodo.gov.pl/pl/190/1728))
+Strona źródłowa: **uodo.gov.pl** ([link](https://archiwum.uodo.gov.pl/pl/190/1728))

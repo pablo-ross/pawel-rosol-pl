@@ -23,7 +23,7 @@ Poradnik przygotowano jako element materiałów szkoleniowych dla trenerów w ra
 
 <iframe width="600" height="500" src="https://www.docdroid.net/bWPOV4x/podrecznik-inspektora-ochrony-danych-wersja-polska.pdf"></iframe>
 
-- Podręcznik Inspektora Ochrony Danych - wersja polska ([PDF](https://uodo.gov.pl/pl/file/2509))
-- Podręcznik Inspektora Ochrony Danych - wersja angielska ([PDF](https://uodo.gov.pl/pl/file/2510))
+- Podręcznik Inspektora Ochrony Danych - wersja polska ([PDF](https://archiwum.uodo.gov.pl/pl/file/2509))
+- Podręcznik Inspektora Ochrony Danych - wersja angielska ([PDF](https://archiwum.uodo.gov.pl/pl/file/2510))
 
-Informacja źródłowa: **uodo.gov.pl** ([link](https://uodo.gov.pl/pl/file/2510))
+Informacja źródłowa: **uodo.gov.pl** ([link](https://archiwum.uodo.gov.pl/pl/file/2510))

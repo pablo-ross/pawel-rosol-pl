@@ -14,7 +14,7 @@ Zapraszam do cyklicznego odwiedzania strony [pawel.rosol.pl](https://pawel.rosol
 
 ## Kto to jest inspektor ochrony danych?
 
-Dzisiaj niemal każda firma lub instytucja przetwarza **dane osobowe**. Odkąd obowiązuje ogólne rozporządzenie o ochronie danych czyli **RODO** (ang. GDPR), w tematyce ochrony danych osobowych funkcjonuje pojęcie Inspektora Ochrony Danych (IOD). W języku angielskim jest to Data Protection Officer (DPO). O tym, czy konkretny administrator danych musi wyznaczyć Inspektora czy też nie, jest odpowiednio uregulowane w art. 37 ust. 1 RODO (zobacz: [uodo.gov.pl](https://uodo.gov.pl/pl/223/638 "Kto może, a kto musi wyznaczyć IOD?")).
+Dzisiaj niemal każda firma lub instytucja przetwarza **dane osobowe**. Odkąd obowiązuje ogólne rozporządzenie o ochronie danych czyli **RODO** (ang. GDPR), w tematyce ochrony danych osobowych funkcjonuje pojęcie Inspektora Ochrony Danych (IOD). W języku angielskim jest to Data Protection Officer (DPO). O tym, czy konkretny administrator danych musi wyznaczyć Inspektora czy też nie, jest odpowiednio uregulowane w art. 37 ust. 1 RODO (zobacz: [uodo.gov.pl](https://archiwum.uodo.gov.pl/pl/223/638 "Kto może, a kto musi wyznaczyć IOD?")).
 
 ## Jakie kwalifikacje powinien posiadać IOD?
 
@@ -24,7 +24,7 @@ Dla mnie jako osoby wykonującej zadania Inspektora Ochrony Danych wydaje się n
 
 ## Czym zajmuje się IOD?
 
-Do najbardziej podstawowych zadań inspektora ochrony danych należą te wymienione w art. 39 ust. 1 oraz 38 ust. 4 RODO (zobacz: [uodo.gov.pl](https://uodo.gov.pl/pl/225/662 "Jakie zadania ma IOD?")). Oprócz tego w zależności od konkretnych ustaleń, zestaw obowiązków IOD może zostać poszerzony o kolejne zadania. Zadania IOD, które świadczę dla swoich klientów mogą polegać na różnych czynnościach, a w szczególności:
+Do najbardziej podstawowych zadań inspektora ochrony danych należą te wymienione w art. 39 ust. 1 oraz 38 ust. 4 RODO (zobacz: [uodo.gov.pl](https://archiwum.uodo.gov.pl/pl/225/662 "Jakie zadania ma IOD?")). Oprócz tego w zależności od konkretnych ustaleń, zestaw obowiązków IOD może zostać poszerzony o kolejne zadania. Zadania IOD, które świadczę dla swoich klientów mogą polegać na różnych czynnościach, a w szczególności:
 
   - Dokonywaniu bieżących przeglądów obecnego zasobu danych osobowych w celu opracowania nowych dokumentów i określenia środków technicznych spełniających wymagania RODO;
   - Aktualizowaniu Polityki Bezpieczeństwa Ochrony Danych Osobowych i innych dokumentów regulacyjnych, w tym praktyczne wdrażanie zagadnień związanych z danymi osobowymi w organizacji;
@@ -32,7 +32,7 @@ Do najbardziej podstawowych zadań inspektora ochrony danych należą te wymieni
   - Prowadzeniu rejestrów i dokumentacji z zakresu bezpieczeństwa informacji i ochrony danych osobowych, prowadzeniu rejestru czynności przetwarzania danych osobowych (art. 30 RODO);
   - Przeprowadzeniu oceny skutków planowanych operacji przetwarzania danych osobowych przed rozpoczęciem ich przetwarzania - analiza ryzyka (art. 35 RODO);
   - Bieżącej współpracy z działami w zakresie ochrony danych osobowych;
-  - 7) Prowadzeniu szkoleń dla pracowników w zakresie ochrony danych osobowych;
+  - Prowadzeniu szkoleń dla pracowników w zakresie ochrony danych osobowych;
   - Nadzorze nad procesami przetwarzania danych osobowych u Zamawiającego;
   - Monitorowaniu zgodności dokumentów z obowiązującymi przepisami i regulacjami w zakresie ochrony danych osobowych;
   - Bieżącym monitorowaniu przestrzegania u Zamawiającego przepisów RODO i innych przepisów dotyczących ochrony danych osobowych oraz pełnienie funkcji doradczych w tym zakresie;
@@ -65,4 +65,4 @@ Inspektorzy ochrony danych – bez względu na to, czy są pracownikami administ
 * zakaz odwoływania i karania IOD,
 * obowiązek zachowania tajemnicy lub poufności co do wykonywania zadań przez IOD.
 
-Więcej na ten temat można się dowiedzieć na stronie [uodo.gov.pl](https://uodo.gov.pl/pl/223/713 "Jakie gwarancje niezależności zostały przyznane IOD w przepisach RODO?").
+Więcej na ten temat można się dowiedzieć na stronie [uodo.gov.pl](https://archiwum.uodo.gov.pl/pl/223/713 "Jakie gwarancje niezależności zostały przyznane IOD w przepisach RODO?").

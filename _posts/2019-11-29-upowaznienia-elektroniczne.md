@@ -23,5 +23,5 @@ Na stronach Urzędu Ochrony Danych Osobowych (UODO) pojawiła się oficjalna odp
 *Za przyjęciem takiego stanowiska przemawia również podejście co do formy pisemnej wskazanej w art. 30 ust. 3 RODO. Zgodnie z tym przepisem, rejestr czynności przetwarzania i rejestr kategorii czynności przetwarzania, mają formę pisemną, w tym formę elektroniczną. Jak wskazujemy w poradniku dotyczącym tego obowiązku (Wskazówki i wyjaśnienia dotyczące obowiązku rejestrowania czynności i kategorii czynności przetwarzania określonego w art. 30 ust. 1 i 2 RODO  - str. 13) rejestry powinny być prowadzone w formie pisemnej (art. 30 ust. 3), a zatem mogą być prowadzone zarówno w postaci papierowej, jak i elektronicznej.*
 
 Informacje źródłowe:
-* **uodo.gov.pl** ([link](https://uodo.gov.pl/pl/225/1278))
+* **uodo.gov.pl** ([link](https://archiwum.uodo.gov.pl/pl/225/1278))
 * **prawo.sejm.gov.pl** ([link](http://prawo.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20190000730))

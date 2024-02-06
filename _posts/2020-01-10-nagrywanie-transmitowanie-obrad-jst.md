@@ -49,4 +49,4 @@ ADO powinien uwzględnić w szczególności wszelkie ryzyka związane z przetwar
 Co do zasady, dane osobowe zawarte w upublicznionych nagraniach posiedzeń kolegialnych organów jednostek samorządu terytorialnego powinny być przechowywane w formie umożliwiającej identyfikację osoby, której dotyczą, przez **okres nie dłuższy, niż jest to niezbędne do celów, w których dane te są przetwarzane**. Zapewnienie przez administratora **retencji danych osobowych** zawartych w upublicznianych nagraniach, wiąże się ze stałą ich analizą i przeglądem pod kątem oceny ich niezbędności do celów, dla których są przetwarzane. Jeżeli ustawodawca określił w aktach prawnych okres, po którym dane mają być usuwane, to administrator musi przestrzegać tych terminów. Jeśli jednak w przepisach brak jest szczegółowych regulacji w tym zakresie, **administrator ma obowiązek samodzielnie określić okres retencji danych**, stosując się do wynikającej z RODO zasady ograniczenia przechowywania.
 
 Dodatkowe informacje na stronie UODO:
-**uodo.gov.pl** ([link](https://uodo.gov.pl/pl/138/1258))
+**uodo.gov.pl** ([link](https://archiwum.uodo.gov.pl/pl/138/1258))

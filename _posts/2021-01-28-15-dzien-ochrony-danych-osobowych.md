@@ -25,7 +25,7 @@ Wydarzenie odbędzie się 28 stycznia, a jego rozpoczęcie będzie miało miejsc
 Konferencja będzie transmitowana za pośrednictwem strony internetowej UODO, a nagranie z wydarzenia zostanie udostępnione w poźniejszym terminie.
 
 Dodatkowe informacje na stronie UODO:
-**uodo.gov.pl** ([link](https://uodo.gov.pl/pl/465/1860))
+**uodo.gov.pl** ([link](https://archiwum.uodo.gov.pl/pl/465/1860))
 
 ![Plakat nr 1 SPOD z okazji 15. Dnia Ochrony Danych Osobowych](/media/2021-01-28/spod-plakat-01.jpg)
 
