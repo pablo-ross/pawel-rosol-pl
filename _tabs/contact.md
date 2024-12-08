@@ -8,7 +8,7 @@ description: Paweł Rosół - Kontakt ze mną
 
 #### Telefon
 
-* +48 61 623-23-28
+* +48 502-706-280
 
 #### E-mail
 
