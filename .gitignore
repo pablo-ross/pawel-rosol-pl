@@ -26,3 +26,4 @@ _sass/vendors
 
 # Deployment scripts (contain server credentials)
 .production.sh
+.claude/
