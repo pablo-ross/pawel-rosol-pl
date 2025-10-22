@@ -23,3 +23,6 @@ package-lock.json
 
 # Misc
 _sass/vendors
+
+# Deployment scripts (contain server credentials)
+.production.sh
