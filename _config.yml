@@ -211,6 +211,8 @@ exclude:
   - purgecss.js
   - "*.config.js"
   - "package*.json"
+  - "TREE.md"
+  - "UPDATE.md"
 
 include:
   - google7ccb7976466cc251.html
