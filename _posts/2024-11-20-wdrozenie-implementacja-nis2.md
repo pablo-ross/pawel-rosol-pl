@@ -9,6 +9,10 @@ tags:
   - Cyberbezpieczeństwo
   - Cyberzagrożenia
   - Analiza ryzyka
+  - Zarządzanie ryzykiem
+  - Bezpieczeństwo informacji
+  - Infrastruktura krytyczna
+  - Compliance
 description: 'Potrzeba implementacji NIS2 w przedsiębiorstwie w kontekście zagrożeń związanych z cyberbezpieczeństwem i ochroną danych.'
 ---
 

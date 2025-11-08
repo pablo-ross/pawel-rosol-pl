@@ -9,7 +9,10 @@ tags:
   - RODO
   - Cyberbezpieczeństwo
   - Cyberzagrożenia
-  - Incydent
+  - Incydent bezpieczeństwa
+  - Ransomware
+  - Infrastruktura krytyczna
+  - Naruszenie danych
 description: 'W ostatnich dniach Miejskie Przedsiębiorstwo Komunikacyjne w Krakowie (MPK Kraków) padło ofiarą zaawansowanego ataku hakerskiego, który został przypisany międzynarodowej grupie cyberprzestępczej.'
 ---
 

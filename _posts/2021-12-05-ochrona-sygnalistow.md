@@ -5,10 +5,13 @@ categories:
   - Ochrona sygnalistów
 tags:
   - Sygnalista
+  - Ochrona sygnalistów
   - Anonimowa skrzynka kontaktowa
   - Bezpieczny Kontakt
   - Działania odwetowe
   - Zgłaszanie naruszeń prawa
+  - Whistleblowing
+  - Kanał wewnętrzny
 description: 'Od dnia 17 grudnia 2021 r. obowiązują wymagania prawne związane z Dyrektywą Unijną nr 2019/1937, potocznie nazywaną „dyrektywą o sygnalistach”.'
 ---
 

@@ -5,9 +5,15 @@ categories:
   - Jednostki samorządu terytorialnego
 tags:
   - Analiza ryzyka
-  - Naruszenia
+  - Naruszenie danych
   - Informacja publiczna
   - Anonimizacja
+  - Cyberbezpieczeństwo
+  - Krajowy System Cyberbezpieczeństwa
+  - RODO
+  - Ransomware
+  - Transparentność
+  - Jednostki samorządu terytorialnego
 description: Atak ransomware w urzędzie, wyciek danych osobowych, awaria systemu IT - każdy taki incydent rodzi pytania ze strony mediów, obywateli i organizacji pozarządowych. Czy podmiot publiczny może odmówić udostępnienia dokumentów związanych z naruszeniem?
 ---
 

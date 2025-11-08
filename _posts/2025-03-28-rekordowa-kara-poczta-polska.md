@@ -5,9 +5,13 @@ categories:
   - Urząd Ochrony Danych Osobowych
 tags:
   - Analiza ryzyka
-  - Naruszenia
+  - Naruszenie danych
   - Wybory
-  - Kara finansowa
+  - Kara administracyjna
+  - RODO
+  - PESEL
+  - Poczta Polska
+  - Administrator danych
 description: Urząd Ochrony Danych Osobowych (UODO) nałożył rekordowe kary za naruszenie przepisów o ochronie danych osobowych w związku z nieudaną próbą przeprowadzenia tzw. wyborów kopertowych w 2020 roku.
 ---
 

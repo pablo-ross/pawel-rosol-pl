@@ -5,9 +5,12 @@ categories:
   - Urząd Ochrony Danych Osobowych
 tags:
   - Analiza ryzyka
-  - Naruszenia
+  - Naruszenie danych
   - Poradnik
   - Zgłoszenie naruszenia
+  - RODO
+  - Administrator danych
+  - Dokumentacja RODO
 description: Urząd Ochrony Danych Osobowych opublikował zaktualizowaną wersję poradnika na temat naruszeń ochrony danych osobowych.
 ---
 

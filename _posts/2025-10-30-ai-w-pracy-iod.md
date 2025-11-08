@@ -6,8 +6,14 @@ categories:
 tags:
   - Analiza ryzyka
   - LLM
-  - AI
-  - Anonimizacja
+  - Sztuczna inteligencja
+  - Inspektor ochrony danych
+  - RODO
+  - Lokalne modele językowe
+  - Ollama
+  - Automatyzacja
+  - n8n
+  - Ochrona danych osobowych
 description: Inspektor Ochrony Danych stoi przed unikalnym wyzwaniem - z jednej strony musi zapewnić najwyższą ochronę danych osobowych w organizacji, z drugiej – efektywnie zarządzać coraz większą liczbą zadań i obowiązków. Sztuczna inteligencja, a konkretnie duże modele językowe (LLM), mogą znacząco usprawnić codzienną pracę IOD, ale tylko pod warunkiem, że będą wykorzystywane w sposób zgodny z RODO i zasadami bezpieczeństwa danych.
 ---
 
