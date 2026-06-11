@@ -67,7 +67,10 @@ Optional fields: `image`, `pin: true` (pin to home), `toc: false` (disable TOC).
 
 ### Theme
 
-Chirpy is installed as `gem "jekyll-theme-chirpy", "~> 7.5"`. All theme source files (_includes, _layouts, _sass, _javascript, assets/js) live inside the gem — do not add them to this repo. To upgrade the theme, bump the version constraint in `Gemfile` and run `bundle update jekyll-theme-chirpy`.
+Chirpy is installed as `gem "jekyll-theme-chirpy", "~> 7.5"`. All theme source files (_includes, _layouts, _sass, _javascript, assets/js) live inside the gem — do not add them to this repo. To upgrade the theme:
+1. Update the version constraint in `Gemfile`, e.g. `"~> 7.5"` → `"~> 7.6"`
+2. Run `bundle update jekyll-theme-chirpy`
+3. Test with `JEKYLL_ENV=production bundle exec jekyll b`
 
 The `assets/lib` directory is a git submodule pointing to [chirpy-static-assets](https://github.com/cotes2020/chirpy-static-assets).
 
