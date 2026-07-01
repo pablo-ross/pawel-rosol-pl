@@ -1,0 +1,31 @@
+---
+permalink: /llms.txt
+sitemap: false
+---
+# {{ site.title }} — {{ site.tagline }}
+
+> {{ site.description | strip_newlines | strip }}
+
+Blog prowadzony po polsku przez Pawła Rosoła, Inspektora Ochrony Danych (IOD/DPO)
+z certyfikatem auditora wiodącego ISO/IEC 27001. Tematyka: RODO, ochrona danych
+osobowych, cyberbezpieczeństwo, bezpieczeństwo aplikacji webowych i REST API,
+testy penetracyjne oraz wydajność i optymalizacja. Autor i właściciel praw:
+{{ site.social.name }} ({{ site.url }}).
+
+## Strony
+
+- [O mnie]({{ '/about/' | absolute_url }}): sylwetka autora, rola i zadania IOD/DPO
+- [Kategorie]({{ '/categories/' | absolute_url }}): treści pogrupowane tematycznie
+- [Tagi]({{ '/tags/' | absolute_url }}): indeks tagów
+- [Archiwum]({{ '/archives/' | absolute_url }}): wszystkie wpisy chronologicznie
+- [Kontakt]({{ '/contact/' | absolute_url }}): kontakt z Inspektorem Ochrony Danych
+
+## Wpisy
+{% assign posts = site.posts | sort: 'date' | reverse %}
+{% for post in posts -%}
+- [{{ post.title }}]({{ post.url | absolute_url }}){% if post.description %}: {{ post.description | strip_newlines | strip | truncate: 200 }}{% endif %}
+{% endfor %}
+## Kanały
+
+- [Sitemap]({{ '/sitemap.xml' | absolute_url }})
+- [Atom feed]({{ '/feed.xml' | absolute_url }})
