@@ -62,6 +62,19 @@ curl -s -X POST \
 
 W odpowiedzi dostajemy listę umów w JSON-ie. Każda umowa to m.in.: identyfikator (`idUmowy`), nazwa jednostki (`nazwa`), REGON, data zawarcia, wartość przedmiotu umowy i jej przedmiot. Do stronicowania służą parametry `offset` (od którego rekordu) i `limit` (ile rekordów naraz).
 
+### Jak filtrować wyniki (np. po REGON-ie)
+
+Tu jest druga pułapka, na którą sam się na początku nabrałem. Filtry **działają**, ale nie można ich wysyłać jako pól najwyższego poziomu w ciele żądania. Jeśli wyślesz `{"regon": "001262860"}`, API zignoruje filtr i zwróci wszystkie umowy. Kryteria trzeba zagnieździć w obiekcie `menuGlowne`:
+
+```bash
+curl -s -X POST \
+  'https://rejestrumow.gov.pl/api-dp/v1/agreements/search?offset=0&limit=10' \
+  -H 'Content-Type: application/json' \
+  -d '{"menuGlowne": {"regon": "001262860"}}'
+```
+
+Tak zbudowane żądanie zwraca już tylko umowy danej jednostki (u mnie dla REGON-u `001262860` - jedną umowę zamiast całego kompletu). To dokładnie ten sam sposób, w jaki filtruje oficjalna wyszukiwarka na stronie - wystarczyło podejrzeć jej żądanie w zakładce *Network*.
+
 ### Jak pobrać szczegóły jednej umowy
 
 Mając `idUmowy` z listy, pełne szczegóły umowy pobieramy zwykłym GET-em:
@@ -75,7 +88,7 @@ Tutaj dostajemy już komplet: strony umowy, okres obowiązywania, wartość, pod
 
 ### Jedno ważne zastrzeżenie
 
-W dniu startu (1 lipca) sprawdziłem filtrowanie po REGON-ie, nazwie czy wartości - i **filtry na razie nie zawężają wyników**. Niezależnie od tego, co wpiszę, API zwraca cały komplet rekordów. Wygląda to na niedokończone filtrowanie po stronie serwera w świeżo uruchomionym systemie. W praktyce oznacza to, że dziś trzeba pobrać wszystko przez `offset`/`limit` i przefiltrować sobie dane po swojej stronie. To może się jeszcze zmienić - to nieudokumentowany endpoint, więc Ministerstwo może go w każdej chwili poprawić albo przebudować.
+To nieudokumentowany endpoint. Skoro nie jest oficjalnie opisany, nikt nie obiecuje, że jutro będzie działał tak samo - Ministerstwo może w każdej chwili zmienić strukturę żądania (choćby nazwę `menuGlowne`) albo cały endpoint przebudować. Jeśli więc oprzesz na nim jakiś skrypt czy analizę, licz się z tym, że trzeba go będzie od czasu do czasu poprawić.
 
 ## Drugie, oficjalne API - z autoryzacją X-API-KEY
 
@@ -98,7 +111,7 @@ Najważniejsze funkcje tego API to: publikacja i aktualizacja umów, wycofywanie
 
 Zasada jest prosta:
 
-- **Chcesz tylko czytać i analizować publiczne dane o umowach?** Użyj pierwszego API (`rejestrumow.gov.pl/api-dp/v1`). Nie potrzebujesz żadnego klucza, działa od ręki - pamiętaj tylko o metodzie POST przy wyszukiwaniu.
+- **Chcesz tylko czytać i analizować publiczne dane o umowach?** Użyj pierwszego API (`rejestrumow.gov.pl/api-dp/v1`). Nie potrzebujesz żadnego klucza, działa od ręki - pamiętaj tylko o metodzie POST przy wyszukiwaniu i o tym, że filtry trzeba zagnieżdżać w obiekcie `menuGlowne`.
 - **Chcesz automatycznie wysyłać umowy swojej jednostki do rejestru?** Załatw klucz `X-API-KEY` i korzystaj z oficjalnego API integracyjnego.
 
 ## Moje trzy grosze jako IOD
@@ -109,4 +122,4 @@ Mam jednak dwa zastrzeżenia. Po pierwsze - to nieoficjalny, nieudokumentowany e
 
 Po drugie - pamiętajmy, że w rejestrze lądują też **dane osobowe** (np. imiona i nazwiska osób fizycznych będących stronami umów). Jawność finansów publicznych i RODO nie są ze sobą sprzeczne, ale masowe pobieranie takich danych to już przetwarzanie, które trzeba robić z głową i w konkretnym, uzasadnionym celu. O tym jednak napiszę osobno.
 
-*A jeśli sam bawisz się API do CRU i zauważysz, że filtrowanie zaczęło działać - daj znać, zaktualizuję wpis.*
+*A jeśli sam bawisz się API do CRU i zauważysz, że coś działa inaczej niż opisałem - daj znać, zaktualizuję wpis.*
