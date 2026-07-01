@@ -24,4 +24,4 @@ Na stronach Urzędu Ochrony Danych Osobowych (UODO) pojawiła się oficjalna odp
 
 Informacje źródłowe:
 * **uodo.gov.pl** ([link](https://archiwum.uodo.gov.pl/pl/225/1278))
-* **prawo.sejm.gov.pl** ([link](http://prawo.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20190000730))
+* **prawo.sejm.gov.pl** ([link](https://prawo.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20190000730))
