@@ -73,7 +73,26 @@ curl -s -X POST \
   -d '{"menuGlowne": {"regon": "001262860"}}'
 ```
 
-Tak zbudowane żądanie zwraca już tylko umowy danej jednostki (u mnie dla REGON-u `001262860` - jedną umowę zamiast całego kompletu). To dokładnie ten sam sposób, w jaki filtruje oficjalna wyszukiwarka na stronie - wystarczyło podejrzeć jej żądanie w zakładce *Network*.
+Tak zbudowane żądanie zwraca już tylko umowy danej jednostki (u mnie dla REGON-u `001262860` - dwie umowy zamiast całego kompletu). To dokładnie ten sam sposób, w jaki filtruje oficjalna wyszukiwarka na stronie - wystarczyło podejrzeć jej żądanie w zakładce *Network*.
+
+Filtrować można nie tylko po REGON-ie. W obiekcie `menuGlowne` działają też inne kryteria z wyszukiwarki - sprawdziłem je bezpośrednio na API:
+
+- `regon` - REGON strony umowy (zarówno jednostki publicznej, jak i kontrahenta),
+- `nip` - NIP strony umowy,
+- `nazwa` - nazwa strony umowy,
+- `przedmiotUmowy` - fraza z przedmiotu umowy (dopasowanie po fragmencie tekstu),
+- `dataZmianyOd` / `dataZmianyDo` - zakres dat.
+
+Na przykład, żeby znaleźć umowy zawierające w przedmiocie słowo „materiały":
+
+```bash
+curl -s -X POST \
+  'https://rejestrumow.gov.pl/api-dp/v1/agreements/search?offset=0&limit=10' \
+  -H 'Content-Type: application/json' \
+  -d '{"menuGlowne": {"przedmiotUmowy": "materiały"}}'
+```
+
+Analogicznie po NIP-ie: `-d '{"menuGlowne": {"nip": "8791012391"}}'`. Kryteria w obrębie `menuGlowne` można łączyć - wystarczy podać kilka pól naraz.
 
 ### Jak pobrać szczegóły jednej umowy
 
