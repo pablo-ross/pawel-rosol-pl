@@ -1,0 +1,70 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+.post-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.post-faq-item {
+  border: 1px solid var(--main-border-color);
+  border-radius: var(--radius-lg, 10px);
+  background: var(--card-bg);
+  padding: 0 1.1rem;
+
+  &[open] {
+    padding-bottom: 0.9rem;
+  }
+
+  &[open] summary {
+    border-bottom: 1px solid var(--main-border-color);
+    margin-bottom: 0.8rem;
+  }
+
+  summary {
+    cursor: pointer;
+    padding: 0.9rem 1.8rem 0.9rem 0;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5;
+    list-style: none;
+    position: relative;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '+';
+      position: absolute;
+      top: 0.9rem;
+      right: 0;
+      font-weight: 400;
+      color: var(--text-muted-color);
+    }
+  }
+
+  &[open] summary::after {
+    content: '\2212';
+  }
+
+  .post-faq-answer {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
