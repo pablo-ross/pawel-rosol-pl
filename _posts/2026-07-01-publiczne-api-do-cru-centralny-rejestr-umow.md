@@ -14,6 +14,13 @@ tags:
   - curl
   - rejestrumow.gov.pl
 description: "Od 1 lipca 2026 r. działa Centralny Rejestr Umów (CRU). Sprawdziłem, jak wygląda publiczne API do CRU na rejestrumow.gov.pl - jest dostępny endpoint JSON, z którego można pobrać dane bez logowania. Pokazuję gotowe przykłady w curl oraz drugie, oficjalne API Ministerstwa Finansów z autoryzacją X-API-KEY."
+faq:
+  - question: "Czy do Centralnego Rejestru Umów (CRU) istnieje publiczne API?"
+    answer: "Tak, choć nieoficjalnie i bez dokumentacji. Strona rejestrumow.gov.pl korzysta z endpointu JSON pod adresem rejestrumow.gov.pl/api-dp/v1, który nie wymaga logowania ani klucza API i można go odpytywać zwykłym curl-em lub dowolnym językiem programowania."
+  - question: "Jak wyszukać umowy w API CRU po REGON lub NIP?"
+    answer: "Trzeba wysłać żądanie POST na adres rejestrumow.gov.pl/api-dp/v1/agreements/search z kryteriami zagnieżdżonymi w obiekcie menuGlowne, np. {\"menuGlowne\": {\"regon\": \"001262860\"}} lub {\"menuGlowne\": {\"nip\": \"8791012391\"}}. Umieszczenie filtrów jako pól najwyższego poziomu żądania nie działa - API wtedy je ignoruje."
+  - question: "Czym różni się publiczny endpoint CRU od oficjalnego API Ministerstwa Finansów?"
+    answer: "Publiczny endpoint (rejestrumow.gov.pl/api-dp/v1) służy wyłącznie do odczytu danych i nie wymaga autoryzacji, ale jest nieoficjalny i nieudokumentowany. Oficjalne API integracyjne Ministerstwa Finansów (środowisko testowe na jsfp-cru-test.mf.gov.pl) wymaga klucza w nagłówku X-API-KEY i służy jednostkom oraz firmom do automatycznej publikacji umów w rejestrze ze swoich systemów."
 ---
 
 Od 1 lipca 2026 r. tysiące urzędów mają obowiązek publikować swoje umowy w [Centralnym Rejestrze Umów](https://rejestrumow.gov.pl/). Sieć Obywatelska Watchdog Polska od miesięcy apeluje o to, żeby dane były dostępne przez **publiczne API**, a nie tylko do ręcznego przeglądania po jednej umowie. I słusznie - z klikania po pojedynczych rekordach nikt nie zrobi żadnej analizy.
@@ -140,5 +147,9 @@ Cieszy mnie, że publiczny endpoint w ogóle jest - to znaczy, że dane da się 
 Mam jednak dwa zastrzeżenia. Po pierwsze - to nieoficjalny, nieudokumentowany endpoint. Skoro nie jest opisany, nikt nie obiecuje, że jutro będzie działał tak samo. Dopóki Ministerstwo nie opublikuje **oficjalnego, stabilnego, publicznego API z otwartymi danymi** (najlepiej wpiętego w [dane.gov.pl](https://dane.gov.pl)), postulat Sieci Obywatelskiej pozostaje aktualny.
 
 Po drugie - pamiętajmy, że w rejestrze lądują też **dane osobowe** (np. imiona i nazwiska osób fizycznych będących stronami umów). Jawność finansów publicznych i RODO nie są ze sobą sprzeczne, ale masowe pobieranie takich danych to już przetwarzanie, które trzeba robić z głową i w konkretnym, uzasadnionym celu. O tym jednak napiszę osobno.
+
+## Najczęściej zadawane pytania
+
+{% include post-faq.html %}
 
 *A jeśli sam bawisz się API do CRU i zauważysz, że coś działa inaczej niż opisałem - daj znać, zaktualizuję wpis.*

@@ -13,6 +13,13 @@ tags:
   - Szyfrowanie poczty
   - Kara administracyjna
 description: "Skrzynka e-mail to jeden z najpoważniejszych obszarów ryzyka dla danych osobowych. Analiza decyzji UODO (DKN.5131.34.2023), przykłady z innych krajów UE oraz aktualne metody ochrony poczty."
+faq:
+  - question: "Jaką karę nałożył UODO w decyzji DKN.5131.34.2023 dotyczącej poczty e-mail?"
+    answer: "UODO nałożył na przedsiębiorcę prowadzącego działalność rachunkowo-księgową karę w wysokości 11 594 zł (ok. 2 760 euro) za brak analizy ryzyka dla poczty elektronicznej, brak adekwatnych zabezpieczeń technicznych i organizacyjnych oraz brak testowania i przeglądu tych zabezpieczeń, po tym jak nieuprawniony podmiot przejął konto e-mail pracownika z danymi klientów."
+  - question: "Jakie nowe metody ochrony poczty e-mail warto wdrożyć oprócz 2FA?"
+    answer: "Oprócz uwierzytelniania dwuskładnikowego warto wdrożyć uwierzytelnianie odporne na phishing (klucze FIDO2, passkeys), skonfigurować SPF, DKIM i DMARC w trybie egzekwowania (p=reject), włączyć MTA-STS wymuszające szyfrowanie transmisji TLS między serwerami oraz stosować zasady dostępu warunkowego i krótsze sesje logowania."
+  - question: "Dlaczego pomyłka w polu CC zamiast BCC może być poważnym naruszeniem RODO?"
+    answer: "Wpisanie adresów odbiorców w polu CC zamiast BCC ujawnia wszystkim adresatom listę pozostałych odbiorców. Jeśli lista dotyczy np. uczestników programu wsparcia dla osób z określonym schorzeniem, ujawnienie adresów (często zawierających imię i nazwisko) może zdradzić informację o stanie zdrowia tych osób, czyli dane szczególnej kategorii z art. 9 RODO - tak jak w przypadku kary brytyjskiego ICO dla Central YMCA."
 ---
 
 **Poczta elektroniczna pozostaje najczęściej wykorzystywanym narzędziem komunikacji w organizacjach, a jednocześnie jednym z najsłabiej zabezpieczonych zbiorów danych osobowych. Skrzynka pocztowa przeciętnego pracownika to dziś nieuporządkowany, latami narastający zbiór zawierający imiona, nazwiska, numery PESEL, dane kontaktowe, skany dokumentów, a niejednokrotnie także dane szczególnej kategorii. Decyzja UODO o sygnaturze DKN.5131.34.2023 dobrze pokazuje, jak kosztowne bywa zlekceważenie tego obszaru.**
@@ -99,6 +106,10 @@ Decyzja UODO oraz doświadczenia zagranicznych organów nadzorczych układają s
 6. **Testuj i przeglądaj zabezpieczenia** - brak regularnej weryfikacji skuteczności również był przedmiotem zarzutu UODO.
 
 Poczta e-mail to obszar, w którym najprostsze zaniedbania kosztują najwięcej. Jak przypomina UODO - **kto uzyska dostęp do skrzynki, uzyskuje dostęp do większości informacji o nas, naszej działalności oraz o osobach i podmiotach, z którymi się kontaktujemy.**
+
+## Najczęściej zadawane pytania
+
+{% include post-faq.html %}
 
 ---
 

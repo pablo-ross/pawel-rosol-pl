@@ -13,6 +13,13 @@ tags:
   - Poczta Polska
   - Administrator danych
 description: Urząd Ochrony Danych Osobowych (UODO) nałożył rekordowe kary za naruszenie przepisów o ochronie danych osobowych w związku z nieudaną próbą przeprowadzenia tzw. wyborów kopertowych w 2020 roku.
+faq:
+  - question: "Jakie kary nałożył UODO w sprawie tzw. wyborów kopertowych?"
+    answer: "UODO nałożył 27 milionów złotych kary na Pocztę Polską oraz 100 tysięcy złotych (maksymalna kwota dla podmiotów sektora publicznego) na ministra cyfryzacji, za bezprawne udostępnienie i przetwarzanie danych osobowych ok. 30 milionów obywateli z rejestru PESEL na potrzeby nieprzeprowadzonych ostatecznie wyborów korespondencyjnych w 2020 roku."
+  - question: "Jakie dane obywateli zostały bezprawnie udostępnione Poczcie Polskiej?"
+    answer: "Minister cyfryzacji przekazał Poczcie Polskiej numer PESEL, imiona i nazwiska, ostatni aktualny adres zameldowania na pobyt stały (lub nieaktualny, jeśli brak aktualnego), adres zameldowania na pobyt czasowy z terminem pobytu oraz informacje o zarejestrowanych wyjazdach czasowych za granicę - dane ok. 30 milionów osób, niemal 80% populacji Polski."
+  - question: "Dlaczego pierwotna kara dla Poczty Polskiej została obniżona?"
+    answer: "Kara dla Poczty Polskiej miała pierwotnie wynieść ponad 100 mln zł, ale UODO obniżył ją do 27 mln zł ze względu na trudną sytuację finansową spółki (745 mln zł straty w 2023 r.) oraz fakt, że realizuje ona zadania publiczne."
 ---
 
 Urząd Ochrony Danych Osobowych (UODO) nałożył rekordowe kary za naruszenie przepisów o ochronie danych osobowych w związku z nieudaną próbą przeprowadzenia tzw. wyborów kopertowych w 2020 roku:
@@ -85,5 +92,9 @@ Z decyzji UODO wynikają następujące ważne zasady postępowania:
 8. **Szanuj prawa osób, których dane dotyczą** – pamiętaj, że przetwarzanie danych osobowych zawsze dotyczy konkretnych osób i ich konstytucyjnych praw.
 
 Decyzja UODO stanowi ważny precedens pokazujący, że naruszenia przepisów o ochronie danych osobowych mogą prowadzić do poważnych konsekwencji finansowych, nawet dla dużych podmiotów państwowych.
+
+## Najczęściej zadawane pytania
+
+{% include post-faq.html %}
 
 Dostęp do tekstu decyzji UODO: [DKN.5131.1.2025](https://uodo.gov.pl/decyzje/DKN.5131.1.2025).

@@ -12,6 +12,13 @@ tags:
   - Administrator danych
   - Dokumentacja RODO
 description: Urząd Ochrony Danych Osobowych opublikował zaktualizowaną wersję poradnika na temat naruszeń ochrony danych osobowych.
+faq:
+  - question: "Czy samo wystąpienie naruszenia ochrony danych oznacza naruszenie RODO?"
+    answer: "Nie. Zaktualizowany poradnik UODO wprost wskazuje, że samo wystąpienie naruszenia ochrony danych osobowych nie stanowi naruszenia przepisów RODO. Naruszeniem przepisów jest natomiast niewykonywanie lub nieprawidłowe wykonywanie obowiązków wynikających z rozporządzenia, np. brak odpowiednich zabezpieczeń czy niezgłoszenie incydentu."
+  - question: "Jakie są najczęstsze przyczyny naruszeń ochrony danych osobowych według UODO?"
+    answer: "Poradnik UODO wskazuje jako główne przyczyny błędy ludzkie, niewystarczające zabezpieczenia lub procedury, działania cyberprzestępcze, zamierzone nadużycia wewnętrzne oraz czynniki fizyczne lub środowiskowe. Szkodliwe działania lub zaniechania pracowników pozostają jedną z najczęstszych przyczyn."
+  - question: "Jaką dokumentację powinien gromadzić administrator, żeby wykazać prawidłowe wykonywanie obowiązków RODO?"
+    answer: "Poradnik zaleca gromadzenie notatek, instrukcji korespondencji, wyciągów z systemów, raportów z audytów czy testów bezpieczeństwa. Taka dokumentacja pozwala administratorowi wykazać, że prawidłowo wykonywał swoje obowiązki, nawet jeśli mimo to doszło do naruszenia."
 ---
 
 Urząd Ochrony Danych Osobowych opublikował zaktualizowaną wersję poradnika na temat naruszeń ochrony danych osobowych. Dokument zawiera kompleksowe informacje dotyczące aktualnych przepisów regulujących obowiązki administratorów danych oraz rekomendacje w zakresie zapobiegania incydentom związanym z bezpieczeństwem danych.
@@ -42,5 +49,9 @@ Według opublikowanego poradnika, główne przyczyny naruszeń ochrony danych os
 - czynniki fizyczne lub środowiskowe
 
 Poradnik zwraca uwagę, że pomimo ciągłych starań administratorów i podmiotów przetwarzających zmierzających do ograniczenia występowania błędów, szkodliwe działania lub zaniechania (np. ze strony pracowników) pozostają jedną z najczęstszych przyczyn powstawania naruszeń ochrony danych osobowych.
+
+## Najczęściej zadawane pytania
+
+{% include post-faq.html %}
 
 Poradnik jest dostępny pod [tym adresem](https://uodo.gov.pl/pl/file/5686).

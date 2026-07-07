@@ -14,6 +14,13 @@ tags:
   - Sektor publiczny
   - COVID-19
 description: "Ośrodek pomocy społecznej trafił do kar UODO, bo plik z danymi osób objętych kwarantanną COVID-19 zaindeksowała wyszukiwarka. Analiza decyzji DKN.5131.27.2023 i praktyczne wnioski dla administratorów."
+faq:
+  - question: "Jakie kary nałożył UODO w decyzji DKN.5131.27.2023?"
+    answer: "UODO nałożył trzy kary na ośrodek pomocy społecznej: 15 000 zł za brak odpowiednich środków bezpieczeństwa (naruszenie art. 5, 25 i 32 RODO), 5 500 zł za niezgłoszenie naruszenia organowi nadzorczemu w ciągu 72 godzin (art. 33 ust. 1) oraz 13 200 zł za niezawiadomienie osób, których dane dotyczą (art. 34 ust. 1). Łącznie kary wyniosły 33 700 zł."
+  - question: "Co doprowadziło do wycieku danych o kwarantannie?"
+    answer: "Plik XLSX z danymi kilkuset mieszkańców, w tym informacją o objęciu kwarantanną lub izolacją COVID-19, trafił na prywatny serwer pracownika ośrodka pomocy społecznej. Katalog na tym serwerze był publicznie dostępny, więc jego zawartość zaindeksowała wyszukiwarka internetowa. O wycieku administrator dowiedział się nie z własnych zabezpieczeń, lecz z e-maila osoby postronnej."
+  - question: "Dlaczego dane o kwarantannie są danymi szczególnej kategorii?"
+    answer: "Informacja o objęciu obowiązkową kwarantanną lub izolacją w związku z COVID-19 to dane dotyczące stanu zdrowia, czyli dane szczególnej kategorii w rozumieniu art. 9 RODO. Ich przetwarzanie wymaga wyższego poziomu zabezpieczeń niż dane zwykłe, a naruszenie takich danych niesie większe ryzyko dla osób, których dotyczy."
 ---
 
 **Plik w formacie XLSX z danymi kilkuset mieszkańców gminy, w tym informacją o tym, kto jest objęty kwarantanną i izolacją, wylądował na prywatnym serwerze pracownika. Katalog był publicznie dostępny, więc treść zaindeksowała wyszukiwarka i każdy mógł ją znaleźć. O wycieku administrator dowiedział się nie z własnych zabezpieczeń, lecz z e-maila osoby postronnej. Decyzja UODO o sygnaturze DKN.5131.27.2023 to podręcznikowy przykład tego, jak drobne zaniedbania organizacyjne prowadzą do naruszenia danych o stanie zdrowia.**
@@ -83,6 +90,10 @@ Najtańszy moment na uniknięcie takiej kary to moment, w którym nic złego jes
 Decyzja DKN.5131.27.2023 nie opowiada o wyrafinowanym ataku. Opowiada o zwykłych zaniedbaniach: plik na prywatnym serwerze, analiza ryzyka zrobiona dla formalności, brak kontroli nad tym, co jest dostępne w sieci, i milczenie po wykryciu problemu. Każdy z tych elementów da się wyeliminować bez wielkich nakładów.
 
 Dla administratorów i inspektorów ochrony danych płynie z tego prosty przekaz. O wysokości kary często decyduje nie sam incydent, lecz reakcja na niego. Zgłoszenie naruszenia i uczciwe zawiadomienie osób to nie tylko obowiązek prawny, ale też najtańsza dostępna forma ograniczenia sankcji. W tej sprawie zabrakło jednego i drugiego.
+
+## Najczęściej zadawane pytania
+
+{% include post-faq.html %}
 
 ---
 

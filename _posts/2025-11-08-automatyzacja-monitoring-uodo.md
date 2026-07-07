@@ -10,6 +10,13 @@ tags:
   - UODO
   - n8n
 description: Pracuję jako inspektor ochrony danych i wiem, że powinienem mieć oko na świeże decyzje UODO. Problem? Codzienne sprawdzanie portalu orzeczenia.uodo.gov.pl to czysta strata czasu. No i zawsze jest to nieprzyjemne uczucie, że mogłem coś przegapić. W końcu postanowiłem — skoro i tak to wszystko można zrobić automatycznie, to po co się męczyć?
+faq:
+  - question: "Jak działa automatyczny monitoring decyzji UODO opisany w artykule?"
+    answer: "Workflow w n8n uruchamia się co poniedziałek o 7:07, pobiera z API UODO listę decyzji z ostatnich 30 dni w formacie CSV, pobiera pełną treść każdej decyzji, a następnie lokalny model językowy generuje jej streszczenie. Gotowe streszczenia trafiają w jednym raporcie HTML na e-mail autora."
+  - question: "Jakiego modelu językowego używa autor do streszczania decyzji UODO i dlaczego lokalnego?"
+    answer: "Autor używa lokalnego modelu Qwen3-Coder-30B-A3B-Instruct działającego na własnym serwerze, żeby nie wysyłać treści decyzji do zewnętrznych dostawców takich jak OpenAI czy Anthropic i uniknąć kosztów API. Dzięki temu ma pełną kontrolę nad danymi przy zerowych kosztach uruchomienia."
+  - question: "Jakich parametrów używa się do pobrania decyzji UODO z API w formacie CSV?"
+    answer: "Eksport CSV pobiera się z adresu orzeczenia.uodo.gov.pl/search/export/csv, podając parametry dcr=rodo (kategoria decyzji), dtps i dtpe określające zakres dat początkowej i końcowej oraz targetUrl wskazujący na stronę UODO. n8n automatycznie podstawia bieżące daty dla wybranego okresu, np. ostatnich 30 dni."
 ---
 
 ## Jak to działa?
@@ -95,3 +102,7 @@ System chodzi sam, nie muszę o niczym pamiętać. Wszystko przetwarzam lokalnie
 ## Na koniec
 
 To rozwiązanie naprawdę działa. Automatyzacja plus lokalny LLM to połączenie, które w mojej codziennej pracy jako IOD sprawdza się wyśmienicie. Nie tracę czasu na rutynowe sprawdzanie portalu, a za to mam więcej czasu na rzeczy, które naprawdę wymagają mojej uwagi. Jeśli też jesteś IOD i spędzasz za dużo czasu na przeglądaniu decyzji UODO, to może warto coś takiego u siebie postawić? n8n jest darmowy, modele można odpalić lokalnie, a efekt naprawdę robi robotę.
+
+## Najczęściej zadawane pytania
+
+{% include post-faq.html %}

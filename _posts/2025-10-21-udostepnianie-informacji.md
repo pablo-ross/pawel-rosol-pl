@@ -15,6 +15,13 @@ tags:
   - Transparentność
   - Jednostki samorządu terytorialnego
 description: Atak ransomware w urzędzie, wyciek danych osobowych, awaria systemu IT - każdy taki incydent rodzi pytania ze strony mediów, obywateli i organizacji pozarządowych. Czy podmiot publiczny może odmówić udostępnienia dokumentów związanych z naruszeniem?
+faq:
+  - question: "Czy urząd musi udostępnić dokumentację dotyczącą incydentu cyberbezpieczeństwa na wniosek o informację publiczną?"
+    answer: "Zależy od rodzaju informacji. Fakty - data incydentu, ogólna kategoria naruszenia, zagregowana liczba dotkniętych osób, fakt zgłoszenia do UODO czy CERT Polska - podlegają udostępnieniu bez ograniczeń. Dokumenty techniczne, takie jak pełna dokumentacja SZBI, protokoły audytów bezpieczeństwa czy szczegółowe DPIA, podlegają całkowitej odmowie na podstawie art. 37 ust. 1 ustawy o krajowym systemie cyberbezpieczeństwa."
+  - question: "Kto ponosi obowiązek anonimizacji danych osobowych przed udostępnieniem dokumentów o incydencie?"
+    answer: "To organ udostępniający dokument musi sam przeprowadzić anonimizację - nie może odmówić udostępnienia, tłumacząc się czasochłonnością tego procesu. Potwierdził to wyrok WSA w Warszawie, który nałożył karę 20 000 zł na prokuraturę za udostępnienie dokumentów bez uprzedniej anonimizacji danych osobowych."
+  - question: "Jak prawidłowo uzasadnić odmowę udostępnienia dokumentacji bezpieczeństwa?"
+    answer: "Nie wystarczy ogólnikowe stwierdzenie „dokument wewnętrzny” czy „bezpieczeństwo”. Trzeba wskazać konkretne kategorie chronionych informacji (podatności, zagrożenia, dane osobowe), przepis wyłączający udostępnienie (art. 37 ust. 1 ustawy o KSC), wyjaśnić, dlaczego anonimizacja nie wystarczy, oraz jaki interes publiczny chroni odmowa."
 ---
 
 Atak ransomware w urzędzie, wyciek danych osobowych, awaria systemu IT - każdy taki incydent rodzi pytania ze strony mediów, obywateli i organizacji pozarządowych. Czy podmiot publiczny może odmówić udostępnienia dokumentów związanych z naruszeniem? Odpowiedź brzmi: to zależy od tego, o jakie konkretnie informacje chodzi.
@@ -76,3 +83,7 @@ Jeśli odmawiacie udostępnienia dokumentacji SZBI, nie wystarczy napisać "doku
 W dobie rosnącej liczby cyberataków (Polska była globalnym liderem w I połowie 2025 roku z 6% światowych ataków ransomware) transparentność jest kluczowa dla zaufania publicznego. Obywatele mają prawo wiedzieć, że incydent wystąpił i jakie były jego skutki. Nie mają jednak prawa do wiedzy technicznej, która mogłaby ułatwić kolejne ataki.
 
 Złota zasada: **informujcie o faktach, chrońcie szczegóły techniczne, zawsze anonimizujcie dane osobowe**.
+
+## Najczęściej zadawane pytania
+
+{% include post-faq.html %}

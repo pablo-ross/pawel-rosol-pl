@@ -15,6 +15,13 @@ tags:
   - Monitoring
   - rejestrumow.gov.pl
 description: "Napisałem prosty monitor Centralnego Rejestru Umów (CRU), który sam przegląda rejestr i wysyła na Telegram powiadomienie, gdy pojawi się nowa umowa pasująca do moich filtrów (NIP, REGON, przedmiot umowy). Kod jest na GitHubie, na otwartej licencji. Pokazuję, jak to działa i jak uruchomić własną wersję."
+faq:
+  - question: "Co robi CRU Monitor i jak działa?"
+    answer: "CRU Monitor to skrypt w Pythonie, który cyklicznie odpytuje publiczne API Centralnego Rejestru Umów, sprawdza, czy pojawiły się nowe umowy pasujące do zdefiniowanych filtrów (np. NIP, REGON, fraza z przedmiotu umowy), zapisuje je do pliku CSV i wysyła powiadomienie na Telegram."
+  - question: "Gdzie znaleźć kod CRU Monitor i na jakiej licencji jest udostępniony?"
+    answer: "Kod jest dostępny na GitHubie pod adresem github.com/pablo-ross/centralny-rejestr-umow-monitor na otwartej licencji - każdy może go pobrać, uruchomić u siebie i zmodyfikować pod własne potrzeby."
+  - question: "Jak często CRU Monitor sprawdza rejestr i czy działa całą dobę?"
+    answer: "Domyślnie program sprawdza rejestr co pół godziny, ale tylko w typowych godzinach pracy urzędów, czyli od poniedziałku do piątku, mniej więcej między 8 a 18. Skrypt automatycznie pomija weekendy i polskie święta, w tym ruchome, żeby niepotrzebnie nie odpytywać cudzego API."
 ---
 
 Kilka dni temu [opisałem publiczne API do Centralnego Rejestru Umów]({% post_url 2026-07-01-publiczne-api-do-cru-centralny-rejestr-umow %}). Skoro dane da się pobrać jednym poleceniem, to naturalne pytanie brzmi: po co robić to ręcznie? Nie chcę codziennie wchodzić na `rejestrumow.gov.pl` i sprawdzać, czy interesujący mnie urząd albo kontrahent podpisał coś nowego. Wolę, żeby program zrobił to za mnie i dał mi znać, kiedy faktycznie jest co czytać.
@@ -133,3 +140,7 @@ Nie obiecuję, że przyklepię każdą propozycję, bo chcę, żeby to narzędzi
 Wracam do myśli z poprzedniego wpisu. Dane publiczne najbardziej cieszą wtedy, gdy można je pobrać jednym poleceniem, i jeszcze bardziej, gdy nie trzeba pobierać ich samemu. Podobnie [zautomatyzowałem sobie kiedyś monitoring decyzji UODO]({% post_url 2025-11-08-automatyzacja-monitoring-uodo %}). Zasada jest ta sama: nudną, powtarzalną robotę oddaj maszynie, a sobie zostaw myślenie.
 
 Zostaje jedno przypomnienie, o którym pisałem poprzednio i które powtórzę, bo jest ważne. W rejestrze siedzą też dane osobowe, choćby imiona i nazwiska osób fizycznych będących stronami umów. Automat, który masowo zbiera takie dane, przetwarza dane osobowe, i musi mieć do tego konkretny, uzasadniony cel. Śledzenie, jak wydawane są publiczne pieniądze, taki cel spełnia. Budowanie sobie prywatnej bazy o konkretnych ludziach już niekoniecznie. Warto mieć to z tyłu głowy, zanim odpali się pierwsze filtry.
+
+## Najczęściej zadawane pytania
+
+{% include post-faq.html %}

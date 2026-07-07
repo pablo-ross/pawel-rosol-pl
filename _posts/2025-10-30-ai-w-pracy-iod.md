@@ -15,6 +15,13 @@ tags:
   - n8n
   - Ochrona danych osobowych
 description: Inspektor Ochrony Danych stoi przed unikalnym wyzwaniem - z jednej strony musi zapewnić najwyższą ochronę danych osobowych w organizacji, z drugiej – efektywnie zarządzać coraz większą liczbą zadań i obowiązków. Sztuczna inteligencja, a konkretnie duże modele językowe (LLM), mogą znacząco usprawnić codzienną pracę IOD, ale tylko pod warunkiem, że będą wykorzystywane w sposób zgodny z RODO i zasadami bezpieczeństwa danych.
+faq:
+  - question: "Dlaczego komercyjne narzędzia AI takie jak ChatGPT czy Claude są ryzykowne dla IOD?"
+    answer: "Zapytania trafiają na serwery firm trzecich, co oznacza utratę kontroli nad danymi, ryzyko naruszenia umów powierzenia, potencjalny niedozwolony transfer danych do krajów spoza EOG oraz brak pewności, czy dostawca nie wykorzysta i nie zachowa treści zapytań. Dla IOD, który przetwarza dane osobowe klientów jako podmiot przetwarzający, to bezpośrednie ryzyko niezgodności z RODO."
+  - question: "Jakie narzędzia pozwalają uruchomić lokalny model językowy bez wysyłania danych do chmury?"
+    answer: "Do prostego startu służy Ollama (open source, instalacja jedną komendą, API REST) oraz LM Studio (aplikacja z graficznym interfejsem dla mniej technicznych użytkowników). Do zaawansowanego przeszukiwania dużej liczby dokumentów warto dodać lokalną bazę wektorową, np. ChromaDB, Qdrant lub Weaviate."
+  - question: "Jaki sprzęt jest potrzebny, żeby uruchomić lokalny model LLM w pracy IOD?"
+    answer: "Dla indywidualnego IOD wystarcza komputer z minimum 16 GB RAM (zalecane 32 GB i GPU z 8 GB VRAM) obsługujący model klasy Llama 3.1 8B lub Mistral 7B. Dla większej organizacji zaleca się serwer z co najmniej 64 GB RAM i GPU klasy NVIDIA A100, obsługujący większe modele jak Llama 3.1 70B czy Qwen 2.5 32B."
 ---
 
 ## Dlaczego komercyjne rozwiązania AI są ryzykowne dla IOD?
@@ -357,4 +364,8 @@ Wśród kluczowych narzędzi dla IOD warto wymienić **Ollama** (<https://ollama
 ### Modele
 
 Polecane modele językowe obejmują **Llama 3** (<https://huggingface.co/meta-llama>), **Mistral** (<https://huggingface.co/mistralai>), **Qwen** (<https://huggingface.co/Qwen>), a także polskie modele: **Bielik** (<https://huggingface.co/speakleash/Bielik-7B-v0.1>) oraz **PLLuM** (<https://huggingface.co/collections/amu-cai/pllum>).
+
+## Najczęściej zadawane pytania
+
+{% include post-faq.html %}
 

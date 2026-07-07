@@ -13,6 +13,13 @@ tags:
   - Powierzenie przetwarzania
   - Bezpieczeństwo danych
 description: Prezes UODO nałożył na McDonald's Polska rekordową karę pieniężną w wysokości niemal 17 milionów złotych za szereg naruszeń przepisów o ochronie danych osobowych.
+faq:
+  - question: "Jaką karę nałożył UODO na McDonald's Polska i za co?"
+    answer: "UODO nałożył na McDonald's Polska karę niemal 17 milionów złotych (druga najwyższa w historii polskiego organu nadzorczego) za wyciek danych osobowych pracowników i franczyzobiorców, do którego doszło w lipcu 2020 r. przez błędną konfigurację serwera podmiotu przetwarzającego. Wyciekły m.in. numery PESEL, numery paszportów i grafiki pracy."
+  - question: "Jaką karę otrzymał podmiot przetwarzający dane w tej sprawie?"
+    answer: "Firma 24/7 Communication, której McDonald's powierzył przetwarzanie danych w aplikacji do zarządzania grafikami pracowniczymi, otrzymała karę ponad 183 tysięcy złotych. UODO zarzucił jej brak analizy ryzyka, brak odpowiednich zabezpieczeń oraz korzystanie z podwykonawcy bez zawartej umowy podpowierzenia."
+  - question: "Jakie błędy popełnił McDonald's przy wyborze i nadzorze nad podmiotem przetwarzającym?"
+    answer: "McDonald's wybrał firmę PR-ową do zarządzania grafikami wyłącznie na podstawie wcześniejszej współpracy, bez weryfikacji jej kompetencji technicznych w ochronie danych. Nigdy nie przeprowadził audytu u tego podmiotu, mimo że umowa powierzenia to przewidywała, i nie miał nawet dostępu do panelu administracyjnego systemu."
 ---
 
 Prezes UODO nałożył na McDonald's Polska rekordową karę pieniężną w wysokości niemal 17 milionów złotych za szereg naruszeń przepisów o ochronie danych osobowych. To druga najwyższa kara administracyjna w historii polskiego organu nadzorczego, która pokazuje, jak kosztowne mogą być zaniedbania w obszarze ochrony danych osobowych.
@@ -63,5 +70,9 @@ Decyzja UODO stanowi istotną lekcję dla wszystkich administratorów danych:
 5. **Rola IOD** - inspektor ochrony danych powinien być włączany we wszystkie kluczowe procesy związane z przetwarzaniem danych osobowych.
 
 Sprawa McDonald's pokazuje, że UODO coraz skuteczniej egzekwuje przepisy RODO, a kary mogą sięgać milionów złotych. Warto wyciągnąć wnioski z cudzych błędów i zadbać o właściwe zabezpieczenie danych w swojej organizacji.
+
+## Najczęściej zadawane pytania
+
+{% include post-faq.html %}
 
 Dostęp do tekstu decyzji UODO: [DKN.5130.4179.2020](https://orzeczenia.uodo.gov.pl/document/urn:ndoc:gov:pl:uodo:2020:dkn_5130_4179/content?query=).

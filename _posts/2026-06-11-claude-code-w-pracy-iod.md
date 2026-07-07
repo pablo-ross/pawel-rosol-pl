@@ -15,6 +15,13 @@ tags:
   - AI Act
   - CLI
 description: Lokalne modele językowe sprawdzają się w prostych zadaniach IOD, ale przy analizie umów powierzenia czy ocenie naruszeń modele frontierowe są o klasę lepsze. Problem w tym, że działają w chmurze. Opisuję, jak połączyłem własny CRM z warstwą anonimizacji i Claude Code, dzięki czemu korzystam z najlepszego dostępnego AI, a dane osobowe moich klientów nie opuszczają mojej infrastruktury.
+faq:
+  - question: "Jak autor korzysta z Claude Code, nie wysyłając danych osobowych klientów do chmury?"
+    answer: "Autor zbudował endpoint eksportu we własnym CRM, który przed wysłaniem dokumentu do Claude Code automatycznie anonimizuje treść: zamienia imiona i nazwiska na tokeny, usuwa numery PESEL i dokumentów, uogólnia adresy, a nazwy kontrahentów i e-maile zastępuje identyfikatorami. Słownik podmian pozostaje wyłącznie w bazie CRM na własnym serwerze, a wynik z modelu jest lokalnie podstawiany z powrotem na prawdziwe dane."
+  - question: "Czym różni się anonimizacja od pseudonimizacji w tym rozwiązaniu?"
+    answer: "Ściśle rzecz biorąc to pseudonimizacja, bo słownik podmian istnieje i pozwala odtworzyć tożsamość - autor otwarcie to przyznaje i nadal traktuje te dane w CRM jako dane osobowe podlegające pełnemu rygorowi RODO. Kluczowe jest jednak to, że klucz (słownik) nigdy nie opuszcza jego infrastruktury, więc dostawca modelu (Anthropic) otrzymuje tekst, którego nie da się powiązać z konkretną osobą."
+  - question: "Do jakich zadań IOD autor wykorzystuje Claude Code?"
+    answer: "Głównie do weryfikacji umów powierzenia pod kątem art. 28 ust. 3 RODO, oceny naruszeń według wytycznych EROD 9/2022 i metodyki ENISA, sprawdzania klauzul informacyjnych pod kątem art. 13 i 14 RODO, kontroli spójności rejestru czynności przetwarzania oraz do pisania i utrzymywania własnych automatyzacji, np. workflow w n8n do monitoringu decyzji UODO."
 ---
 
 W październiku pisałem, że [komercyjne modele AI odpadają w pracy IOD]({% post_url 2025-10-30-ai-w-pracy-iod %}), bo dane osobowe nie mogą lecieć na serwery OpenAI czy Anthropic. Potem pokazałem, jak [lokalny model streszcza mi decyzje UODO]({% post_url 2025-11-08-automatyzacja-monitoring-uodo %}). Oba teksty bronią się do dziś. Ale od tamtej pory moje podejście wyewoluowało.
@@ -99,3 +106,7 @@ Koszty trzymam pod kontrolą. Subskrypcja plus rozliczenie API to realny wydatek
 ## Na koniec
 
 Pół roku temu napisałbym, że IOD ma do wyboru: lokalny model albo nic. Dziś uważam, że jest trzecia droga, tylko trzeba ją sobie zbudować. Własna baza danych klientów, warstwa anonimizacji przed API i agent w terminalu składają się na zestaw, w którym dostaję jakość modelu frontierowego bez wysyłania komukolwiek danych osobowych. Nie jest to rozwiązanie z pudełka i wymaga trochę dłubania, ale dla kogoś, kto obsługuje wielu klientów jako IOD, inwestycja zwraca się szybko. A satysfakcja z systemu, który zbudowało się samemu i którego nie trzeba się wstydzić przed własnym audytem, to miły bonus.
+
+## Najczęściej zadawane pytania
+
+{% include post-faq.html %}

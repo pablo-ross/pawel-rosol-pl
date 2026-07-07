@@ -12,6 +12,13 @@ tags:
   - Compliance
   - Jednostki samorządu terytorialnego
 description: 'Obowiązek wdrożenia kanału zewnętrznego do obsługi sygnalistów wynika z implementacji Dyrektywy Parlamentu Europejskiego i Rady (UE) 2019/1937 z dnia 23 października 2019 r.'
+faq:
+  - question: "Od kiedy obowiązuje wymóg posiadania kanału zewnętrznego dla sygnalistów?"
+    answer: "Obowiązek posiadania kanału zewnętrznego do obsługi zgłoszeń sygnalistów obowiązuje od 25 grudnia 2024 r., zgodnie z ustawą o ochronie sygnalistów implementującą dyrektywę Parlamentu Europejskiego i Rady (UE) 2019/1937."
+  - question: "Kogo dotyczy obowiązek wdrożenia kanału zewnętrznego dla sygnalistów?"
+    answer: "Obowiązek dotyczy organów publicznych w rozumieniu art. 2 pkt 6 ustawy, czyli m.in. naczelnych i centralnych organów administracji rządowej (np. UODO, Główny Inspektorat Sanitarny), terenowych organów administracji rządowej (np. wojewodowie), organów jednostek samorządu terytorialnego (wójt, burmistrz, prezydent, starosta, marszałek, rada gminy/powiatu, sejmik wojewódzki) oraz innych podmiotów wykonujących zadania administracji publicznej w określonych dziedzinach."
+  - question: "Jakie są konsekwencje braku wdrożenia kanału zewnętrznego dla sygnalistów?"
+    answer: "Nieprzestrzeganie tego obowiązku może skutkować karami administracyjnymi, odpowiedzialnością karną osób odpowiedzialnych za zaniedbania oraz utratą zaufania publicznego i reputacji organizacji."
 ---
 
 Obowiązek wdrożenia kanału zewnętrznego do obsługi sygnalistów wynika z implementacji Dyrektywy Parlamentu Europejskiego i Rady (UE) 2019/1937 z dnia 23 października 2019 r. w sprawie ochrony osób zgłaszających naruszenia prawa Unii, znanej powszechnie jako dyrektywa o sygnalistach. Celem tego aktu prawnego jest zapewnienie skutecznej ochrony sygnalistów, czyli osób zgłaszających naruszenia prawa, przed działaniami odwetowymi oraz promowanie przejrzystości i odpowiedzialności w organizacjach. W Polsce przepisy implementujące tę dyrektywę są zawarte w ustawie o ochronie sygnalistów, która określa szczegółowe obowiązki podmiotów zobowiązanych.
@@ -68,3 +75,7 @@ Nieprzestrzeganie obowiązku wdrożenia kanału zewnętrznego może skutkować p
 ## Podsumowanie
 
 Obowiązek wdrożenia kanału zewnętrznego do obsługi sygnalistów stanowi kluczowy element systemu ochrony sygnalistów w Polsce. Jest on skierowany do szerokiego grona podmiotów publicznych, które muszą zapewnić transparentność i skuteczność w obsłudze zgłoszeń naruszeń prawa. Realizacja tego obowiązku nie tylko pozwala uniknąć sankcji, ale również buduje zaufanie społeczne i wzmacnia kulturę etyczną w organizacji.
+
+## Najczęściej zadawane pytania
+
+{% include post-faq.html %}
