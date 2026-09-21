@@ -11,24 +11,24 @@ tags:
   - Analiza ryzyka
   - Incydent bezpieczeństwa
   - Infrastruktura krytyczna
-description: 'Po serii ataków na stacje uzdatniania wody i oczyszczalnie ścieków Pełnomocnik Rządu ds. Cyberbezpieczeństwa zalecił odseparowanie systemów OT od internetu. Co z ustawy o KSC wynika dla spółki wod-kan: wykaz, reżim pełny czy uproszczony, dwie oceny ryzyka, terminy zgłoszenia incydentu i kto za to odpowiada.'
+description: 'Po serii ataków na stacje uzdatniania wody i oczyszczalnie ścieków Pełnomocnik Rządu ds. Cyberbezpieczeństwa zalecił odseparowanie systemów OT od internetu. Co z ustawy o KSC wynika dla spółki wod-kan: wykaz i terminy, reżim z art. 8 ust. 1 albo z załącznika nr 4, trzy oceny ryzyka, łańcuch zgłoszeń do CSIRT sektorowego i kto za to odpowiada.'
 legal: true
 faq:
   - question: "Czy przedsiębiorstwo wodociągowo-kanalizacyjne podlega ustawie o KSC?"
     answer: "Sektor zaopatrzenia w wodę pitną i jej dystrybucji oraz sektor ścieków są objęte ustawą, ale samo działanie w sektorze nie przesądza sprawy. O statusie podmiotu kluczowego albo ważnego decydują dodatkowo rodzaj świadczonej usługi oraz wielkość podmiotu. Kwalifikację przeprowadza i dokumentuje sam podmiot; nikt nie nadaje tego statusu z urzędu."
   - question: "Do kiedy trzeba złożyć wniosek o wpis do wykazu podmiotów kluczowych i ważnych?"
-    answer: "Do 3 października 2026 r. Samorejestracja ruszyła 7 maja 2026 r., a wykaz jest aplikacją działającą w ramach Systemu S46. Jeżeli spółka zawarła umowę z dostawcą usług zarządzanych w zakresie cyberbezpieczeństwa, informację o tym ujawnia się w wykazie i aktualizuje wpis w terminie wynikającym z art. 7c uksc."
+    answer: "Art. 7c ust. 1 uksc daje 6 miesięcy od dnia spełnienia przesłanek uznania za podmiot kluczowy lub ważny. Dla podmiotów, które spełniały je już w dniu wejścia w życie nowelizacji, termin ten upływa 3 października 2026 r. Samorejestracja ruszyła 7 maja 2026 r., a wykaz jest aplikacją w ramach Systemu S46. Umowę z dostawcą usług zarządzanych w zakresie cyberbezpieczeństwa ujawnia się w wykazie wraz z danymi dostawcy (art. 7 ust. 2 pkt 16 uksc), a zmianę danych zgłasza w terminie 14 dni (art. 7c ust. 3 uksc)."
   - question: "Czy rekomendacje Pełnomocnika Rządu ds. Cyberbezpieczeństwa są obowiązkowe?"
     answer: "Nie, zostały wydane jako zalecenie, a nie akt prawa powszechnie obowiązującego. W praktyce i tak trudno je pominąć: ustawa o KSC wymaga środków adekwatnych do ryzyka, a od sierpnia 2026 r. istnieje publiczny, sektorowy dokument opisujący to ryzyko i sposób jego ograniczenia. Odstępstwo od zalecenia wymaga uzasadnienia w analizie ryzyka, a nie przemilczenia."
-  - question: "Czy ocena ryzyka z ustawy o KSC to to samo co ocena ryzyka z ustawy wodociągowej?"
-    answer: "Nie. Szacowanie ryzyka z ustawy o KSC dotyczy bezpieczeństwa systemów informacyjnych wykorzystywanych do świadczenia usługi. Ocena ryzyka z art. 4e ustawy o zbiorowym zaopatrzeniu w wodę dotyczy obszaru zasilania ujęć wody przeznaczonej do spożycia i jest przeglądana w odstępach wynikających z tej oceny, nie rzadszych niż co 6 lat. To dwa odrębne obowiązki o różnych przedmiotach, choć w spółce wod-kan powinny się widzieć nawzajem."
+  - question: "Ile ocen ryzyka musi mieć przedsiębiorstwo wodociągowo-kanalizacyjne?"
+    answer: "Trzy, z dwóch różnych ustaw. Ustawa o KSC wymaga systematycznego szacowania ryzyka wystąpienia incydentu w systemie informacyjnym wspierającym usługę (art. 8 ust. 1 pkt 1 uksc). Art. 4e ust. 1 ustawy o zbiorowym zaopatrzeniu w wodę nakłada dwie odrębne oceny: ryzyka w obszarze zasilania ujęcia wody oraz ryzyka w systemie zaopatrzenia w wodę, przeglądane w odstępach wynikających z tych ocen, nie dłuższych niż 6 lat. To trzy odrębne dokumenty, które powinny znać wspólne scenariusze."
   - question: "Jakie są terminy zgłoszenia incydentu poważnego do CSIRT?"
-    answer: "Trzy, liczone od wykrycia: wczesne ostrzeżenie w ciągu 24 godzin, zgłoszenie w ciągu 72 godzin i sprawozdanie końcowe w ciągu miesiąca. Zakres stosowania tych obowiązków zależy od podstawy wpisu podmiotu do wykazu. Biegną niezależnie od 72-godzinnego terminu zgłoszenia naruszenia ochrony danych osobowych do UODO."
+    answer: "Do właściwego CSIRT sektorowego: wczesne ostrzeżenie nie później niż w ciągu 24 godzin od wykrycia (art. 11 ust. 1 pkt 4 uksc), zgłoszenie incydentu poważnego nie później niż w ciągu 72 godzin od wykrycia (pkt 4a), sprawozdanie okresowe na wniosek CSIRT (pkt 4b) oraz sprawozdanie końcowe nie później niż w ciągu miesiąca od dnia zgłoszenia, a nie od wykrycia (pkt 4c). Podmiot ważny będący podmiotem publicznym składa samo zgłoszenie: art. 12c uksc wyłącza wobec niego wczesne ostrzeżenie i sprawozdania. Terminy te biegną niezależnie od 72-godzinnego terminu zgłoszenia naruszenia ochrony danych osobowych do UODO."
   - question: "Czy można zlecić obowiązki z ustawy o KSC firmie zewnętrznej?"
     answer: "Zadania można realizować przez wewnętrzne struktury albo na podstawie umowy z podmiotem zewnętrznym (art. 14 uksc). Odpowiedzialność za ich wykonanie pozostaje przy kierowniku podmiotu również wtedy, gdy obowiązki powierzono innej osobie (art. 8c ust. 3 uksc). Umowa przenosi pracę, nie odpowiedzialność."
 ---
 
-> **W skrócie:** w 2025 r. doszło do serii ataków na stacje uzdatniania wody i oczyszczalnie ścieków w Polsce, a NIK w sierpniu 2026 r. ocenił dotychczasowe zabezpieczenia operatorów jako niewystarczające. Pełnomocnik Rządu ds. Cyberbezpieczeństwa zalecił sektorowi wod-kan przede wszystkim odseparowanie urządzeń OT od internetu. Zalecenia nie są wiążące, ale ustawa o KSC wymaga środków adekwatnych do ryzyka, więc od ich publikacji milczenie w analizie ryzyka przestało być bezpieczną opcją. Jeżeli spółka jest podmiotem kluczowym albo ważnym, wniosek o wpis do wykazu składa się **do 3 października 2026 r.**
+> **W skrócie:** w 2025 r. doszło do serii ataków na stacje uzdatniania wody i oczyszczalnie ścieków w Polsce, a NIK w sierpniu 2026 r. ocenił dotychczasowe zabezpieczenia operatorów jako niewystarczające. Pełnomocnik Rządu ds. Cyberbezpieczeństwa zalecił sektorowi wod-kan przede wszystkim odseparowanie urządzeń OT od internetu. Zalecenia nie są wiążące, ale ustawa o KSC wymaga środków adekwatnych do ryzyka, więc od ich publikacji milczenie w analizie ryzyka przestało być bezpieczną opcją. Jeżeli spółka jest podmiotem kluczowym albo ważnym, a przesłanki spełniała już w dniu wejścia w życie nowelizacji, wniosek o wpis do wykazu składa się **do 3 października 2026 r.**
 {: .prompt-info }
 
 Wpis powstał w listopadzie 2024 r. i dotyczył samej dyrektywy NIS2. Napisałem go na nowo we wrześniu 2026 r., po wdrożeniu dyrektywy do prawa polskiego i po serii ataków na infrastrukturę wodociągową, zawężając temat do sektora, w którym te dwa wątki spotykają się najostrzej.
@@ -74,47 +74,60 @@ Dwie rzeczy warto zapamiętać.
 
 Kwalifikację przeprowadza sam podmiot i sam ją dokumentuje. Nikt nie nadaje tego statusu z urzędu, a notatka z uzasadnieniem przydaje się również wtedy, gdy wynik jest negatywny.
 
-Wniosek o wpis do wykazu podmiotów kluczowych i podmiotów ważnych składa się **do 3 października 2026 r.** Samorejestracja ruszyła 7 maja 2026 r., a wykaz działa jako aplikacja w ramach Systemu S46. Procedurę opisuje Ministerstwo Cyfryzacji w komunikacie o [uruchomieniu samorejestracji](https://samorzad.gov.pl/web/gov/nowelizacja-ustawy-o-krajowym-systemie-cyberbezpieczenstwa-ksc---uruchamiamy-samorejestracje-w-wykazie-podmiotow-kluczowych-i-podmiotow-waznych-sprawdz-jak-dokonac-wpisu).
+Termin na wniosek o wpis do wykazu to zgodnie z art. 7c ust. 1 uksc **6 miesięcy od dnia spełnienia przesłanek** uznania za podmiot kluczowy lub ważny. Dla podmiotów, które spełniały je już w dniu wejścia w życie nowelizacji, wypada on **3 października 2026 r.** Samorejestracja ruszyła 7 maja 2026 r., a wykaz działa jako aplikacja w ramach Systemu S46. Procedurę opisuje Ministerstwo Cyfryzacji w komunikacie o [uruchomieniu samorejestracji](https://samorzad.gov.pl/web/gov/nowelizacja-ustawy-o-krajowym-systemie-cyberbezpieczenstwa-ksc---uruchamiamy-samorejestracje-w-wykazie-podmiotow-kluczowych-i-podmiotow-waznych-sprawdz-jak-dokonac-wpisu).
 
-Jeżeli spółka korzysta z zewnętrznego dostawcy usług zarządzanych w zakresie cyberbezpieczeństwa, informację o zawarciu takiej umowy ujawnia się w wykazie (art. 7 ust. 2 pkt 16 uksc), a wpis aktualizuje w terminie wynikającym z art. 7c uksc. To drobiazg, o którym łatwo zapomnieć przy podpisywaniu umowy.
+Wniosek zawiera oświadczenie kierownika podmiotu składane pod rygorem odpowiedzialności karnej za złożenie fałszywego oświadczenia (art. 7c ust. 5 uksc), więc kwalifikacja opisana wyżej nie jest ćwiczeniem wewnętrznym.
+
+Jeżeli spółka korzysta z zewnętrznego dostawcy usług zarządzanych w zakresie cyberbezpieczeństwa do realizacji zadań z art. 8 i art. 11, informację o zawarciu takiej umowy wraz z danymi dostawcy ujawnia się w wykazie (art. 7 ust. 2 pkt 16 uksc). Zmianę danych zgłasza się w terminie 14 dni (art. 7c ust. 3 uksc). To drobiazg, o którym łatwo zapomnieć przy podpisywaniu umowy.
 
 ## Pełny czy uproszczony reżim SZBI?
 
-To pytanie decyduje o nakładzie pracy bardziej niż jakiekolwiek inne, a bywa zadawane dopiero na etapie pisania dokumentacji.
+To pytanie decyduje o nakładzie pracy bardziej niż jakiekolwiek inne, a bywa zadawane dopiero na etapie pisania dokumentacji. W spółce komunalnej jest przy tym trudniejsze, niż się wydaje, bo ta sama spółka potrafi pasować do dwóch sektorów naraz.
 
-| | Reżim z art. 8 ust. 1 uksc | Reżim z art. 8 ust. 3 uksc i załącznika nr 4 |
+Zasadą jest art. 8 ust. 1 uksc: podmiot kluczowy lub ważny wdraża system zarządzania bezpieczeństwem informacji w systemie informacyjnym wykorzystywanym w procesach wpływających na świadczenie usługi. Wyjątek z art. 8 ust. 3 jest wąski i adresowany imiennie: przepisu ust. 1 nie stosuje **podmiot ważny będący podmiotem publicznym** (oraz wskazane tam podmioty ze sfery szkolnictwa wyższego i nauki). Taki podmiot buduje SZBI spełniający wymagania załącznika nr 4 do ustawy.
+
+| | Art. 8 ust. 1 uksc | Art. 8 ust. 3 uksc i załącznik nr 4 |
 |---|---|---|
-| Kogo dotyczy | Zależy od podstawy wpisu do wykazu oraz zakresu zadań, usług i systemów informacyjnych | Jak wyżej, przy węższym zakresie stosowania |
-| Zakres dokumentacji | Pełny katalog wymagań rozdziału 3 uksc | Wymagania wskazane w załączniku nr 4 |
-| Praktyczny skutek | Rozbudowany SZBI, pełny cykl przeglądów | Węższy, ale nadal udokumentowany system |
+| Kogo dotyczy | Zasada: każdy podmiot kluczowy i każdy podmiot ważny | Wyjątek: podmiot **ważny** będący **podmiotem publicznym** |
+| Zakres | Pełne wymagania SZBI z art. 8 ust. 1 | Wymagania z załącznika nr 4 |
+| Audyt z art. 15 | Co najmniej raz na 3 lata, ale tylko dla podmiotu kluczowego | Nie dotyczy podmiotu ważnego |
 
-Odpowiedź wynika z podstawy wpisu do wykazu, sektora oraz zakresu zadań, usług i systemów informacyjnych podmiotu. Dlatego kopia zawiadomienia o wpisie i ewentualnego wezwania organu to pierwszy dokument, o który pytam, zanim ustalę zakres prac. Jeżeli podstawa wpisu zmieni się albo zostanie sprostowana później, zmienia się również zakres obowiązków, i to w obie strony.
+Cała trudność siedzi w definicji. „Podmiot publiczny" to według art. 2 pkt 11b uksc podmiot wskazany w załączniku nr 1 lub 2 **w sektorze podmioty publiczne**, a nie każdy podmiot z kapitałem samorządowym. W sektorze tym wymieniono między innymi spółki wykonujące zadania o charakterze użyteczności publicznej w rozumieniu art. 1 ust. 2 ustawy o gospodarce komunalnej. Gminna spółka wod-kan mieści się w tym opisie, a jednocześnie jest przedsiębiorstwem wodociągowo-kanalizacyjnym wymienionym w sektorach zbiorowego zaopatrzenia w wodę pitną i zbiorowego odprowadzania ścieków.
 
-## Dwie oceny ryzyka, nie jedna
+Rozstrzyga więc podstawa wpisu do wykazu: w jakim sektorze i jako jaki podmiot spółka została ujęta. Od tego zależy nie tylko zakres dokumentacji, ale też obowiązek audytu i zakres obowiązków incydentalnych opisanych niżej. Dlatego kopia zawiadomienia o wpisie, a jeżeli zostało doręczone, także wezwania organu, to pierwszy dokument, o który proszę, zanim ustalę zakres prac. Jeżeli podstawa wpisu zmieni się albo zostanie sprostowana, zmienia się również zakres obowiązków, i to w obie strony.
 
-Spółka wod-kan jest w nietypowej sytuacji, bo ciążą na niej dwa niezależne obowiązki oceny ryzyka, wynikające z różnych ustaw i dotyczące różnych rzeczy.
+## Ile ocen ryzyka musi mieć spółka wod-kan?
 
-| | Ustawa o KSC | Ustawa o zbiorowym zaopatrzeniu w wodę |
-|---|---|---|
-| Czego dotyczy | Bezpieczeństwa systemów informacyjnych wykorzystywanych do świadczenia usługi | Obszaru zasilania ujęć wody przeznaczonej do spożycia (art. 4e) |
-| Cel | Ciągłość i bezpieczeństwo usługi | Bezpieczeństwo sanitarne wody |
-| Przegląd | Zgodnie z przyjętym cyklem SZBI | W odstępach wynikających z oceny, nie rzadziej niż co 6 lat |
+Trzy, i to wynikające z dwóch różnych ustaw.
 
-Obowiązek z art. 4e wprowadziła [ustawa z 13 marca 2026 r. o zmianie ustawy o zbiorowym zaopatrzeniu w wodę i zbiorowym odprowadzaniu ścieków oraz niektórych innych ustaw](https://eli.gov.pl/eli/DU/2026/605/ogl) (Dz.U. 2026 poz. 605).
+Ustawa o KSC wymaga systematycznego szacowania ryzyka wystąpienia incydentu i zarządzania tym ryzykiem (art. 8 ust. 1 pkt 1). Przedmiotem jest system informacyjny wykorzystywany w procesach wpływających na świadczenie usługi.
 
-To dwa odrębne dokumenty i nie należy ich łączyć w jeden. Powinny się natomiast widzieć nawzajem, bo scenariusz „utrata kontroli nad dozowaniem reagentów wskutek nieuprawnionego dostępu do OT" jest jednocześnie ryzykiem cyber i ryzykiem sanitarnym. Ataki z 2025 r. pokazały, że to nie jest teoretyczne ćwiczenie z korelacji rejestrów.
+Art. 4e ustawy o zbiorowym zaopatrzeniu w wodę nakłada na dostawcę wody dwie odrębne oceny: ocenę ryzyka w obszarze zasilania ujęcia wody wykorzystywanego do poboru wody przeznaczonej do spożycia przez ludzi oraz ocenę ryzyka w systemie zaopatrzenia w wodę. Obie podlegają udokumentowanym przeglądom w regularnych odstępach wynikających z tych ocen, nie dłuższych niż 6 lat, i w razie potrzeby aktualizacji. Ustawa wymaga przy tym oparcia ich na obowiązujących normach dotyczących bezpieczeństwa zaopatrzenia w wodę.
+
+| Ocena | Podstawa | Czego dotyczy | Przegląd |
+|---|---|---|---|
+| Szacowanie ryzyka wystąpienia incydentu | art. 8 ust. 1 pkt 1 uksc | Systemy informacyjne wspierające usługę | Zgodnie z przyjętym cyklem SZBI |
+| Ocena ryzyka w obszarze zasilania ujęcia | art. 4e ust. 1 pkt 1 uzzw | Zlewnia i samo ujęcie | Nie rzadziej niż co 6 lat |
+| Ocena ryzyka w systemie zaopatrzenia w wodę | art. 4e ust. 1 pkt 2 uzzw | Układ od ujęcia do kranu | Nie rzadziej niż co 6 lat |
+
+Obowiązki z art. 4e wprowadziła [ustawa z 13 marca 2026 r. o zmianie ustawy o zbiorowym zaopatrzeniu w wodę i zbiorowym odprowadzaniu ścieków oraz niektórych innych ustaw](https://eli.gov.pl/eli/DU/2026/605/ogl) (Dz.U. 2026 poz. 605).
+
+To trzy odrębne dokumenty i nie należy ich zlewać w jeden. Powinny się natomiast widzieć nawzajem, bo scenariusz „utrata kontroli nad dozowaniem reagentów wskutek nieuprawnionego dostępu do OT" jest jednocześnie ryzykiem cyber i ryzykiem sanitarnym. Ataki z 2025 r. pokazały, że to nie jest ćwiczenie z korelacji rejestrów.
 
 ## Jak zgłasza się incydent?
 
-Zgłoszenie incydentu poważnego do właściwego CSIRT przebiega w trzech krokach.
+Najpierw trzeba zaklasyfikować incydent jako poważny na podstawie progów uznawania incydentu za poważny (art. 11 ust. 1 pkt 3 uksc). Dopiero wtedy uruchamia się łańcuch zgłoszeń do **właściwego CSIRT sektorowego**, przekazywanych przez system teleinformatyczny z art. 46 ust. 1 uksc.
 
-| Krok | Termin od wykrycia | Co zawiera |
+| Krok | Termin | Podstawa |
 |---|---|---|
-| Wczesne ostrzeżenie | 24 godziny | Sygnał, że incydent wystąpił, wraz ze wstępną oceną charakteru |
-| Zgłoszenie | 72 godziny | Ocena incydentu, wskaźniki, dotychczasowe działania |
-| Sprawozdanie końcowe | miesiąc | Przebieg, przyczyna źródłowa, zastosowane środki |
+| Wczesne ostrzeżenie | niezwłocznie, nie później niż 24 godziny od wykrycia | art. 11 ust. 1 pkt 4 |
+| Zgłoszenie incydentu poważnego | niezwłocznie, nie później niż 72 godziny od wykrycia | art. 11 ust. 1 pkt 4a |
+| Sprawozdanie okresowe | na wniosek CSIRT sektorowego | art. 11 ust. 1 pkt 4b |
+| Sprawozdanie końcowe | nie później niż miesiąc **od dnia zgłoszenia**, nie od wykrycia | art. 11 ust. 1 pkt 4c |
 
-Zakres stosowania tych obowiązków zależy od podstawy wpisu podmiotu do wykazu (art. 12c uksc), więc również i tu punktem wyjścia jest zawiadomienie o wpisie.
+Termin sprawozdania końcowego liczy się od zgłoszenia z pkt 4a, a nie od wykrycia incydentu. To drobna różnica, która w kalendarzu potrafi przesunąć się o kilka dni w jedną albo drugą stronę, więc lepiej zapisać ją w procedurze niż odtwarzać z pamięci pod presją.
+
+Jest tu wyjątek istotny właśnie dla spółek komunalnych. Zgodnie z art. 12c uksc do **podmiotu ważnego będącego podmiotem publicznym** stosuje się art. 11 i art. 12 z wyłączeniem przepisów o wczesnym ostrzeżeniu, sprawozdaniu okresowym, sprawozdaniu z postępu obsługi incydentu i sprawozdaniu końcowym. Taki podmiot składa więc samo zgłoszenie w ciągu 72 godzin. Czy spółka mieści się w tym wyjątku, zależy znów od podstawy wpisu do wykazu, a nie od tego, kto ma w niej udziały.
 
 Ten zegar biegnie niezależnie od terminów z RODO. Jeżeli incydent objął dane osobowe, a w spółce komunalnej obejmie je niemal zawsze, administrator ma równolegle 72 godziny od stwierdzenia naruszenia na zgłoszenie do UODO oraz obowiązek zawiadomienia osób przy wysokim ryzyku. Rozpisałem to w [przewodniku po obowiązkach przy naruszeniu ochrony danych]({% post_url 2026-09-21-naruszenie-ochrony-danych-przewodnik %}).
 
