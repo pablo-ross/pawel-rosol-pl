@@ -397,28 +397,29 @@ Each phase ends with `bash tools/test.sh` and one Conventional Commit per logica
 - [ ] Run and record the 10-question citation check (§8) — this is the "before" number
 
 ### Phase 1 — Defects (~2–3 h)
-- [ ] Breadcrumb URL fix + `jsonify` for all strings in `metadata-hook.html` (§1.1)
+- [x] Breadcrumb URL fix + `jsonify` for all strings in `metadata-hook.html` (§1.1)
 - [x] `exclude: CLAUDE.md` (§1.2) — in `_config.yml`, takes effect on next deploy
-- [ ] `seo: type:` front matter on all five tabs (§1.3) — `/about/` done in rev. 3
-- [ ] Feed override: limit + author name; full content only with the escaping fix (§1.4)
-- [ ] Security headers + `charset=utf-8` on the server (§1.5)
-- [ ] Verification stub out of the sitemap (§1.6); text on the 404 page (§1.7)
+- [x] `seo: type:` front matter on all five tabs (§1.3); real meta descriptions on archives/categories/tags/contact
+- [x] Feed override (§1.4): `assets/feed.xml`, limit 5→20, author resolved via `_data/authors.yml`, `xml_escape` dropped from the entry `title=` attribute (it was double-escaped). Full content deliberately **not** added — owner decision, §10.7
+- [ ] Security headers + `charset=utf-8` on the server (§1.5) — **server-side, outside this repo; still outstanding**
+- [x] Verification stub out of the sitemap (§1.6) — front matter `sitemap: false`, sitemap 185 → 184 URLs; text on the 404 page (§1.7) — `assets/404.html` override
 - [ ] Deploy; re-run the `curl` checks from this audit
 
 ### Phase 2 — Structured data (~4–5 h)
-- [ ] `tools/check-jsonld.rb` wired into `tools/test.sh` — **first**, so the rest is developed against it (§3.8)
-- [ ] Post `@graph` (§3.3)
-- [ ] `/contact/`: `ContactPage` + organization — **blocked on owner decisions, §10** (§3.4)
-- [ ] `OfferCatalog`; `worksFor` on `Person` (§3.5)
-- [ ] `Person` node: both job titles, extended `knowsAbout` (§11.3)
-- [ ] `CollectionPage` on archives (§3.6)
-- [ ] seo-tag JSON-LD strip plugin, once all page types are covered (§3.2)
-- [ ] Validate one URL per page type: validator.schema.org + Rich Results Test
+- [x] `tools/check-jsonld.rb` wired into `tools/test.sh` (§3.8). It caught the percent-encoded category URLs while §3.3 was being written
+- [x] Post `@graph` (§3.3)
+- [x] `/contact/`: `ContactPage` + `ProfessionalService` (§3.4) — owner confirmed Mornel s.c. with full NIP/REGON/geo. IBAN left on the page as published (§10.4 still open)
+- [x] `OfferCatalog` (4 services, all taken verbatim from `/about/` — no penetration tests); `worksFor` on `Person` (§3.5)
+- [x] `Person` node: both job titles, extended `knowsAbout` (§11.3)
+- [x] `CollectionPage` + `ItemList` on archives and generated category/tag pages (§3.6)
+- [x] seo-tag JSON-LD strip plugin (§3.2b) — one JSON-LD block per page, 184/184
+- [ ] Validate one URL per page type: validator.schema.org + Rich Results Test — **needs a deploy first**
 
 ### Phase 3 — Linking & taxonomy (~5–6 h, plus the pillar)
 - [ ] Back-fill `{% post_url %}` links, old → new (§4.3.1–2)
 - [ ] Primary-source citations in the 6 posts with none (§4.3.5)
-- [ ] Tag consolidation + `noindex, follow` on tags with < 3 posts (§2) — one pass, one commit
+- [x] `noindex, follow` on tags with < 3 posts (§2) — 119 of 133 tag archives
+- [ ] Tag consolidation to ~30–40 tags (§2) — **still outstanding**, one pass, one commit
 - [ ] Pillar #1: *Naruszenie ochrony danych osobowych* (6–10 h) (§4.3.3)
 - [ ] `/about/` → pillar; post → `/contact/` CTAs
 - [ ] KSC / NIS2 cluster: refresh the 2024 NIS2 post, then posts 2–5 of §11.4, then pillar #2
@@ -434,10 +435,11 @@ Do **not** do all 31. Order: the 7 posts of the UODO cluster → the 5 AI posts 
 - [ ] Self-host assets, in the §6.2 order; then add a CSP (§1.5)
 - [ ] Per-post OG images (§6.1)
 - [ ] IndexNow in `.production.sh` (§6.3)
-- [ ] `llms.txt` sections; optional `/llms-full.txt` (§5.2i)
-- [ ] `security.txt` (§6.5) · media conversion (§6.4)
-- [ ] `tagline`, site `description`, `llms.txt`, contact link titles → both roles (§11.3)
-- [ ] Update `CLAUDE.md`: site scope (both roles), feed override, new plugin, submodule init, JSON-LD check
+- [x] `llms.txt`: `## O autorze` + `## Usługi i kontakt`, both roles in the intro (§5.2i). `/llms-full.txt` not done (optional)
+- [x] `security.txt` (§6.5) — `.well-known/` added to `include:`
+- [ ] Media conversion (§6.4)
+- [x] `tagline` → "Inspektor Ochrony Danych · Cyberbezpieczeństwo", site `description` rewritten, `llms.txt` and `/contact/` lead → both roles (§11.3)
+- [x] Update `CLAUDE.md`: site scope (both roles), feed + 404 overrides, new plugin, submodule init, JSON-LD check, server-side gaps
 
 ---
 
