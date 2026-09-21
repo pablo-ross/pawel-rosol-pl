@@ -31,7 +31,7 @@ Sprawa dotyczyła przedsiębiorcy prowadzącego działalność rachunkowo-księg
 
 Zakres danych, które znalazły się w rękach osoby nieuprawnionej, był bardzo szeroki: imiona i nazwiska, daty urodzenia, numery PESEL, numery rachunków bankowych, adresy zamieszkania, numery telefonów, a także wizerunek oraz dokumenty takie jak paszporty i świadectwa pracy. Innymi słowy - komplet informacji wystarczający do kradzieży tożsamości czy oszustw finansowych.
 
-### Co zarzucił administratorowi organ nadzorczy
+### Co zarzucił administratorowi organ nadzorczy?
 
 UODO nie skupił się na samym fakcie włamania - te zdarzają się nawet w dobrze zabezpieczonych organizacjach. Istotą decyzji były **zaniedbania po stronie administratora**, które sprowadzały się do trzech kluczowych błędów:
 
@@ -69,7 +69,7 @@ Zbierając doświadczenia organów nadzorczych, ryzyka związane z pocztą e-mai
 - **Brak szyfrowania transmisji** - przechwycenie wiadomości w drodze między serwerami.
 - **Nadmiarowe gromadzenie danych** - skrzynka jako nieuporządkowane, latami narastające archiwum danych osobowych, wbrew zasadzie minimalizacji i ograniczenia przechowywania.
 
-## Co zmieniło się od czasu poprzedniego wpisu - nowe metody ochrony
+## Co zmieniło się od czasu poprzedniego wpisu?
 
 W [poprzednim artykule]({% post_url 2022-01-07-bezpieczna-poczta-email %}) pisałem przede wszystkim o uwierzytelnianiu dwuskładnikowym, kluczach U2F (Yubikey) i szyfrowaniu PGP. Wszystko to pozostaje aktualne, ale w ostatnich latach standardem stały się kolejne rozwiązania, które warto dziś traktować jako minimum.
 

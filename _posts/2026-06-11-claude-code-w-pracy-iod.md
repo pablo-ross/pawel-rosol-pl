@@ -27,7 +27,7 @@ Lokalne modele mają sufit. Streszczenie publicznie dostępnej decyzji UODO? Qwe
 
 Przez dłuższy czas uznawałem temat za zamknięty. Aż poukładałem sobie infrastrukturę tak, że dziś korzystam z Claude Code codziennie, a żadne dane osobowe nie wychodzą poza mój serwer.
 
-## Czym jest Claude Code i po co to inspektorowi
+## Czym jest Claude Code i po co to inspektorowi?
 
 Claude Code to agent od Anthropic działający w terminalu. Nie czat w przeglądarce, do którego wkleja się tekst, tylko narzędzie, które samo czyta pliki z dysku, uruchamia polecenia, odpytuje API i zapisuje wyniki. Powstał dla programistów, ale od jakiegoś czasu widać wyraźny trend używania go do pracy biurowej: analizy dokumentów, raportów, compliance. Anthropic poszedł za ciosem i wypuścił Cowork, czyli wersję tego samego pomysłu dla ludzi, którzy terminala wolą nie dotykać. Ja akurat terminal lubię, więc zostałem przy Claude Code.
 
@@ -74,7 +74,7 @@ Czy to wystarczy? Motyw 26 RODO każe oceniać możliwość identyfikacji przez 
 
 Dlatego nie opieram się na jednym filarze. Po stronie umownej korzystam z API na warunkach komercyjnych: Anthropic nie trenuje modeli na danych z API i podpisuje DPA zgodne z art. 28 RODO. Ale projektuję całość tak, jakby tych gwarancji nie było. Skoro w treści zapytania nie ma danych osobowych, to nawet incydent po stronie dostawcy nie wywołuje u mnie naruszenia. Wolę takie założenie niż wiarę w cudze regulaminy.
 
-## Co konkretnie robię w Claude Code
+## Co konkretnie robię w Claude Code?
 
 Umowy powierzenia to najczęstszy przypadek. Mam w `.claude/commands` własną komendę `/umowa-powierzenia`, która sprawdza kompletność względem art. 28 ust. 3, wyłapuje klauzule przerzucające odpowiedzialność na administratora i porównuje dokument z moim wzorcem. To, co kiedyś zajmowało dwie godziny, teraz schodzi do pół godziny, z czego większość to moja weryfikacja uwag modelu.
 

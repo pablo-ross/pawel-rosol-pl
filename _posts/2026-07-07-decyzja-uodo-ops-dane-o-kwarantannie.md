@@ -25,7 +25,7 @@ faq:
 ---
 **Plik w formacie XLSX z danymi kilkuset mieszkańców gminy, w tym informacją o tym, kto jest objęty kwarantanną i izolacją, wylądował na prywatnym serwerze pracownika. Katalog był publicznie dostępny, więc treść zaindeksowała wyszukiwarka i każdy mógł ją znaleźć. O wycieku administrator dowiedział się nie z własnych zabezpieczeń, lecz z e-maila osoby postronnej. Decyzja UODO o sygnaturze DKN.5131.27.2023 to podręcznikowy przykład tego, jak drobne zaniedbania organizacyjne prowadzą do naruszenia danych o stanie zdrowia.**
 
-## Co się wydarzyło
+## Co się wydarzyło?
 
 Sprawa dotyczyła ośrodka pomocy społecznej, czyli jednostki publicznej realizującej zadania gminy. W czasie pandemii koordynator zatrudniony w ośrodku prowadził arkusz z danymi osób, którym udzielano wsparcia w związku z kwarantanną i izolacją. Plik powstał 30 października 2020 roku, a 23 listopada 2020 roku znalazł się na prywatnym serwerze pracownika. Katalog na tym serwerze był otwarty, więc jego zawartość zaindeksowała wyszukiwarka i stała się dostępna dla dowolnego użytkownika internetu.
 
@@ -59,7 +59,7 @@ Ośrodek bronił się, twierdząc, że administratorem danych jest stacja sanita
 
 Najpoważniejsza część decyzji dotyczy tego, co stało się po incydencie, a właściwie tego, co się nie stało. Ośrodek nie zgłosił naruszenia do UODO w ciągu 72 godzin, mimo że przetwarzał dane o stanie zdrowia. Nie zawiadomił też osób, których dane wyciekły, choć ryzyko dla ich praw i wolności było wysokie. Organ musiał nakazać zawiadomienie dopiero w samej decyzji.
 
-## Ile to kosztowało
+## Ile to kosztowało?
 
 UODO nałożył trzy kary za trzy odrębne grupy naruszeń:
 
@@ -69,7 +69,7 @@ UODO nałożył trzy kary za trzy odrębne grupy naruszeń:
 
 Łącznie **33 700 zł**. Dla gminnej jednostki to odczuwalna kwota, ale nie ona jest tu najważniejsza. Uderza proporcja: dwie z trzech kar wynikają nie z samego wycieku, lecz z tego, jak organizacja zachowała się po jego wykryciu. Gdyby ośrodek zgłosił naruszenie i zawiadomił mieszkańców, uniknąłby prawie 19 000 zł, czyli ponad połowy łącznej sankcji. O tym, jak w praktyce wygląda prawidłowe zgłaszanie naruszeń, pisałem szerzej przy okazji [poradnika UODO]({% post_url 2025-03-03-poradnik-uodo-naruszenia %}).
 
-## Co organizacja powinna zrobić, zanim dojdzie do naruszenia
+## Co organizacja powinna zrobić, zanim dojdzie do naruszenia?
 
 O tym, co robić już po naruszeniu - od którego momentu biegną 72 godziny, kiedy zawiadamia się osoby i co wpisać do rejestru - piszę w [przewodniku dla administratora]({% post_url 2026-09-21-naruszenie-ochrony-danych-przewodnik %}).
 

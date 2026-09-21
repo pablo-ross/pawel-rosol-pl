@@ -21,7 +21,7 @@ Od 1 lipca 2026 r. tysiące urzędów mają obowiązek publikować swoje umowy w
 
 Postanowiłem sprawdzić, jak to naprawdę wygląda pod maską. Okazało się, że **publiczne API do CRU już istnieje** - tylko nikt o nim głośno nie mówi. Poniżej pokazuję, jak z niego skorzystać, oraz jak wygląda drugie, oficjalne API Ministerstwa Finansów.
 
-## Co to jest CRU i dlaczego nagle wszyscy o nim mówią
+## Co to jest CRU i dlaczego nagle wszyscy o nim mówią?
 
 W dużym skrócie: [od 1 lipca 2026 r. do rejestru trafiają wszystkie umowy](https://www.prawo.pl/samorzad/cru-od-1-lipca-wszystkie-umowy-do-rejestru,1547632.html) zawierane przez jednostki sektora finansów publicznych. Kilka faktów, które warto znać:
 
@@ -32,7 +32,7 @@ W dużym skrócie: [od 1 lipca 2026 r. do rejestru trafiają wszystkie umowy](ht
 
 To potencjalnie ogromna baza danych o wydatkach publicznych. Pytanie tylko, jak się do niej dostać w sposób, który pozwoli cokolwiek policzyć.
 
-## Dlaczego samo przeglądanie to za mało
+## Dlaczego samo przeglądanie to za mało?
 
 [Sieć Obywatelska Watchdog Polska i Instytut Finansów Publicznych zwracają uwagę](https://siecobywatelska.pl/cru-i-otwarte-api/) na rzecz oczywistą: rejestr, w którym można tylko ręcznie wyszukać pojedynczą umowę, **nie pozwala porównać instytucji ani prześledzić wydatków w czasie**. Żeby obywatelska kontrola miała sens, dane muszą być:
 
@@ -50,7 +50,7 @@ Strona `rejestrumow.gov.pl` to aplikacja napisana w Angular. A takie aplikacje n
 
 Odpowiedź: z endpointu JSON pod adresem `rejestrumow.gov.pl/api-dp/v1/...`. **Nie wymaga on żadnego logowania ani klucza.** Można z niego korzystać zwykłym `curl`-em z terminala albo dowolnym językiem programowania.
 
-### Jak pobrać listę umów
+### Jak pobrać listę umów?
 
 Najważniejsza pułapka: wyszukiwarka umów działa metodą **POST**, a nie GET. Jeśli spróbujesz wejść na ten adres zwykłym GET-em, dostaniesz błąd `401`. Trzeba wysłać żądanie POST z ciałem w formacie JSON (na początek wystarczy puste `{}`):
 
@@ -63,7 +63,7 @@ curl -s -X POST \
 
 W odpowiedzi dostajemy listę umów w JSON-ie. Każda umowa to m.in.: identyfikator (`idUmowy`), nazwa jednostki (`nazwa`), REGON, data zawarcia, wartość przedmiotu umowy i jej przedmiot. Do stronicowania służą parametry `offset` (od którego rekordu) i `limit` (ile rekordów naraz).
 
-### Jak filtrować wyniki (np. po REGON-ie)
+### Jak filtrować wyniki (np. po REGON-ie)?
 
 Tu jest druga pułapka, na którą sam się na początku nabrałem. Filtry **działają**, ale nie można ich wysyłać jako pól najwyższego poziomu w ciele żądania. Jeśli wyślesz `{"regon": "001262860"}`, API zignoruje filtr i zwróci wszystkie umowy. Kryteria trzeba zagnieździć w obiekcie `menuGlowne`:
 
@@ -95,7 +95,7 @@ curl -s -X POST \
 
 Analogicznie po NIP-ie: `-d '{"menuGlowne": {"nip": "8791012391"}}'`. Kryteria w obrębie `menuGlowne` można łączyć - wystarczy podać kilka pól naraz.
 
-### Jak pobrać szczegóły jednej umowy
+### Jak pobrać szczegóły jednej umowy?
 
 Mając `idUmowy` z listy, pełne szczegóły umowy pobieramy zwykłym GET-em:
 
@@ -127,7 +127,7 @@ Najważniejsze funkcje tego API to: publikacja i aktualizacja umów, wycofywanie
 - integratorzy zewnętrzni → `pomoc.cru@mf.gov.pl`
 - jednostki sektora finansów publicznych → `wsparcie.cru.jsfp@mf.gov.pl`
 
-## Które API wybrać
+## Które API wybrać?
 
 Zasada jest prosta:
 

@@ -127,7 +127,7 @@ Rejestr pełni dwie funkcje. Pozwala organowi zweryfikować przestrzeganie art. 
 
 [Zaktualizowany poradnik UODO]({% post_url 2025-03-03-poradnik-uodo-naruszenia %}) kładzie na to wyraźny nacisk i wylicza, co może stanowić taką dokumentację: notatki, korespondencję, wyciągi z systemów, raporty z audytów i testów.
 
-## Czego uczą decyzje UODO
+## Czego uczą decyzje UODO?
 
 Kara rzadko pada za sam incydent. Pada za to, czego zabrakło wcześniej albo później.
 
@@ -141,7 +141,7 @@ Kara rzadko pada za sam incydent. Pada za to, czego zabrakło wcześniej albo p�
 
 Za każdą z tych pozycji stoi ten sam wniosek: obowiązki z art. 24 i 32 RODO wykonuje się przed incydentem. Po incydencie można już tylko ograniczać skutki i wykazywać, że wcześniej zrobiło się, co trzeba.
 
-## Co zrobić w pierwszej dobie
+## Co zrobić w pierwszej dobie?
 
 1. Zapisz moment i sposób, w jaki dowiedziałeś się o zdarzeniu. To od tego punktu będzie liczony termin i o to organ zapyta w pierwszej kolejności.
 2. Ogranicz skutki: odetnij dostęp, zmień hasła, wycofaj publikację, uruchom odtwarzanie z kopii.

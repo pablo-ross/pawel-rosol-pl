@@ -24,7 +24,7 @@ Tak powstał **CRU Monitor** - mały skrypt, który co jakiś czas sam przegląd
 > Repozytorium: [github.com/pablo-ross/centralny-rejestr-umow-monitor](https://github.com/pablo-ross/centralny-rejestr-umow-monitor)
 {: .prompt-info }
 
-## Co ten program właściwie robi
+## Co ten program właściwie robi?
 
 Pomysł jest banalnie prosty i sprowadza się do trzech kroków, które powtarzają się w kółko:
 
@@ -47,7 +47,7 @@ Gmina Przykładowa
 
 Nic wyszukanego. Dokładnie tyle, ile potrzeba, żeby zdecydować, czy warto zajrzeć głębiej.
 
-## Dlaczego akurat Telegram i CSV
+## Dlaczego akurat Telegram i CSV?
 
 Telegram wybrałem, bo postawienie bota zajmuje pięć minut i nie trzeba do tego żadnego serwera pocztowego ani zewnętrznej usługi. Piszesz do [@BotFather](https://t.me/BotFather), dostajesz token, i tyle. Powiadomienia lądują na telefonie od razu. Jeśli ktoś woli e-mail albo Slacka, podmiana tego fragmentu to kwestia jednego pliku. Wrócę do tego niżej.
 
@@ -63,7 +63,7 @@ Pisząc ten skrypt, wpadłem na kilka rzeczy, których nie było widać na pierw
 
 Jest jeszcze trzecia rzecz, o której warto pamiętać. To API jest nieoficjalne i nieudokumentowane, o czym pisałem w poprzednim wpisie. Jeśli więc pewnego dnia powiadomienia przestaną przychodzić, pierwsze podejrzenie powinno paść na to, że Ministerstwo coś w tym API zmieniło. Taki urok budowania na czymś, czego nikt oficjalnie nie obiecał.
 
-## Jak to uruchomić u siebie
+## Jak to uruchomić u siebie?
 
 Nie trzeba być programistą. Wystarczy umieć skopiować kilka poleceń do terminala i zmienić parę linijek w pliku konfiguracyjnym. Zakładam, że masz Pythona (wersja 3) i Gita.
 
@@ -128,7 +128,7 @@ Możesz to zrobić na dwa sposoby:
 
 Nie obiecuję, że przyklepię każdą propozycję, bo chcę, żeby to narzędzie zostało proste. Ale każde sensowne zgłoszenie przeczytam i na każde odpowiem.
 
-## Po co mi to wszystko jako IOD
+## Po co mi to wszystko jako IOD?
 
 Wracam do myśli z poprzedniego wpisu. Dane publiczne najbardziej cieszą wtedy, gdy można je pobrać jednym poleceniem, i jeszcze bardziej, gdy nie trzeba pobierać ich samemu. Podobnie [zautomatyzowałem sobie kiedyś monitoring decyzji UODO]({% post_url 2025-11-08-automatyzacja-monitoring-uodo %}). Zasada jest ta sama: nudną, powtarzalną robotę oddaj maszynie, a sobie zostaw myślenie.
 

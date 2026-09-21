@@ -11,7 +11,7 @@ Cześć, nazywam się **Paweł Rosół**. Pełnię funkcję **Inspektora Ochrony
 
 > Jeśli jesteś zainteresowana(-y) spotkaniem czy podjęciem współpracy, zapraszam do [kontaktu](/contact "Kontakt - IOD i pełnomocnik ds. cyberbezpieczeństwa").
 
-## Czym się zajmuję
+## Czym się zajmuję?
 
 - **Ochrona danych osobowych** - pełnię funkcję IOD w modelu outsourcingu: doradzam, monitoruję zgodność z RODO, prowadzę szkolenia i wspieram administratora przy naruszeniach. [Więcej o funkcji IOD](#inspektor-ochrony-danych-iod).
 - **Cyberbezpieczeństwo (KSC / NIS2)** - jako pełnomocnik ds. cyberbezpieczeństwa wspieram kierownictwo podmiotów kluczowych i ważnych we wdrożeniu i utrzymaniu systemu zarządzania bezpieczeństwem informacji. [Więcej o roli pełnomocnika](#pełnomocnik-ds-cyberbezpieczeństwa-ksc--nis2).
