@@ -8,6 +8,7 @@ tags:
   - Kanały zgłoszeń
   - Jednostki samorządu terytorialnego
 description: 'Obowiązek wdrożenia kanału zewnętrznego do obsługi sygnalistów wynika z implementacji Dyrektywy Parlamentu Europejskiego i Rady (UE) 2019/1937 z dnia 23 października 2019 r.'
+legal: true
 faq:
   - question: "Od kiedy obowiązuje wymóg posiadania kanału zewnętrznego dla sygnalistów?"
     answer: "Obowiązek posiadania kanału zewnętrznego do obsługi zgłoszeń sygnalistów obowiązuje od 25 grudnia 2024 r., zgodnie z ustawą o ochronie sygnalistów implementującą dyrektywę Parlamentu Europejskiego i Rady (UE) 2019/1937."

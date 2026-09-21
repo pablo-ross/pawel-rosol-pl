@@ -12,6 +12,7 @@ tags:
   - RODO
   - Naruszenie ochrony danych
 description: 'Decyzja Prezesa Urzędu Ochrony Danych Osobowych nr DKN.5131.9.2024 dotyczyła naruszenia przepisów RODO przez administratora danych w zakresie niezapewnienia odpowiednich środków technicznych i organizacyjnych'
+legal: true
 ---
 
 Decyzja Prezesa Urzędu Ochrony Danych Osobowych nr DKN.5131.9.2024 dotyczy naruszeń RODO przez pewien podmiot w zakresie ochrony danych osobowych, szczególnie w kontekście zarządzania ryzykiem i wdrażania odpowiednich środków bezpieczeństwa.

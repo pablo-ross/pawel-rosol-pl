@@ -8,6 +8,7 @@ tags:
   - Nauka zdalna
   - Bezpieczeństwo danych
 description: 'Czy można nagrywać lekcje online? Jak zadbać o bezpieczeństwo przetwarzania danych uczniów, ich rodziców i nauczycieli? Z jakich platform edukacyjnych korzystać? Które dostępne usługi są bezpieczne?'
+legal: true
 ---
 
 > **Wpis archiwalny (październik 2020 r.).** Relacja ze szkolenia UODO i MEN z okresu nauki zdalnej w czasie pandemii COVID-19. Zachowuję go jako zapis ówczesnego stanowiska organu; część wskazówek dotyczy realiów, które minęły.

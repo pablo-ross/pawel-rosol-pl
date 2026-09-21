@@ -8,6 +8,7 @@ tags:
   - Bezpieczeństwo poczty e-mail
   - Uwierzytelnianie dwuskładnikowe
 description: 'Bezpieczna poczta e-mail. Ryzyko naruszeń jest wysokie jeśli chodzi o obszar związany z nieuporządkowanym zbiorem informacji - a takim są skrzynki pocztowe.'
+legal: true
 ---
 
 > **Aktualizacja (wrzesień 2026 r.):** nowszy wpis, [Poczta e-mail jako źródło ryzyka dla danych osobowych]({% post_url 2026-06-16-ryzyko-danych-osobowych-poczta-email %}), omawia ten sam temat na tle konkretnej decyzji UODO (DKN.5131.34.2023) i zawiera aktualny przegląd zabezpieczeń.

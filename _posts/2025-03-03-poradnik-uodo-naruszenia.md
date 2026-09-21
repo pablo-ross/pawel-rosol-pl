@@ -11,6 +11,7 @@ tags:
   - Administrator danych
   - Dokumentacja RODO
 description: Urząd Ochrony Danych Osobowych opublikował zaktualizowaną wersję poradnika na temat naruszeń ochrony danych osobowych.
+legal: true
 faq:
   - question: "Czy samo wystąpienie naruszenia ochrony danych oznacza naruszenie RODO?"
     answer: "Nie. Zaktualizowany poradnik UODO wprost wskazuje, że samo wystąpienie naruszenia ochrony danych osobowych nie stanowi naruszenia przepisów RODO. Naruszeniem przepisów jest natomiast niewykonywanie lub nieprawidłowe wykonywanie obowiązków wynikających z rozporządzenia, np. brak odpowiednich zabezpieczeń czy niezgłoszenie incydentu."

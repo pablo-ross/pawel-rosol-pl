@@ -8,6 +8,7 @@ tags:
   - UODO
   - RODO
 description: "Podręcznik Inspektora Ochrony Danych to zbiór wytycznych dla IOD dotyczących sposobu zapewnienia zgodności z ogólnym rozporządzeniem o ochronie danych (RODO). Opracowany w ramach projektu T4DATA poradnik jest dostępny także w polskiej wersji językowej."
+legal: true
 ---
 
 Opublikowany na stronach Urzędu Ochrony Danych w dniu 23 grudnia 2019 r. "Podręcznik Inspektora Ochrony Danych" to zbiór wytycznych dla IOD dotyczących sposobu zapewnienia zgodności z ogólnym rozporządzeniem o ochronie danych (RODO). Opracowany w ramach projektu T4DATA poradnik jest dostępny także w polskiej wersji językowej.

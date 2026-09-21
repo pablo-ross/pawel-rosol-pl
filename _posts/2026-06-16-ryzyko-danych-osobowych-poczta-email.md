@@ -12,6 +12,7 @@ tags:
   - Bezpieczeństwo poczty e-mail
   - Kara administracyjna
 description: "Skrzynka e-mail to jeden z najpoważniejszych obszarów ryzyka dla danych osobowych. Analiza decyzji UODO (DKN.5131.34.2023), przykłady z innych krajów UE oraz aktualne metody ochrony poczty."
+legal: true
 faq:
   - question: "Jaką karę nałożył UODO w decyzji DKN.5131.34.2023 dotyczącej poczty e-mail?"
     answer: "UODO nałożył na przedsiębiorcę prowadzącego działalność rachunkowo-księgową karę w wysokości 11 594 zł (ok. 2 760 euro) za brak analizy ryzyka dla poczty elektronicznej, brak adekwatnych zabezpieczeń technicznych i organizacyjnych oraz brak testowania i przeglądu tych zabezpieczeń, po tym jak nieuprawniony podmiot przejął konto e-mail pracownika z danymi klientów."

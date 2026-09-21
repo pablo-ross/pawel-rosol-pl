@@ -9,6 +9,7 @@ tags:
   - RODO
   - Dokumentacja RODO
 description: "Czy elektroniczną postać upoważnienia do przetwarzania danych osobowych można interpretować jako formę pisemną, a tym samym spełniającą dyspozycje przepisów prawa, odnoszących się do konieczności wydawania „pisemnych upoważnień do przetwarzania danych osobowych”, wynikających z ustawy z dnia 21 lutego 2019 r. o zmianie niektórych ustaw w związku z zapewnieniem stosowania RODO?"
+legal: true
 ---
 
 Na stronach Urzędu Ochrony Danych Osobowych (UODO) pojawiła się oficjalna odpowiedź na tak postawione pytanie:

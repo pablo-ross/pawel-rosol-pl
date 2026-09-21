@@ -10,6 +10,7 @@ tags:
   - RODO
   - Administrator danych
 description: Urząd Ochrony Danych Osobowych (UODO) nałożył rekordowe kary za naruszenie przepisów o ochronie danych osobowych w związku z nieudaną próbą przeprowadzenia tzw. wyborów kopertowych w 2020 roku.
+legal: true
 faq:
   - question: "Jakie kary nałożył UODO w sprawie tzw. wyborów kopertowych?"
     answer: "UODO nałożył 27 milionów złotych kary na Pocztę Polską oraz 100 tysięcy złotych (maksymalna kwota dla podmiotów sektora publicznego) na ministra cyfryzacji, za bezprawne udostępnienie i przetwarzanie danych osobowych ok. 30 milionów obywateli z rejestru PESEL na potrzeby nieprzeprowadzonych ostatecznie wyborów korespondencyjnych w 2020 roku."

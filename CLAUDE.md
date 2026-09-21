@@ -78,7 +78,13 @@ description: "SEO description"
 ---
 ```
 
-Optional fields: `image`, `pin: true` (pin to home), `toc: false` (disable TOC), `faq:` (a list of `question:`/`answer:` pairs — rendered by `_includes/post-faq.html` and emitted as `FAQPage` JSON-LD).
+Optional fields:
+
+- `image`, `pin: true` (pin to home), `toc: false` (disable TOC)
+- `faq:` — a list of `question:`/`answer:` pairs, rendered by `_includes/post-faq.html` and emitted as `FAQPage` JSON-LD
+- `legal: true` — the post makes claims about the law, so it carries a *Stan prawny* stamp
+- `legal_status_date: YYYY-MM-DD` — **the day the author last checked this post against the law as it stands.** Nothing sets it automatically and nothing may set it on the author's behalf. Without it, a `legal: true` post shows its publication date plus an explicit "nie był weryfikowany" warning, which is the honest output for a 2020 post about law that has since changed. Stamping a review that did not happen is worse than showing none.
+- `post_footer: false` — suppress the author box and *Stan prawny* stamp on this post
 
 `_tabs/*.md` additionally carry `seo: type:` (`ProfilePage`, `ContactPage`, `CollectionPage`). Without it jekyll-seo-tag types them `BlogPosting` with the build time as `datePublished`.
 
@@ -124,6 +130,7 @@ Rules when editing it:
 ### Plugins
 
 - `_plugins/posts-lastmod-hook.rb` — sets `last_modified_at` on posts with more than one git commit, using `git log`.
+- `_plugins/post-footer-hook.rb` — appends `{% include legal-status.html %}` and `{% include author-box.html %}` to every post. It writes to `doc.content` in `:pre_render`, before Liquid and Markdown run, so the output lands inside the post's `.content` element; appending to `doc.output` would place it after the page footer. One include rather than a block pasted into 31 files.
 - `_plugins/strip-seo-tag-jsonld.rb` — removes the thin JSON-LD that jekyll-seo-tag emits, so `metadata-hook.html` is the only source. It matches the gem's *minified* output (`{"@context":"https://schema.org"`); `metadata-hook.html` pretty-prints with a space after each colon, which is what keeps the two apart. Everything else seo-tag produces (`<title>`, canonical, Open Graph, Twitter cards) is untouched. If a gem upgrade changes the formatting, `check-jsonld.rb` fails the build on the duplicate `BlogPosting`.
 
 ### Theme

@@ -11,6 +11,7 @@ tags:
   - RODO
   - Bezpieczeństwo danych
 description: Prezes UODO nałożył na McDonald's Polska rekordową karę pieniężną w wysokości niemal 17 milionów złotych za szereg naruszeń przepisów o ochronie danych osobowych.
+legal: true
 faq:
   - question: "Jaką karę nałożył UODO na McDonald's Polska i za co?"
     answer: "UODO nałożył na McDonald's Polska karę niemal 17 milionów złotych (druga najwyższa w historii polskiego organu nadzorczego) za wyciek danych osobowych pracowników i franczyzobiorców, do którego doszło w lipcu 2020 r. przez błędną konfigurację serwera podmiotu przetwarzającego. Wyciekły m.in. numery PESEL, numery paszportów i grafiki pracy."

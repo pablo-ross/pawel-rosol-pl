@@ -15,6 +15,7 @@ tags:
   - Jednostki samorządu terytorialnego
   - NIS2
 description: Atak ransomware w urzędzie, wyciek danych osobowych, awaria systemu IT - każdy taki incydent rodzi pytania ze strony mediów, obywateli i organizacji pozarządowych. Czy podmiot publiczny może odmówić udostępnienia dokumentów związanych z naruszeniem?
+legal: true
 faq:
   - question: "Czy urząd musi udostępnić dokumentację dotyczącą incydentu cyberbezpieczeństwa na wniosek o informację publiczną?"
     answer: "Zależy od rodzaju informacji. Fakty - data incydentu, ogólna kategoria naruszenia, zagregowana liczba dotkniętych osób, fakt zgłoszenia do UODO czy CERT Polska - podlegają udostępnieniu bez ograniczeń. Dokumenty techniczne, takie jak pełna dokumentacja SZBI, protokoły audytów bezpieczeństwa czy szczegółowe DPIA, podlegają całkowitej odmowie na podstawie art. 37 ust. 1 ustawy o krajowym systemie cyberbezpieczeństwa."

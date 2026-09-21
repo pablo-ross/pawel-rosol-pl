@@ -14,6 +14,7 @@ tags:
   - Naruszenie ochrony danych
   - KSC
 description: 'W ostatnich dniach Miejskie Przedsiębiorstwo Komunikacyjne w Krakowie (MPK Kraków) padło ofiarą zaawansowanego ataku hakerskiego, który został przypisany międzynarodowej grupie cyberprzestępczej.'
+legal: true
 faq:
   - question: "Co się stało podczas ataku hakerskiego na MPK Kraków w grudniu 2024 roku?"
     answer: "3 grudnia 2024 r. MPK Kraków padło ofiarą zaawansowanego ataku hakerskiego przypisanego międzynarodowej grupie cyberprzestępczej, który zakłócił działanie systemów sprzedaży biletów, strony internetowej i innych usług. Mimo trudności operacyjnych usługi przewozowe działały bez większych zakłóceń dzięki procedurom awaryjnym."

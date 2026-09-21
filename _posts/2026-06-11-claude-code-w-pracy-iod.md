@@ -11,6 +11,7 @@ tags:
   - RODO
   - IOD
 description: Lokalne modele językowe sprawdzają się w prostych zadaniach IOD, ale przy analizie umów powierzenia czy ocenie naruszeń modele frontierowe są o klasę lepsze. Problem w tym, że działają w chmurze. Opisuję, jak połączyłem własny CRM z warstwą anonimizacji i Claude Code, dzięki czemu korzystam z najlepszego dostępnego AI, a dane osobowe moich klientów nie opuszczają mojej infrastruktury.
+legal: true
 faq:
   - question: "Jak autor korzysta z Claude Code, nie wysyłając danych osobowych klientów do chmury?"
     answer: "Autor zbudował endpoint eksportu we własnym CRM, który przed wysłaniem dokumentu do Claude Code automatycznie anonimizuje treść: zamienia imiona i nazwiska na tokeny, usuwa numery PESEL i dokumentów, uogólnia adresy, a nazwy kontrahentów i e-maile zastępuje identyfikatorami. Słownik podmian pozostaje wyłącznie w bazie CRM na własnym serwerze, a wynik z modelu jest lokalnie podstawiany z powrotem na prawdziwe dane."

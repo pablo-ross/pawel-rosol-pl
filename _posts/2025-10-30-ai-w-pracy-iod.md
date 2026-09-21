@@ -11,6 +11,7 @@ tags:
   - RODO
   - Automatyzacja
 description: Inspektor Ochrony Danych stoi przed unikalnym wyzwaniem - z jednej strony musi zapewnić najwyższą ochronę danych osobowych w organizacji, z drugiej – efektywnie zarządzać coraz większą liczbą zadań i obowiązków. Sztuczna inteligencja, a konkretnie duże modele językowe (LLM), mogą znacząco usprawnić codzienną pracę IOD, ale tylko pod warunkiem, że będą wykorzystywane w sposób zgodny z RODO i zasadami bezpieczeństwa danych.
+legal: true
 faq:
   - question: "Dlaczego komercyjne narzędzia AI takie jak ChatGPT czy Claude są ryzykowne dla IOD?"
     answer: "Zapytania trafiają na serwery firm trzecich, co oznacza utratę kontroli nad danymi, ryzyko naruszenia umów powierzenia, potencjalny niedozwolony transfer danych do krajów spoza EOG oraz brak pewności, czy dostawca nie wykorzysta i nie zachowa treści zapytań. Dla IOD, który przetwarza dane osobowe klientów jako podmiot przetwarzający, to bezpośrednie ryzyko niezgodności z RODO."

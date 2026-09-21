@@ -1,0 +1,22 @@
+{%- comment -%}
+  Stan prawny stamp. Three states, opt-in:
+
+    legal_status_date: 2026-09-21   -> "sprawdzony: 21.09.2026"
+    legal: true (and no date)       -> publication date + an explicit warning
+    neither                         -> nothing rendered
+
+  `legal_status_date` is the day the AUTHOR last checked the post against the
+  law as it stands. It is not the build date and not the publication date, and
+  nothing sets it automatically: stamping a review that did not happen is worse
+  than showing none, especially on posts from 2019-2021 covering law that has
+  since changed. Set it by hand when the review is actually done.
+{%- endcomment -%}
+{%- if page.legal_status_date -%}
+<p class="legal-status">
+  Stan prawny sprawdzony: <time datetime="{{ page.legal_status_date | date_to_xmlschema }}">{{ page.legal_status_date | date: '%d.%m.%Y' }}</time>.
+</p>
+{%- elsif page.legal -%}
+<p class="legal-status legal-status-unreviewed">
+  Stan prawny na dzień publikacji: <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%d.%m.%Y' }}</time>. Wpis nie był od tego czasu weryfikowany pod kątem zmian w przepisach.
+</p>
+{%- endif -%}

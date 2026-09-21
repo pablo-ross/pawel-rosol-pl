@@ -14,6 +14,7 @@ tags:
   - Jednostki samorządu terytorialnego
   - COVID-19
 description: "Ośrodek pomocy społecznej trafił do kar UODO, bo plik z danymi osób objętych kwarantanną COVID-19 zaindeksowała wyszukiwarka. Analiza decyzji DKN.5131.27.2023 i praktyczne wnioski dla administratorów."
+legal: true
 faq:
   - question: "Jakie kary nałożył UODO w decyzji DKN.5131.27.2023?"
     answer: "UODO nałożył trzy kary na ośrodek pomocy społecznej: 15 000 zł za brak odpowiednich środków bezpieczeństwa (naruszenie art. 5, 25 i 32 RODO), 5 500 zł za niezgłoszenie naruszenia organowi nadzorczemu w ciągu 72 godzin (art. 33 ust. 1) oraz 13 200 zł za niezawiadomienie osób, których dane dotyczą (art. 34 ust. 1). Łącznie kary wyniosły 33 700 zł."

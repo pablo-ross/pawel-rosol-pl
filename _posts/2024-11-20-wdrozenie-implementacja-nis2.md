@@ -11,6 +11,7 @@ tags:
   - Infrastruktura krytyczna
   - KSC
 description: 'Potrzeba implementacji NIS2 w przedsiębiorstwie w kontekście zagrożeń związanych z cyberbezpieczeństwem i ochroną danych.'
+legal: true
 ---
 
 ## Potrzeba implementacji NIS2 w przedsiębiorstwie w kontekście zagrożeń związanych z cyberbezpieczeństwem i ochroną danych

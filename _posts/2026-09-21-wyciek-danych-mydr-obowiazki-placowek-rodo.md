@@ -13,6 +13,7 @@ tags:
   - Cyberbezpieczeństwo
   - RODO
 description: "Wyciek z systemu MyDr objął dane nawet 18,8 mln osób i ponad 12 tysięcy placówek. Kto odpowiada za naruszenie, jakie obowiązki ma przychodnia i czym to grozi w świetle RODO."
+legal: true
 faq:
   - question: "Kto odpowiada za wyciek danych z systemu MyDr - dostawca czy przychodnia?"
     answer: "Administratorem danych pacjenta jest placówka medyczna albo lekarz prowadzący praktykę, a MyDr jest podmiotem przetwarzającym, któremu powierzono dane. To administrator zgłasza naruszenie do UODO, zawiadamia pacjentów i odpowiada wobec nich za skutki. Powierzenie przetwarzania nie przenosi odpowiedzialności na dostawcę oprogramowania, choć procesor odpowiada za własne uchybienia z art. 32 RODO i może zostać ukarany osobno."

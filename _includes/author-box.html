@@ -1,0 +1,26 @@
+{%- comment -%}
+  Author box appended to every post by _plugins/post-footer-hook.rb, so it
+  lives in one place rather than being pasted into 31 files. Styled in
+  assets/css/jekyll-theme-chirpy.scss.
+
+  Keep the wording in step with _tabs/about.md and the Person node in
+  metadata-hook.html — both roles, no claim that is not on /about/.
+{%- endcomment -%}
+<aside class="author-box">
+  {%- comment -%}
+    The <a> wrapper is deliberate: Chirpy's refactor-content.html otherwise
+    wraps a bare <img> in a lightbox popup link, which is wrong for an avatar.
+    It also supplies loading="lazy" itself, so this tag must not.
+  {%- endcomment -%}
+  <a href="{{ '/about/' | relative_url }}"><img class="author-box-avatar" src="{{ site.avatar | relative_url }}" alt="Paweł Rosół" width="72" height="72"></a>
+  <div class="author-box-text">
+    <p class="author-box-name">{{ site.social.name }}</p>
+    <p>
+      Inspektor Ochrony Danych (IOD/DPO) i pełnomocnik ds. cyberbezpieczeństwa,
+      auditor wiodący ISO/IEC 27001. Pracuję z jednostkami sektora publicznego,
+      spółkami komunalnymi, placówkami oświatowymi oraz małymi i średnimi firmami.
+      <a href="{{ '/about/' | relative_url }}">Więcej o mnie</a> ·
+      <a href="{{ '/contact/' | relative_url }}">Kontakt</a>
+    </p>
+  </div>
+</aside>

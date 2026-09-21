@@ -7,6 +7,7 @@ tags:
   - Administrator danych
   - Oświata
 description: "Jednym z częściej występujących dylematów w pracy Inspektora Ochrony Danych (IOD) jest problem określenia, kto w danej czynności jest Administratorem Danych Osobowych (ADO) a kto podmiotem przetwarzającym powierzone dane osobowe (Procesor). Ma to zasadnicze znaczenie w określeniu kto może wydawać upoważnienia do przetwarzania, czy niezbędne jest zawarcie umowy powierzenia przetwarzania danych osobowych, i w całym szeregu innych obowiązków wynikających z RODO."
+legal: true
 ---
 
 Jednym z częściej występujących dylematów w pracy Inspektora Ochrony Danych (IOD) jest problem określenia, kto w danej czynności jest Administratorem Danych Osobowych (ADO) a kto podmiotem przetwarzającym powierzone dane osobowe (Procesor). Ma to zasadnicze znaczenie w określeniu kto może wydawać [upoważnienia do przetwarzania]({% post_url 2019-11-29-upowaznienia-elektroniczne %}), czy niezbędne jest zawarcie umowy powierzenia przetwarzania danych osobowych, i w całym szeregu innych obowiązków wynikających z RODO. Jak wysoką cenę potrafi mieć błąd w tym drugim obszarze, pokazuje [decyzja UODO wobec McDonald's Polska]({% post_url 2025-07-28-kara-mcdonalds %}).

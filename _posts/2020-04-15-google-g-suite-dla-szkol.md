@@ -8,6 +8,7 @@ tags:
   - RODO
   - Nauka zdalna
 description: Ze względu na światową pandemię zakaźnej choroby COVID-19 wywoływanej przez koronawirusa SARS-CoV-2 wprowadzono w wielu krajach różnego rodzaju środki bezpieczeństwa. Jednym z nich jest okresowe zamknięcie szkół i wprowadzenie obowiązku nauki zdalnej z wykorzystaniem narzędzi online.
+legal: true
 ---
 
 > **Wpis archiwalny (kwiecień 2020 r.).** Powstał w pierwszych tygodniach nauki zdalnej i opisuje G Suite dla Szkół w ówczesnej postaci; usługa nazywa się dziś Google Workspace for Education, a jej ustawienia i nazewnictwo od tego czasu się zmieniły. Zasady ochrony danych opisane niżej pozostają aktualne, konkretne kroki konfiguracyjne należy zweryfikować u dostawcy.
