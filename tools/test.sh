@@ -64,6 +64,9 @@ main() {
   bundle exec htmlproofer "$SITE_DIR" \
     --disable-external \
     --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+
+  # structured data — html-proofer does not look inside JSON-LD
+  ruby tools/check-jsonld.rb "$SITE_DIR"
 }
 
 while (($#)); do
