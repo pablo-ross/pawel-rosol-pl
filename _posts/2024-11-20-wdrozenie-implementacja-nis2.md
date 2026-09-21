@@ -1,68 +1,108 @@
 ---
-title: 'Ustawa o KSC po wdrożeniu NIS2 - obowiązki podmiotu kluczowego i ważnego'
+title: 'Ustawa o KSC w przedsiębiorstwie wodociągowo-kanalizacyjnym - obowiązki, terminy i wnioski z ataków na OT'
 date: '2024-11-20T11:22:22.22Z'
 categories:
   - Bezpieczeństwo
 tags:
-  - NIS2
   - KSC
+  - NIS2
   - Cyberbezpieczeństwo
+  - Wodociągi
   - Analiza ryzyka
   - Incydent bezpieczeństwa
   - Infrastruktura krytyczna
-description: 'Dyrektywę NIS2 wdrożyła w Polsce nowelizacja ustawy o KSC (Dz.U. 2026 poz. 252). Kto jest podmiotem kluczowym, a kto ważnym, do kiedy trzeba złożyć wniosek o wpis do wykazu, jakie są terminy zgłoszenia incydentu do CSIRT i kto za to wszystko odpowiada.'
+description: 'Po serii ataków na stacje uzdatniania wody i oczyszczalnie ścieków Pełnomocnik Rządu ds. Cyberbezpieczeństwa zalecił odseparowanie systemów OT od internetu. Co z ustawy o KSC wynika dla spółki wod-kan: wykaz, reżim pełny czy uproszczony, dwie oceny ryzyka, terminy zgłoszenia incydentu i kto za to odpowiada.'
 legal: true
 faq:
-  - question: "Czy dyrektywa NIS2 obowiązuje w Polsce bezpośrednio?"
-    answer: "Nie. Dyrektywa wiąże państwo członkowskie co do celu, a obowiązki podmiotu wynikają z przepisów krajowych. W Polsce wdrożyła ją ustawa z 23 stycznia 2026 r. o zmianie ustawy o krajowym systemie cyberbezpieczeństwa oraz niektórych innych ustaw (Dz.U. 2026 poz. 252), obowiązująca od 3 kwietnia 2026 r. To do ustawy o KSC, a nie do dyrektywy, sięga się przy ustalaniu własnych obowiązków."
+  - question: "Czy przedsiębiorstwo wodociągowo-kanalizacyjne podlega ustawie o KSC?"
+    answer: "Sektor zaopatrzenia w wodę pitną i jej dystrybucji oraz sektor ścieków są objęte ustawą, ale samo działanie w sektorze nie przesądza sprawy. O statusie podmiotu kluczowego albo ważnego decydują dodatkowo rodzaj świadczonej usługi oraz wielkość podmiotu. Kwalifikację przeprowadza i dokumentuje sam podmiot; nikt nie nadaje tego statusu z urzędu."
   - question: "Do kiedy trzeba złożyć wniosek o wpis do wykazu podmiotów kluczowych i ważnych?"
-    answer: "Do 3 października 2026 r. Samorejestracja ruszyła 7 maja 2026 r., a wykaz jest aplikacją działającą w ramach Systemu S46. Obowiązek dotyczy podmiotów, które same ustaliły, że spełniają kryteria uznania za podmiot kluczowy albo ważny - ustawa nie przewiduje tu wezwania z urzędu."
-  - question: "Jakie są terminy zgłoszenia incydentu do CSIRT?"
-    answer: "Trzy, liczone od wykrycia incydentu poważnego: wczesne ostrzeżenie w ciągu 24 godzin, właściwe zgłoszenie w ciągu 72 godzin oraz sprawozdanie końcowe w ciągu miesiąca. Są niezależne od 72-godzinnego terminu zgłoszenia naruszenia ochrony danych osobowych do UODO; jedno zdarzenie może uruchomić oba tryby naraz."
-  - question: "Czy pełnomocnik ds. cyberbezpieczeństwa jest funkcją wymaganą przez ustawę?"
-    answer: "Nie. Ustawa nie przewiduje takiej funkcji; to przyjęta w praktyce nazwa roli koordynującej wykonywanie obowiązków. Art. 14 pozwala realizować zadania z zakresu cyberbezpieczeństwa przez wewnętrzne struktury albo na podstawie umowy z podmiotem zewnętrznym. Odpowiedzialność i tak pozostaje przy kierowniku podmiotu (art. 8c ust. 3)."
-  - question: "Czy wdrożenie RODO wystarczy, żeby spełnić wymagania ustawy o KSC?"
-    answer: "Nie, choć oba systemy mocno się pokrywają. RODO chroni osoby fizyczne w związku z przetwarzaniem ich danych, ustawa o KSC chroni ciągłość i bezpieczeństwo świadczonej usługi. Analiza ryzyka, zarządzanie dostępem, kopie zapasowe czy ocena dostawców robią robotę dla obu reżimów, ale zakres podmiotowy, terminy zgłoszeń i organy są różne."
+    answer: "Do 3 października 2026 r. Samorejestracja ruszyła 7 maja 2026 r., a wykaz jest aplikacją działającą w ramach Systemu S46. Jeżeli spółka zawarła umowę z dostawcą usług zarządzanych w zakresie cyberbezpieczeństwa, informację o tym ujawnia się w wykazie i aktualizuje wpis w terminie wynikającym z art. 7c uksc."
+  - question: "Czy rekomendacje Pełnomocnika Rządu ds. Cyberbezpieczeństwa są obowiązkowe?"
+    answer: "Nie, zostały wydane jako zalecenie, a nie akt prawa powszechnie obowiązującego. W praktyce i tak trudno je pominąć: ustawa o KSC wymaga środków adekwatnych do ryzyka, a od sierpnia 2026 r. istnieje publiczny, sektorowy dokument opisujący to ryzyko i sposób jego ograniczenia. Odstępstwo od zalecenia wymaga uzasadnienia w analizie ryzyka, a nie przemilczenia."
+  - question: "Czy ocena ryzyka z ustawy o KSC to to samo co ocena ryzyka z ustawy wodociągowej?"
+    answer: "Nie. Szacowanie ryzyka z ustawy o KSC dotyczy bezpieczeństwa systemów informacyjnych wykorzystywanych do świadczenia usługi. Ocena ryzyka z art. 4e ustawy o zbiorowym zaopatrzeniu w wodę dotyczy obszaru zasilania ujęć wody przeznaczonej do spożycia i jest przeglądana w odstępach wynikających z tej oceny, nie rzadszych niż co 6 lat. To dwa odrębne obowiązki o różnych przedmiotach, choć w spółce wod-kan powinny się widzieć nawzajem."
+  - question: "Jakie są terminy zgłoszenia incydentu poważnego do CSIRT?"
+    answer: "Trzy, liczone od wykrycia: wczesne ostrzeżenie w ciągu 24 godzin, zgłoszenie w ciągu 72 godzin i sprawozdanie końcowe w ciągu miesiąca. Zakres stosowania tych obowiązków zależy od podstawy wpisu podmiotu do wykazu. Biegną niezależnie od 72-godzinnego terminu zgłoszenia naruszenia ochrony danych osobowych do UODO."
+  - question: "Czy można zlecić obowiązki z ustawy o KSC firmie zewnętrznej?"
+    answer: "Zadania można realizować przez wewnętrzne struktury albo na podstawie umowy z podmiotem zewnętrznym (art. 14 uksc). Odpowiedzialność za ich wykonanie pozostaje przy kierowniku podmiotu również wtedy, gdy obowiązki powierzono innej osobie (art. 8c ust. 3 uksc). Umowa przenosi pracę, nie odpowiedzialność."
 ---
 
-> **W skrócie:** dyrektywy NIS2 nie stosuje się bezpośrednio. W Polsce wdrożyła ją nowelizacja ustawy o krajowym systemie cyberbezpieczeństwa (Dz.U. 2026 poz. 252), obowiązująca od 3 kwietnia 2026 r. Jeżeli organizacja działa w objętym ustawą sektorze i spełnia kryteria podmiotu kluczowego albo ważnego, sama ustala swój status i składa wniosek o wpis do wykazu **do 3 października 2026 r.** Incydent poważny zgłasza się do właściwego CSIRT w trzech krokach: 24 godziny, 72 godziny, miesiąc. Odpowiedzialność za całość spoczywa na kierowniku podmiotu i nie da się jej scedować umową.
+> **W skrócie:** w 2025 r. doszło do serii ataków na stacje uzdatniania wody i oczyszczalnie ścieków w Polsce, a NIK w sierpniu 2026 r. ocenił dotychczasowe zabezpieczenia operatorów jako niewystarczające. Pełnomocnik Rządu ds. Cyberbezpieczeństwa zalecił sektorowi wod-kan przede wszystkim odseparowanie urządzeń OT od internetu. Zalecenia nie są wiążące, ale ustawa o KSC wymaga środków adekwatnych do ryzyka, więc od ich publikacji milczenie w analizie ryzyka przestało być bezpieczną opcją. Jeżeli spółka jest podmiotem kluczowym albo ważnym, wniosek o wpis do wykazu składa się **do 3 października 2026 r.**
 {: .prompt-info }
 
-Wpis powstał w listopadzie 2024 r., gdy obowiązywała sama dyrektywa, a Polska nie miała jeszcze przepisów wdrażających. Został napisany na nowo we wrześniu 2026 r. na podstawie ustawy w brzmieniu obowiązującym.
+Wpis powstał w listopadzie 2024 r. i dotyczył samej dyrektywy NIS2. Napisałem go na nowo we wrześniu 2026 r., po wdrożeniu dyrektywy do prawa polskiego i po serii ataków na infrastrukturę wodociągową, zawężając temat do sektora, w którym te dwa wątki spotykają się najostrzej.
 
-Podstawa prawna: [ustawa z 5 lipca 2018 r. o krajowym systemie cyberbezpieczeństwa](https://eli.gov.pl/eli/DU/2018/1560/ogl) w brzmieniu nadanym [ustawą z 23 stycznia 2026 r.](https://eli.gov.pl/eli/DU/2026/252/ogl) (Dz.U. 2026 poz. 252, ogłoszona 2 marca 2026 r., obowiązująca od 3 kwietnia 2026 r.), która wdraża [dyrektywę (UE) 2022/2555](https://eur-lex.europa.eu/eli/dir/2022/2555/oj).
+Podstawa prawna: [ustawa z 5 lipca 2018 r. o krajowym systemie cyberbezpieczeństwa](https://eli.gov.pl/eli/DU/2018/1560/ogl) (dalej „uksc"; tekst jednolity ogłoszony [obwieszczeniem Marszałka Sejmu z 29 grudnia 2025 r.](https://eli.gov.pl/eli/DU/2026/20/ogl), Dz.U. 2026 poz. 20, ze zmianami), znowelizowana [ustawą z 23 stycznia 2026 r.](https://eli.gov.pl/eli/DU/2026/252/ogl) (Dz.U. 2026 poz. 252, obowiązującą od 3 kwietnia 2026 r.), która wdraża [dyrektywę (UE) 2022/2555](https://eur-lex.europa.eu/eli/dir/2022/2555/oj).
 
-## Czy ustawa w ogóle dotyczy mojej organizacji?
+## Co się wydarzyło w wodociągach?
 
-To pierwsze pytanie i jedyne, od którego można zacząć. Ustawa posługuje się dwiema kategoriami: **podmiot kluczowy** i **podmiot ważny**. O przypisaniu decyduje sektor, w którym organizacja działa, rodzaj świadczonej usługi oraz wielkość mierzona liczbą zatrudnionych i danymi finansowymi.
+W 2025 r. celem ataków były kolejno stacje uzdatniania wody w Tolkmicku, Małdytach i Sierakowie (luty), oczyszczalnia ścieków w Witkowie (maj), stacja uzdatniania w Jabłonnej Lackiej (wrzesień) i oczyszczalnia w Chodaczowie (październik). Pełnomocnik Rządu ds. Cyberbezpieczeństwa Krzysztof Gawkowski podał w marcu 2026 r., że w sektorze wodno-kanalizacyjnym odnotowano w poprzednim roku 94 cyberataki, czyli blisko dwa razy więcej niż rok wcześniej.
 
-Dwie rzeczy zaskakują najczęściej.
+W sierpniu 2026 r. Najwyższa Izba Kontroli opublikowała raport z kontroli operatorów usług kluczowych dostarczających między innymi wodę pitną. Wniosek za lata 2021-2025 brzmiał, że stosowane środki cyberbezpieczeństwa „były niewystarczające i nieadekwatne do obecnego charakteru zagrożeń oraz ich skali".
 
-Po pierwsze, zakres podmiotowy jest znacznie szerszy niż w poprzednim stanie prawnym. Obok energetyki, transportu czy ochrony zdrowia znalazły się w nim między innymi gospodarka odpadami, produkcja, usługi pocztowe i kurierskie, a także znaczna część administracji publicznej i spółek komunalnych. Organizacja, która nigdy nie uważała się za część „infrastruktury krytycznej", może dziś być podmiotem ważnym.
+Uderza w tym jedno. To nie były ataki na wyrafinowane systemy sterowania przez łańcuch dostaw, tylko w znacznej części sięganie po panele sterownicze wystawione wprost do internetu, często z domyślnymi hasłami. Trudno o lepszą ilustrację tego, że rozdźwięk między dokumentacją a rzeczywistością jest w tym sektorze realnym ryzykiem sanitarnym, a nie problemem formalnym.
 
-Po drugie, nikt tego statusu nie nadaje z urzędu. Ustalenie własnej kwalifikacji jest obowiązkiem podmiotu, a wynik tego ustalenia trzeba udokumentować także wtedy, gdy wychodzi negatywny. Notatka z uzasadnieniem, dlaczego organizacja nie spełnia kryteriów, jest tanim zabezpieczeniem na wypadek pytania organu.
+## Co dokładnie zalecił Pełnomocnik Rządu?
 
-## Do kiedy trzeba się wpisać do wykazu?
+We wrześniu 2026 r. Pełnomocnik Rządu ds. Cyberbezpieczeństwa, wspólnie z Ministerstwem Cyfryzacji i CSIRT Infrastruktura, skierował do podmiotów krajowego systemu cyberbezpieczeństwa z sektora wodno-kanalizacyjnego zestaw zaleceń. W skrócie:
 
-Wykaz podmiotów kluczowych i podmiotów ważnych działa jako aplikacja w ramach Systemu S46. Samorejestracja ruszyła **7 maja 2026 r.**, a termin złożenia wniosku upływa **3 października 2026 r.** Szczegóły procedury opisuje Ministerstwo Cyfryzacji w komunikacie o [uruchomieniu samorejestracji w wykazie](https://samorzad.gov.pl/web/gov/nowelizacja-ustawy-o-krajowym-systemie-cyberbezpieczenstwa-ksc---uruchamiamy-samorejestracje-w-wykazie-podmiotow-kluczowych-i-podmiotow-waznych-sprawdz-jak-dokonac-wpisu).
+1. odseparowanie od internetu urządzeń OT (*Operational Technology*),
+2. wydzielenie sieci OT od sieci korporacyjnej,
+3. zabezpieczenie zdalnego dostępu szyfrowanymi kanałami komunikacji,
+4. stosowanie uwierzytelniania wieloskładnikowego i zarządzania uprawnieniami pracowników,
+5. bieżące aktualizacje oprogramowania systemów OT,
+6. stosowanie mechanizmów audytu, w tym monitorowanie zdarzeń bezpieczeństwa.
 
-Przy wpisie podaje się też osoby do kontaktu. Warto potraktować to poważnie: to na ten adres przyjdzie korespondencja od organu właściwego i to ta osoba będzie w praktyce uruchamiać procedurę zgłoszenia incydentu.
+Całość ma być objęta systemem zarządzania bezpieczeństwem informacji. Uzasadnienie pierwszego punktu jest sformułowane wprost: „bezpośrednia dostępność systemów OT i ich paneli administracyjnych z sieci Internet zwiększa ryzyko nieuprawnionego dostępu".
 
-## Co trzeba mieć wdrożone?
+## Skoro zalecenia nie są wiążące, to po co je czytać?
 
-Ustawa nie wylicza konkretnych produktów ani technologii. Wymaga systemu zarządzania bezpieczeństwem informacji, w którym środki są dobrane do ryzyka i regularnie sprawdzane. W praktyce sprowadza się to do kilku elementów, które muszą istnieć w dokumentacji i w rzeczywistości jednocześnie.
+Bo brak obowiązku stosowania konkretnego środka nie oznacza braku obowiązku uzasadnienia, dlaczego się go nie stosuje.
 
-Inwentaryzacja aktywów oraz mapa świadczonej usługi. Bez wiedzy, co składa się na usługę i od czego zależy jej ciągłość, analiza ryzyka jest zgadywaniem.
+Ustawa o KSC nie wymienia produktów ani konfiguracji. Wymaga systemu zarządzania bezpieczeństwem informacji, w którym środki są dobrane do ryzyka i sprawdzane. Dopóki nie istniał publiczny dokument sektorowy opisujący konkretne ryzyko, spór o adekwatność środków był sporem o oceny. Od września 2026 r. istnieje taki dokument, opracowany przez organ, po serii incydentów opisanych z nazwy i po krytycznym raporcie NIK.
 
-Metodyka i przeprowadzona analiza ryzyka wraz z planem postępowania z ryzykiem. To ten sam mechanizm, którego brak UODO wytyka administratorom w decyzjach na gruncie RODO, na przykład w [sprawie niezaszyfrowanego laptopa]({% post_url 2024-11-13-decyzja-uodo %}).
+Praktycznie oznacza to, że w analizie ryzyka spółki wod-kan powinien znaleźć się ślad po tych zaleceniach: albo wdrożenie, albo opis środka równoważnego wraz z uzasadnieniem, dlaczego daje porównywalny poziom bezpieczeństwa. Pominięcie milczeniem jest najgorszym z trzech wyjść, bo w razie kontroli albo incydentu nie da się go obronić.
 
-Polityki i procedury, które opisują to, co organizacja faktycznie robi. Dokument opisujący stan pożądany, a nie rzeczywisty, jest gorszy od jego braku, bo tworzy pozór zgodności.
+Zdaję sobie sprawę, że punkt pierwszy bywa w praktyce najtrudniejszy. Odcięcie OT od internetu w spółce, która przez ten sam kanał serwisuje przepompownie w kilkunastu miejscowościach, nie jest zmianą konfiguracji na jedno popołudnie. Ale to jest właśnie ta rozmowa, którą trzeba odbyć z dostawcą automatyki i zapisać jej wynik, zamiast odkładać ją do następnego audytu.
 
-Bezpieczeństwo łańcucha dostaw: ocena dostawców ICT i odpowiednie zapisy umowne. Tu ustawa i RODO spotykają się najwyraźniej, bo ten sam dostawca bywa jednocześnie podmiotem przetwarzającym dane osobowe.
+## Czy moja spółka w ogóle podlega ustawie?
 
-Plany ciągłości działania i odtwarzania, wraz z testami odtworzenia kopii zapasowych. Kopia, której nigdy nie odtwarzano, jest założeniem, nie zabezpieczeniem.
+Sektor zaopatrzenia w wodę pitną i jej dystrybucji oraz sektor ścieków są objęte ustawą. Samo działanie w sektorze niczego jednak nie przesądza: o przypisaniu do kategorii **podmiotu kluczowego** albo **podmiotu ważnego** decydują dodatkowo rodzaj świadczonej usługi i wielkość podmiotu.
 
-Szkolenia dla pracowników oraz wymagane ustawą coroczne szkolenie kierownika podmiotu (art. 8e).
+Dwie rzeczy warto zapamiętać.
+
+Kwalifikację przeprowadza sam podmiot i sam ją dokumentuje. Nikt nie nadaje tego statusu z urzędu, a notatka z uzasadnieniem przydaje się również wtedy, gdy wynik jest negatywny.
+
+Wniosek o wpis do wykazu podmiotów kluczowych i podmiotów ważnych składa się **do 3 października 2026 r.** Samorejestracja ruszyła 7 maja 2026 r., a wykaz działa jako aplikacja w ramach Systemu S46. Procedurę opisuje Ministerstwo Cyfryzacji w komunikacie o [uruchomieniu samorejestracji](https://samorzad.gov.pl/web/gov/nowelizacja-ustawy-o-krajowym-systemie-cyberbezpieczenstwa-ksc---uruchamiamy-samorejestracje-w-wykazie-podmiotow-kluczowych-i-podmiotow-waznych-sprawdz-jak-dokonac-wpisu).
+
+Jeżeli spółka korzysta z zewnętrznego dostawcy usług zarządzanych w zakresie cyberbezpieczeństwa, informację o zawarciu takiej umowy ujawnia się w wykazie (art. 7 ust. 2 pkt 16 uksc), a wpis aktualizuje w terminie wynikającym z art. 7c uksc. To drobiazg, o którym łatwo zapomnieć przy podpisywaniu umowy.
+
+## Pełny czy uproszczony reżim SZBI?
+
+To pytanie decyduje o nakładzie pracy bardziej niż jakiekolwiek inne, a bywa zadawane dopiero na etapie pisania dokumentacji.
+
+| | Reżim z art. 8 ust. 1 uksc | Reżim z art. 8 ust. 3 uksc i załącznika nr 4 |
+|---|---|---|
+| Kogo dotyczy | Zależy od podstawy wpisu do wykazu oraz zakresu zadań, usług i systemów informacyjnych | Jak wyżej, przy węższym zakresie stosowania |
+| Zakres dokumentacji | Pełny katalog wymagań rozdziału 3 uksc | Wymagania wskazane w załączniku nr 4 |
+| Praktyczny skutek | Rozbudowany SZBI, pełny cykl przeglądów | Węższy, ale nadal udokumentowany system |
+
+Odpowiedź wynika z podstawy wpisu do wykazu, sektora oraz zakresu zadań, usług i systemów informacyjnych podmiotu. Dlatego kopia zawiadomienia o wpisie i ewentualnego wezwania organu to pierwszy dokument, o który pytam, zanim ustalę zakres prac. Jeżeli podstawa wpisu zmieni się albo zostanie sprostowana później, zmienia się również zakres obowiązków, i to w obie strony.
+
+## Dwie oceny ryzyka, nie jedna
+
+Spółka wod-kan jest w nietypowej sytuacji, bo ciążą na niej dwa niezależne obowiązki oceny ryzyka, wynikające z różnych ustaw i dotyczące różnych rzeczy.
+
+| | Ustawa o KSC | Ustawa o zbiorowym zaopatrzeniu w wodę |
+|---|---|---|
+| Czego dotyczy | Bezpieczeństwa systemów informacyjnych wykorzystywanych do świadczenia usługi | Obszaru zasilania ujęć wody przeznaczonej do spożycia (art. 4e) |
+| Cel | Ciągłość i bezpieczeństwo usługi | Bezpieczeństwo sanitarne wody |
+| Przegląd | Zgodnie z przyjętym cyklem SZBI | W odstępach wynikających z oceny, nie rzadziej niż co 6 lat |
+
+Obowiązek z art. 4e wprowadziła [ustawa z 13 marca 2026 r. o zmianie ustawy o zbiorowym zaopatrzeniu w wodę i zbiorowym odprowadzaniu ścieków oraz niektórych innych ustaw](https://eli.gov.pl/eli/DU/2026/605/ogl) (Dz.U. 2026 poz. 605).
+
+To dwa odrębne dokumenty i nie należy ich łączyć w jeden. Powinny się natomiast widzieć nawzajem, bo scenariusz „utrata kontroli nad dozowaniem reagentów wskutek nieuprawnionego dostępu do OT" jest jednocześnie ryzykiem cyber i ryzykiem sanitarnym. Ataki z 2025 r. pokazały, że to nie jest teoretyczne ćwiczenie z korelacji rejestrów.
 
 ## Jak zgłasza się incydent?
 
@@ -70,49 +110,40 @@ Zgłoszenie incydentu poważnego do właściwego CSIRT przebiega w trzech krokac
 
 | Krok | Termin od wykrycia | Co zawiera |
 |---|---|---|
-| Wczesne ostrzeżenie | 24 godziny | Sygnał, że incydent wystąpił, wraz z wstępną oceną charakteru |
+| Wczesne ostrzeżenie | 24 godziny | Sygnał, że incydent wystąpił, wraz ze wstępną oceną charakteru |
 | Zgłoszenie | 72 godziny | Ocena incydentu, wskaźniki, dotychczasowe działania |
-| Sprawozdanie końcowe | miesiąc | Opis przebiegu, przyczyna źródłowa, zastosowane środki |
+| Sprawozdanie końcowe | miesiąc | Przebieg, przyczyna źródłowa, zastosowane środki |
 
-Ten zegar biegnie niezależnie od terminów z RODO. Jeżeli incydent objął dane osobowe, administrator ma równolegle 72 godziny od stwierdzenia naruszenia na zgłoszenie do UODO oraz obowiązek zawiadomienia osób przy wysokim ryzyku. Rozpisałem to w [przewodniku po obowiązkach przy naruszeniu ochrony danych]({% post_url 2026-09-21-naruszenie-ochrony-danych-przewodnik %}).
+Zakres stosowania tych obowiązków zależy od podstawy wpisu podmiotu do wykazu (art. 12c uksc), więc również i tu punktem wyjścia jest zawiadomienie o wpisie.
 
-Praktycznie oznacza to jedną procedurę z dwiema ścieżkami i jedną osobą, która pilnuje obu zegarów. Rozdzielenie tego na „sprawę IT" i „sprawę IOD" kończy się tym, że jeden z terminów przepada. Jak taki incydent wygląda w spółce komunalnej, opisywałem na przykładzie [ataku na MPK Kraków]({% post_url 2024-12-06-atak-mpk-krakow %}).
+Ten zegar biegnie niezależnie od terminów z RODO. Jeżeli incydent objął dane osobowe, a w spółce komunalnej obejmie je niemal zawsze, administrator ma równolegle 72 godziny od stwierdzenia naruszenia na zgłoszenie do UODO oraz obowiązek zawiadomienia osób przy wysokim ryzyku. Rozpisałem to w [przewodniku po obowiązkach przy naruszeniu ochrony danych]({% post_url 2026-09-21-naruszenie-ochrony-danych-przewodnik %}).
 
-Osobne pytanie, które pojawia się kilka dni później, to co wolno ujawnić mediom i wnioskodawcom. Odpowiada na nie art. 37 ust. 1 ustawy o KSC; rozwijam to w [poradniku o udostępnianiu informacji po incydencie]({% post_url 2025-10-21-udostepnianie-informacji %}).
+Jedna procedura, dwie ścieżki, jedna osoba pilnująca obu zegarów. Rozdzielenie tego na „sprawę automatyki" i „sprawę IOD" kończy się tym, że jeden z terminów przepada. Jak taki incydent wygląda w spółce komunalnej, opisywałem na przykładzie [ataku na MPK Kraków]({% post_url 2024-12-06-atak-mpk-krakow %}).
+
+Kilka dni po incydencie pojawia się osobne pytanie: co wolno powiedzieć mediom i wnioskodawcom. Odpowiada na nie art. 37 ust. 1 uksc, a rozwijam je w [poradniku o udostępnianiu informacji po incydencie]({% post_url 2025-10-21-udostepnianie-informacji %}).
 
 ## Kto za to odpowiada?
 
-Kierownik podmiotu. Art. 8c ust. 3 ustawy przesądza, że odpowiedzialność za wykonywanie obowiązków spoczywa na nim również wtedy, gdy ich realizację powierzono innej osobie lub podmiotowi zewnętrznemu.
+Kierownik podmiotu, czyli w spółce z o.o. zarząd. Art. 8c ust. 3 uksc przesądza, że odpowiedzialność za wykonywanie obowiązków spoczywa na nim również wtedy, gdy ich realizację powierzono innej osobie. Art. 8d wskazuje, że to kierownik podmiotu podejmuje decyzje w zakresie przygotowania, wdrażania, stosowania, przeglądu i nadzoru systemu zarządzania bezpieczeństwem informacji. Art. 8e nakłada obowiązek jego cyklicznego szkolenia.
 
-Art. 14 pozwala realizować zadania z zakresu cyberbezpieczeństwa albo przez wewnętrzne struktury, albo na podstawie umowy z podmiotem zewnętrznym. Stąd wzięła się praktyczna nazwa „pełnomocnik ds. cyberbezpieczeństwa", która w ustawie nie występuje. Rola jest realna, ale polega na koordynacji i doradztwie, a nie na przejęciu odpowiedzialności. Opisałem jej zakres na stronie [O mnie](/about "O mnie - IOD i pełnomocnik ds. cyberbezpieczeństwa").
+Art. 14 uksc pozwala realizować zadania z zakresu cyberbezpieczeństwa przez wewnętrzne struktury albo na podstawie umowy z podmiotem zewnętrznym. Stąd wzięła się praktyczna nazwa „pełnomocnik ds. cyberbezpieczeństwa", która w ustawie nie występuje i która nie oznacza pełnomocnictwa w rozumieniu Kodeksu cywilnego. Rola jest realna, ale polega na doradztwie i koordynacji. Zakres, w jakim ją pełnię, opisałem na stronie [O mnie](/about "O mnie - IOD i pełnomocnik ds. cyberbezpieczeństwa").
 
-Warto to powiedzieć wprost przy podpisywaniu umowy, bo oczekiwanie bywa odwrotne. Zarząd, który kupuje usługę, czasem słyszy, że „firma zewnętrzna bierze to na siebie". Ustawa mówi co innego i to zarząd poniesie konsekwencje.
+Warto powiedzieć to wprost przy podpisywaniu umowy, bo oczekiwanie bywa odwrotne. Zarząd, który kupuje usługę, czasem słyszy, że „firma zewnętrzna bierze to na siebie". Ustawa mówi co innego i to zarząd poniesie konsekwencje.
 
-## Czym to się różni od RODO?
-
-Oba reżimy wymagają analizy ryzyka, adekwatnych zabezpieczeń, zarządzania dostępem, kopii zapasowych i oceny dostawców. Różni je to, co chronią i przed kim odpowiadają.
-
-| | RODO | Ustawa o KSC |
-|---|---|---|
-| Przedmiot ochrony | Prawa i wolności osób fizycznych | Ciągłość i bezpieczeństwo świadczonej usługi |
-| Kto ma obowiązki | Administrator i podmiot przetwarzający | Podmiot kluczowy albo ważny |
-| Organ | Prezes UODO | Organ właściwy i CSIRT |
-| Pierwszy termin zgłoszenia | 72 h od stwierdzenia naruszenia | 24 h od wykrycia incydentu |
-| Kogo się zawiadamia | Osoby, których dane dotyczą, przy wysokim ryzyku | Odbiorców usługi, gdy incydent na nich wpływa |
-
-Dobrze zaprojektowany system zarządzania bezpieczeństwem informacji obsługuje oba naraz. Zły obsługuje jeden i generuje drugą, równoległą dokumentację, której nikt nie czyta.
+Osobna rzecz, która zaskakuje przy pierwszym wdrożeniu: art. 8f uksc wymaga, by osoby realizujące zadania z art. 8 i art. 11 uksc przedstawiły informację z Krajowego Rejestru Karnego. Dotyczy to także osób po stronie wykonawcy zewnętrznego, więc lepiej uwzględnić to w harmonogramie, zanim okaże się, że prace stoją.
 
 ## Od czego zacząć?
 
-1. Ustal i zapisz, czy organizacja jest podmiotem kluczowym, ważnym, czy żadnym z nich. Uzasadnienie zachowaj także przy wyniku negatywnym.
-2. Jeżeli podlegasz ustawie, złóż wniosek o wpis do wykazu w terminie do 3 października 2026 r. i wyznacz realne osoby kontaktowe.
-3. Zrób analizę luk: co z wymagań ustawy już masz, co masz tylko na papierze, czego nie masz wcale.
-4. Ustal harmonogram dojścia do zgodności z przypisaną odpowiedzialnością i terminami, zatwierdzony przez kierownika podmiotu.
-5. Napisz jedną procedurę obsługi incydentu z dwiema ścieżkami zgłoszeniowymi, do CSIRT i do UODO, i przetestuj ją na ćwiczeniu.
-6. Przejrzyj umowy z dostawcami ICT pod kątem zgłaszania incydentów i podpowierzeń.
-7. Zaplanuj coroczne szkolenie kierownika podmiotu i szkolenia z cyberhigieny dla pracowników.
+1. Ustal i zapisz, czy spółka jest podmiotem kluczowym, ważnym, czy żadnym z nich. Uzasadnienie zachowaj także przy wyniku negatywnym.
+2. Jeżeli podlegasz ustawie, złóż wniosek o wpis do wykazu w terminie do 3 października 2026 r. i wskaż realne osoby kontaktowe.
+3. Weź zawiadomienie o wpisie i ustal na jego podstawie, czy stosujesz art. 8 ust. 1, czy art. 8 ust. 3 i załącznik nr 4. Od tego zależy wszystko dalej.
+4. Przejdź zalecenia z sekcji wyżej punkt po punkcie i dla każdego zapisz jedno z trzech: wdrożone, wdrażane do daty, zastąpione środkiem równoważnym z uzasadnieniem.
+5. Zinwentaryzuj OT: sterowniki, panele, modemy, zdalne dostępy serwisowe dostawcy automatyki. Sprawdź, co z tego jest osiągalne z internetu, a nie co według dokumentacji powinno być.
+6. Napisz jedną procedurę obsługi incydentu z dwiema ścieżkami zgłoszeniowymi, do CSIRT i do UODO, i przetestuj ją na ćwiczeniu.
+7. Sprawdź, czy ocena ryzyka z art. 4e ustawy wodociągowej i szacowanie ryzyka z ustawy o KSC znają wspólne scenariusze.
+8. Zaplanuj szkolenie kierownika podmiotu i szkolenia z cyberhigieny dla pracowników, w tym dla obsługi obiektów.
 
-Najtrudniejszy jest punkt pierwszy, bo wymaga decyzji, a nie zakupu. Reszta to praca, którą da się rozłożyć na miesiące.
+Punkt piąty daje zwykle najwięcej do myślenia, bo jego wynik rzadko zgadza się z tym, co ludzie sądzili przed jego wykonaniem. Od niego bym zaczął, gdyby trzeba było wybrać tylko jeden.
 
 ## Najczęściej zadawane pytania
 
