@@ -40,7 +40,7 @@ Podstawowe zadania IOD określone są w art. 39 ust. 1 oraz art. 38 ust. 4 RODO.
 - Wsparcie w prowadzeniu i aktualizacji rejestru czynności przetwarzania - art. 30 RODO,
 - Przeprowadzanie przeglądów i audytów bezpieczeństwa danych,
 - Opiniowanie i pomoc w aktualizacji dokumentacji ochrony danych,
-- Wsparcie administratora w obsłudze incydentów i ocenie naruszeń - art. 33-34 RODO ([jak prawidłowo zgłaszać naruszenia]({% post_url 2025-03-03-poradnik-uodo-naruszenia %})).
+- Wsparcie administratora w obsłudze incydentów i ocenie naruszeń - art. 33-34 RODO ([przewodnik po obowiązkach przy naruszeniu]({% post_url 2026-09-21-naruszenie-ochrony-danych-przewodnik %})).
 
 **Zadania edukacyjne:**
 

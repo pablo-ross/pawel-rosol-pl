@@ -55,6 +55,8 @@ Druga dotyczy pacjentów. MyDr, jako procesor, nie ma podstawy prawnej, żeby pr
 
 Jeśli prowadzisz placówkę korzystającą z MyDr albo jesteś w niej IOD, kolejność działań wygląda tak:
 
+Kolejność kroków i terminy opisałem szczegółowo w [przewodniku po obowiązkach przy naruszeniu ochrony danych]({% post_url 2026-09-21-naruszenie-ochrony-danych-przewodnik %}). W tej konkretnej sprawie wygląda to tak:
+
 1. **Ustal fakty.** Sprawdź, czy i w jakim okresie placówka korzystała z systemu, jakie moduły i jaki zakres danych powierzono. Wystąp do MyDr o pisemne potwierdzenie, czy naruszenie objęło Twój zbiór, i o informacje, które są Ci potrzebne do oceny ryzyka. Art. 28 ust. 3 lit. f RODO daje Ci do tego podstawę umowną.
 2. **Przeprowadź własną ocenę ryzyka.** Dane o stanie zdrowia to dane szczególnej kategorii z art. 9 RODO. Przy połączeniu PESEL, danych kontaktowych i informacji o leczeniu ryzyko dla praw i wolności będzie w praktyce wysokie.
 3. **Zgłoś naruszenie do UODO w 72 godziny** od stwierdzenia naruszenia. Jeśli nie masz pełnych informacji, skorzystaj z art. 33 ust. 4 RODO i zgłoś naruszenie etapami, uzupełniając je w miarę ustaleń. Pisałem o tym szerzej przy okazji [poradnika UODO o naruszeniach]({% post_url 2025-03-03-poradnik-uodo-naruszenia %}).

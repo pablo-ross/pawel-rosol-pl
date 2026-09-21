@@ -71,6 +71,8 @@ UODO nałożył trzy kary za trzy odrębne grupy naruszeń:
 
 ## Co organizacja powinna zrobić, zanim dojdzie do naruszenia
 
+O tym, co robić już po naruszeniu - od którego momentu biegną 72 godziny, kiedy zawiadamia się osoby i co wpisać do rejestru - piszę w [przewodniku dla administratora]({% post_url 2026-09-21-naruszenie-ochrony-danych-przewodnik %}).
+
 Najtańszy moment na uniknięcie takiej kary to moment, w którym nic złego jeszcze się nie stało. Poniższe działania nie wymagają dużego budżetu, a w opisanej sprawie w całości zmieniłyby jej przebieg.
 
 1. **Trzymaj dane tam, gdzie masz nad nimi kontrolę.** Praca na prywatnym sprzęcie i w prywatnych chmurach pracowników powinna być jednoznacznie zakazana, a organizacja musi zapewnić wygodną alternatywę. Jeśli legalne narzędzie jest niewygodne, ludzie znajdą obejście.

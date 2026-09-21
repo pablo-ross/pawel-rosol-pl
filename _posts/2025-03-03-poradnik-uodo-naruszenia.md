@@ -21,6 +21,9 @@ faq:
     answer: "Poradnik zaleca gromadzenie notatek, instrukcji korespondencji, wyciągów z systemów, raportów z audytów czy testów bezpieczeństwa. Taka dokumentacja pozwala administratorowi wykazać, że prawidłowo wykonywał swoje obowiązki, nawet jeśli mimo to doszło do naruszenia."
 ---
 
+> **Szukasz całości obowiązków przy naruszeniu?** Terminy, próg zgłoszenia, zawiadomienie osób i rejestr naruszeń zebrałem w przewodniku: [Naruszenie ochrony danych osobowych - przewodnik dla administratora]({% post_url 2026-09-21-naruszenie-ochrony-danych-przewodnik %}). Ten wpis omawia sam poradnik UODO.
+{: .prompt-tip }
+
 > **W skrócie:** samo wystąpienie naruszenia nie jest jeszcze naruszeniem przepisów RODO. Naruszeniem przepisów jest niewykonanie obowiązków, które się z nim wiążą: oceny ryzyka, zgłoszenia do UODO w ciągu 72 godzin od stwierdzenia, zawiadomienia osób przy wysokim ryzyku i udokumentowania całości. Administrator, który miał procedury i ich przestrzegał, nie musi obawiać się sankcji za to, że incydent w ogóle się zdarzył.
 {: .prompt-info }
 
