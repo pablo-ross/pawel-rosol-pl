@@ -6,19 +6,58 @@ sitemap: false
 
 > {{ site.description | strip_newlines | strip }}
 
-Blog prowadzony po polsku przez Pawła Rosoła, Inspektora Ochrony Danych (IOD/DPO)
-z certyfikatem auditora wiodącego ISO/IEC 27001. Tematyka: RODO, ochrona danych
-osobowych, cyberbezpieczeństwo, bezpieczeństwo aplikacji webowych i REST API,
-testy penetracyjne oraz wydajność i optymalizacja. Autor i właściciel praw:
+Blog prowadzony po polsku przez Pawła Rosoła, który pełni dwie funkcje:
+**Inspektora Ochrony Danych (IOD/DPO)** oraz **pełnomocnika ds. cyberbezpieczeństwa**
+wdrażającego wymagania ustawy o krajowym systemie cyberbezpieczeństwa (KSC) i
+dyrektywy NIS2. Auditor wiodący ISO/IEC 27001. Tematyka: RODO i ochrona danych
+osobowych, decyzje i kary UODO, naruszenia ochrony danych, cyberbezpieczeństwo,
+KSC i NIS2, system zarządzania bezpieczeństwem informacji, bezpieczeństwo aplikacji
+webowych, a także sektor publiczny, samorząd i oświata. Autor i właściciel praw:
 {{ site.social.name }} ({{ site.url }}).
 
 ## Strony
 
-- [O mnie]({{ '/about/' | absolute_url }}): sylwetka autora, rola i zadania IOD/DPO
+- [O mnie]({{ '/about/' | absolute_url }}): sylwetka autora, zadania IOD oraz zakres wsparcia jako pełnomocnika ds. cyberbezpieczeństwa
 - [Kategorie]({{ '/categories/' | absolute_url }}): treści pogrupowane tematycznie
 - [Tagi]({{ '/tags/' | absolute_url }}): indeks tagów
 - [Archiwum]({{ '/archives/' | absolute_url }}): wszystkie wpisy chronologicznie
-- [Kontakt]({{ '/contact/' | absolute_url }}): kontakt z Inspektorem Ochrony Danych
+- [Kontakt]({{ '/contact/' | absolute_url }}): dane kontaktowe, adres biura, klucz PGP
+
+## O autorze
+
+Paweł Rosół pełni funkcję **Inspektora Ochrony Danych (IOD/DPO)** w modelu
+outsourcingu oraz **pełnomocnika ds. cyberbezpieczeństwa** — roli, która
+koordynuje wykonywanie obowiązków z ustawy o KSC. Posiada certyfikat auditora
+wiodącego ISO/IEC 27001 i wieloletnie doświadczenie techniczne (infrastruktura,
+poczta elektroniczna, sieci, bezpieczeństwo aplikacji webowych).
+
+Pracuje przede wszystkim z jednostkami sektora publicznego, spółkami komunalnymi,
+placówkami oświatowymi oraz małymi i średnimi firmami. Tam, gdzie obie funkcje
+spotykają się w jednej organizacji, stosuje udokumentowany rozdział ról
+wymagany przez art. 38 ust. 6 RODO: rekomenduje warianty i ryzyko, ale decyzje
+o środkach bezpieczeństwa podejmuje kierownictwo podmiotu; nie posiada uprawnień
+wykonawczych w systemach klienta, a skuteczność rekomendowanych przez siebie
+środków ocenia ktoś inny. Szczegóły: [O mnie]({{ '/about/' | absolute_url }}).
+
+## Usługi i kontakt
+
+Usługi świadczy w ramach Mornel s.c., ul. Działkowa 32, 60-185 Skórzewo
+(powiat poznański, województwo wielkopolskie), NIP 7772887283, REGON 300232439,
+telefon +48 502-706-280. Obszar działania: Poznań i powiat poznański oraz — w
+modelu zdalnym — cała Polska.
+
+Zakres usług:
+
+- pełnienie funkcji Inspektora Ochrony Danych (IOD/DPO) w modelu outsourcingu,
+- rola pełnomocnika ds. cyberbezpieczeństwa: ustalenie statusu podmiotu kluczowego
+  lub ważnego, wpis do wykazu, analiza luk, wdrożenie SZBI, obsługa i zgłaszanie
+  incydentów do CSIRT, ciągłość działania (BCP/DRP),
+- audyty i przeglądy ochrony danych osobowych, rejestr czynności przetwarzania,
+  analiza ryzyka, DPIA,
+- szkolenia z ochrony danych osobowych i cyberhigieny, w tym wymagane ustawą
+  coroczne szkolenie kierownika podmiotu.
+
+Pełne dane: [Kontakt]({{ '/contact/' | absolute_url }}).
 
 ## Wpisy
 {% assign posts = site.posts | sort: 'date' | reverse %}
@@ -29,3 +68,4 @@ testy penetracyjne oraz wydajność i optymalizacja. Autor i właściciel praw:
 
 - [Sitemap]({{ '/sitemap.xml' | absolute_url }})
 - [Atom feed]({{ '/feed.xml' | absolute_url }})
+- [Zgłoszenia bezpieczeństwa]({{ '/.well-known/security.txt' | absolute_url }})

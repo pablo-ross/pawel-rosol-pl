@@ -16,10 +16,12 @@ timezone: Europe/Warsaw
 
 title: Paweł Rosół # the main title
 
-tagline: Inspektor Ochrony Danych # it will display as the subtitle
+tagline: Inspektor Ochrony Danych · Cyberbezpieczeństwo # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Ochrona danych osobowych, cyberbezpieczeństwo, ochrona webaplikacji, ochrona REST, testy penetracyjne, wydajność i optymalizacja.
+  RODO i ochrona danych osobowych, cyberbezpieczeństwo, ustawa o KSC i dyrektywa NIS2,
+  bezpieczeństwo informacji i aplikacji webowych — z perspektywy Inspektora Ochrony Danych
+  i pełnomocnika ds. cyberbezpieczeństwa.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
