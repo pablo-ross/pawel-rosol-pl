@@ -5,8 +5,7 @@ categories:
   - Urząd Ochrony Danych Osobowych
 tags:
   - Analiza ryzyka
-  - Naruszenie danych
-  - Poradnik
+  - Naruszenie ochrony danych
   - Zgłoszenie naruszenia
   - RODO
   - Administrator danych

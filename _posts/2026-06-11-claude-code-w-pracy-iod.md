@@ -4,16 +4,12 @@ date: 2026-06-11T09:17:00.00Z
 categories:
   - Sztuczna inteligencja
 tags:
-  - Claude Code
-  - AI
+  - Sztuczna inteligencja
   - LLM
   - Automatyzacja
-  - Anonimizacja
-  - Pseudonimizacja
+  - Anonimizacja i pseudonimizacja
   - RODO
-  - Inspektor ochrony danych
-  - AI Act
-  - CLI
+  - IOD
 description: Lokalne modele językowe sprawdzają się w prostych zadaniach IOD, ale przy analizie umów powierzenia czy ocenie naruszeń modele frontierowe są o klasę lepsze. Problem w tym, że działają w chmurze. Opisuję, jak połączyłem własny CRM z warstwą anonimizacji i Claude Code, dzięki czemu korzystam z najlepszego dostępnego AI, a dane osobowe moich klientów nie opuszczają mojej infrastruktury.
 faq:
   - question: "Jak autor korzysta z Claude Code, nie wysyłając danych osobowych klientów do chmury?"

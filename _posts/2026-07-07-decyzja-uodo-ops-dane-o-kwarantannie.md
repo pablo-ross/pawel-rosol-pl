@@ -5,13 +5,13 @@ categories:
   - Urząd Ochrony Danych Osobowych
 tags:
   - Analiza ryzyka
-  - Naruszenie danych
+  - Naruszenie ochrony danych
   - Zgłoszenie naruszenia
   - Kara administracyjna
   - RODO
-  - Dane szczególnej kategorii
+  - Dane szczególnych kategorii
   - Administrator danych
-  - Sektor publiczny
+  - Jednostki samorządu terytorialnego
   - COVID-19
 description: "Ośrodek pomocy społecznej trafił do kar UODO, bo plik z danymi osób objętych kwarantanną COVID-19 zaindeksowała wyszukiwarka. Analiza decyzji DKN.5131.27.2023 i praktyczne wnioski dla administratorów."
 faq:
@@ -22,7 +22,6 @@ faq:
   - question: "Dlaczego dane o kwarantannie są danymi szczególnej kategorii?"
     answer: "Informacja o objęciu obowiązkową kwarantanną lub izolacją w związku z COVID-19 to dane dotyczące stanu zdrowia, czyli dane szczególnej kategorii w rozumieniu art. 9 RODO. Ich przetwarzanie wymaga wyższego poziomu zabezpieczeń niż dane zwykłe, a naruszenie takich danych niesie większe ryzyko dla osób, których dotyczy."
 ---
-
 **Plik w formacie XLSX z danymi kilkuset mieszkańców gminy, w tym informacją o tym, kto jest objęty kwarantanną i izolacją, wylądował na prywatnym serwerze pracownika. Katalog był publicznie dostępny, więc treść zaindeksowała wyszukiwarka i każdy mógł ją znaleźć. O wycieku administrator dowiedział się nie z własnych zabezpieczeń, lecz z e-maila osoby postronnej. Decyzja UODO o sygnaturze DKN.5131.27.2023 to podręcznikowy przykład tego, jak drobne zaniedbania organizacyjne prowadzą do naruszenia danych o stanie zdrowia.**
 
 ## Co się wydarzyło

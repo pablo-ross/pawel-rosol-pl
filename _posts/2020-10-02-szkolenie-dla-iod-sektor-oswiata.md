@@ -4,12 +4,9 @@ date: '2020-10-02T11:18:14.12Z'
 categories:
   - Nauka zdalna w szkołach
 tags:
-  - Koronawirus
   - COVID-19
-  - SARS-CoV-2
-  - Platformy edukacyjne
-  - Pandemia
-  - Bezpieczeństwo przetwarzania danych uczniów
+  - Nauka zdalna
+  - Bezpieczeństwo danych
 description: 'Czy można nagrywać lekcje online? Jak zadbać o bezpieczeństwo przetwarzania danych uczniów, ich rodziców i nauczycieli? Z jakich platform edukacyjnych korzystać? Które dostępne usługi są bezpieczne?'
 ---
 

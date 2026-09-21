@@ -4,11 +4,10 @@ date: 2025-11-08T07:07:00.00Z
 categories:
   - Sztuczna inteligencja
 tags:
-  - AI
+  - Sztuczna inteligencja
   - LLM
   - Automatyzacja
   - UODO
-  - n8n
 description: Pracuję jako inspektor ochrony danych i wiem, że powinienem mieć oko na świeże decyzje UODO. Problem? Codzienne sprawdzanie portalu orzeczenia.uodo.gov.pl to czysta strata czasu. No i zawsze jest to nieprzyjemne uczucie, że mogłem coś przegapić. W końcu postanowiłem — skoro i tak to wszystko można zrobić automatycznie, to po co się męczyć?
 faq:
   - question: "Jak działa automatyczny monitoring decyzji UODO opisany w artykule?"

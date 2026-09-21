@@ -4,15 +4,12 @@ date: 2026-09-21T10:00:00.00Z
 categories:
   - Bezpieczeństwo
 tags:
-  - Naruszenie danych
+  - Naruszenie ochrony danych
   - Zgłoszenie naruszenia
-  - Wyciek danych
-  - Podmiot przetwarzający
   - Powierzenie przetwarzania
   - Administrator danych
-  - Dane szczególnej kategorii
+  - Dane szczególnych kategorii
   - Analiza ryzyka
-  - PESEL
   - Cyberbezpieczeństwo
   - RODO
 description: "Wyciek z systemu MyDr objął dane nawet 18,8 mln osób i ponad 12 tysięcy placówek. Kto odpowiada za naruszenie, jakie obowiązki ma przychodnia i czym to grozi w świetle RODO."

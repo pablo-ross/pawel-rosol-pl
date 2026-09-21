@@ -4,16 +4,9 @@ date: 2026-07-04T07:16:18.00Z
 categories:
   - Jednostki samorządu terytorialnego
 tags:
-  - CRU
   - Centralny Rejestr Umów
   - API
   - Automatyzacja
-  - Python
-  - Telegram
-  - Open Source
-  - GitHub
-  - Monitoring
-  - rejestrumow.gov.pl
 description: "Napisałem prosty monitor Centralnego Rejestru Umów (CRU), który sam przegląda rejestr i wysyła na Telegram powiadomienie, gdy pojawi się nowa umowa pasująca do moich filtrów (NIP, REGON, przedmiot umowy). Kod jest na GitHubie, na otwartej licencji. Pokazuję, jak to działa i jak uruchomić własną wersję."
 faq:
   - question: "Co robi CRU Monitor i jak działa?"

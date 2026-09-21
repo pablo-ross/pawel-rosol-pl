@@ -7,11 +7,10 @@ categories:
 tags:
   - Kara administracyjna
   - Analiza ryzyka
-  - Środki techniczne i organizacyjne
+  - Bezpieczeństwo danych
   - Incydent bezpieczeństwa
   - RODO
-  - Naruszenie danych
-  - Szyfrowanie danych
+  - Naruszenie ochrony danych
 description: 'Decyzja Prezesa Urzędu Ochrony Danych Osobowych nr DKN.5131.9.2024 dotyczyła naruszenia przepisów RODO przez administratora danych w zakresie niezapewnienia odpowiednich środków technicznych i organizacyjnych'
 ---
 

@@ -4,15 +4,9 @@ date: 2026-07-01T10:30:00.00Z
 categories:
   - Jednostki samorządu terytorialnego
 tags:
-  - CRU
   - Centralny Rejestr Umów
   - API
-  - Otwarte dane
-  - Jawność
-  - REST
-  - JSON
-  - curl
-  - rejestrumow.gov.pl
+  - Jawność i informacja publiczna
 description: "Od 1 lipca 2026 r. działa Centralny Rejestr Umów (CRU). Sprawdziłem, jak wygląda publiczne API do CRU na rejestrumow.gov.pl - jest dostępny endpoint JSON, z którego można pobrać dane bez logowania. Pokazuję gotowe przykłady w curl oraz drugie, oficjalne API Ministerstwa Finansów z autoryzacją X-API-KEY."
 faq:
   - question: "Czy do Centralnego Rejestru Umów (CRU) istnieje publiczne API?"

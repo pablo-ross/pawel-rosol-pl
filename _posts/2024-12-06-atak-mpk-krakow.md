@@ -8,11 +8,11 @@ tags:
   - NIS2
   - RODO
   - Cyberbezpieczeństwo
-  - Cyberzagrożenia
   - Incydent bezpieczeństwa
   - Ransomware
   - Infrastruktura krytyczna
-  - Naruszenie danych
+  - Naruszenie ochrony danych
+  - KSC
 description: 'W ostatnich dniach Miejskie Przedsiębiorstwo Komunikacyjne w Krakowie (MPK Kraków) padło ofiarą zaawansowanego ataku hakerskiego, który został przypisany międzynarodowej grupie cyberprzestępczej.'
 faq:
   - question: "Co się stało podczas ataku hakerskiego na MPK Kraków w grudniu 2024 roku?"

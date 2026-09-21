@@ -5,11 +5,8 @@ last_modified_at: '2023-11-03T15:34:14.17Z'
 categories:
   - Poczta e-mail
 tags:
-  - Szyfrowanie poczty
-  - Bezpieczna poczta
-  - Klucz Yubikey
+  - Bezpieczeństwo poczty e-mail
   - Uwierzytelnianie dwuskładnikowe
-  - Weryfikacja dwuetapowa
 description: 'Bezpieczna poczta e-mail. Ryzyko naruszeń jest wysokie jeśli chodzi o obszar związany z nieuporządkowanym zbiorem informacji - a takim są skrzynki pocztowe.'
 ---
 

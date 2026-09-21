@@ -4,13 +4,9 @@ date: '2020-04-15T13:38:16.17Z'
 categories:
   - Nauka zdalna w szkołach
 tags:
-  - Koronawirus
   - COVID-19
-  - SARS-CoV-2
-  - Ochrona danych w fazie projektowania
-  - Domyślna ochrona danych
-  - Google Classroom
-  - Homeschool
+  - RODO
+  - Nauka zdalna
 description: Ze względu na światową pandemię zakaźnej choroby COVID-19 wywoływanej przez koronawirusa SARS-CoV-2 wprowadzono w wielu krajach różnego rodzaju środki bezpieczeństwa. Jednym z nich jest okresowe zamknięcie szkół i wprowadzenie obowiązku nauki zdalnej z wykorzystaniem narzędzi online.
 ---
 

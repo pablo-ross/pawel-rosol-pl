@@ -4,9 +4,7 @@ date: "2019-02-17T16:14:37.31Z"
 categories:
   - Narzędzia
 tags:
-  - "Zammad"
-  - "Obsługa zgłoszeń"
-  - "System wsparcia"
+  - Narzędzia IOD
 description: "W pracy Inspektora Ochrony Danych nieodzowne są odpowiednie narzędzia do zarządzania przepływem informacji. W mojej codziennej praktyce, obsługując kilku klientów i otrzymując zgłoszenia od kilkuset osób w miesiącu, trudno jest mi wyobrazić sobie aby sensownie zarządzać całą korespondencją bez zaawansowanego narzędzia do tego celu."
 ---
 

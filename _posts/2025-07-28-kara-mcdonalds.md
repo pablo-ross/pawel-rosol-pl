@@ -5,12 +5,10 @@ categories:
   - Urząd Ochrony Danych Osobowych
 tags:
   - Analiza ryzyka
-  - Naruszenie danych
-  - Podmiot przetwarzający
+  - Naruszenie ochrony danych
+  - Powierzenie przetwarzania
   - Kara administracyjna
   - RODO
-  - Wyciek danych
-  - Powierzenie przetwarzania
   - Bezpieczeństwo danych
 description: Prezes UODO nałożył na McDonald's Polska rekordową karę pieniężną w wysokości niemal 17 milionów złotych za szereg naruszeń przepisów o ochronie danych osobowych.
 faq:

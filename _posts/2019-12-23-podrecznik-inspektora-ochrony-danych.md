@@ -4,12 +4,9 @@ date: "2019-12-23T11:16:37.111Z"
 categories:
   - Edukacja
 tags:
-  - "Podręcznik IOD"
-  - "Urząd Ochrony Danych Osobowych"
-  - "T4DATA"
-  - "RODO"
-  - "Douwe Korff"
-  - "Marie George"
+  - IOD
+  - UODO
+  - RODO
 description: "Podręcznik Inspektora Ochrony Danych to zbiór wytycznych dla IOD dotyczących sposobu zapewnienia zgodności z ogólnym rozporządzeniem o ochronie danych (RODO). Opracowany w ramach projektu T4DATA poradnik jest dostępny także w polskiej wersji językowej."
 ---
 

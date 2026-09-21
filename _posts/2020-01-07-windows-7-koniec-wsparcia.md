@@ -4,10 +4,7 @@ date: "2020-01-07T11:56:11.14Z"
 categories:
   - Systemy operacyjne
 tags:
-  - "Microsoft Windows 7"
-  - "Aktualizacje bezpieczeństwa"
-  - "System operacyjny"
-  - "Ochrona antywirusowa"
+  - Bezpieczeństwo danych
 description: "Z dniem 14 stycznia 2020r. kończy się wsparcie producenta dla systemu operacyjnego Windows w wersji 7. Konsekwencje wynikające z zakończenia okresu wsparcia technicznego mają bezpośredni wpływ na bezpieczeństwo systemu przetwarzającego dane osobowe. Jeśli w Twojej organizacji znajdują się aktywne komputery osobiste z systemem Windows 7, po 14 stycznia 2020 r. przestaną one otrzymywać aktualizacje zabezpieczeń."
 ---
 

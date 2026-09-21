@@ -5,10 +5,8 @@ last_modified_at: '2023-12-04T16:42:23.27Z'
 categories:
   - Bezpieczeństwo
 tags:
-  - Autentykacja
-  - Bezpieczna poczta
   - Uwierzytelnianie dwuskładnikowe
-  - Weryfikacja dwuetapowa
+  - Bezpieczeństwo poczty e-mail
 description: 'Ta lista kontrolna zawiera kilka prostych kroków, które możesz podjąć, aby zwiększyć bezpieczeństwo swoje i swoich danych online.'
 ---
 

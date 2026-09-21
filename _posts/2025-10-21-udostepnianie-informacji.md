@@ -5,15 +5,15 @@ categories:
   - Jednostki samorządu terytorialnego
 tags:
   - Analiza ryzyka
-  - Naruszenie danych
-  - Informacja publiczna
-  - Anonimizacja
+  - Naruszenie ochrony danych
+  - Jawność i informacja publiczna
+  - Anonimizacja i pseudonimizacja
   - Cyberbezpieczeństwo
-  - Krajowy System Cyberbezpieczeństwa
+  - KSC
   - RODO
   - Ransomware
-  - Transparentność
   - Jednostki samorządu terytorialnego
+  - NIS2
 description: Atak ransomware w urzędzie, wyciek danych osobowych, awaria systemu IT - każdy taki incydent rodzi pytania ze strony mediów, obywateli i organizacji pozarządowych. Czy podmiot publiczny może odmówić udostępnienia dokumentów związanych z naruszeniem?
 faq:
   - question: "Czy urząd musi udostępnić dokumentację dotyczącą incydentu cyberbezpieczeństwa na wniosek o informację publiczną?"

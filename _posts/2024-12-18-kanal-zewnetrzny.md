@@ -4,12 +4,8 @@ date: '2024-12-18T11:54:23.27Z'
 categories:
   - Ochrona sygnalistów
 tags:
-  - Sygnalista
   - Ochrona sygnalistów
-  - Kanał zewnętrzny
-  - Zgłaszanie naruszeń prawa
-  - Whistleblowing
-  - Compliance
+  - Kanały zgłoszeń
   - Jednostki samorządu terytorialnego
 description: 'Obowiązek wdrożenia kanału zewnętrznego do obsługi sygnalistów wynika z implementacji Dyrektywy Parlamentu Europejskiego i Rady (UE) 2019/1937 z dnia 23 października 2019 r.'
 faq:

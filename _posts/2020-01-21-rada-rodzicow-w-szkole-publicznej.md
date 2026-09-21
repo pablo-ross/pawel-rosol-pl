@@ -4,12 +4,8 @@ date: "2020-01-21T18:08:33.17Z"
 categories:
   - Administrator danych osobowych
 tags:
-  - "ADO"
-  - "Rada Rodziców"
-  - "Oświata"
-  - "Szkoła"
-  - "Dyrektor szkoły"
-  - "RODO w szkole"
+  - Administrator danych
+  - Oświata
 description: "Jednym z częściej występujących dylematów w pracy Inspektora Ochrony Danych (IOD) jest problem określenia, kto w danej czynności jest Administratorem Danych Osobowych (ADO) a kto podmiotem przetwarzającym powierzone dane osobowe (Procesor). Ma to zasadnicze znaczenie w określeniu kto może wydawać upoważnienia do przetwarzania, czy niezbędne jest zawarcie umowy powierzenia przetwarzania danych osobowych, i w całym szeregu innych obowiązków wynikających z RODO."
 ---
 

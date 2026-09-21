@@ -4,13 +4,9 @@ date: "2019-04-08T15:33:39.11Z"
 categories:
   - Narzędzia
 tags:
-  - "Sphinx"
-  - "Read The Docs"
-  - "Kontrola wersji"
-  - "Polityka ochrony danych osobowych"
-  - "Instrukcja zarządzania zasobami informatycznymi"
-  - "Analiza ryzyka"
-  - "Rejestry i ewidencje"
+  - Narzędzia IOD
+  - Dokumentacja RODO
+  - Analiza ryzyka
 description: "Tytuł może być nieco mylący. Nie jest to bowiem narzędzie, które stworzy za Inspektora Ochrony Danych całą niezbędną dokumentację. Jest to system tworzenia i generowania dokumentacji, w oparciu o konwersję tekstowych plików w formacie reST (reStructuredText)."
 ---
 

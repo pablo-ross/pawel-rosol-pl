@@ -4,17 +4,12 @@ date: "2020-01-10T12:14:13.17Z"
 categories:
   - Jednostki samorządu terytorialnego
 tags:
-  - "JST"
-  - "Nagrywanie obrad"
-  - "Transmitowanie obrad"
-  - "Anonimizacja danych"
-  - "Retencja danych"
-  - "Klauzula informacyjna"
-  - "Analiza ryzyka"
-  - "Ocena skutków dla ochrony danych"
-  - "Rada Miasta"
-  - "Rada Gminy"
-  - "Rada Powiatu"
+  - Jednostki samorządu terytorialnego
+  - Transmisje obrad
+  - Anonimizacja i pseudonimizacja
+  - RODO
+  - Dokumentacja RODO
+  - Analiza ryzyka
 description: "W listopadzie 2019 roku na stronie organu nadzorczego tj. UODO ukazał się interesujący materiał pt. Projektowanie ochrony danych osobowych w związku z transmisją i nagrywaniem obrad kolegialnych organów jednostek samorządu terytorialnego. Rozwój technologiczny i zmiany w ustawodawstwie regulującym spowodowały, że działanie kolegialnych organów jednostek samorządu terytorialnego, pochodzących z wyborów powszechnych musi być transmitowane i utrwalane za pomocą urządzeń rejestrujących obraz i dźwięk obrad tych organów."
 ---
 

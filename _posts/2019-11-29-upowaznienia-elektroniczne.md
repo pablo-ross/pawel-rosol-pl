@@ -4,11 +4,10 @@ date: "2019-11-29T11:23:16.34Z"
 categories:
   - Upoważnienia
 tags:
-  - "Urząd Ochrony Danych Osobowych"
-  - "Upoważnienia do przetwarzania danych osobowych"
-  - "RODO"
-  - "Rejestr czynności przetwarzania"
-  - "Rejestr kategorii czynności przetwarzania"
+  - UODO
+  - Upoważnienia do przetwarzania
+  - RODO
+  - Dokumentacja RODO
 description: "Czy elektroniczną postać upoważnienia do przetwarzania danych osobowych można interpretować jako formę pisemną, a tym samym spełniającą dyspozycje przepisów prawa, odnoszących się do konieczności wydawania „pisemnych upoważnień do przetwarzania danych osobowych”, wynikających z ustawy z dnia 21 lutego 2019 r. o zmianie niektórych ustaw w związku z zapewnieniem stosowania RODO?"
 ---
 

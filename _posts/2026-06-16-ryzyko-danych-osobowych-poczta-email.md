@@ -5,12 +5,11 @@ categories:
   - Poczta e-mail
 tags:
   - Analiza ryzyka
-  - Naruszenie danych
+  - Naruszenie ochrony danych
   - Bezpieczeństwo danych
   - RODO
-  - Phishing
-  - Przejęcie konta
-  - Szyfrowanie poczty
+  - Cyberbezpieczeństwo
+  - Bezpieczeństwo poczty e-mail
   - Kara administracyjna
 description: "Skrzynka e-mail to jeden z najpoważniejszych obszarów ryzyka dla danych osobowych. Analiza decyzji UODO (DKN.5131.34.2023), przykłady z innych krajów UE oraz aktualne metody ochrony poczty."
 faq:
@@ -21,7 +20,6 @@ faq:
   - question: "Dlaczego pomyłka w polu CC zamiast BCC może być poważnym naruszeniem RODO?"
     answer: "Wpisanie adresów odbiorców w polu CC zamiast BCC ujawnia wszystkim adresatom listę pozostałych odbiorców. Jeśli lista dotyczy np. uczestników programu wsparcia dla osób z określonym schorzeniem, ujawnienie adresów (często zawierających imię i nazwisko) może zdradzić informację o stanie zdrowia tych osób, czyli dane szczególnej kategorii z art. 9 RODO - tak jak w przypadku kary brytyjskiego ICO dla Central YMCA."
 ---
-
 **Poczta elektroniczna pozostaje najczęściej wykorzystywanym narzędziem komunikacji w organizacjach, a jednocześnie jednym z najsłabiej zabezpieczonych zbiorów danych osobowych. Skrzynka pocztowa przeciętnego pracownika to dziś nieuporządkowany, latami narastający zbiór zawierający imiona, nazwiska, numery PESEL, dane kontaktowe, skany dokumentów, a niejednokrotnie także dane szczególnej kategorii. Decyzja UODO o sygnaturze DKN.5131.34.2023 dobrze pokazuje, jak kosztowne bywa zlekceważenie tego obszaru.**
 
 Kilka lat temu pisałem już o tym, [czym jest bezpieczna poczta e-mail]({% post_url 2022-01-07-bezpieczna-poczta-email %}). Od tamtego czasu zmieniło się sporo - zarówno po stronie zagrożeń, jak i dostępnych mechanizmów ochrony. Warto więc wrócić do tematu, tym razem od strony konkretnych rozstrzygnięć organów nadzorczych i realnych scenariuszy naruszeń.

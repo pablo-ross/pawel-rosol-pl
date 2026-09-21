@@ -5,10 +5,8 @@ categories:
   - Urząd Ochrony Danych Osobowych
 tags:
   - UODO
-  - Dzień Ochrony Danych Osobowych
   - IOD
-  - Inspektor ochrony danych
-  - Koronawirus
+  - COVID-19
 description: '28 stycznia jest obchodzony jako Europejski Dzień Ochrony Danych Osobowych, został on ustanowiony na pamiątkę sporządzenia konwencji Rady Europy z 28 stycznia 1981 r. w sprawie ochrony osób w zakresie zautomatyzowanego przetwarzania danych osobowych. Konwencja ta jest najstarszym międzynarodowym aktem prawnym, który reguluje zagadnienia związane z ochroną danych osobowych.'
 ---
 
