@@ -8,7 +8,7 @@ tags:
   - LLM
   - Automatyzacja
   - UODO
-description: Pracuję jako inspektor ochrony danych i wiem, że powinienem mieć oko na świeże decyzje UODO. Problem? Codzienne sprawdzanie portalu orzeczenia.uodo.gov.pl to czysta strata czasu. No i zawsze jest to nieprzyjemne uczucie, że mogłem coś przegapić. W końcu postanowiłem — skoro i tak to wszystko można zrobić automatycznie, to po co się męczyć?
+description: Pracuję jako inspektor ochrony danych i wiem, że powinienem mieć oko na świeże decyzje UODO. Problem? Codzienne sprawdzanie portalu orzeczenia.uodo.gov.pl to czysta strata czasu. No i zawsze jest to nieprzyjemne uczucie, że mogłem coś przegapić. W końcu postanowiłem - skoro i tak to wszystko można zrobić automatycznie, to po co się męczyć?
 faq:
   - question: "Jak działa automatyczny monitoring decyzji UODO opisany w artykule?"
     answer: "Workflow w n8n uruchamia się co poniedziałek o 7:07, pobiera z API UODO listę decyzji z ostatnich 30 dni w formacie CSV, pobiera pełną treść każdej decyzji, a następnie lokalny model językowy generuje jej streszczenie. Gotowe streszczenia trafiają w jednym raporcie HTML na e-mail autora."

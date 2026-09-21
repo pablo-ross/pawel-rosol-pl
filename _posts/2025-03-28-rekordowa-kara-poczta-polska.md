@@ -33,16 +33,16 @@ Naruszenie dotyczyło bezprawnego udostępnienia i przetwarzania danych osobowyc
 ## Chronologia wydarzeń
 
 1. W kwietniu 2020 r., podczas pandemii COVID-19, władze zdecydowały o organizacji wyborów prezydenckich w formie korespondencyjnej, mimo że odpowiednia ustawa nie weszła jeszcze w życie.
-2. 16 kwietnia 2020 r. – Premier wydał decyzję zobowiązującą Pocztę Polską do rozpoczęcia przygotowań do wyborów.
-3. 20 kwietnia 2020 r. – Poczta Polska wystąpiła o przekazanie danych z rejestru PESEL.
-4. 22 kwietnia 2020 r. – Minister cyfryzacji udostępnił dane 30 mln obywateli Poczcie Polskiej.
-5. Maj 2020 r. – Po odwołaniu wyborów, dane zostały zniszczone (15-22 maja).
-6. 29 kwietnia 2020 r. – Rzecznik Praw Obywatelskich złożył skargę do WSA na decyzję Premiera.
-7. 15 maja 2020 r. – RPO złożył skargę na działanie ministra cyfryzacji.
-8. Wrzesień 2020 r. – WSA stwierdził, że decyzja Premiera rażąco naruszała prawo.
-9. Luty 2021 r. – WSA stwierdził bezskuteczność czynności ministra cyfryzacji.
-10. Marzec i czerwiec 2024 r. – NSA utrzymał w mocy wyroki WSA.
-11. 17 marca 2025 r. – Prezes UODO wydał decyzję o nałożeniu kar.
+2. 16 kwietnia 2020 r. - Premier wydał decyzję zobowiązującą Pocztę Polską do rozpoczęcia przygotowań do wyborów.
+3. 20 kwietnia 2020 r. - Poczta Polska wystąpiła o przekazanie danych z rejestru PESEL.
+4. 22 kwietnia 2020 r. - Minister cyfryzacji udostępnił dane 30 mln obywateli Poczcie Polskiej.
+5. Maj 2020 r. - Po odwołaniu wyborów, dane zostały zniszczone (15-22 maja).
+6. 29 kwietnia 2020 r. - Rzecznik Praw Obywatelskich złożył skargę do WSA na decyzję Premiera.
+7. 15 maja 2020 r. - RPO złożył skargę na działanie ministra cyfryzacji.
+8. Wrzesień 2020 r. - WSA stwierdził, że decyzja Premiera rażąco naruszała prawo.
+9. Luty 2021 r. - WSA stwierdził bezskuteczność czynności ministra cyfryzacji.
+10. Marzec i czerwiec 2024 r. - NSA utrzymał w mocy wyroki WSA.
+11. 17 marca 2025 r. - Prezes UODO wydał decyzję o nałożeniu kar.
 
 ## Zakres udostępnionych danych
 
@@ -58,8 +58,8 @@ Przekazane Poczcie Polskiej dane obejmowały:
 
 Prezes UODO Mirosław Wróblewski wskazał na następujące okoliczności obciążające:
 
-1. **Bezprecedensowa skala naruszenia** – nigdy wcześniej nie doszło do nielegalnego udostępnienia danych na taką skalę.
-2. **Naruszenie konstytucyjnych praw obywateli** – bezpodstawne przetwarzanie danych zagrażało prawu do ochrony życia prywatnego.
+1. **Bezprecedensowa skala naruszenia** - nigdy wcześniej nie doszło do nielegalnego udostępnienia danych na taką skalę.
+2. **Naruszenie konstytucyjnych praw obywateli** - bezpodstawne przetwarzanie danych zagrażało prawu do ochrony życia prywatnego.
 3. **Szczególna odpowiedzialność organów państwowych**:
    - Poczta Polska jako spółka Skarbu Państwa powinna wykazać najwyższą staranność w przestrzeganiu przepisów.
    - Minister cyfryzacji jako podmiot odpowiedzialny za rejestr PESEL powinien dawać gwarancję poszanowania praw obywateli.
@@ -75,22 +75,22 @@ Początkowo kara dla Poczty Polskiej miała wynieść ponad 100 mln zł, ale zos
 
 Z decyzji UODO wynikają następujące ważne zasady postępowania:
 
-1. **Bezwzględny wymóg podstawy prawnej** – przetwarzanie danych osobowych, szczególnie na dużą skalę, wymaga wyraźnej podstawy prawnej.
-2. **Konieczność weryfikacji legalności poleceń** – nawet polecenie służbowe czy decyzja administracyjna nie zwalnia z obowiązku weryfikacji zgodności działań z przepisami o ochronie danych.
-3. **Wyższa odpowiedzialność organów publicznych** – od podmiotów realizujących zadania publiczne i dysponujących danymi z rejestrów państwowych oczekuje się szczególnej staranności w przestrzeganiu przepisów RODO.
-4. **Proporcjonalność przetwarzania** – zakres przetwarzanych danych powinien być ograniczony do niezbędnego minimum i adekwatny do celu.
-5. **Odpowiedzialność kierownictwa** – decyzje dotyczące przetwarzania danych obywateli muszą być podejmowane w oparciu o analizę prawną, a nie tylko względy organizacyjne czy polityczne.
+1. **Bezwzględny wymóg podstawy prawnej** - przetwarzanie danych osobowych, szczególnie na dużą skalę, wymaga wyraźnej podstawy prawnej.
+2. **Konieczność weryfikacji legalności poleceń** - nawet polecenie służbowe czy decyzja administracyjna nie zwalnia z obowiązku weryfikacji zgodności działań z przepisami o ochronie danych.
+3. **Wyższa odpowiedzialność organów publicznych** - od podmiotów realizujących zadania publiczne i dysponujących danymi z rejestrów państwowych oczekuje się szczególnej staranności w przestrzeganiu przepisów RODO.
+4. **Proporcjonalność przetwarzania** - zakres przetwarzanych danych powinien być ograniczony do niezbędnego minimum i adekwatny do celu.
+5. **Odpowiedzialność kierownictwa** - decyzje dotyczące przetwarzania danych obywateli muszą być podejmowane w oparciu o analizę prawną, a nie tylko względy organizacyjne czy polityczne.
 
 ## Jak unikać podobnych naruszeń?
 
-1. **Przeprowadzaj ocenę skutków dla ochrony danych (DPIA)** przed rozpoczęciem przetwarzania na dużą skalę – pozwoli to zidentyfikować i zminimalizować ryzyka.
+1. **Przeprowadzaj ocenę skutków dla ochrony danych (DPIA)** przed rozpoczęciem przetwarzania na dużą skalę - pozwoli to zidentyfikować i zminimalizować ryzyka.
 2. **Konsultuj z ekspertami prawnymi i Inspektorem Ochrony Danych** wszystkie działania związane z przetwarzaniem danych osobowych, szczególnie w nietypowych sytuacjach.
-3. **Weryfikuj podstawy prawne** – każde przetwarzanie danych osobowych musi mieć wyraźną podstawę prawną zgodną z art. 6 RODO.
-4. **Stosuj zasadę minimalizacji danych** – przetwarzaj tylko te dane, które są niezbędne do osiągnięcia celu.
-5. **Dokumentuj procesy decyzyjne** – zachowuj dokumentację uzasadniającą podjęte decyzje dotyczące przetwarzania danych.
-6. **Wdrażaj odpowiednie środki techniczne i organizacyjne** – zapewniaj bezpieczeństwo przetwarzania danych, nawet w sytuacjach nadzwyczajnych.
-7. **Nie ulegaj presji czasowej** – nawet w sytuacjach nagłych należy przestrzegać podstawowych zasad ochrony danych.
-8. **Szanuj prawa osób, których dane dotyczą** – pamiętaj, że przetwarzanie danych osobowych zawsze dotyczy konkretnych osób i ich konstytucyjnych praw.
+3. **Weryfikuj podstawy prawne** - każde przetwarzanie danych osobowych musi mieć wyraźną podstawę prawną zgodną z art. 6 RODO.
+4. **Stosuj zasadę minimalizacji danych** - przetwarzaj tylko te dane, które są niezbędne do osiągnięcia celu.
+5. **Dokumentuj procesy decyzyjne** - zachowuj dokumentację uzasadniającą podjęte decyzje dotyczące przetwarzania danych.
+6. **Wdrażaj odpowiednie środki techniczne i organizacyjne** - zapewniaj bezpieczeństwo przetwarzania danych, nawet w sytuacjach nadzwyczajnych.
+7. **Nie ulegaj presji czasowej** - nawet w sytuacjach nagłych należy przestrzegać podstawowych zasad ochrony danych.
+8. **Szanuj prawa osób, których dane dotyczą** - pamiętaj, że przetwarzanie danych osobowych zawsze dotyczy konkretnych osób i ich konstytucyjnych praw.
 
 Decyzja UODO stanowi ważny precedens pokazujący, że naruszenia przepisów o ochronie danych osobowych mogą prowadzić do poważnych konsekwencji finansowych, nawet dla dużych podmiotów państwowych. Jeśli do naruszenia już doszło, o obowiązkach zgłoszeniowych i sposobie ich udokumentowania piszę w omówieniu [poradnika UODO dotyczącego naruszeń]({% post_url 2025-03-03-poradnik-uodo-naruszenia %}); przykładem kary nałożonej równolegle na administratora i na procesora jest [sprawa McDonald's Polska]({% post_url 2025-07-28-kara-mcdonalds %}).
 

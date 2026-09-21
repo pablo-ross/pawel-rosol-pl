@@ -1,5 +1,5 @@
 ---
-title: AI w pracy Inspektora Ochrony Danych – Jak wykorzystać sztuczną inteligencję bez naruszenia RODO?
+title: AI w pracy Inspektora Ochrony Danych - Jak wykorzystać sztuczną inteligencję bez naruszenia RODO?
 date: 2025-10-30T11:34:13.27Z
 categories:
   - Sztuczna inteligencja
@@ -10,7 +10,7 @@ tags:
   - IOD
   - RODO
   - Automatyzacja
-description: Inspektor Ochrony Danych stoi przed unikalnym wyzwaniem - z jednej strony musi zapewnić najwyższą ochronę danych osobowych w organizacji, z drugiej – efektywnie zarządzać coraz większą liczbą zadań i obowiązków. Sztuczna inteligencja, a konkretnie duże modele językowe (LLM), mogą znacząco usprawnić codzienną pracę IOD, ale tylko pod warunkiem, że będą wykorzystywane w sposób zgodny z RODO i zasadami bezpieczeństwa danych.
+description: Inspektor Ochrony Danych stoi przed unikalnym wyzwaniem - z jednej strony musi zapewnić najwyższą ochronę danych osobowych w organizacji, z drugiej - efektywnie zarządzać coraz większą liczbą zadań i obowiązków. Sztuczna inteligencja, a konkretnie duże modele językowe (LLM), mogą znacząco usprawnić codzienną pracę IOD, ale tylko pod warunkiem, że będą wykorzystywane w sposób zgodny z RODO i zasadami bezpieczeństwa danych.
 legal: true
 faq:
   - question: "Dlaczego komercyjne narzędzia AI takie jak ChatGPT czy Claude są ryzykowne dla IOD?"
@@ -28,7 +28,7 @@ faq:
 
 ### Status IOD jako podmiotu przetwarzającego
 
-IOD w swojej codziennej pracy przetwarza szczególnie wrażliwe dane osobowe – od umów powierzenia, przez klauzule informacyjne, po rejestry czynności przetwarzania zawierające informacje o procesach biznesowych organizacji. Zgodnie z RODO, gdy IOD wykonuje swoje zadania na podstawie umowy o świadczenie usług (co jest częstą praktyką), występuje w roli **podmiotu przetwarzającego (procesora)**.
+IOD w swojej codziennej pracy przetwarza szczególnie wrażliwe dane osobowe - od umów powierzenia, przez klauzule informacyjne, po rejestry czynności przetwarzania zawierające informacje o procesach biznesowych organizacji. Zgodnie z RODO, gdy IOD wykonuje swoje zadania na podstawie umowy o świadczenie usług (co jest częstą praktyką), występuje w roli **podmiotu przetwarzającego (procesora)**.
 
 ### Ryzyko wycieku danych przy korzystaniu z komercyjnych narzędzi
 
@@ -70,11 +70,11 @@ Poza wymienionymi obszarami AI może wspomóc IOD w wielu innych codziennych zad
 
 ### Czym są lokalne LLM?
 
-Lokalne duże modele językowe to rozwiązania AI działające w całości na infrastrukturze użytkownika – na komputerze, serwerze lub we własnej chmurze organizacji. Oznacza to, że **żadne dane nie opuszczają organizacji**, co zapewnia pełną kontrolę nad przepływem informacji; następnie, **brak transmisji przez Internet** gwarantuje, że dane nie są wysyłane do zewnętrznych dostawców; dalej, **pełna prywatność** oznacza, że organizacja ma wyłączną kontrolę nad danymi; w końcu, rozwiązanie to zapewnia **zgodność z RODO** przez spełnienie wymogów dotyczących bezpieczeństwa i minimalizacji danych.
+Lokalne duże modele językowe to rozwiązania AI działające w całości na infrastrukturze użytkownika - na komputerze, serwerze lub we własnej chmurze organizacji. Oznacza to, że **żadne dane nie opuszczają organizacji**, co zapewnia pełną kontrolę nad przepływem informacji; następnie, **brak transmisji przez Internet** gwarantuje, że dane nie są wysyłane do zewnętrznych dostawców; dalej, **pełna prywatność** oznacza, że organizacja ma wyłączną kontrolę nad danymi; w końcu, rozwiązanie to zapewnia **zgodność z RODO** przez spełnienie wymogów dotyczących bezpieczeństwa i minimalizacji danych.
 
 ### Kluczowe narzędzia dla IOD
 
-#### Ollama – prosty start z lokalnymi LLM
+#### Ollama - prosty start z lokalnymi LLM
 
 **Ollama** to narzędzie typu open-source, które umożliwia łatwe uruchamianie dużych modeli językowych lokalnie. Działa na systemach Windows, macOS i Linux. Dla IOD oferuje szereg istotnych zalet: po pierwsze, zapewnia prostą instalację jedną komendą; po drugie, daje duży wybór gotowych modeli (Llama, Mistral, Qwen, Gemma); po trzecie, umożliwia pracę offline; po czwarte, oferuje API REST umożliwiające integrację z innymi narzędziami; po piąte, nie wymaga zaawansowanej wiedzy technicznej; wreszcie, jest całkowicie bezpłatne.
 
@@ -90,13 +90,13 @@ ollama run llama3
 ollama serve
 ```
 
-#### LM Studio – interfejs graficzny dla mniej technicznych użytkowników
+#### LM Studio - interfejs graficzny dla mniej technicznych użytkowników
 
 **LM Studio** to aplikacja desktopowa z przyjaznym interfejsem graficznym, idealnie nadająca się dla IOD-ów bez zaawansowanej wiedzy technicznej. Narzędzie to oferuje liczne zalety: posiada intuicyjny interfejs graficzny; umożliwia łatwą instalację modeli „klik i gotowe"; zawiera wbudowany chat podobny do ChatGPT; daje możliwość zapisywania szablonów promptów; jest dostępne na Windows, macOS i Linux; jest bezpłatne.
 
 Typowe zastosowanie jest bardzo proste i sprowadza się do czterech kroków. Najpierw należy pobrać i zainstalować LM Studio; następnie wybrać i pobrać model z wbudowanego katalogu; kolejno skonfigurować szablon dla konkretnego zadania (np. „Jesteś ekspertem RODO weryfikującym umowy powierzenia"); w końcu można rozpocząć pracę bez konieczności używania terminala.
 
-#### Lokalne bazy wektorowe – dla zaawansowanych zastosowań
+#### Lokalne bazy wektorowe - dla zaawansowanych zastosowań
 
 Dla IOD-ów, którzy chcą wykorzystać AI do przeszukiwania dużej ilości dokumentów (np. wszystkich umów powierzenia, polityk prywatności, klauzul), warto rozważyć użycie lokalnych baz wektorowych. Wśród popularnych rozwiązań wyróżniają się **ChromaDB** jako najprostsze i idealne na początek; **Qdrant** jako bardzo wydajne, napisane w Rust; oraz **Weaviate** oferujące zaawansowane funkcje hybrydowego wyszukiwania.
 
@@ -122,9 +122,9 @@ Zastosowanie dla IOD jest szerokie i obejmuje semantyczne przeszukiwanie dokumen
 - Zalecany przez ekspertów dla zadań wielojęzycznych
 
 **Polskie modele:**
-- **Bielik** – polski model bazujący na Mistral, dostosowany do polskiej specyfiki
-- **PLLuM** – rodzina polskich modeli językowych, dostępne w różnych rozmiarach
-- **Qra** – modele stworzone przez Politechnikę Gdańską, zoptymalizowane pod język polski
+- **Bielik** - polski model bazujący na Mistral, dostosowany do polskiej specyfiki
+- **PLLuM** - rodzina polskich modeli językowych, dostępne w różnych rozmiarach
+- **Qra** - modele stworzone przez Politechnikę Gdańską, zoptymalizowane pod język polski
 
 ## Optymalny stack technologiczny dla IOD
 
@@ -247,15 +247,15 @@ Przy wdrażaniu N8N dla IOD kluczowe jest zapewnienie kilku fundamentalnych elem
 
 Proces weryfikacji umowy z wykorzystaniem AI składa się z pięciu etapów.
 
-W **kroku pierwszym – przygotowaniu** – IOD otrzymuje projekt umowy powierzenia od działu prawnego i zapisuje dokument lokalnie.
+W **kroku pierwszym - przygotowaniu** - IOD otrzymuje projekt umowy powierzenia od działu prawnego i zapisuje dokument lokalnie.
 
-W **kroku drugim – wstępnej analizie** – IOD otwiera LM Studio, ładuje szablon „Weryfikacja umowy powierzenia RODO" i wkleja treść umowy. Model następnie analizuje dokument i wskazuje, czy wszystkie wymagane elementy z art. 28 RODO są obecne; identyfikuje potencjalnie problematyczne klauzule; wykrywa niejasne sformułowania.
+W **kroku drugim - wstępnej analizie** - IOD otwiera LM Studio, ładuje szablon „Weryfikacja umowy powierzenia RODO" i wkleja treść umowy. Model następnie analizuje dokument i wskazuje, czy wszystkie wymagane elementy z art. 28 RODO są obecne; identyfikuje potencjalnie problematyczne klauzule; wykrywa niejasne sformułowania.
 
-W **kroku trzecim – szczegółowej weryfikacji** – IOD przegląda sugestie modelu, weryfikuje krytyczne uwagi i nanosi własne poprawki oparte na doświadczeniu.
+W **kroku trzecim - szczegółowej weryfikacji** - IOD przegląda sugestie modelu, weryfikuje krytyczne uwagi i nanosi własne poprawki oparte na doświadczeniu.
 
-W **kroku czwartym – przygotowaniu feedbacku** – IOD za pomocą AI generuje zwięzłe podsumowanie uwag, dodaje referencje do konkretnych artykułów RODO i przygotowuje propozycje poprawek.
+W **kroku czwartym - przygotowaniu feedbacku** - IOD za pomocą AI generuje zwięzłe podsumowanie uwag, dodaje referencje do konkretnych artykułów RODO i przygotowuje propozycje poprawek.
 
-W **kroku piątym – dokumentacji** – IOD zapisuje notatki w lokalnym systemie, dzięki czemu wszystko pozostaje w organizacji i zero danych nie wyciekło na zewnątrz.
+W **kroku piątym - dokumentacji** - IOD zapisuje notatki w lokalnym systemie, dzięki czemu wszystko pozostaje w organizacji i zero danych nie wyciekło na zewnątrz.
 
 **Oszczędność czasu:** Zamiast 2-3 godzin ręcznej analizy proces trwa jedynie 30-45 minut z weryfikacją AI.
 
@@ -265,7 +265,7 @@ W **kroku piątym – dokumentacji** – IOD zapisuje notatki w lokalnym systemi
 
 Skuteczność AI zależy od jakości instrukcji. Dla IOD warto przygotować zestaw szablonów:
 
-**Przykład – weryfikacja umowy:**
+**Przykład - weryfikacja umowy:**
 ```
 Jesteś ekspertem RODO specjalizującym się w umowach powierzenia przetwarzania danych osobowych.
 
@@ -314,8 +314,8 @@ Bezpieczeństwo systemu wymaga systematycznego podejścia. Trzeba regularnie two
 
 **Zależy:**
 
-- Jeśli IOD działa jako podmiot przetwarzający i używa lokalnych LLM w ramach wykonywania umowy – zazwyczaj **NIE**, bo dane nie są przekazywane dalej
-- Jeśli organizacja zatrudnia IOD wewnętrznie – użycie lokalnych narzędzi jest częścią normalnych procesów, **NIE** wymaga osobnej regulacji
+- Jeśli IOD działa jako podmiot przetwarzający i używa lokalnych LLM w ramach wykonywania umowy - zazwyczaj **NIE**, bo dane nie są przekazywane dalej
+- Jeśli organizacja zatrudnia IOD wewnętrznie - użycie lokalnych narzędzi jest częścią normalnych procesów, **NIE** wymaga osobnej regulacji
 
 ### Czy trzeba informować osoby, których dane dotyczą?
 
@@ -323,7 +323,7 @@ W klauzulach informacyjnych warto wskazać, że organizacja może używać narz�
 
 ### Czy można używać AI do przetwarzania szczególnych kategorii danych?
 
-**TAK**, w przypadku lokalnych LLM jest to możliwe, przy czym dane szczególne kategorii (zdrowotne, biometryczne, etc.) mogą być przetwarzane pod warunkiem zapewnienia odpowiednich zabezpieczeń; jednocześnie należy działać zgodnie z zasadą minimalizacji – tylko wtedy gdy jest to konieczne.
+**TAK**, w przypadku lokalnych LLM jest to możliwe, przy czym dane szczególne kategorii (zdrowotne, biometryczne, etc.) mogą być przetwarzane pod warunkiem zapewnienia odpowiednich zabezpieczeń; jednocześnie należy działać zgodnie z zasadą minimalizacji - tylko wtedy gdy jest to konieczne.
 
 ## Porównanie: komercyjne vs lokalne LLM dla IOD
 
