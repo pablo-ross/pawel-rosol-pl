@@ -214,6 +214,7 @@ exclude:
   - "package*.json"
   - "TREE.md"
   - "UPDATE.md"
+  - "CLAUDE.md"
 
 include:
   - google7ccb7976466cc251.html
