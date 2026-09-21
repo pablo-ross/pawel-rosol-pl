@@ -56,7 +56,7 @@ bash .production.sh
 
 - `_posts/` — blog posts, filename format: `YYYY-MM-DD-slug.md`
 - `_tabs/` — static pages rendered as sidebar navigation tabs (about, archives, categories, tags, contact)
-- `_data/` — user YAML data files: `authors.yml`, `contact.yml`, `media.yml`, `share.yml`
+- `_data/` — user YAML data files: `authors.yml`, `contact.yml`, `media.yml`, `share.yml`, `locales/pl-PL.yml` (all Polish UI strings — see "Tab titles and UI strings")
 - `media/` — images and media assets (referenced via `/media/...` paths)
 - `assets/img/favicons/` — site-specific favicons
 - `docs/aeo-geo-seo-audit.md` — the AEO/GEO/SEO audit and phased action plan; the source of truth for what is done and what is outstanding. `docs/` is excluded from the build.
@@ -81,6 +81,19 @@ description: "SEO description"
 Optional fields: `image`, `pin: true` (pin to home), `toc: false` (disable TOC), `faq:` (a list of `question:`/`answer:` pairs — rendered by `_includes/post-faq.html` and emitted as `FAQPage` JSON-LD).
 
 `_tabs/*.md` additionally carry `seo: type:` (`ProfilePage`, `ContactPage`, `CollectionPage`). Without it jekyll-seo-tag types them `BlogPosting` with the build time as `datePublished`.
+
+### Writing and editing content — use the `humanizer` skill
+
+**Invoke the project-local `humanizer` skill (`.claude/skills/humanizer/SKILL.md`) whenever you write or edit prose in `_posts/`, `_tabs/`, `llms.txt`, or a post's `description:` / `faq:` values — and always before committing a new or rewritten post.** Posts are in Polish and the author is a practising DPO; text that reads as machine-written undermines the site's whole premise, and a plausible-sounding but wrong article number is worse than no post at all.
+
+The skill is adapted from [blader/humanizer](https://github.com/blader/humanizer) (MIT) for this repo: Polish-language tells, this blog's voice, and a set of hard rules that override everything else in it —
+
+- never invent or alter an article number, act name, Dz.U./ELI reference, decision signature, fine amount, date or statutory deadline;
+- never touch YAML keys, Liquid tags, `{: .prompt-* }` blocks, code, paths or link targets;
+- no em dashes (`—`) or en dashes (`–`) in prose — the house style is a spaced hyphen (` - `);
+- Polish typographic quotes `„…"` are correct and must be preserved.
+
+It does not apply to posts published before 30 November 2022: those carry the author's own habits, and normalising them makes the corpus more uniform, not more human. Edit those for links, citations and dated notes only.
 
 ### Internal links between posts
 
@@ -128,6 +141,10 @@ Both live under `assets/`, outside the do-not-fork list, and both are marked wit
 
 - `assets/feed.xml` — entry limit 5 → 20; author resolved through `_data/authors.yml` instead of printing the raw id; `xml_escape` dropped from the entry `title=` attribute, where the template's global `replace: '&', '&amp;'` was double-escaping it. Do **not** add `{{ post.content }}` without first removing that global replace and escaping each field individually — otherwise every entity in the feed is double-escaped.
 - `assets/404.html` — Polish text plus links to archives, categories, tags and contact. The gem ships an empty `<p class="lead">`.
+
+### Tab titles and UI strings
+
+`_data/locales/pl-PL.yml` supplies every user-facing theme string. Its `tabs:` map is keyed by **the tab's `title:` in lower case** (the theme's own `<filename_without_extension>` comment is wrong). `_layouts/page.html` falls back to `page.title` when a key is missing, but `_includes/head.html` does not — a missing key ships an empty `<title>`. Adding or renaming a tab means adding the matching key. `tools/test.sh` fails the build if any page has an empty title.
 
 ### Site root files
 

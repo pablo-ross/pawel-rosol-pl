@@ -19,4 +19,7 @@ _sass/vendors
 
 # Deployment scripts (contain server credentials)
 .production.sh
-.claude/
+
+# Claude Code: track shared project skills, ignore local settings
+.claude/*
+!.claude/skills/
