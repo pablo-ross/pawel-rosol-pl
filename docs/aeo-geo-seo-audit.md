@@ -420,20 +420,24 @@ Each phase ends with `bash tools/test.sh` and one Conventional Commit per logica
 - [x] Primary-source citations in the posts with none (§4.3.5) — EUR-Lex ELI for RODO/NIS2/2019/1937, eli.gov.pl for KSC + nowelizacja + sygnaliści + UdIP, orzeczenia.uodo.gov.pl for DKN.5131.9.2024. All URLs checked to resolve
 - [x] `noindex, follow` on tags with < 3 posts (§2) — 119 of 133 tag archives
 - [ ] Tag consolidation to ~30–40 tags (§2) — **still outstanding**, one pass, one commit
-- [ ] Pillar #1: *Naruszenie ochrony danych osobowych* (6–10 h) (§4.3.3) — **next**
+- [x] Pillar #1: *Naruszenie ochrony danych osobowych - przewodnik dla administratora* (§4.3.3) — pinned, ~1700 words, 3 tables, 6 FAQ, links out to 7 posts and back from 4. `legal_status_date` left unset pending the author's review
 - [x] Post → `/contact/` CTA — via the author box on every post (§5.2f)
-- [ ] `/about/` → pillar — blocked on the pillar existing
-- [ ] KSC / NIS2 cluster: refresh the 2024 NIS2 post, then posts 2–5 of §11.4, then pillar #2
+- [x] `/about/` → pillar
+- [x] KSC / NIS2: `wdrozenie-implementacja-nis2` rewritten around the act as in force (§11.4.1) — wykaz deadline, CSIRT 24 h/72 h/month, art. 8c ust. 3 / 8e / 14, RODO-vs-KSC table, 5 FAQ, first external citations
+- [ ] KSC / NIS2 posts 2–6 of §11.4, then pillar #2
 
 ### Phase 4 — AEO content pass (~45 min per post)
 
 *Infrastructure done; the UODO cluster (7 posts) done; the AI cluster and the rest outstanding.*
 Do **not** do all 31. Order: the 7 posts of the UODO cluster → the 5 AI posts → whatever Search Console shows impressions for. Roughly 12–15 posts, ≈ 10 h.
 - [x] UODO cluster (7 posts): "W skrócie" (§5.2a), question headings (§5.2b), `faq:` on `decyzja-uodo` (§5.2c) — FAQ coverage 14 → 15 of 31
+- [x] `wdrozenie-implementacja-nis2` (full rewrite) and the pillar
+- [x] House style enforced: no em/en dashes in post-2022 posts; every question heading ends with `?` (humanizer §8, §20)
 - [ ] Same pass on the 5 AI posts, then whatever Search Console shows
 - [x] `legal_status_date` include (§5.2d) — opt-in via `legal: true`, set on 21 posts. **No date stamped on any post:** that field means "the author checked this post against current law on this day", and that review has not happened. Unreviewed posts show their publication date plus an explicit warning, which is the intended output
 - [x] Author-box include (§5.2f) — appended to every post by `_plugins/post-footer-hook.rb`
 - [x] One table added: causes of naruszenia mapped to decisions, in `poradnik-uodo-naruszenia`
+- [x] Two more tables: CSIRT reporting chain and RODO-vs-KSC, in `wdrozenie-implementacja-nis2`; three in the pillar
 - [ ] Remaining tables (§5.2e): `kara-mcdonalds`, `rekordowa-kara-poczta-polska`, `decyzja-uodo-ops`, `kanal-zewnetrzny`
 - [x] Archival notes on dated posts (§5.2h) — `windows-7-koniec-wsparcia`, `google-g-suite-dla-szkol`, `szkolenie-dla-iod-sektor-oswiata`, plus dated update notes on `ochrona-sygnalistow`, `atak-mpk-krakow`, `ai-w-pracy-iod`, `bezpieczna-poczta-email`
 - [x] Expanded `decyzja-uodo` 226 → 549 words (§5.2g)
