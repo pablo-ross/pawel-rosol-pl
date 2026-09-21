@@ -1,8 +1,10 @@
 # AEO / GEO / SEO audit & action plan — pawel.rosol.pl
 
-**Audit date:** 2026-09-21 · **Revision 3** (rev. 2: every claim re-verified against the repo, the production build and the live site — §9; rev. 3: second professional role, `/about/` rewritten — §11)
-**Scope:** Jekyll 4.4.1 + jekyll-theme-chirpy 7.6.0, jekyll-seo-tag 2.9.0, 31 posts, 13 categories, 132 tags, Polish-language content. Hosting: nginx on mydevil.net.
+**Audit date:** 2026-09-21 · **Revision 4** (rev. 2: every claim re-verified against the repo, the production build and the live site — §9; rev. 3: second professional role, `/about/` rewritten — §11; rev. 4: phases 1–4 largely implemented and deployed — §0.1)
+**Scope at audit time:** Jekyll 4.4.1 + jekyll-theme-chirpy 7.6.0, jekyll-seo-tag 2.9.0, 31 posts, 13 categories, 132 tags, Polish-language content. Hosting: nginx on mydevil.net.
 **Method:** production build (`JEKYLL_ENV=production bundle exec jekyll b`) inspected offline — sitemap, robots, feed, rendered JSON-LD, meta tags, link graph, front matter — plus `curl` against the live site for status codes and response headers.
+
+> **Reading note:** §1–§6 and §11 record the diagnosis as it stood on the audit date and are deliberately left as written, so the reasoning behind each recommendation survives. Sections whose factual claims have since changed carry a **Status** line. §0.1 and §7 are the current picture.
 
 ---
 
@@ -23,9 +25,65 @@ Realistic effort: Phases 0–2 ≈ 8–10 hours. Phases 3–4 are content work, 
 
 ---
 
+## 0.1 Status — 21.09.2026 *(new in rev. 4)*
+
+Phases 1–4 implemented and **deployed**; `curl` checks re-run against the live site. 18 commits. `bash tools/test.sh` green, which now means production build + html-proofer + `tools/check-jsonld.rb` + an empty-`<title>` guard.
+
+| Phase | Done | Outstanding |
+|---|---|---|
+| 0 — Baseline | — | **All of it.** Not started |
+| 1 — Defects | 6 of 7 | Security headers + `charset=utf-8` (§1.5), server-side |
+| 2 — Structured data | 7 of 8 | External schema validators (manual) |
+| 3 — Linking & taxonomy | Links, citations, tags, pillar #1 | §11.4 posts 2–6, then pillar #2 |
+| 4 — AEO content pass | Infrastructure, UODO cluster, 2 rewrites | AI cluster, 4 tables, 3 thin hubs |
+| 5 — Infrastructure | `llms.txt`, `security.txt`, identity signals | Self-hosting, OG images, IndexNow, media |
+
+### What moved
+
+| Measure | At audit | Now |
+|---|---|---|
+| Posts | 31 | 32 |
+| Tags | 132 (9 with ≥3 posts) | 38 (21 with ≥3 posts) |
+| Sitemap URLs | 185 (72% tag archives) | 91 |
+| `{% post_url %}` links | 15 | 81 |
+| Posts with a contextual inbound link | 9 of 31 | 31 of 32 |
+| Posts with visible FAQ + `FAQPage` | 14 | 17 |
+| JSON-LD blocks per page | 2 (duplicate `BlogPosting`) | 1 |
+| Breadcrumb category URL | HTTP 404 on every post | 200 |
+| `/CLAUDE.md` | HTTP 200 | 404 |
+| `<title>` on the five tabs | empty | correct |
+
+### New in the repo
+
+- `_plugins/strip-seo-tag-jsonld.rb`, `_plugins/post-footer-hook.rb`
+- `_includes/author-box.html`, `_includes/legal-status.html`
+- `tools/check-jsonld.rb`, wired into `tools/test.sh`
+- `assets/feed.xml` and `assets/404.html` — the two theme-owned overrides, recorded in `CLAUDE.md`
+- `.well-known/security.txt`
+- `.claude/skills/humanizer/` — house style for Polish prose, adapted from blader/humanizer (MIT), now tracked in git and referenced from `CLAUDE.md`
+
+### Found while implementing, not in the original audit
+
+- **Empty `<title>` on all five tabs**, including `/about/` and `/contact/`. `_data/locales/pl-PL.yml` defined only `home:` under `tabs:`; `_layouts/page.html` falls back to `page.title` but `_includes/head.html` does not. Fixed, with a build guard.
+- **Question headings without a question mark** — 19 of them. Fixed and recorded as humanizer §20.
+- The theme's `assets/feed.xml` **double-escapes** the entry `title=` attribute, because `xml_escape` output is then caught by the template's global `replace: '&', '&amp;'`.
+- §11.2 misdescribed Dz.U. 2026 poz. 1003 as a KSC amendment; it is the **ustawa o systemach sztucznej inteligencji**. Corrected in place.
+
+### Open items that need the owner, not the implementer
+
+1. **Phase 0 never happened, and the site has now changed.** The pillar and the tag consolidation are the two changes most worth measuring, and both shipped without a "before" reading. Verify Search Console and Bing, then record the first reading as a post-change baseline. Bing matters disproportionately: Copilot and ChatGPT search retrieve through its index.
+2. **Security headers (§1.5)** — the last Phase 1 defect, and the one a technical prospect checks first.
+3. **`legal_status_date` is unset on all 22 `legal: true` posts**, so each displays "nie był weryfikowany pod kątem zmian w przepisach". That is the intended output (§5.2d) until the author reviews a post against current law, but it is visible on two thirds of the corpus.
+4. **§10 decisions 4 (IBAN on `/contact/`) and 8 (`/about/` review)** remain open.
+5. The KSC post turns on whether the owner's own entry in the wykaz is under the water/sewage sector or under *podmioty publiczne*; that determines documentation scope, the art. 15 audit duty and the incident-reporting duties.
+
+---
+
 ## 1. Confirmed defects (fix first)
 
 ### 1.1 — `BreadcrumbList` links to a 404 on every post — **high**
+
+**Status (21.09.2026):** **fixed and deployed.** Both bugs: the slug is built with `cat_slug` in isolation, and every string now goes through `| jsonify`. Live check: the category URL returns 200 and the breadcrumb name reads `McDonald's`, not `McDonald&#39;s`.
 
 `_includes/metadata-hook.html` builds the category URL as:
 
@@ -52,11 +110,15 @@ Verified: Liquid `slugify` output matches all 13 directories jekyll-archives gen
 
 ### 1.2 — `CLAUDE.md` is published to the live site — **medium (disclosure)**
 
+**Status (21.09.2026):** **fixed and deployed.** `https://pawel.rosol.pl/CLAUDE.md` now returns 404; `rsync --delete` removed the remote copy.
+
 Confirmed live: `https://pawel.rosol.pl/CLAUDE.md` → HTTP 200. It describes the deploy mechanism (rsync over SSH) and internal working instructions. No credentials or hostnames are in it, so this is housekeeping rather than an incident — but it should not be there.
 
 **Fix** — add `CLAUDE.md` to `exclude:` in `_config.yml`. `rsync --delete` in `.production.sh` removes the remote copy on the next deploy. `docs/` is already excluded, so this file is safe.
 
 ### 1.3 — Tabs are typed `BlogPosting` with a build-time publish date — **high** *(new in rev. 2)*
+
+**Status (21.09.2026):** **fixed.** All five tabs carry `seo: type:` and real meta descriptions. The spurious `datePublished` is gone too, because the seo-tag block is now stripped entirely (§3.2b).
 
 jekyll-seo-tag picks `@type` as: `seo.type` front matter → `WebSite` for home/about → **`BlogPosting` for anything with a date** → `WebPage`. Documents in the `tabs` collection inherit a date (the build time), so today:
 
@@ -81,6 +143,8 @@ The spurious `datePublished` remains; §3.2 removes it.
 
 ### 1.4 — Atom feed: 5 entries, author id instead of name — **medium**
 
+**Status (21.09.2026):** **fixed**, limit + author only (owner decision, §10.7). One extra bug found and fixed while overriding the file: `xml_escape` on the entry `title=` attribute was double-escaped by the template's global `replace: '&', '&amp;'`, rendering an apostrophe as `&amp;apos;`.
+
 The gem's `assets/feed.xml` hardcodes `limit: 5` and prints `{{ post.author }}` raw, so every entry says `<name>pawel_rosol</name>` (the id set in `_config.yml` defaults). `<content>` is a `src=` pointer; the only text is a 400-character `<summary>`.
 
 **Fix** — copy the gem's file to `assets/feed.xml` and:
@@ -95,6 +159,8 @@ The gem's `assets/feed.xml` hardcodes `limit: 5` and prints `{{ post.author }}` 
 
 ### 1.5 — No security headers on the live site — **medium** *(promoted from "verify" to confirmed)*
 
+**Status (21.09.2026):** **still outstanding.** Server-side on mydevil.net, outside this repo. The last unresolved Phase 1 defect.
+
 `curl -I https://pawel.rosol.pl/` returns no `Strict-Transport-Security`, `X-Content-Type-Options`, `Referrer-Policy`, `Content-Security-Policy`, `X-Frame-Options` or `Permissions-Policy`. For a blog that audits other people's security, this is the first thing a technical prospect checks (securityheaders.com grade: F).
 
 Also: `/llms.txt` and `/robots.txt` are served as `text/plain` **without `charset=utf-8`** — Polish diacritics in `llms.txt` can arrive as mojibake in clients that default to Latin-1.
@@ -102,6 +168,8 @@ Also: `/llms.txt` and `/robots.txt` are served as `text/plain` **without `charse
 **Fix** — server-side, outside this repo. On mydevil.net this is done through the panel / `devil www` options (or `.htaccess` if the domain type routes through Apache — in which case add `.htaccess` to `include:` so Jekyll ships it). Start with HSTS, `nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, `X-Frame-Options: DENY`. Add a CSP **after** §6.2 (self-hosting), when the allow-list shrinks to `'self'`.
 
 ### 1.6 — Google verification stub is in the sitemap — **low**
+
+**Status (21.09.2026):** **fixed** via the `sitemap: false` route. The file is still served (200) and the `include:` entry is no longer needed, since it is now a page rather than a static file.
 
 `/google7ccb7976466cc251.html` is listed in `sitemap.xml`. Either move verification to `webmaster_verifications.google` (or DNS TXT — most robust) and delete the file + its `include:` entry, or keep it with:
 
@@ -113,11 +181,15 @@ defaults:
 
 ### 1.7 — `404.html` has an empty body — **low** *(downgraded)*
 
+**Status (21.09.2026):** **fixed** via `assets/404.html`, with Polish text and links to archives, categories, tags and contact.
+
 Rev. 1 called this an indexing problem. It is not: unknown URLs correctly return **HTTP 404** (verified), the page is not in the sitemap, and nothing links to `/404.html` directly. No `noindex` needed. The real issue is UX — the body is an empty `<p class="lead">`. Give it a sentence plus links to `/archives/` and `/categories/`.
 
 ---
 
 ## 2. Sitemap and taxonomy
+
+**Status (21.09.2026):** **done.** 132 → 38 tags in one pass, 21 with three or more posts. `noindex, follow` on the rest is emitted by `metadata-hook.html` and is self-maintaining. Sitemap 185 → 91 URLs. Retired tag URLs 404, as accepted below. Categories were left at 12 and untouched: renaming `Bezpieczeństwo` (§11.3) would break category URLs and was never committed to.
 
 **Status: generated correctly, badly proportioned.** 185 URLs, absolute `https://` locs, git-derived `<lastmod>`, correct `Sitemap:` line in `robots.txt`.
 
@@ -147,6 +219,8 @@ Of 132 distinct tags, **87 are used once**; only 9 are used three times or more.
 
 ### 3.1 What ships now (verified in `_site/`)
 
+**Status (21.09.2026):** **superseded.** The table below is the audit-date state. `metadata-hook.html` is now the single source of structured data and emits exactly one `@graph` per page; see the table in `CLAUDE.md` for what ships today.
+
 | Page type | jekyll-seo-tag | `metadata-hook.html` |
 |---|---|---|
 | Home | `WebSite` (no `@id`) | `WebSite` + `Blog` + `Person` graph ✅ |
@@ -156,6 +230,8 @@ Of 132 distinct tags, **87 are used once**; only 9 are used three times or more.
 | Category / tag archives | `WebPage` (acceptable) | nothing |
 
 ### 3.2 — Resolve the seo-tag duplication — **medium**
+
+**Status (21.09.2026):** **done, option (b).** `_plugins/strip-seo-tag-jsonld.rb`. Live: one `ld+json` block per page on 91 of 91.
 
 §1.3 fixes the wrong types. What remains is duplication: once §3.3 lands, every post carries **two `BlogPosting` nodes for the same URL** that share no `@id` — one thin (seo-tag), one rich (custom). Rev. 1 proposed "out-specifying" the thin one and hoping consumers prefer the richer node; that is a guess, and duplicate same-type nodes are exactly what validators warn about.
 
@@ -180,6 +256,8 @@ Options:
 Whichever you choose, add the guard in §3.8 so a gem upgrade cannot silently change the outcome.
 
 ### 3.3 — Upgrade the post schema — **high**
+
+**Status (21.09.2026):** **done**, following the corrected template below.
 
 Today's post node has no `@id`, `publisher`, `inLanguage`, `keywords`, `articleSection`, `isPartOf`, and its `author` is an inline duplicate `Person` rather than a reference to `/#person` — so nothing connects "author of this article" to "the ISO 27001 lead auditor described on the home page".
 
@@ -217,6 +295,8 @@ Changes from rev. 1's template: `jsonify` everywhere (§1.1); `page.content` ins
 
 ### 3.4 — `/contact/` entity graph — **high, largest GEO lever**
 
+**Status (21.09.2026):** **done.** Owner chose Mornel s.c. with full NIP/REGON/geo (§10.1). The IBAN caveat at the end of this section is still open (§10.4).
+
 `/contact/` is the highest-intent page, contains a complete verifiable business identity (phone, address, geo, NIP, REGON, Mornel s.c.) and — after §1.3 — still only says "I am a ContactPage". This is the data an assistant needs to answer *"kto świadczy usługi IOD pod Poznaniem?"*.
 
 Add `ContactPage` + an organization node wired to `/#person`:
@@ -252,6 +332,8 @@ Mirror the service list on `/about/` as `Service` items in an `OfferCatalog` on 
 
 ### 3.6 — `CollectionPage` + `ItemList` on archives — **low**
 
+**Status (21.09.2026):** **done**, on the tab archives and on the generated category and tag pages.
+
 Via `page.layout == 'category'` / `'tag'` branches; `page.posts` is available. Skip for `noindex`ed thin tags (§2).
 
 ### 3.7 — `SearchAction` — **do not add**
@@ -260,6 +342,8 @@ Chirpy's search is client-side over `search.json`; there is no `?q=` URL, so a `
 
 ### 3.8 — Guard the JSON-LD in the build — **medium** *(new)*
 
+**Status (21.09.2026):** **done.** `tools/check-jsonld.rb`. It earned its keep immediately: check (c) caught percent-encoded Polish category paths while §3.3 was being written. `tools/test.sh` also fails now on any empty `<title>`.
+
 Liquid-templated JSON breaks silently (one stray quote in a title). Add `tools/check-jsonld.rb`, run from `tools/test.sh`: for every `_site/**/*.html`, extract each `ld+json` block, `JSON.parse` it, and assert (a) it parses, (b) exactly one `BlogPosting` per post, (c) every `BreadcrumbList` `item` under `site.url` maps to an existing file in `_site/`. Check (c) would have caught §1.1 on day one. html-proofer does not look inside JSON-LD.
 
 ---
@@ -267,6 +351,8 @@ Liquid-templated JSON breaks silently (one stray quote in a title). Add `tools/c
 ## 4. Internal linking
 
 ### 4.1 Current state *(corrected)*
+
+**Status (21.09.2026):** **superseded.** The figures below are the audit-date state. Now: 81 `{% post_url %}` links, 31 of 32 posts receive a contextual inbound link, and only `kali-linux-przyjaciel-pentestera` is still an orphan.
 
 Rev. 1 reported "exactly one internal link on the whole site". That was a measurement error: the grep looked for `](/…)` and missed the `{% post_url %}` tag the recent posts use. Actual figures:
 
@@ -321,6 +407,8 @@ So the practice is sound and current; it has simply never been applied backwards
 
 ### 5.2 Gaps to close
 
+**Status (21.09.2026):** (a) done for the UODO cluster, the pillar and the KSC post; (c) FAQ coverage 14 → 17 of 32; (d) the include exists and is opt-in, **but no post carries a real review date yet**; (f) done via `_plugins/post-footer-hook.rb`; (g) `decyzja-uodo` expanded 226 → 549 words; (h) done. Outstanding: the AI cluster for (a)–(c), four tables for (e), three thin hubs for (g).
+
 **a) Answer-first openings — highest impact.** Add a 40–60-word **"W skrócie"** block before the first `<h2>`, stating the answer outright. Use Chirpy's existing prompt style so no CSS is needed:
 
 ```markdown
@@ -368,6 +456,8 @@ Every page loads from `fonts.googleapis.com`, `fonts.gstatic.com` and `cdn.jsdel
 
 ### 6.3 Measurement — **high → Phase 0**
 
+**Status (21.09.2026):** **not started, and now partly overtaken.** The site was deployed on 21.09.2026 with the pillar and the tag consolidation in place, so the first Search Console reading will be a post-change baseline rather than a pre-change one.
+
 - **Search Console + Bing Webmaster Tools** first. Free, no visitor-side processing, and the only source of query data. Bing matters disproportionately: Copilot and ChatGPT search retrieve through its index.
 - **Analytics:** the lowest-footprint option is already available — **GoAccess over the nginx access logs** on mydevil.net. No script, no third party, nothing to add to a privacy notice, and it sees AI crawlers and no-JS clients that script-based analytics cannot. If page-level dashboards are wanted later, GoatCounter or Umami (one line in `_config.yml`) — preferably self-hosted; a hosted instance is a processor relationship and should be treated as one.
 - **IndexNow** ping at the end of `.production.sh`: host a key file at the site root, POST changed URLs. Reaches Bing/Yandex/Seznam — not Google.
@@ -378,6 +468,8 @@ Every page loads from `fonts.googleapis.com`, `fonts.gstatic.com` and `cdn.jsdel
 6.6 MB across 21 files, one WebP. Convert to WebP/AVIF, add `width`/`height`. The two Kali GIFs → looping MP4/WebM.
 
 ### 6.5 `/.well-known/security.txt` — **low, fitting**
+
+**Status (21.09.2026):** **done and live.** `Expires:` is generated as `<current year + 1>-09-01`, so the site needs a rebuild at least annually.
 
 Confirmed absent (404). RFC 9116; needs `Contact:` and `Expires:` (≤ 1 year — put the renewal in a calendar). A PGP key is already published at `/media/commons/public.key.txt`; reference it under `Encryption:`. Jekyll skips dot-directories: add `.well-known` to `include:`.
 
@@ -495,9 +587,22 @@ With 31 posts and niche Polish queries the numbers will be small and noisy. Expe
 | — | — | — | New: §3.8 JSON-LD build guard |
 | 11 | *(rev. 3)* Site positioned as IOD only | Owner also acts as pełnomocnik ds. cyberbezpieczeństwa (KSC / NIS2) | `/about/` rewritten; §11 added; pillar #2 changed from AI to KSC / NIS2 |
 
+### Rev. 4 — found while implementing
+
+| § | The audit said | What implementation found | Effect |
+|---|---|---|---|
+| — | — | All five tabs shipped an empty `<title>`: `_data/locales/pl-PL.yml` defined only `home:` under `tabs:`, and `head.html` has no fallback where `page.html` does | Fixed; build guard in `tools/test.sh` |
+| — | — | 19 headings were phrased as questions without a `?` | Fixed; recorded as humanizer §20 |
+| 1.4 | Feed: limit and author id | Also double-escapes the entry `title=` attribute | Fixed in the same override |
+| 11.2 | "further KSC changes (Dz.U. 2026 poz. 1003)" | poz. 1003 is the **ustawa o systemach sztucznej inteligencji** | Corrected in §11.2; nothing cites it |
+| 11.4 | Refresh the NIS2 post | The draft engagement contract's KSC citations needed checking against the consolidated statute; four claims in the first rewrite were wrong (final-report clock, art. 12c, the art. 8 ust. 3 carve-out, the count of art. 4e risk assessments) | Corrected against ISAP text |
+| 5.2d | `legal_status_date` with real review dates | The review has not happened, so no date may be stamped | Field left unset on all 22 posts, by design |
+
 ---
 
 ## 10. Decisions needed from the owner
+
+**Status (21.09.2026):** 1, 2, 3, 5, 7 and 9 answered and implemented. **4, 6 and 8 remain open.**
 
 These block parts of Phase 2 and cannot be inferred from the repo:
 
@@ -546,7 +651,9 @@ Deliberate choices to confirm (§10.8):
 - *Kwalifikacje* lists only what the old page already claimed plus technical experience. Not added because unverifiable from here: KSC/NIS2 training, ISO 22301, OC insurance, number of clients.
 - Only three article numbers are cited (art. 8c ust. 3, 8e, 14), all taken from the verified analysis. Re-check after **28.10.2026**. *(Correction, 21.09.2026: rev. 3 described Dz.U. 2026 poz. 1003 as "further KSC changes". Checked against eli.gov.pl: poz. 1003 is the **ustawa z 3 lipca 2026 r. o systemach sztucznej inteligencji**, published 27.07.2026, in force 11.08.2026, which amends ten acts and has some provisions applying from 28.10.2026. Whether the KSC act is among the ten was not confirmed, so nothing in the content cites it.)*
 
-### 11.3 Knock-on changes (not yet done)
+### 11.3 Knock-on changes — **done, except the category rename**
+
+**Status (21.09.2026):** `Person` carries both job titles and the extended `knowsAbout`; `tagline` is "Inspektor Ochrony Danych · Cyberbezpieczeństwo"; site `description`, `llms.txt`, `/contact/` and the author box cover both roles; `KSC` and `NIS2` are first-class tags. Not done: replacing the `Bezpieczeństwo` category, which would break category URLs.
 
 - **`metadata-hook.html` `Person`:** `jobTitle` → `["Inspektor Ochrony Danych (IOD/DPO)", "Pełnomocnik ds. cyberbezpieczeństwa"]`; extend `knowsAbout` with "Krajowy system cyberbezpieczeństwa (KSC)", "Dyrektywa NIS2", "System zarządzania bezpieczeństwem informacji (SZBI)", "Zarządzanie ryzykiem", "Ciągłość działania". KSC services into `serviceType` / `OfferCatalog` (§3.4–3.5).
 - **`_config.yml`:** `tagline` → e.g. "IOD · Pełnomocnik ds. cyberbezpieczeństwa" (renders under the name in the sidebar — check mobile width); rewrite `description` around RODO, KSC/NIS2, bezpieczeństwo informacji.
@@ -557,6 +664,8 @@ Deliberate choices to confirm (§10.8):
 - **Note for the business itself:** a provider of managed cybersecurity services that reaches small-enterprise size is itself a *podmiot kluczowy* under the act. Irrelevant to the website today; relevant before describing Mornel s.c. in `Organization` markup with a growing team.
 
 ### 11.4 Content cluster to build
+
+**Status (21.09.2026):** item 1 done, and rewritten twice: first around the act as in force, then narrowed to przedsiębiorstwa wodociągowo-kanalizacyjne after the September 2026 sector recommendations. Items 2–6 and pillar #2 outstanding.
 
 Currently 1½ posts, so pillar #2 cannot exist yet. In order:
 
