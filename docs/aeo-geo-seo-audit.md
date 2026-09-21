@@ -540,7 +540,7 @@ Deliberate choices to confirm (§10.8):
 - **IOD task wording softened** from performing to supporting ("Wsparcie w prowadzeniu rejestru…", "Opiniowanie dokumentacji…", "Wsparcie administratora w obsłudze incydentów…"). The old list described decision-type tasks, which sits badly next to a section explaining why the IOD must not decide.
 - **Client types** ("jednostki sektora publicznego, spółki komunalne, placówki oświatowe, MŚP") inferred from blog categories — confirm.
 - *Kwalifikacje* lists only what the old page already claimed plus technical experience. Not added because unverifiable from here: KSC/NIS2 training, ISO 22301, OC insurance, number of clients.
-- Only three article numbers are cited (art. 8c ust. 3, 8e, 14), all taken from the verified analysis. Re-check after **28.10.2026**, when further KSC changes (Dz.U. 2026 poz. 1003) apply.
+- Only three article numbers are cited (art. 8c ust. 3, 8e, 14), all taken from the verified analysis. Re-check after **28.10.2026**. *(Correction, 21.09.2026: rev. 3 described Dz.U. 2026 poz. 1003 as "further KSC changes". Checked against eli.gov.pl: poz. 1003 is the **ustawa z 3 lipca 2026 r. o systemach sztucznej inteligencji**, published 27.07.2026, in force 11.08.2026, which amends ten acts and has some provisions applying from 28.10.2026. Whether the KSC act is among the ten was not confirmed, so nothing in the content cites it.)*
 
 ### 11.3 Knock-on changes (not yet done)
 
