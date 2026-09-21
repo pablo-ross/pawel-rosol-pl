@@ -9,7 +9,7 @@ tags:
   - Zgłoszenie naruszenia
   - Kara administracyjna
   - RODO
-  - Dane szczególnych kategorii
+  - Dane szczególnej kategorii
   - Administrator danych
   - Jednostki samorządu terytorialnego
   - COVID-19

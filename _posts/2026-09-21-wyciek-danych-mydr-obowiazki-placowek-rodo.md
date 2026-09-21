@@ -8,7 +8,7 @@ tags:
   - Zgłoszenie naruszenia
   - Powierzenie przetwarzania
   - Administrator danych
-  - Dane szczególnych kategorii
+  - Dane szczególnej kategorii
   - Analiza ryzyka
   - Cyberbezpieczeństwo
   - RODO
