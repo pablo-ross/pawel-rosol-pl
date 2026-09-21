@@ -1,0 +1,28 @@
+---
+layout: page
+title: "404: Nie znaleziono strony"
+permalink: /404.html
+sitemap: false
+---
+
+{% include lang.html %}
+
+<p class="lead">{{ site.data.locales[lang].not_found.statement }}</p>
+
+<p>
+  Adres, który otworzyłaś(-eś), nie istnieje albo wpis został przeniesiony pod inny
+  adres. Najprostsze sposoby na znalezienie tego, czego szukasz:
+</p>
+
+<ul>
+  <li><a href="{{ '/archives/' | relative_url }}">Archiwum</a> — wszystkie wpisy w porządku chronologicznym</li>
+  <li><a href="{{ '/categories/' | relative_url }}">Kategorie</a> — treści pogrupowane tematycznie</li>
+  <li><a href="{{ '/tags/' | relative_url }}">Tagi</a> — indeks tagów</li>
+  <li><a href="{{ '/' | relative_url }}">Strona główna</a> — najnowsze wpisy</li>
+</ul>
+
+<p>
+  Możesz też skorzystać z wyszukiwarki w górnym pasku albo
+  <a href="{{ '/contact/' | relative_url }}">napisać do mnie</a>, jeśli trafiłaś(-eś)
+  tu z linku, który powinien działać.
+</p>

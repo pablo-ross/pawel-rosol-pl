@@ -1,0 +1,14 @@
+---
+permalink: /.well-known/security.txt
+sitemap: false
+layout: null
+---
+# Zgłoszenia dotyczące bezpieczeństwa tej witryny (RFC 9116).
+# Security contact for this website.
+
+Contact: mailto:inspektor@rosol.pl
+Contact: https://pawel.rosol.pl/contact/
+Encryption: https://pawel.rosol.pl/media/commons/public.key.txt
+Preferred-Languages: pl, en
+Canonical: https://pawel.rosol.pl/.well-known/security.txt
+Expires: {{ 'now' | date: '%Y' | plus: 1 }}-09-01T00:00:00.000Z

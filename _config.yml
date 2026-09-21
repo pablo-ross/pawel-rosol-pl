@@ -219,7 +219,7 @@ exclude:
   - "CLAUDE.md"
 
 include:
-  - google7ccb7976466cc251.html
+  - .well-known
 
 jekyll-archives:
   enabled: [categories, tags]
