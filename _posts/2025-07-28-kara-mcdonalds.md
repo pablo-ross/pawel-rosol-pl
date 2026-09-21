@@ -67,7 +67,7 @@ Decyzja UODO stanowi istotną lekcję dla wszystkich administratorów danych:
 
 5. **Rola IOD** - inspektor ochrony danych powinien być włączany we wszystkie kluczowe procesy związane z przetwarzaniem danych osobowych.
 
-Sprawa McDonald's pokazuje, że UODO coraz skuteczniej egzekwuje przepisy RODO, a kary mogą sięgać milionów złotych. Warto wyciągnąć wnioski z cudzych błędów i zadbać o właściwe zabezpieczenie danych w swojej organizacji.
+Sprawa McDonald's pokazuje, że UODO coraz skuteczniej egzekwuje przepisy [RODO](https://eur-lex.europa.eu/eli/reg/2016/679/oj), a kary mogą sięgać milionów złotych. Warto wyciągnąć wnioski z cudzych błędów i zadbać o właściwe zabezpieczenie danych w swojej organizacji. Jeśli naruszenie już wystąpiło, kolejnym krokiem jest jego prawidłowe zgłoszenie i udokumentowanie - opisuję to w omówieniu [poradnika UODO dotyczącego naruszeń]({% post_url 2025-03-03-poradnik-uodo-naruszenia %}).
 
 ## Najczęściej zadawane pytania
 

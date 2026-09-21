@@ -10,7 +10,10 @@ tags:
 description: 'Czy można nagrywać lekcje online? Jak zadbać o bezpieczeństwo przetwarzania danych uczniów, ich rodziców i nauczycieli? Z jakich platform edukacyjnych korzystać? Które dostępne usługi są bezpieczne?'
 ---
 
-Czy można nagrywać lekcje online? Jak zadbać o bezpieczeństwo przetwarzania danych uczniów, ich rodziców i nauczycieli? Z jakich platform edukacyjnych korzystać? Które dostępne usługi są bezpieczne?
+> **Wpis archiwalny (październik 2020 r.).** Relacja ze szkolenia UODO i MEN z okresu nauki zdalnej w czasie pandemii COVID-19. Zachowuję go jako zapis ówczesnego stanowiska organu; część wskazówek dotyczy realiów, które minęły.
+{: .prompt-warning }
+
+Czy można nagrywać lekcje online? Jak zadbać o bezpieczeństwo przetwarzania danych uczniów, ich rodziców i nauczycieli? Z jakich platform edukacyjnych korzystać? Które dostępne usługi są bezpieczne? Praktyczną konfigurację jednej z takich platform opisałem wcześniej we wpisie [G Suite dla szkół - ochrona prywatności i bezpieczeństwo]({% post_url 2020-04-15-google-g-suite-dla-szkol %}).
 
 Na te i wiele innych pytań odpowiedzieli eksperci Urzędu Ochrony Danych Osobowych wspólnie z przedstawicielem Ministerstwa Edukacji Narodowej podczas szkolenia dla inspektorów ochrony danych z sektora oświaty, które odbyło się 30 września 2020 r.
 

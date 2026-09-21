@@ -14,6 +14,8 @@ description: 'Ta lista kontrolna zawiera kilka prostych kroków, które możesz 
 
 Materiałem źródłowym poniższego tekstu jest na bieżąco aktualizowana lista autorstwa Alicia Sykes pod adresem: [github.com/Lissy93/personal-security-checklist](https://github.com/Lissy93/personal-security-checklist).
 
+Odpowiednikiem tej listy dla organizacji jest wpis [Bezpieczna poczta e-mail - co to oznacza?]({% post_url 2022-01-07-bezpieczna-poczta-email %}), a o tym, dlaczego nieaktualizowane oprogramowanie jest osobnym ryzykiem, pisałem przy [końcu wsparcia dla Windows 7]({% post_url 2020-01-07-windows-7-koniec-wsparcia %}).
+
 ## Autentykacja
 
 ### 1. Silne hasła

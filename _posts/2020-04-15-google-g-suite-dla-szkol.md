@@ -10,6 +10,9 @@ tags:
 description: Ze względu na światową pandemię zakaźnej choroby COVID-19 wywoływanej przez koronawirusa SARS-CoV-2 wprowadzono w wielu krajach różnego rodzaju środki bezpieczeństwa. Jednym z nich jest okresowe zamknięcie szkół i wprowadzenie obowiązku nauki zdalnej z wykorzystaniem narzędzi online.
 ---
 
+> **Wpis archiwalny (kwiecień 2020 r.).** Powstał w pierwszych tygodniach nauki zdalnej i opisuje G Suite dla Szkół w ówczesnej postaci; usługa nazywa się dziś Google Workspace for Education, a jej ustawienia i nazewnictwo od tego czasu się zmieniły. Zasady ochrony danych opisane niżej pozostają aktualne, konkretne kroki konfiguracyjne należy zweryfikować u dostawcy.
+{: .prompt-warning }
+
 Ze względu na światową **pandemię** zakaźnej choroby **COVID-19** wywoływanej przez koronawirusa **SARS-CoV-2** wprowadzono w wielu krajach różnego rodzaju środki bezpieczeństwa. Jednym z nich jest **okresowe zamknięcie szkół** i wprowadzenie obowiązku **nauki zdalnej** z wykorzystaniem narzędzi online.
 
 W Polsce nie stosowano wcześniej na większą skalę takich metod nauczania, stąd w większości jednostek oświatowych wdrożenie odpowiednich rozwiązań odbywało się i nadal odbywa się szybko i bez wcześniej opracowanego planu. Minister Edukacji wskazał jedynie ogólne wskazówki, jednak z braku odpowiednich procedur i rozwiązań, szkoły samodzielnie wdrażają metody i narzędzia związane ze zdalnym nauczaniem w okresie pandemii koronawirusa.
@@ -97,6 +100,10 @@ Jednocześnie zastosowanie odpowiednich zmian w konfiguracji w Meet pozwoli na u
 ![Ustawienia dla jednostki organizacyjnej szkoły z uprawnieniami ograniczonymi](/media/2020-04-15/google_meet.jpg)
 
 Zwrócę uwagę, że po odpowiednich zmianach w Meet **jedynie nauczyciele** powinni mieć możliwość inicjowania spotkań wideo, natomiast uczniowie mogą tylko dołączać do spotkań. Inaczej mówiąc, uczeń nie może zainicjować sam spotkania wideo np. z kolegami z klasy. Oprócz tego, jedynie nauczyciele mogą mieć uprawnienie do **nagrywania zajęć wideo**.
+
+## Powiązane wpisy
+
+Pół roku później UODO i MEN odniosły się do tych samych pytań na szkoleniu dla inspektorów z sektora oświaty - relacjonuję je we wpisie [Szkolenie dla inspektorów ochrony danych z sektora oświaty]({% post_url 2020-10-02-szkolenie-dla-iod-sektor-oswiata %}). O tym, kto w szkole jest administratorem, a kto podmiotem przetwarzającym, piszę na przykładzie [Rady Rodziców]({% post_url 2020-01-21-rada-rodzicow-w-szkole-publicznej %}).
 
 ## Na co zwracać uwagę podczas codziennej pracy ze środowiskiem G Suite dla szkół?
 

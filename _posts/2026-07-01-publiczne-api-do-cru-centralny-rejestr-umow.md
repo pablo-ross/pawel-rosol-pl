@@ -146,4 +146,6 @@ Po drugie - pamiętajmy, że w rejestrze lądują też **dane osobowe** (np. imi
 
 {% include post-faq.html %}
 
+Na bazie tego API zbudowałem później działający monitor, który sam pilnuje rejestru i wysyła powiadomienia - opisuję go we wpisie [Monitor CRU na Telegramie]({% post_url 2026-07-04-monitor-cru-jak-zbudowac-wlasny-alert-o-umowach %}).
+
 *A jeśli sam bawisz się API do CRU i zauważysz, że coś działa inaczej niż opisałem - daj znać, zaktualizuję wpis.*

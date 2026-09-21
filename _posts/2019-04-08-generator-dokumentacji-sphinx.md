@@ -26,9 +26,11 @@ Integralną częścią dokumentacji związanej z ochroną danych osobowych, co w
 * polityki i instrukcje,
 * wzory dokumentów (umowy, klauzule itd.),
 * rejestr czynności przetwarzania danych osobowych,
-* ewidencja upoważnień do przetwarzania danych osobowych,
+* ewidencja [upoważnień do przetwarzania danych osobowych]({% post_url 2019-11-29-upowaznienia-elektroniczne %}),
 * rejestr incydentów,
 * zarządzanie szkoleniami dla pracowników,
 * analiza ryzyka i plan postępowania z ryzykiem.
 
 W celu łatwego zarządzania często zmieniającymi się powyższymi elementami, stosuję dodatkowo swój **autorski system bazodanowy**, który w efekcie ciągłej pracy generuje wynikowe pliki reST (reStructuredText), które z kolei stają się integralną częścią całego źródłowego repozytorium dokumentacji. W efekcie udaje się stosunkowo łatwo i pewnie pracować oraz zarządzać kolejnymi wersjami dokumentacji, a następnie w formie online jest ona udostępniana do wglądu w sposób automatyczny. Na chwilę obecną nie wyobrażam sobie powrotu do plików typu Word. Gorąco zachęcam do korzystania ze Sphinx-a 🙂
+
+Drugą połową tego samego warsztatu jest obsługa zgłoszeń - opisałem ją we wpisie o [systemie Zammad]({% post_url 2019-02-17-obsluga-zgloszen-zammad %}). O tym, jak do tego zestawu doszły narzędzia oparte na modelach językowych, piszę w [AI w pracy IOD]({% post_url 2025-10-30-ai-w-pracy-iod %}).

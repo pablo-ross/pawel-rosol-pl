@@ -28,7 +28,7 @@ Atak ransomware w urzędzie, wyciek danych osobowych, awaria systemu IT - każdy
 
 ## Co mówi prawo?
 
-Kluczowy dla tej kwestii jest **art. 37 ust. 1 ustawy o krajowym systemie cyberbezpieczeństwa**. Ten przepis wprost wyłącza stosowanie ustawy o dostępie do informacji publicznej do informacji o podatnościach, incydentach i zagrożeniach cyberbezpieczeństwa. Brzmi jak całkowita odmowa? Nie do końca. W praktyce trzeba rozróżnić informacje o **faktach** od **szczegółów technicznych**.
+Kluczowy dla tej kwestii jest **art. 37 ust. 1 [ustawy o krajowym systemie cyberbezpieczeństwa](https://eli.gov.pl/eli/DU/2018/1560/ogl)**. Ten przepis wprost wyłącza stosowanie [ustawy z dnia 6 września 2001 r. o dostępie do informacji publicznej](https://eli.gov.pl/eli/DU/2001/1198/ogl) do informacji o podatnościach, incydentach i zagrożeniach cyberbezpieczeństwa. Brzmi jak całkowita odmowa? Nie do końca. W praktyce trzeba rozróżnić informacje o **faktach** od **szczegółów technicznych**.
 
 Orzecznictwo sądów administracyjnych z ostatnich lat konsekwentnie wskazuje, że dokumenty techniczne bezpieczeństwa - rejestry RODO, dokumentacja SZBI, protokoły audytów - nie są informacją publiczną. Jednocześnie sądy wymagają, by każda odmowa była szczegółowo uzasadniona, a tam gdzie to możliwe, dane osobowe należy zanonimizować i udostępnić dokument częściowo.
 
@@ -40,13 +40,13 @@ Orzecznictwo sądów administracyjnych z ostatnich lat konsekwentnie wskazuje, �
 - Ogólną kategorię naruszenia (poufność, integralność, dostępność).
 - Liczbę osób dotkniętych naruszeniem w sposób zagregowany ("100-1000 osób").
 - Kategorie naruszonych danych w ujęciu ogólnym ("dane kontaktowe", "dane identyfikacyjne").
-- Fakt zgłoszenia do UODO, policji czy CERT Polska.
+- Fakt zgłoszenia do UODO, policji czy CERT Polska (o samym obowiązku zgłoszenia piszę w omówieniu [poradnika UODO]({% post_url 2025-03-03-poradnik-uodo-naruszenia %})).
 - Ogólny opis podjętych działań naprawczych.
 
 ### Informacje wymagające anonimizacji
 
 - Dane osobowe pracowników obsługujących incydent.
-- Dane osób, których naruszenie dotyczyło.
+- Dane osób, których naruszenie dotyczyło (o anonimizacji przy publikacji nagrań z obrad piszę w osobnym wpisie: [Nagrywanie i transmisje z posiedzeń w JST]({% post_url 2020-01-10-nagrywanie-transmitowanie-obrad-jst %})).
 - Dane kontaktowe inspektora ochrony danych.
 - Ogólne wnioski z analiz ryzyka (bez szczegółów technicznych).
 
@@ -67,7 +67,7 @@ Wyobraźmy sobie, że udostępniamy protokół audytu bezpieczeństwa. Taki doku
 
 ## Jak to wygląda w praktyce?
 
-Gdy w lutym 2021 roku Urząd Marszałkowski Województwa Małopolskiego padł ofiarą ataku ransomware, opublikowano komunikat zawierający: datę incydentu, fakt zawiadomienia UODO i służb, ogólne kategorie dotkniętych osób oraz podjęte działania naprawcze. Nie ujawniono jednak szczegółów technicznych ataku. To wzorcowe podejście - transparentność co do faktów przy ochronie szczegółów technicznych.
+Podobny schemat komunikacji zastosowało MPK Kraków po [ataku w grudniu 2024 r.]({% post_url 2024-12-06-atak-mpk-krakow %}). Gdy w lutym 2021 roku Urząd Marszałkowski Województwa Małopolskiego padł ofiarą ataku ransomware, opublikowano komunikat zawierający: datę incydentu, fakt zawiadomienia UODO i służb, ogólne kategorie dotkniętych osób oraz podjęte działania naprawcze. Nie ujawniono jednak szczegółów technicznych ataku. To wzorcowe podejście - transparentność co do faktów przy ochronie szczegółów technicznych.
 
 ## Jak uzasadnić odmowę?
 

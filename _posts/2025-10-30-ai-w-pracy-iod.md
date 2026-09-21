@@ -20,6 +20,9 @@ faq:
     answer: "Dla indywidualnego IOD wystarcza komputer z minimum 16 GB RAM (zalecane 32 GB i GPU z 8 GB VRAM) obsługujący model klasy Llama 3.1 8B lub Mistral 7B. Dla większej organizacji zaleca się serwer z co najmniej 64 GB RAM i GPU klasy NVIDIA A100, obsługujący większe modele jak Llama 3.1 70B czy Qwen 2.5 32B."
 ---
 
+> **Aktualizacja (wrzesień 2026 r.):** moje podejście się od tego czasu zmieniło. Wpis poniżej rekomenduje lokalne modele jako domyślne rozwiązanie dla IOD. W praktyce przy trudniejszych zadaniach - analizie umów powierzenia czy ocenie naruszeń - modele frontierowe okazały się o klasę lepsze, więc zbudowałem warstwę anonimizacji, która pozwala z nich korzystać bez wysyłania danych osobowych. Opisuję to w nowszym wpisie: [Claude Code w pracy IOD]({% post_url 2026-06-11-claude-code-w-pracy-iod %}). Wnioski o ryzyku komercyjnych narzędzi pozostają aktualne - zmieniła się odpowiedź na pytanie, co z tym zrobić.
+{: .prompt-warning }
+
 ## Dlaczego komercyjne rozwiązania AI są ryzykowne dla IOD?
 
 ### Status IOD jako podmiotu przetwarzającego
@@ -60,7 +63,7 @@ Rejestr czynności przetwarzania wymaga stałej aktualizacji, w czym AI może by
 
 ### 7. Inne typowe zadania IOD
 
-Poza wymienionymi obszarami AI może wspomóc IOD w wielu innych codziennych zadaniach. Pomaga w **odpowiedziach na zapytania**, czyli przygotowaniu odpowiedzi na pytania pracowników dotyczące RODO; wspiera **analizę incydentów** i ocenę naruszeń ochrony danych osobowych; ułatwia **przygotowanie szkoleń** przez tworzenie materiałów edukacyjnych; wspomaga także **dokumentację procesów**, czyli opisywanie i dokumentowanie procedur.
+Poza wymienionymi obszarami AI może wspomóc IOD w wielu innych codziennych zadaniach. Pomaga w **odpowiedziach na zapytania**, czyli przygotowaniu odpowiedzi na pytania pracowników dotyczące RODO; wspiera **analizę incydentów** i ocenę naruszeń ochrony danych osobowych (ramy tej oceny opisuję w omówieniu [poradnika UODO]({% post_url 2025-03-03-poradnik-uodo-naruszenia %})); ułatwia **przygotowanie szkoleń** przez tworzenie materiałów edukacyjnych; wspomaga także **dokumentację procesów**, czyli opisywanie i dokumentowanie procedur.
 
 ## Rozwiązanie: Lokalne LLM jako bezpieczna alternatywa
 

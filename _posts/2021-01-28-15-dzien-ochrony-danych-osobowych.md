@@ -12,6 +12,8 @@ description: '28 stycznia jest obchodzony jako Europejski Dzień Ochrony Danych 
 
 28 stycznia jest obchodzony jako **Europejski Dzień Ochrony Danych Osobowych**, został on ustanowiony na pamiątkę sporządzenia konwencji Rady Europy z 28 stycznia 1981 r. w sprawie ochrony osób w zakresie zautomatyzowanego przetwarzania danych osobowych. Konwencja ta jest najstarszym międzynarodowym aktem prawnym, który reguluje zagadnienia związane z ochroną danych osobowych.
 
+Relację z poprzednich obchodów opisałem we wpisie o [XIV Dniu Ochrony Danych Osobowych]({% post_url 2020-01-30-14-dzien-ochrony-danych-osobowych %}).
+
 „Realna ochrona danych osobowych w zdalnej rzeczywistości”- to temat tegorocznej konferencji, jaką organizuje Urząd Ochrony Danych Osobowych w ramach obchodów XV Dnia Ochrony Danych Osobowych.
 
 Wydarzenie odbędzie się 28 stycznia, a jego rozpoczęcie będzie miało miejsce o godz. 10.00. Całość spotkania podzielono na trzy sesje tematyczne:

@@ -10,7 +10,7 @@ description: "W pracy Inspektora Ochrony Danych nieodzowne są odpowiednie narz�
 
 W pracy Inspektora Ochrony Danych nieodzowne są odpowiednie narzędzia do **zarządzania przepływem informacji**. W mojej codziennej praktyce, obsługując kilku klientów i otrzymując zgłoszenia od kilkuset osób w miesiącu, trudno jest mi wyobrazić sobie aby sensownie zarządzać całą korespondencją bez zaawansowanego narzędzia do tego celu.
 
-Mając na uwadze zasadę **rozliczalności**, o której mówi art. 5 RODO, a także mając na uwadze ograniczony czas na podjęcie decyzji w przypadku **naruszenia** (art. 33 RODO), bardzo istotne jest odpowiednie zarządzanie zgłoszeniami spływającymi do Inspektora Ochrony Danych.
+Mając na uwadze zasadę **rozliczalności**, o której mówi art. 5 RODO, a także mając na uwadze ograniczony czas na podjęcie decyzji w przypadku **naruszenia** (art. 33 RODO), bardzo istotne jest odpowiednie zarządzanie zgłoszeniami spływającymi do Inspektora Ochrony Danych. O tym, jak UODO patrzy na dokumentowanie obsługi naruszeń, piszę w omówieniu [poradnika UODO]({% post_url 2025-03-03-poradnik-uodo-naruszenia %}); samą dokumentację prowadzę w [Sphinksie]({% post_url 2019-04-08-generator-dokumentacji-sphinx %}).
 
 Od ponad roku wszystkie kanały komunikacji w mojej pracy Inspektora Ochrony Danych (a wcześniej ABI) są obsługiwane przez system obsługi zgłoszeń [**Zammad**](https://zammad.org). Ogólnie rzecz ujmując Zammad to system typu **helpdesk** z dużą liczbą konfigurowalnych opcji, który agreguje informacje spływające przez wiele kanałów, w tym telefon, poczta e-mail, chat, twitter i wiele innych.
 

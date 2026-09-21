@@ -19,5 +19,7 @@ Pierwsza debata tego dnia dotyczyła najczęstszych problemów z jakimi w swojej
 
 Drugi panel dyskusyjny dotyczył kwestii udostępniania danych dzieci w Internecie. W tej rozmowie wiedzą i doświadczeniem podzielili się eksperci: dr Aleksandra Piotrowska, psycholog dziecięcy, pracownik naukowy Uniwersytetu Warszawskiego, dr Szymon Wójcik z Fundacji Dajemy Dzieciom Siłę, Anna Lewandowska ze Szkoły Podstawowej nr 360 w Warszawie oraz Paulina Dawidczyk, zastępca dyrektora Departament Skarg w UODO. Rozmowie przysłuchiwali się uczniowie jednej ze szkół uczestniczących w programie edukacyjnym „Twoje dane -Twoja sprawa”.
 
+Rok wcześniej UODO opublikował [Podręcznik Inspektora Ochrony Danych]({% post_url 2019-12-23-podrecznik-inspektora-ochrony-danych %}), który porusza dokładnie te zagadnienia statusu i zadań IOD. Relację z kolejnych obchodów opisałem we wpisie o [XV Dniu Ochrony Danych Osobowych]({% post_url 2021-01-28-15-dzien-ochrony-danych-osobowych %}).
+
 Dodatkowe informacje na stronie UODO:
 **uodo.gov.pl** ([link](https://archiwum.uodo.gov.pl/pl/138/1328))

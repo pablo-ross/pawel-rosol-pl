@@ -10,9 +10,14 @@ tags:
 description: 'Bezpieczna poczta e-mail. Ryzyko naruszeń jest wysokie jeśli chodzi o obszar związany z nieuporządkowanym zbiorem informacji - a takim są skrzynki pocztowe.'
 ---
 
+> **Aktualizacja (wrzesień 2026 r.):** nowszy wpis, [Poczta e-mail jako źródło ryzyka dla danych osobowych]({% post_url 2026-06-16-ryzyko-danych-osobowych-poczta-email %}), omawia ten sam temat na tle konkretnej decyzji UODO (DKN.5131.34.2023) i zawiera aktualny przegląd zabezpieczeń.
+{: .prompt-tip }
+
 **Mimo, że e-mail w sensie technicznym jest już leciwym wynalazkiem „wczesnego internetu”, to nadal jest to wiodące narzędzie komunikacji w praktycznie każdej dziedzinie życia. W obszarze ochrony danych osobowych jest to jednocześnie to miejsce, gdzie należy szczególnie zadbać o bezpieczeństwo dostępu do danych.**
 
 Przykładów na incydenty i zagrożenia nie brakuje. Codziennie słyszymy o przejęciu kont pocztowych i uzyskiwania dzięki temu dostępu do całego szeregu innych zasobów. Można też z dużym prawdopodobieństwem zakładać, że o większości naruszeń nigdy się nie dowiemy, a bezpośrednie i pośrednie skutki mogą być dotkliwe i długotrwałe.
+
+Obowiązek doboru zabezpieczeń adekwatnych do ryzyka wynika wprost z art. 32 [RODO](https://eur-lex.europa.eu/eli/reg/2016/679/oj), a UODO wielokrotnie karał administratorów właśnie za jego zaniechanie - także [w sprawie dotyczącej skrzynki pocztowej]({% post_url 2026-06-16-ryzyko-danych-osobowych-poczta-email %}).
 
 Dlatego w kontekście bezpieczeństwa informacji nie da się ukryć, że ryzyko naruszeń jest wysokie jeśli chodzi o obszar związany z nieuporządkowanym zbiorem informacji – a takim są skrzynki pocztowe. Coraz częściej pracownicy firm i instytucji posiadają w skrzynkach pocztowych coraz szybciej przyrastające zbiory danych, zawierające ogromne ilości danych osobowych, w tym ogromne możliwości uzyskiwania korelacji i łączenia zbiorów metadanych w kolejne zbiory informacji.
 
@@ -35,6 +40,8 @@ Tak jak większość specjalistów od bezpieczeństwa, również moim zdaniem na
 Co to znaczy, że poczta e-mail jest szyfrowana? To pojęcie jest tak ogólne i szerokie jednocześnie, że najprawdopodobniej dla każdego może to oznaczać coś innego. Na pewno czym innym jest szyfrowanie transmisji w trakcie wysyłania wiadomości, a czym innym jest szyfrowanie danych bezpośrednio na serwerze.
 
 Już od dość dawna można korzystać z szyfrowania poczty poprzez np. klucze prywatne i publiczne PGP. Jednak dla typowego użytkownika jest to dość skomplikowane. Na szczęście na rynku jest coraz więcej rozwiązań, które wdrażają metodą „out of the box” wiele tego typu dodatków minimalizujących ryzyko naruszenia danych.
+
+Praktyczną listę kroków dla osoby prywatnej zebrałem osobno w [osobistej liście bezpieczeństwa]({% post_url 2023-12-04-osobista-lista-bezpieczenstwa %}).
 
 Jeśli w skrzynkach pocztowych Twojej organizacji znajdują się np. dane szczególnej kategorii, tym bardziej warto wdrożyć takie systemy, które nawet w przypadku nieuprawnionego dostępu do zasobów, nie pozwolą na łatwy dostęp do danych wrażliwych.
 

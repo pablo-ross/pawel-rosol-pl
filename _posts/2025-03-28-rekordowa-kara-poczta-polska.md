@@ -88,7 +88,7 @@ Z decyzji UODO wynikają następujące ważne zasady postępowania:
 7. **Nie ulegaj presji czasowej** – nawet w sytuacjach nagłych należy przestrzegać podstawowych zasad ochrony danych.
 8. **Szanuj prawa osób, których dane dotyczą** – pamiętaj, że przetwarzanie danych osobowych zawsze dotyczy konkretnych osób i ich konstytucyjnych praw.
 
-Decyzja UODO stanowi ważny precedens pokazujący, że naruszenia przepisów o ochronie danych osobowych mogą prowadzić do poważnych konsekwencji finansowych, nawet dla dużych podmiotów państwowych.
+Decyzja UODO stanowi ważny precedens pokazujący, że naruszenia przepisów o ochronie danych osobowych mogą prowadzić do poważnych konsekwencji finansowych, nawet dla dużych podmiotów państwowych. Jeśli do naruszenia już doszło, o obowiązkach zgłoszeniowych i sposobie ich udokumentowania piszę w omówieniu [poradnika UODO dotyczącego naruszeń]({% post_url 2025-03-03-poradnik-uodo-naruszenia %}); przykładem kary nałożonej równolegle na administratora i na procesora jest [sprawa McDonald's Polska]({% post_url 2025-07-28-kara-mcdonalds %}).
 
 ## Najczęściej zadawane pytania
 

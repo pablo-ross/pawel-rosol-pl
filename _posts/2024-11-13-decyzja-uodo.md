@@ -20,7 +20,7 @@ Decyzja Prezesa Urzędu Ochrony Danych Osobowych nr DKN.5131.9.2024 dotyczy naru
 
 ### 1. Stwierdzone naruszenia
 
-* Brak przeprowadzenia i aktualizacji analizy ryzyka zgodnie z wymogami art. 24 ust. 1 oraz art. 32 RODO, co doprowadziło do niewłaściwego zabezpieczenia danych osobowych.
+* Brak przeprowadzenia i aktualizacji analizy ryzyka zgodnie z wymogami art. 24 ust. 1, art. 25 ust. 1 oraz art. 32 ust. 1 i 2 [RODO](https://eur-lex.europa.eu/eli/reg/2016/679/oj), co doprowadziło do niewłaściwego zabezpieczenia danych osobowych.
 * Niewdrożenie odpowiednich środków technicznych i organizacyjnych, które uwzględniałyby kontekst przetwarzania oraz możliwe ryzyka naruszenia praw osób fizycznych.
 * Brak regularnego testowania skuteczności zastosowanych środków bezpieczeństwa.
 
@@ -42,4 +42,6 @@ Decyzja podkreśla kluczową rolę analizy ryzyka w systemie ochrony danych osob
 * Dokumentowana: Pozwalać na wykazanie, że środki techniczne i organizacyjne są adekwatne do charakteru przetwarzania.
 * Regularnie aktualizowana: Aby uwzględniać nowe ryzyka i potrzeby organizacji.
 
-Decyzja Prezesa UODO jest kolejnym przypomnieniem, że brak kompleksowego podejścia do zarządzania ryzykiem może prowadzić do istotnych konsekwencji prawnych i finansowych​.
+Decyzja Prezesa UODO jest kolejnym przypomnieniem, że brak kompleksowego podejścia do zarządzania ryzykiem może prowadzić do istotnych konsekwencji prawnych i finansowych. Ten sam mechanizm - brak analizy ryzyka, a w konsekwencji brak adekwatnych zabezpieczeń - UODO wytknął administratorowi w [rekordowej karze dla McDonald's Polska]({% post_url 2025-07-28-kara-mcdonalds %}) oraz w [decyzji dotyczącej poczty e-mail]({% post_url 2026-06-16-ryzyko-danych-osobowych-poczta-email %}). O tym, jak prawidłowo zgłosić i udokumentować samo naruszenie, piszę w omówieniu [poradnika UODO]({% post_url 2025-03-03-poradnik-uodo-naruszenia %}).
+
+Źródło: pełny tekst decyzji [DKN.5131.9.2024](https://orzeczenia.uodo.gov.pl/document/urn:ndoc:gov:pl:uodo:2024:dkn_5131_9/content?query=) w bazie orzeczeń UODO.

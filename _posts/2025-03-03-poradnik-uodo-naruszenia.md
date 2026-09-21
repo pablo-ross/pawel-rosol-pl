@@ -33,7 +33,7 @@ Zgodnie z komunikatem UODO, nowa wersja poradnika uwzględnia najnowsze interpre
 
 W poradniku szczególną uwagę zwrócono na kwestię odpowiedniego dokumentowania działań przez administratorów danych. Podkreślono, że administratorzy powinni być w stanie wykazać prawidłowe wykonywanie spoczywających na nich obowiązków poprzez gromadzenie odpowiedniej dokumentacji. Mogą to być notatki, instrukcje korespondencji, wyciągi z systemów, raporty z audytów czy testów bezpieczeństwa.
 
-Co istotne, dokument wyraźnie wskazuje, że samo wystąpienie naruszenia ochrony danych osobowych nie stanowi naruszenia przepisów RODO. Naruszeniem przepisów jest natomiast niewykonywanie lub nieprawidłowe wykonywanie obowiązków wynikających z rozporządzenia.
+Co istotne, dokument wyraźnie wskazuje, że samo wystąpienie naruszenia ochrony danych osobowych nie stanowi naruszenia przepisów [RODO](https://eur-lex.europa.eu/eli/reg/2016/679/oj). Naruszeniem przepisów jest natomiast niewykonywanie lub nieprawidłowe wykonywanie obowiązków wynikających z rozporządzenia.
 
 ## Przestrzeganie procedur jest kluczowe
 
@@ -48,6 +48,19 @@ Według opublikowanego poradnika, główne przyczyny naruszeń ochrony danych os
 - czynniki fizyczne lub środowiskowe
 
 Poradnik zwraca uwagę, że pomimo ciągłych starań administratorów i podmiotów przetwarzających zmierzających do ograniczenia występowania błędów, szkodliwe działania lub zaniechania (np. ze strony pracowników) pozostają jedną z najczęstszych przyczyn powstawania naruszeń ochrony danych osobowych.
+
+## Jak te przyczyny wyglądają w decyzjach UODO?
+
+Każdą z wymienionych kategorii da się przypisać do konkretnej, opublikowanej decyzji organu:
+
+| Przyczyna naruszenia | Decyzja i wpis |
+|---|---|
+| Niewystarczające zabezpieczenia | [DKN.5131.9.2024 - niezaszyfrowany laptop]({% post_url 2024-11-13-decyzja-uodo %}) |
+| Brak nadzoru nad podmiotem przetwarzającym | [DKN.5130.4179.2020 - McDonald's Polska]({% post_url 2025-07-28-kara-mcdonalds %}) |
+| Błąd ludzki i błędna konfiguracja | [DKN.5131.27.2023 - dane o kwarantannie w wyszukiwarce]({% post_url 2026-07-07-decyzja-uodo-ops-dane-o-kwarantannie %}) |
+| Brak podstawy prawnej i oceny ryzyka | [DKN.5131.1.2025 - wybory kopertowe]({% post_url 2025-03-28-rekordowa-kara-poczta-polska %}) |
+| Przejęcie konta i phishing | [DKN.5131.34.2023 - poczta e-mail]({% post_url 2026-06-16-ryzyko-danych-osobowych-poczta-email %}) |
+| Naruszenie u dostawcy oprogramowania | [wyciek danych z systemu MyDr]({% post_url 2026-09-21-wyciek-danych-mydr-obowiazki-placowek-rodo %}) |
 
 ## Najczęściej zadawane pytania
 

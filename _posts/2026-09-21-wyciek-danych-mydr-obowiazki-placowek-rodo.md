@@ -66,7 +66,7 @@ Przy punkcie czwartym pojawił się już praktyczny spór. Część placówek og
 
 Najczęstsza reakcja placówek brzmi: przecież włamano się do MyDr, nie do nas. To prawda faktyczna, która nie przekłada się na zwolnienie z odpowiedzialności.
 
-Art. 24 RODO nakłada na administratora obowiązek wdrożenia odpowiednich środków i wykazania zgodności. Art. 28 ust. 1 pozwala korzystać wyłącznie z takich procesorów, którzy dają wystarczające gwarancje bezpieczeństwa. Jeśli placówka podpisała umowę powierzenia, nigdy nie zweryfikowała dostawcy, nie miała w umowie zapisów o zgłaszaniu incydentów i nie uwzględniła tego ryzyka w analizie, to ma własne zaniedbanie, niezależne od cudzego włamania.
+Art. 24 [RODO](https://eur-lex.europa.eu/eli/reg/2016/679/oj) nakłada na administratora obowiązek wdrożenia odpowiednich środków i wykazania zgodności. Art. 28 ust. 1 pozwala korzystać wyłącznie z takich procesorów, którzy dają wystarczające gwarancje bezpieczeństwa. Jak organ rozumie „wystarczające gwarancje" i czego oczekuje od nadzoru nad powierzeniem, najlepiej widać w [decyzji wobec McDonald's Polska]({% post_url 2025-07-28-kara-mcdonalds %}) - kanonicznej polskiej sprawie o odpowiedzialność za wybór i kontrolę procesora. Jeśli placówka podpisała umowę powierzenia, nigdy nie zweryfikowała dostawcy, nie miała w umowie zapisów o zgłaszaniu incydentów i nie uwzględniła tego ryzyka w analizie, to ma własne zaniedbanie, niezależne od cudzego włamania.
 
 Kierunek orzecznictwa też nie sprzyja administratorom. W wyroku z 14 grudnia 2023 roku w sprawie C-340/21 TSUE stwierdził, że sam fakt ataku hakerskiego nie zwalnia administratora z odpowiedzialności, a to na nim spoczywa ciężar wykazania, że zastosowane środki były odpowiednie. Trybunał uznał też, że obawa przed niewłaściwym wykorzystaniem danych może stanowić szkodę niemajątkową, jeśli zostanie wykazana.
 
@@ -90,7 +90,7 @@ Mechanizm, który się tu powtarza, opisywałem już w kontekście [decyzji wobe
 
 Lista minimum dla placówki, która korzystała z systemu:
 
-- Zweryfikuj umowę powierzenia: czy jest, czy zawiera obowiązek zgłaszania incydentów, w jakim terminie, czy dopuszcza podpowierzenia i czy wiesz, komu.
+- Zweryfikuj umowę powierzenia: czy jest, czy zawiera obowiązek zgłaszania incydentów, w jakim terminie, czy dopuszcza podpowierzenia i czy wiesz, komu. Brak zawartej umowy podpowierzenia był jednym z zarzutów wobec procesora w [sprawie McDonald's]({% post_url 2025-07-28-kara-mcdonalds %}).
 - Sprawdź, gdzie fizycznie są dane. W sprawie MyDr pojawił się wątek korzystania z infrastruktury chmurowej dostawców spoza EOG, co oznacza osobne pytanie o rozdział V RODO.
 - Zaktualizuj analizę ryzyka i ocenę skutków. Scenariusz „kompromitacja systemu dostawcy" powinien się w niej pojawić z realnym prawdopodobieństwem, a nie jako teoretyczna możliwość.
 - Przygotuj gotowy szablon zawiadomienia pacjentów i kanał zdalnej weryfikacji tożsamości, zanim będzie potrzebny.

@@ -14,7 +14,7 @@ Opublikowany na stronach Urzędu Ochrony Danych w dniu 23 grudnia 2019 r. "Podr�
 
 Podręcznik ma zwiększać świadomość i rozumienie roli, kompetencji i głównych obowiązków inspektorów ochrony danych oraz ułatwić tworzenie europejskiej kultury monitorowania, przeglądu i oceny przetwarzania danych. Niewątpliwie może być pomocny w określeniu, jak w kontekście RODO należy patrzeć na status i gwarancje związane z pełnieniem funkcji inspektora.
 
-Publikacja ma charakter pomocniczy i zawiera wskazówki, których zastosowanie w konkretnym przypadku może wymagać dodatkowej analizy. Dlatego opublikowane rozwiązania nie mogą być traktowane jako oficjalne stanowisko organu nadzorczego.
+Publikacja ma charakter pomocniczy i zawiera wskazówki, których zastosowanie w konkretnym przypadku może wymagać dodatkowej analizy. Te same pytania o status i niezależność IOD wracały na [XIV Dniu Ochrony Danych Osobowych]({% post_url 2020-01-30-14-dzien-ochrony-danych-osobowych %}). Dlatego opublikowane rozwiązania nie mogą być traktowane jako oficjalne stanowisko organu nadzorczego.
 
 Poradnik przygotowano jako element materiałów szkoleniowych dla trenerów w ramach międzynarodowego projektu „T4DATA”, a wraz z platformą edukacyjną z wykładami dla inspektorów ochrony danych stanowią rezultaty tego przedsięwzięcia, które będą dostępne, mimo że wspomniany projekt zakończy się na początku stycznia 2020 roku.
 

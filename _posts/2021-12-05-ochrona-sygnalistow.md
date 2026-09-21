@@ -9,7 +9,10 @@ tags:
 description: 'Od dnia 17 grudnia 2021 r. obowiązują wymagania prawne związane z Dyrektywą Unijną nr 2019/1937, potocznie nazywaną „dyrektywą o sygnalistach”.'
 ---
 
-Od dnia 17 grudnia 2021 r. obowiązują wymagania prawne związane z Dyrektywą Unijną nr 2019/1937, potocznie nazywaną „dyrektywą o sygnalistach”. Od tego dnia każdy pracodawca zatrudniający powyżej 250 pracowników w sektorze prywatnym albo powyżej 50 pracowników w sektorze publicznym, jest obowiązany wprowadzić rozwiązania ułatwiające zgłaszanie potencjalnych naruszeń przez sygnalistów wraz z ochroną takich osób.
+> **Aktualizacja (wrzesień 2026 r.):** ten wpis powstał w grudniu 2021 r., gdy obowiązywała sama dyrektywa, a Polska nie miała jeszcze przepisów wdrażających. Dyrektywę wdrożyła dopiero [ustawa z dnia 14 czerwca 2024 r. o ochronie sygnalistów](https://eli.gov.pl/eli/DU/2024/928/ogl), obowiązująca od 25 września 2024 r. — i to ona, a nie dyrektywa, jest dziś podstawą obowiązków pracodawcy. Opisane niżej zasady co do istoty się utrzymały, ale progi, terminy i sankcje należy czytać z ustawy. O obowiązkach organów publicznych piszę w osobnym wpisie: [Obsługa sygnalistów - kanał zewnętrzny]({% post_url 2024-12-18-kanal-zewnetrzny %}).
+{: .prompt-warning }
+
+Od dnia 17 grudnia 2021 r. obowiązują wymagania prawne związane z [Dyrektywą Parlamentu Europejskiego i Rady (UE) 2019/1937](https://eur-lex.europa.eu/eli/dir/2019/1937/oj), potocznie nazywaną „dyrektywą o sygnalistach”. Od tego dnia każdy pracodawca zatrudniający powyżej 250 pracowników w sektorze prywatnym albo powyżej 50 pracowników w sektorze publicznym, jest obowiązany wprowadzić rozwiązania ułatwiające zgłaszanie potencjalnych naruszeń przez sygnalistów wraz z ochroną takich osób.
 
 ## Kto to jest sygnalista?
 
@@ -17,7 +20,7 @@ Sygnalistą może być każdy z nas. Czyli jest to osoba fizyczna lub prawna, kt
 
 ## Kanał wewnętrzny do zgłaszania naruszeń
 
-W myśl przepisów prawa pracodawcy są zobowiązani wprowadzić procedurę, która określa sposób obsługi zgłoszeń od sygnalistów. W dużym skrócie, każdy z pracowników może teraz zgłosić naruszenie w sposób jawny, poufny, a także anonimowy - jeśli tak zdecyduje pracodawca. W tym ostatnim przypadku najlepiej skorzystać z dedykowanego kanału elektronicznego (formularz on-line), który zapewnia pełną anonimowość a jednocześnie daje możliwość komunikacji z sygnalistą.
+W myśl przepisów prawa pracodawcy są zobowiązani wprowadzić procedurę, która określa sposób obsługi zgłoszeń od sygnalistów. W dużym skrócie, każdy z pracowników może teraz zgłosić naruszenie w sposób jawny, poufny, a także anonimowy - jeśli tak zdecyduje pracodawca. W tym ostatnim przypadku najlepiej skorzystać z dedykowanego kanału elektronicznego (formularz on-line), który zapewnia pełną anonimowość a jednocześnie daje możliwość komunikacji z sygnalistą. Kanał wewnętrzny to jednak tylko jedna z dróg zgłoszenia - obok niego ustawa przewiduje [kanał zewnętrzny, prowadzony przez organ publiczny]({% post_url 2024-12-18-kanal-zewnetrzny %}), oraz ujawnienie publiczne.
 
 ## Zachowanie poufności
 
