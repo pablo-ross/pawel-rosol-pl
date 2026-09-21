@@ -80,7 +80,7 @@ The `assets/lib` directory is a git submodule pointing to [chirpy-static-assets]
 
 ### Deployment
 
-Production deploy runs `.production.sh`: builds with `JEKYLL_ENV=production`, sets file permissions, then rsyncs `_site/` to the remote server over SSH on port 62444.
+Production deploy runs `.production.sh`: builds with `JEKYLL_ENV=production`, sets file permissions, then rsyncs `_site/` to the remote server over SSH on port 22.
 
 ## Commit conventions
 
