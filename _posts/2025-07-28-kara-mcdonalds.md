@@ -21,13 +21,16 @@ faq:
     answer: "McDonald's wybrał firmę PR-ową do zarządzania grafikami wyłącznie na podstawie wcześniejszej współpracy, bez weryfikacji jej kompetencji technicznych w ochronie danych. Nigdy nie przeprowadził audytu u tego podmiotu, mimo że umowa powierzenia to przewidywała, i nie miał nawet dostępu do panelu administracyjnego systemu."
 ---
 
-Prezes UODO nałożył na McDonald's Polska rekordową karę pieniężną w wysokości niemal 17 milionów złotych za szereg naruszeń przepisów o ochronie danych osobowych. To druga najwyższa kara administracyjna w historii polskiego organu nadzorczego, która pokazuje, jak kosztowne mogą być zaniedbania w obszarze ochrony danych osobowych.
+> **W skrócie:** powierzenie przetwarzania nie przenosi odpowiedzialności na wykonawcę. McDonald's Polska zapłacił blisko 17 mln zł nie za włamanie, tylko za to, że wybrał procesora bez sprawdzenia jego kompetencji technicznych, nigdy go nie skontrolował, choć umowa na to pozwalała, i nie miał nawet dostępu do panelu administracyjnego systemu. Procesor dostał osobną karę ponad 183 tys. zł, bo obowiązki z RODO ciążą na nim niezależnie od treści umowy i budżetu.
+{: .prompt-info }
 
-## Geneza sprawy - wyciek danych pracowników
+Prezes UODO nałożył na McDonald's Polska karę pieniężną w wysokości niemal 17 milionów złotych za szereg naruszeń przepisów o ochronie danych osobowych. To druga co do wysokości kara administracyjna w historii polskiego organu nadzorczego.
+
+## Co się wydarzyło?
 
 W lipcu 2020 roku doszło do poważnego incydentu bezpieczeństwa. W wyniku błędnej konfiguracji serwera, dane osobowe pracowników McDonald's oraz franczyzobiorców znalazły się w publicznie dostępnym katalogu internetowym. Wykradziony plik zawierał wrażliwe dane: imiona i nazwiska, numery PESEL, numery paszportów, szczegółowe grafiki pracy oraz informacje o stanowiskach. Dostęp do tych danych mógł uzyskać każdy użytkownik internetu.
 
-## Kluczowe błędy administratora
+## Jakie błędy popełnił administrator?
 
 ### 1. Niewłaściwy wybór podmiotu przetwarzającego
 
@@ -45,7 +48,7 @@ McDonald's nie sprawował należytego nadzoru nad powierzonymi danymi. Firma nig
 
 System zawierał nadmiarowe dane - numery PESEL i paszportów wykorzystywane były jedynie jako identyfikatory pracowników. Dopiero po incydencie zastąpiono je zwykłymi numerami identyfikacyjnymi, co UODO uznał za działanie spóźnione.
 
-## Odpowiedzialność podmiotu przetwarzającego
+## Czy podmiot przetwarzający odpowiada osobno?
 
 UODO nałożył również karę na podmiot przetwarzający (24/7 Communication) w wysokości ponad 183 tysięcy złotych. Organ podkreślił, że obowiązki wynikające z RODO mają charakter publicznoprawny i nie mogą być wyłączone umową czy ograniczeniami budżetowymi. Podmiot przetwarzający:
 

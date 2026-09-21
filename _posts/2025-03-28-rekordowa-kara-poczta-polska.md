@@ -20,6 +20,9 @@ faq:
     answer: "Kara dla Poczty Polskiej miała pierwotnie wynieść ponad 100 mln zł, ale UODO obniżył ją do 27 mln zł ze względu na trudną sytuację finansową spółki (745 mln zł straty w 2023 r.) oraz fakt, że realizuje ona zadania publiczne."
 ---
 
+> **W skrócie:** polecenie premiera nie zastąpiło podstawy prawnej. Poczta Polska pobrała dane z rejestru PESEL i przetwarzała je bez przepisu, który by na to pozwalał, a UODO ukarał za to zarówno spółkę, jak i Ministra Cyfryzacji, który dane udostępnił. Dla administratora wniosek jest prosty: w sytuacji nadzwyczajnej to na nim spoczywa obowiązek sprawdzenia podstawy prawnej, a presja czasu i polecenie z góry nie są okolicznością wyłączającą odpowiedzialność.
+{: .prompt-info }
+
 Urząd Ochrony Danych Osobowych (UODO) nałożył rekordowe kary za naruszenie przepisów o ochronie danych osobowych w związku z nieudaną próbą przeprowadzenia tzw. wyborów kopertowych w 2020 roku:
 
 - **27 milionów złotych** kary dla Poczty Polskiej,
@@ -51,7 +54,7 @@ Przekazane Poczcie Polskiej dane obejmowały:
 - adres zameldowania na pobyt czasowy wraz z deklarowanym terminem pobytu,
 - informacje o zarejestrowanych wyjazdach czasowych za granicę.
 
-## Uzasadnienie decyzji UODO
+## Dlaczego UODO uznał to za naruszenie?
 
 Prezes UODO Mirosław Wróblewski wskazał na następujące okoliczności obciążające:
 
@@ -68,7 +71,7 @@ Początkowo kara dla Poczty Polskiej miała wynieść ponad 100 mln zł, ale zos
 - **Poczta Polska** uznała karę za wyjątkowo wysoką i zapowiedziała rozważenie skargi do sądu administracyjnego. Spółka podkreśliła swoją trudną sytuację finansową (745 mln zł straty w 2023 r.) i potrzebę inwestycji w ramach trwającej transformacji.
 - **Ministerstwo Cyfryzacji** analizuje decyzję, ale zgadza się z ustaleniem, że przekazanie danych było nieuprawnione. Wcześniej wycofało skargę od wyroku WSA w tej sprawie.
 
-## Wnioski dla ochrony danych osobowych
+## Co z tej decyzji wynika dla administratora?
 
 Z decyzji UODO wynikają następujące ważne zasady postępowania:
 

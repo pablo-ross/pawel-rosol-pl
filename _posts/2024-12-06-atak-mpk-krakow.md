@@ -24,13 +24,16 @@ faq:
     answer: "Dyrektywa NIS2, obejmująca ochroną kluczowe usługi infrastrukturalne, nakłada na firmy takie jak MPK obowiązek oceny ryzyka i wdrożenia procedur reagowania na incydenty. Atak pokazał, że mimo współpracy z wyspecjalizowanymi firmami IT i służbami państwowymi, potrzebna jest jeszcze lepsza koordynacja i przygotowanie na wypadek podobnych ataków."
 ---
 
+> **W skrócie:** atak na spółkę komunalną uruchamia dwa niezależne zegary. Jeżeli istnieje ryzyko naruszenia praw lub wolności osób fizycznych, administrator ma 72 godziny na zgłoszenie do UODO, licząc od stwierdzenia naruszenia. Równolegle, jeżeli spółka jest podmiotem kluczowym albo ważnym w rozumieniu ustawy o KSC, biegną terminy zgłoszenia incydentu do właściwego CSIRT. Jedno zgłoszenie nie zastępuje drugiego, a ciągłość działania usługi to osobny obowiązek od ochrony danych.
+{: .prompt-info }
+
 W ostatnich dniach Miejskie Przedsiębiorstwo Komunikacyjne w Krakowie (MPK Kraków) padło ofiarą zaawansowanego ataku hakerskiego, który został przypisany międzynarodowej grupie cyberprzestępczej działającej na zlecenie. Atak rozpoczął się we wtorek rano (3 grudnia 2024 roku) i spowodował poważne zakłócenia w funkcjonowaniu systemów informatycznych MPK, w tym platform sprzedaży biletów, strony internetowej oraz innych powiązanych usług. Pomimo trudności operacyjnych, usługi przewozowe były realizowane bez większych zakłóceń dzięki procedurom awaryjnym​.
 
-## Konsekwencje i działania w kontekście RODO
+## Jakie obowiązki wobec UODO uruchamia taki atak?
 
 Atak wywołał obawy dotyczące możliwego naruszenia ochrony danych osobowych pracowników oraz pasażerów. Choć do tej pory brak potwierdzenia, że doszło do kradzieży danych, MPK zgłosiło incydent do Prezesa Urzędu Ochrony Danych Osobowych (PUODO). Zgodnie z [RODO](https://eur-lex.europa.eu/eli/reg/2016/679/oj) (art. 33), administratorzy danych osobowych są zobowiązani do zgłaszania naruszeń w ciągu 72 godzin od ich wykrycia, jeśli istnieje ryzyko naruszenia praw lub wolności osób fizycznych. Jak ten obowiązek wygląda w praktyce - co liczy się jako „stwierdzenie” naruszenia i jak je udokumentować - opisuję we wpisie o [poradniku UODO dotyczącym naruszeń]({% post_url 2025-03-03-poradnik-uodo-naruszenia %}). MPK zapewniło również, że w przypadku stwierdzenia naruszenia poufności danych poszkodowani zostaną poinformowani o sytuacji​.
 
-## Atak w kontekście dyrektywy NIS2
+## A co z obowiązkami z ustawy o KSC i NIS2?
 
 > **Aktualizacja (wrzesień 2026 r.):** w grudniu 2024 r. obowiązywała w tym zakresie sama [dyrektywa NIS2](https://eur-lex.europa.eu/eli/dir/2022/2555/oj). Wdrożyła ją do polskiego porządku prawnego dopiero [nowelizacja ustawy o krajowym systemie cyberbezpieczeństwa](https://eli.gov.pl/eli/DU/2026/252/ogl) (Dz.U. 2026 poz. 252), obowiązująca od 3 kwietnia 2026 r. Spółka komunalna taka jak MPK może dziś być **podmiotem kluczowym albo ważnym** w rozumieniu [ustawy o KSC](https://eli.gov.pl/eli/DU/2018/1560/ogl), z własnymi obowiązkami zgłoszeniowymi wobec CSIRT - niezależnymi od zgłoszenia naruszenia do UODO.
 {: .prompt-info }

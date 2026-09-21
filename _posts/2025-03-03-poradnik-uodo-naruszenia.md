@@ -21,9 +21,12 @@ faq:
     answer: "Poradnik zaleca gromadzenie notatek, instrukcji korespondencji, wyciągów z systemów, raportów z audytów czy testów bezpieczeństwa. Taka dokumentacja pozwala administratorowi wykazać, że prawidłowo wykonywał swoje obowiązki, nawet jeśli mimo to doszło do naruszenia."
 ---
 
-Urząd Ochrony Danych Osobowych opublikował zaktualizowaną wersję poradnika na temat naruszeń ochrony danych osobowych. Dokument zawiera kompleksowe informacje dotyczące aktualnych przepisów regulujących obowiązki administratorów danych oraz rekomendacje w zakresie zapobiegania incydentom związanym z bezpieczeństwem danych.
+> **W skrócie:** samo wystąpienie naruszenia nie jest jeszcze naruszeniem przepisów RODO. Naruszeniem przepisów jest niewykonanie obowiązków, które się z nim wiążą: oceny ryzyka, zgłoszenia do UODO w ciągu 72 godzin od stwierdzenia, zawiadomienia osób przy wysokim ryzyku i udokumentowania całości. Administrator, który miał procedury i ich przestrzegał, nie musi obawiać się sankcji za to, że incydent w ogóle się zdarzył.
+{: .prompt-info }
 
-## Najnowsza interpretacja przepisów
+Urząd Ochrony Danych Osobowych opublikował zaktualizowaną wersję poradnika na temat naruszeń ochrony danych osobowych. Dokument opisuje obowiązki administratorów i zawiera rekomendacje dotyczące zapobiegania incydentom.
+
+## Co zmieniło się w nowej wersji poradnika?
 
 Zgodnie z komunikatem UODO, nowa wersja poradnika uwzględnia najnowsze interpretacje przepisów, aktualne orzecznictwo oraz praktyczne wskazówki dla administratorów. Dokument obejmuje szereg istotnych zagadnień, w tym:
 
@@ -36,7 +39,7 @@ W poradniku szczególną uwagę zwrócono na kwestię odpowiedniego dokumentowan
 
 Co istotne, dokument wyraźnie wskazuje, że samo wystąpienie naruszenia ochrony danych osobowych nie stanowi naruszenia przepisów [RODO](https://eur-lex.europa.eu/eli/reg/2016/679/oj). Naruszeniem przepisów jest natomiast niewykonywanie lub nieprawidłowe wykonywanie obowiązków wynikających z rozporządzenia.
 
-## Przestrzeganie procedur jest kluczowe
+## Czy każde naruszenie kończy się karą?
 
 UODO przypomina również, że rozporządzenie o ochronie danych osobowych nie nakłada na administratorów obowiązku zapobiegania wszelkim możliwym naruszeniom. Kluczowe znaczenie ma natomiast przestrzeganie ustalonych procedur. Dokument wyjaśnia, że w przypadku wystąpienia naruszenia pomimo prawidłowego realizowania obowiązków przez podmioty odpowiedzialne za bezpieczeństwo przetwarzania, nie muszą one obawiać się zastosowania wobec nich sankcji administracyjnych.
 
