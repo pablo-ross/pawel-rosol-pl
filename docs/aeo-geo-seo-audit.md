@@ -403,7 +403,7 @@ Each phase ends with `bash tools/test.sh` and one Conventional Commit per logica
 - [x] Feed override (§1.4): `assets/feed.xml`, limit 5→20, author resolved via `_data/authors.yml`, `xml_escape` dropped from the entry `title=` attribute (it was double-escaped). Full content deliberately **not** added — owner decision, §10.7
 - [ ] Security headers + `charset=utf-8` on the server (§1.5) — **server-side, outside this repo; still outstanding**
 - [x] Verification stub out of the sitemap (§1.6) — front matter `sitemap: false`, sitemap 185 → 184 URLs; text on the 404 page (§1.7) — `assets/404.html` override
-- [ ] Deploy; re-run the `curl` checks from this audit
+- [x] Deploy (21.09.2026); `curl` checks re-run against the live site: breadcrumb category URL 404 → 200, `/CLAUDE.md` 200 → 404, one JSON-LD block per page, real `<title>` on all five tabs, `security.txt` live, retired tag URLs 404 as accepted in §2
 
 ### Phase 2 — Structured data (~4–5 h)
 - [x] `tools/check-jsonld.rb` wired into `tools/test.sh` (§3.8). It caught the percent-encoded category URLs while §3.3 was being written
@@ -413,13 +413,13 @@ Each phase ends with `bash tools/test.sh` and one Conventional Commit per logica
 - [x] `Person` node: both job titles, extended `knowsAbout` (§11.3)
 - [x] `CollectionPage` + `ItemList` on archives and generated category/tag pages (§3.6)
 - [x] seo-tag JSON-LD strip plugin (§3.2b) — one JSON-LD block per page, 184/184
-- [ ] Validate one URL per page type: validator.schema.org + Rich Results Test — **needs a deploy first**
+- [ ] Validate one URL per page type: validator.schema.org + Rich Results Test — now deployed, so unblocked. Manual step; `tools/check-jsonld.rb` covers parsing and structure but not vocabulary conformance
 
 ### Phase 3 — Linking & taxonomy (~5–6 h, plus the pillar)
 - [x] Back-fill `{% post_url %}` links, old → new (§4.3.1–2) — 15 → 63 links; posts with a contextual inbound link 9 → 30 of 31
 - [x] Primary-source citations in the posts with none (§4.3.5) — EUR-Lex ELI for RODO/NIS2/2019/1937, eli.gov.pl for KSC + nowelizacja + sygnaliści + UdIP, orzeczenia.uodo.gov.pl for DKN.5131.9.2024. All URLs checked to resolve
 - [x] `noindex, follow` on tags with < 3 posts (§2) — 119 of 133 tag archives
-- [ ] Tag consolidation to ~30–40 tags (§2) — **still outstanding**, one pass, one commit
+- [x] Tag consolidation (§2) — 132 → 38 tags in one pass, 21 of them indexable; sitemap 185 → 91 URLs
 - [x] Pillar #1: *Naruszenie ochrony danych osobowych - przewodnik dla administratora* (§4.3.3) — pinned, ~1700 words, 3 tables, 6 FAQ, links out to 7 posts and back from 4. `legal_status_date` left unset pending the author's review
 - [x] Post → `/contact/` CTA — via the author box on every post (§5.2f)
 - [x] `/about/` → pillar
