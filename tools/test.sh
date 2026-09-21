@@ -67,6 +67,13 @@ main() {
 
   # structured data — html-proofer does not look inside JSON-LD
   ruby tools/check-jsonld.rb "$SITE_DIR"
+
+  # A tab whose lower-cased title is missing from _data/locales/*.yml `tabs:`
+  # renders as "<title> | Site name". The theme's head.html has no fallback.
+  if grep -rlE '<title>[[:space:]]*\|' "$SITE_DIR" --include='*.html'; then
+    echo "ERROR: the pages above ship an empty <title>" >&2
+    exit 1
+  fi
 }
 
 while (($#)); do

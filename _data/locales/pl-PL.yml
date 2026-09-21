@@ -9,8 +9,17 @@ layout:
 
 # The tabs of sidebar
 tabs:
-  # format: <filename_without_extension>: <value>
+  # Keyed by the tab's `title:` in lower case — that is what both
+  # _layouts/page.html and _includes/head.html look up (the theme's own
+  # "<filename_without_extension>" comment is wrong). _layouts/page.html
+  # falls back to page.title, but head.html does not: a missing key here
+  # renders an empty <title> on that tab.
   home: Start
+  kategorie: Kategorie
+  tagi: Tagi
+  archiwum: Archiwum
+  "o mnie": O mnie
+  kontakt: Kontakt
 
 # the text displayed in the search bar & search results
 search:
