@@ -153,10 +153,11 @@ Chirpy is installed as `gem "jekyll-theme-chirpy", "~> 7.5"`. Theme source files
 
 #### Theme files overridden in this repo
 
-Both live under `assets/`, outside the do-not-fork list, and both are marked with `override:` comments:
+Three files. Two live under `assets/`, outside the do-not-fork list, and are marked with `override:` comments; the third is the data file described under "Self-hosted assets":
 
 - `assets/feed.xml` — entry limit 5 → 20; author resolved through `_data/authors.yml` instead of printing the raw id; `xml_escape` dropped from the entry `title=` attribute, where the template's global `replace: '&', '&amp;'` was double-escaping it. Do **not** add `{{ post.content }}` without first removing that global replace and escaping each field individually — otherwise every entity in the feed is double-escaped.
 - `assets/404.html` — Polish text plus links to archives, categories, tags and contact. The gem ships an empty `<p class="lead">`.
+- `_data/origin/basic.yml` — full copy of the gem's, with dayjs's locale pointed at the vendored Polish file instead of the hardcoded `en.js`.
 
 ### Tab titles and UI strings
 
@@ -170,11 +171,20 @@ Both live under `assets/`, outside the do-not-fork list, and both are marked wit
 
 ### Self-hosted assets
 
-`assets/lib` is a git submodule pointing to [chirpy-static-assets](https://github.com/cotes2020/chirpy-static-assets) and is currently **uninitialised**, so `assets.self_host.enabled` in `_config.yml` must stay off. This has a user-visible cost: in a browser with an ad or tracker blocker the `jsdelivr` and Google Fonts requests are blocked, `dayjs` and `SimpleJekyllSearch` never define, and site search and relative dates break. Switching it on would also let the CSP's `script-src`, `style-src` and `font-src` drop to `'self'`. Enabling it without the submodule 404s every stylesheet and script. To switch over: init the submodule, flip the flag, build, then confirm no `googleapis`, `gstatic` or `jsdelivr` remains:
+`assets/lib` is a git submodule pointing to [chirpy-static-assets](https://github.com/cotes2020/chirpy-static-assets), it **is initialised**, and `assets.self_host.enabled` in `_config.yml` is **on**. Every stylesheet, font and script the theme uses is served from this origin: no `googleapis`, `gstatic` or `jsdelivr` request remains. That is what lets the CSP keep `script-src`, `style-src` and `font-src` at `'self'`, and it fixed a real failure - with the CDNs, a browser running an ad or tracker blocker got no `dayjs` and no `SimpleJekyllSearch`, so site search and relative dates were dead.
+
+A clone without `git submodule update --init --recursive` 404s every stylesheet and script. Verify after a theme upgrade:
 
 ```bash
 grep -rhoE '(href|src)="https?://[^/"]+' _site | sort -u
 ```
+
+Only `platform.twitter.com` and `www.docdroid.net` should appear - two embeds in 2020 posts.
+
+Two consequences of the switch are easy to trip over:
+
+- **`assets/lib/mathjax` and `assets/lib/mermaid` are in `exclude:`.** They are 20 MB the site never loads; Chirpy pulls them only on a page with `math: true` or `mermaid: true`, and no document sets either. Drop the matching `exclude:` line if one ever does - `tools/test.sh` fails the build if a document opts in while the library is still excluded.
+- **`_data/origin/basic.yml` is a full copy of the gem's, overridden here.** One line differs: the gem hardcodes dayjs's locale as `/assets/lib/dayjs/locale/en.js` with no `:LOCALE` placeholder (`cors.yml` has one) and chirpy-static-assets ships only `en.js`, so self-hosting silently moved dates to English. It points instead at `assets/js/dayjs-locale-pl.js`, the Polish locale vendored from npm `dayjs@1` (MIT). Jekyll replaces a theme data file wholesale rather than merging it, so this file must stay a **full** copy - re-diff it on a theme upgrade.
 
 ### Deployment
 
@@ -182,7 +192,7 @@ grep -rhoE '(href|src)="https?://[^/"]+' _site | sort -u
 
 **Server-side** - see `docs/mydevil-hosting.md` for the host's capabilities, the current `devil www` settings and what is still open.
 
-`.htaccess` at the repo root sets the HTTPS redirect, `AddDefaultCharset utf-8`, the security headers (`Strict-Transport-Security`, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, `Permissions-Policy`), a `Content-Security-Policy`, plus `Options -Indexes`. Jekyll skips dotfiles, so it ships only because `include:` in `_config.yml` names it. mydevil implements `.htaccess` as an nginx module supporting a documented subset of Apache syntax, and **only on `php`-type sites** - a directive it does not implement returns 500 for the whole site, so check <https://pomoc.mydevil.net/htaccess/> before adding one, keep the file BOM-free with LF endings, and curl the site after deploying.
+`.htaccess` at the repo root sets the HTTPS redirect, `AddDefaultCharset utf-8`, the security headers (`Strict-Transport-Security`, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, `Permissions-Policy`), a `Content-Security-Policy`, `Cache-Control` per file type, plus `Options -Indexes`. GZIP is on at the panel and Chirpy already minifies the HTML and ships minified CSS/JS, so caching is the only delivery lever left in this file; none of the asset filenames carry a content hash, which is why CSS/JS get one day rather than a year. Jekyll skips dotfiles, so it ships only because `include:` in `_config.yml` names it. mydevil implements `.htaccess` as an nginx module supporting a documented subset of Apache syntax, and **only on `php`-type sites** - a directive it does not implement returns 500 for the whole site, so check <https://pomoc.mydevil.net/htaccess/> before adding one, keep the file BOM-free with LF endings, and curl the site after deploying.
 
 The CSP allows the theme's single inline script **by sha256 hash** rather than by `'unsafe-inline'`, so an injected `<script>` cannot run. That hash is derived from the build, which makes it fragile: a theme upgrade that changes one character of that script leaves a hash the browser silently rejects, and site search stops working with nothing in the build log. `tools/check-csp.rb` recomputes the hashes and the external host list from `_site` and fails the build if either has drifted from `.htaccess` - so when it fails after a Chirpy upgrade, update the hash in `.htaccess`, do not switch to `'unsafe-inline'`. Adding an embed from a new third-party host will fail it too; add the host to the right directive rather than widening `default-src`.
 

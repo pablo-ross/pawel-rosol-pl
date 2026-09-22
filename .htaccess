@@ -29,14 +29,21 @@ AddDefaultCharset utf-8
 # after a theme upgrade or a new embed; tools/check-csp.rb fails the build if an
 # inline script appears whose hash is not listed here.
 #
+# Since assets.self_host was switched on, every stylesheet, font and script the
+# theme uses comes from this origin, so script-src, style-src and font-src are
+# 'self'. What is left external is two legacy embeds:
+#
+#   twitter/twimg  a tweet embedded in two 2020 posts
+#   docdroid       an embedded PDF viewer in one post
+#
 #   script-src  one inline script (Chirpy's search init, identical on all pages)
 #               is allowed by hash, so 'unsafe-inline' is not needed and an
 #               injected <script> cannot run
-#   style-src   'unsafe-inline' is unavoidable: the Twitter widget injects
-#               styles at runtime. Far less dangerous than script 'unsafe-inline'
-#   twimg/twitter, docdroid  two 2020 posts embed a tweet and a PDF viewer
+#   style-src   'unsafe-inline' is still needed: glightbox and the Twitter
+#               widget set style attributes at runtime. The build itself ships
+#               no <style> block and no style= attribute
 #   upgrade-insecure-requests  belt and braces next to the HTTPS redirect
-Header set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'sha256-kN/QDj91CKyOGZ/x3hqqrHGFh0tFZfLJ1vyeIbo7Cuo=' https://cdn.jsdelivr.net https://platform.twitter.com https://cdn.syndication.twimg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https://pbs.twimg.com https://abs.twimg.com https://syndication.twitter.com; frame-src https://platform.twitter.com https://syndication.twitter.com https://www.docdroid.net; connect-src 'self'; manifest-src 'self'; upgrade-insecure-requests"
+Header set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'sha256-kN/QDj91CKyOGZ/x3hqqrHGFh0tFZfLJ1vyeIbo7Cuo=' https://platform.twitter.com https://cdn.syndication.twimg.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://pbs.twimg.com https://abs.twimg.com https://syndication.twitter.com; frame-src https://platform.twitter.com https://syndication.twitter.com https://www.docdroid.net; connect-src 'self'; manifest-src 'self'; upgrade-insecure-requests"
 
 # --- Other security headers ------------------------------------------------
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
@@ -44,6 +51,28 @@ Header set X-Content-Type-Options "nosniff"
 Header set Referrer-Policy "strict-origin-when-cross-origin"
 Header set X-Frame-Options "SAMEORIGIN"
 Header set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=(), usb=()"
+
+# --- Caching ---------------------------------------------------------------
+# GZIP is already on at the panel (devil www options ... gzip), and Chirpy
+# already minifies the HTML and ships minified CSS/JS, so the remaining win on
+# repeat visits is not re-sending bytes that have not changed.
+#
+# None of the theme's asset filenames carry a content hash, so a long cache on
+# CSS/JS would serve a stale theme after a deploy. One day is short enough to
+# propagate quickly while still saving the request; ETag and Last-Modified
+# still allow a 304 on everything below.
+<FilesMatch "\.(html|xml|json|txt|webmanifest)$">
+  Header set Cache-Control "max-age=0, must-revalidate"
+</FilesMatch>
+<FilesMatch "\.(css|js)$">
+  Header set Cache-Control "max-age=86400, public"
+</FilesMatch>
+<FilesMatch "\.(woff2|woff|ttf|eot|otf)$">
+  Header set Cache-Control "max-age=31536000, public, immutable"
+</FilesMatch>
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|avif|svg|ico)$">
+  Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
 
 # --- Directory listings ----------------------------------------------------
 Options -Indexes

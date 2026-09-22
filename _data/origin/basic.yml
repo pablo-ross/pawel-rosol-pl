@@ -1,0 +1,52 @@
+# Self-hosted asset paths, copied from jekyll-theme-chirpy and overridden here.
+#
+# Only one line differs from the gem's copy: dayjs's locale. The gem hardcodes
+# `/assets/lib/dayjs/locale/en.js` with no :LOCALE placeholder (cors.yml has
+# one), and chirpy-static-assets ships only en.js, so switching
+# assets.self_host on silently moved date tooltips and relative times to
+# English. assets/js/dayjs-locale-pl.js is the Polish locale, vendored from
+# npm dayjs@1 (MIT).
+#
+# Jekyll replaces a theme data file wholesale rather than merging it, so this
+# file must stay a full copy. Re-diff it against the gem's on a theme upgrade,
+# the same as the two files under assets/ - see "Theme" in CLAUDE.md.
+
+# fonts
+
+webfonts: /assets/lib/fonts/main.css
+
+# Libraries
+
+toc:
+  css: /assets/lib/tocbot/tocbot.min.css
+  js: /assets/lib/tocbot/tocbot.min.js
+
+fontawesome:
+  css: /assets/lib/fontawesome-free/css/all.min.css
+
+search:
+  js: /assets/lib/simple-jekyll-search/simple-jekyll-search.min.js
+
+mermaid:
+  js: /assets/lib/mermaid/mermaid.min.js
+
+dayjs:
+  js:
+    common: /assets/lib/dayjs/dayjs.min.js
+    locale: /assets/js/dayjs-locale-pl.js
+    relativeTime: /assets/lib/dayjs/plugin/relativeTime.js
+    localizedFormat: /assets/lib/dayjs/plugin/localizedFormat.js
+
+glightbox:
+  css: /assets/lib/glightbox/glightbox.min.css
+  js: /assets/lib/glightbox/glightbox.min.js
+
+lazy-polyfill:
+  css: /assets/lib/loading-attribute-polyfill/loading-attribute-polyfill.min.css
+  js: /assets/lib/loading-attribute-polyfill/loading-attribute-polyfill.umd.min.js
+
+clipboard:
+  js: /assets/lib/clipboard/clipboard.min.js
+
+mathjax:
+  js: /assets/lib/mathjax/tex-chtml.js

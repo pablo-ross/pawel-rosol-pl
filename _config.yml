@@ -130,7 +130,7 @@ comments:
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
-    enabled: # boolean, keep empty means false
+    enabled: true # boolean, keep empty means false
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
     env: # [development | production]
@@ -207,6 +207,12 @@ compress_html:
 exclude:
   - "*.gem"
   - "*.gemspec"
+  # Self-hosted MathJax and Mermaid are 20 MB the site never loads: Chirpy pulls
+  # them only on a page with `math: true` or `mermaid: true`, and no post sets
+  # either. Drop the matching line here if one ever does - tools/test.sh fails
+  # the build if a post opts in while the library is still excluded.
+  - assets/lib/mathjax
+  - assets/lib/mermaid
   - docs
   - tools
   - README.md

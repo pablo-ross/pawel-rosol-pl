@@ -72,6 +72,19 @@ main() {
   # changes that script would break it silently in the browser
   ruby tools/check-csp.rb "$SITE_DIR" .htaccess
 
+  # A post opting into math or mermaid while _config.yml still excludes the
+  # self-hosted library would 404 the script with nothing in the build log.
+  for _lib in mathjax mermaid; do
+    _key="$_lib"
+    [[ $_lib == mathjax ]] && _key="math"
+    if grep -qE "^ *- *assets/lib/$_lib *$" "$_config" 2>/dev/null &&
+      grep -rlE "^$_key: *true" _posts _tabs 2>/dev/null | grep -q .; then
+      echo "ERROR: a document sets '$_key: true' but _config.yml excludes" >&2
+      echo "       assets/lib/$_lib — remove that exclude line" >&2
+      exit 1
+    fi
+  done
+
   # A tab whose lower-cased title is missing from _data/locales/*.yml `tabs:`
   # renders as "<title> | Site name". The theme's head.html has no fallback.
   if grep -rlE '<title>[[:space:]]*\|' "$SITE_DIR" --include='*.html'; then

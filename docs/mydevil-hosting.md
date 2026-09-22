@@ -83,14 +83,14 @@ It sets:
 
 ### The Content-Security-Policy
 
-Derived from what the build actually loads, not from a template. The whole external
-surface is five hosts:
+Derived from what the build actually loads, not from a template. Since
+`assets.self_host` was switched on, the only external hosts left are two legacy embeds:
 
 | Directive | Allowed beyond `'self'` | Why |
 |---|---|---|
-| `script-src` | one `sha256-` hash, `cdn.jsdelivr.net`, `platform.twitter.com`, `cdn.syndication.twimg.com` | theme bundles; a tweet embed on two 2020 posts |
-| `style-src` | `'unsafe-inline'`, `cdn.jsdelivr.net`, `fonts.googleapis.com` | Google Fonts, Font Awesome; the Twitter widget injects styles at runtime |
-| `font-src` | `cdn.jsdelivr.net`, `fonts.gstatic.com` | the fonts those stylesheets pull |
+| `script-src` | one `sha256-` hash, `platform.twitter.com`, `cdn.syndication.twimg.com` | a tweet embedded in two 2020 posts |
+| `style-src` | `'unsafe-inline'` | glightbox and the Twitter widget set style attributes at runtime |
+| `font-src` | - | all fonts are self-hosted |
 | `img-src` | `data:`, `pbs.twimg.com`, `abs.twimg.com`, `syndication.twitter.com` | one inline SVG in the theme CSS; tweet avatars |
 | `frame-src` | `platform.twitter.com`, `syndication.twitter.com`, `www.docdroid.net` | the tweet embeds and one embedded PDF viewer |
 
@@ -104,8 +104,9 @@ than by `'unsafe-inline'`. That is what makes the policy worth having: an inject
 `<script>` cannot run. `<script type="application/ld+json">` is data, not executable, and
 CSP does not apply to it.
 
-`style-src` keeps `'unsafe-inline'`, which is a real weakening but a far smaller one -
-the Twitter widget injects styles at runtime and there is no hash to give it.
+`style-src` keeps `'unsafe-inline'`, which is a real weakening but a far smaller one.
+The build itself ships no `<style>` block and no `style=` attribute; the need comes from
+scripts setting style attributes at runtime.
 
 **The hash is the fragile part.** A theme upgrade that changes one character of that
 inline script leaves a hash that no longer matches; the browser silently refuses to run
@@ -123,6 +124,30 @@ Dropping the tweet embeds from the two 2020 posts would remove four hosts and le
 `style-src` lose `'unsafe-inline'`. The embeds already degrade to a plain quoted
 blockquote with a link when the script does not load. Worth considering on a DPO's site
 for a second reason: a Twitter embed loads third-party code into the visitor's browser.
+
+### Compression and caching
+
+Already handled before any of this work, and worth not redoing by mistake:
+
+- **GZIP** is on at the panel (`devil www options pawel.rosol.pl gzip on`). The home page
+  goes out as 7.9 KB against 30 KB on disk. Brotli is not offered.
+- **HTML is already minified** by Chirpy's compress layout - the built pages are single
+  lines. **CSS and JS ship minified** from the theme and from `assets/lib`.
+
+So the remaining lever was not compressing bytes but not re-sending them.
+`.htaccess` sets `Cache-Control` per file type:
+
+| Files | `Cache-Control` |
+|---|---|
+| `.html` `.xml` `.json` `.txt` `.webmanifest` | `max-age=0, must-revalidate` |
+| `.css` `.js` | `max-age=86400, public` |
+| `.woff2` `.woff` `.ttf` `.eot` `.otf` | `max-age=31536000, public, immutable` |
+| images | `max-age=2592000, public` |
+
+**None of the theme's asset filenames carry a content hash**, which is why CSS and JS get
+a day rather than a year: a longer cache would serve a stale theme after a deploy. Fonts
+are safe at a year because a font change means a new filename under a new submodule
+commit. `ETag` and `Last-Modified` still allow a 304 on everything.
 
 ### Constraints on editing it
 
@@ -158,14 +183,11 @@ headers - the curl checks above are manual.
 
 ## Outstanding
 
-- **Self-hosted assets.** `assets/lib` is still uninitialised and
-  `assets.self_host.enabled` is off, so the theme's CSS and JS come from `jsdelivr` and
-  Google Fonts. Switching it on would let `script-src`, `style-src` and `font-src` drop
-  to `'self'`, and would remove the third-party requests a privacy-conscious visitor can
-  see. It would also fix a real failure: in a browser with an ad or tracker blocker,
-  those CDN requests return 503, `dayjs` and `SimpleJekyllSearch` never define, and site
-  search and relative dates break. Observed in Chrome on 22 September 2026 - the CDNs
-  answer 200 from the server, so it is client-side blocking, not an outage.
+- **The two 2020 embeds.** A tweet in two posts and a docdroid PDF viewer in one are the
+  only third-party requests left. Dropping them would remove five hosts from the CSP and
+  let `style-src` lose `'unsafe-inline'`. The tweet already degrades to a quoted
+  blockquote with a link when the script does not load. Worth considering on a DPO's
+  site for a second reason: an embed loads third-party code into the visitor's browser.
 - **`security.txt` expiry.** `Expires:` is generated as `<build year + 1>-09-01`, so the
   site must be rebuilt and redeployed at least once a year or the file goes stale.
 - **HSTS preload.** Deliberately not set. Preloading is effectively irreversible and
@@ -179,8 +201,10 @@ headers - the curl checks above are manual.
 ## Change log
 
 - **22 September 2026** - added `/.htaccess`: HTTPS redirect, `AddDefaultCharset utf-8`,
-  five security headers, a Content-Security-Policy, `Options -Indexes`. Added
-  `tools/check-csp.rb` and wired it into `tools/test.sh`. Rewrote `.production.sh` to build through
+  five security headers, a Content-Security-Policy, `Cache-Control` per file type,
+  `Options -Indexes`. Added `tools/check-csp.rb` and wired it into `tools/test.sh`.
+  Switched `assets.self_host` on, which removed every `jsdelivr`/`googleapis`/`gstatic`
+  request and let the CSP tighten to `'self'` for scripts, styles and fonts. Rewrote `.production.sh` to build through
   `tools/test.sh` and to refuse to deploy an incomplete build. Bumped bundler to 4.0.21
   and replaced the deprecated `:mingw, :x64_mingw, :mswin` platform names with
   `:windows` in the `Gemfile`.
