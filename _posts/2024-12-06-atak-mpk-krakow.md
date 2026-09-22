@@ -22,6 +22,15 @@ faq:
     answer: "Tak, mimo braku potwierdzenia kradzieży danych, MPK zgłosiło incydent do Prezesa UODO. Zgodnie z art. 33 RODO administratorzy mają obowiązek zgłoszenia naruszenia w ciągu 72 godzin od jego wykrycia, jeśli istnieje ryzyko naruszenia praw lub wolności osób fizycznych."
   - question: "Jakie znaczenie ma dyrektywa NIS2 dla incydentu takiego jak atak na MPK Kraków?"
     answer: "Dyrektywa NIS2, obejmująca ochroną kluczowe usługi infrastrukturalne, nakłada na firmy takie jak MPK obowiązek oceny ryzyka i wdrożenia procedur reagowania na incydenty. Atak pokazał, że mimo współpracy z wyspecjalizowanymi firmami IT i służbami państwowymi, potrzebna jest jeszcze lepsza koordynacja i przygotowanie na wypadek podobnych ataków."
+sources:
+  - name: "Ustawa z 5 lipca 2018 r. o krajowym systemie cyberbezpieczeństwa"
+    url: https://eli.gov.pl/eli/DU/2018/1560/ogl
+  - name: "Ustawa z 23 stycznia 2026 r. o zmianie ustawy o krajowym systemie cyberbezpieczeństwa (Dz.U. 2026 poz. 252)"
+    url: https://eli.gov.pl/eli/DU/2026/252/ogl
+  - name: "Dyrektywa (UE) 2022/2555 (NIS2)"
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+  - name: "Rozporządzenie (UE) 2016/679 (RODO)"
+    url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
 ---
 
 > **W skrócie:** atak na spółkę komunalną uruchamia dwa niezależne zegary. Jeżeli istnieje ryzyko naruszenia praw lub wolności osób fizycznych, administrator ma 72 godziny na zgłoszenie do UODO, licząc od stwierdzenia naruszenia. Równolegle, jeżeli spółka jest podmiotem kluczowym albo ważnym w rozumieniu ustawy o KSC, biegną terminy zgłoszenia incydentu do właściwego CSIRT. Jedno zgłoszenie nie zastępuje drugiego, a ciągłość działania usługi to osobny obowiązek od ochrony danych.

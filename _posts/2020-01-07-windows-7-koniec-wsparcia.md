@@ -6,6 +6,9 @@ categories:
 tags:
   - Bezpieczeństwo danych
 description: "Z dniem 14 stycznia 2020r. kończy się wsparcie producenta dla systemu operacyjnego Windows w wersji 7. Konsekwencje wynikające z zakończenia okresu wsparcia technicznego mają bezpośredni wpływ na bezpieczeństwo systemu przetwarzającego dane osobowe. Jeśli w Twojej organizacji znajdują się aktywne komputery osobiste z systemem Windows 7, po 14 stycznia 2020 r. przestaną one otrzymywać aktualizacje zabezpieczeń."
+sources:
+  - name: "Rozporządzenie (UE) 2016/679 (RODO)"
+    url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
 ---
 
 > **Wpis archiwalny (styczeń 2020 r.).** Windows 7 stracił wsparcie 14 stycznia 2020 r.; wsparcie dla Windows 10 zakończyło się 14 października 2025 r. Konkretne daty są już historyczne - aktualna pozostaje zasada: system bez aktualizacji bezpieczeństwa nie spełnia wymogu art. 32 [RODO](https://eur-lex.europa.eu/eli/reg/2016/679/oj), a UODO karał administratorów właśnie za [niedobranie środków technicznych do ryzyka]({% post_url 2024-11-13-decyzja-uodo %}).

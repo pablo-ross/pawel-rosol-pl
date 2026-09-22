@@ -22,6 +22,9 @@ faq:
     answer: "Szyfrowanie nośnika sprawia, że utrata sprzętu przestaje oznaczać utratę poufności danych, więc usuwa główny skutek zdarzenia. Nie zastępuje jednak analizy ryzyka ani testowania zabezpieczeń, a to ich brak organ zakwalifikował jako naruszenie przepisów. Szyfrowanie jest wnioskiem z analizy ryzyka, nie substytutem tej analizy."
   - question: "Co powinno znaleźć się w analizie ryzyka, gdy dane opuszczają siedzibę organizacji?"
     answer: "Scenariusz utraty lub kradzieży nośnika - laptopa, pendrive'a, dokumentacji papierowej - wraz z oceną skutków dla osób, których dane dotyczą, i decyzją o środkach, które to ryzyko równoważą. Do tego zapis, kiedy skuteczność tych środków jest sprawdzana i przez kogo. Bez takiego zapisu administrator nie wykaże zgodności z art. 24 ust. 1 i art. 32 RODO."
+sources:
+  - name: "Rozporządzenie (UE) 2016/679 (RODO)"
+    url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
 ---
 
 > **W skrócie:** administrator stracił w transporcie laptop i dokumenty z danymi osobowymi, w tym numerami PESEL, danymi rachunków bankowych i informacjami o stanie zdrowia. Sprzęt nie był zaszyfrowany. UODO nałożył karę 24 555 zł nie za sam incydent, ale za to, co go poprzedzało: brak aktualnej analizy ryzyka i brak regularnego testowania skuteczności zabezpieczeń. Zaszyfrowany dysk zamienia utratę sprzętu w zdarzenie bez konsekwencji dla osób, których dane dotyczą.

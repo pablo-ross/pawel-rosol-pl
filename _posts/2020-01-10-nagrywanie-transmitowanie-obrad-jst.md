@@ -12,6 +12,9 @@ tags:
   - Analiza ryzyka
 description: "W listopadzie 2019 roku na stronie organu nadzorczego tj. UODO ukazał się interesujący materiał pt. Projektowanie ochrony danych osobowych w związku z transmisją i nagrywaniem obrad kolegialnych organów jednostek samorządu terytorialnego. Rozwój technologiczny i zmiany w ustawodawstwie regulującym spowodowały, że działanie kolegialnych organów jednostek samorządu terytorialnego, pochodzących z wyborów powszechnych musi być transmitowane i utrwalane za pomocą urządzeń rejestrujących obraz i dźwięk obrad tych organów."
 legal: true
+sources:
+  - name: "Rozporządzenie (UE) 2016/679 (RODO)"
+    url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
 ---
 
 W listopadzie 2019 roku na stronie organu nadzorczego tj. UODO ukazał się interesujący materiał pt. "Projektowanie ochrony danych osobowych w związku z transmisją i nagrywaniem obrad kolegialnych organów jednostek samorządu terytorialnego". Rozwój technologiczny i zmiany w ustawodawstwie regulującym spowodowały, że działanie kolegialnych organów jednostek samorządu terytorialnego, pochodzących z wyborów powszechnych (np. rady gmin, rady powiatów) **musi być transmitowane i utrwalane za pomocą urządzeń rejestrujących obraz i dźwięk** obrad tych organów. Uregulowano również zasady dalszego udostępniania takich nagrań.

@@ -18,6 +18,9 @@ faq:
     answer: "Minister cyfryzacji przekazał Poczcie Polskiej numer PESEL, imiona i nazwiska, ostatni aktualny adres zameldowania na pobyt stały (lub nieaktualny, jeśli brak aktualnego), adres zameldowania na pobyt czasowy z terminem pobytu oraz informacje o zarejestrowanych wyjazdach czasowych za granicę - dane ok. 30 milionów osób, niemal 80% populacji Polski."
   - question: "Dlaczego pierwotna kara dla Poczty Polskiej została obniżona?"
     answer: "Kara dla Poczty Polskiej miała pierwotnie wynieść ponad 100 mln zł, ale UODO obniżył ją do 27 mln zł ze względu na trudną sytuację finansową spółki (745 mln zł straty w 2023 r.) oraz fakt, że realizuje ona zadania publiczne."
+sources:
+  - name: "Decyzja Prezesa UODO DKN.5131.1.2025 (wybory kopertowe)"
+    url: https://uodo.gov.pl/decyzje/DKN.5131.1.2025
 ---
 
 > **W skrócie:** polecenie premiera nie zastąpiło podstawy prawnej. Poczta Polska pobrała dane z rejestru PESEL i przetwarzała je bez przepisu, który by na to pozwalał, a UODO ukarał za to zarówno spółkę, jak i Ministra Cyfryzacji, który dane udostępnił. Dla administratora wniosek jest prosty: w sytuacji nadzwyczajnej to na nim spoczywa obowiązek sprawdzenia podstawy prawnej, a presja czasu i polecenie z góry nie są okolicznością wyłączającą odpowiedzialność.

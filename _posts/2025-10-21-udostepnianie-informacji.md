@@ -23,6 +23,11 @@ faq:
     answer: "To organ udostępniający dokument musi sam przeprowadzić anonimizację - nie może odmówić udostępnienia, tłumacząc się czasochłonnością tego procesu. Potwierdził to wyrok WSA w Warszawie, który nałożył karę 20 000 zł na prokuraturę za udostępnienie dokumentów bez uprzedniej anonimizacji danych osobowych."
   - question: "Jak prawidłowo uzasadnić odmowę udostępnienia dokumentacji bezpieczeństwa?"
     answer: "Nie wystarczy ogólnikowe stwierdzenie „dokument wewnętrzny” czy „bezpieczeństwo”. Trzeba wskazać konkretne kategorie chronionych informacji (podatności, zagrożenia, dane osobowe), przepis wyłączający udostępnienie (art. 37 ust. 1 ustawy o KSC), wyjaśnić, dlaczego anonimizacja nie wystarczy, oraz jaki interes publiczny chroni odmowa."
+sources:
+  - name: "Ustawa z 6 września 2001 r. o dostępie do informacji publicznej"
+    url: https://eli.gov.pl/eli/DU/2001/1198/ogl
+  - name: "Ustawa z 5 lipca 2018 r. o krajowym systemie cyberbezpieczeństwa"
+    url: https://eli.gov.pl/eli/DU/2018/1560/ogl
 ---
 
 Atak ransomware w urzędzie, wyciek danych osobowych, awaria systemu IT - każdy taki incydent rodzi pytania ze strony mediów, obywateli i organizacji pozarządowych. Czy podmiot publiczny może odmówić udostępnienia dokumentów związanych z naruszeniem? Odpowiedź brzmi: to zależy od tego, o jakie konkretnie informacje chodzi.

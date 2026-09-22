@@ -16,6 +16,11 @@ faq:
     answer: "Obowiązek dotyczy organów publicznych w rozumieniu art. 2 pkt 6 ustawy, czyli m.in. naczelnych i centralnych organów administracji rządowej (np. UODO, Główny Inspektorat Sanitarny), terenowych organów administracji rządowej (np. wojewodowie), organów jednostek samorządu terytorialnego (wójt, burmistrz, prezydent, starosta, marszałek, rada gminy/powiatu, sejmik wojewódzki) oraz innych podmiotów wykonujących zadania administracji publicznej w określonych dziedzinach."
   - question: "Jakie są konsekwencje braku wdrożenia kanału zewnętrznego dla sygnalistów?"
     answer: "Nieprzestrzeganie tego obowiązku może skutkować karami administracyjnymi, odpowiedzialnością karną osób odpowiedzialnych za zaniedbania oraz utratą zaufania publicznego i reputacji organizacji."
+sources:
+  - name: "Ustawa z 14 czerwca 2024 r. o ochronie sygnalistów"
+    url: https://eli.gov.pl/eli/DU/2024/928/ogl
+  - name: "Dyrektywa (UE) 2019/1937 w sprawie ochrony osób zgłaszających naruszenia prawa Unii"
+    url: https://eur-lex.europa.eu/eli/dir/2019/1937/oj
 ---
 
 Obowiązek wdrożenia kanału zewnętrznego do obsługi sygnalistów wynika z implementacji [Dyrektywy Parlamentu Europejskiego i Rady (UE) 2019/1937 z dnia 23 października 2019 r.](https://eur-lex.europa.eu/eli/dir/2019/1937/oj) w sprawie ochrony osób zgłaszających naruszenia prawa Unii, znanej powszechnie jako dyrektywa o sygnalistach. Celem tego aktu prawnego jest zapewnienie skutecznej ochrony sygnalistów, czyli osób zgłaszających naruszenia prawa, przed działaniami odwetowymi oraz promowanie przejrzystości i odpowiedzialności w organizacjach. W Polsce przepisy implementujące tę dyrektywę są zawarte w [ustawie z dnia 14 czerwca 2024 r. o ochronie sygnalistów](https://eli.gov.pl/eli/DU/2024/928/ogl), która określa szczegółowe obowiązki podmiotów zobowiązanych. O kanale wewnętrznym, ochronie tożsamości zgłaszającego i zakazie działań odwetowych pisałem wcześniej we wpisie [Ochrona sygnalistów - nowe wymagania]({% post_url 2021-12-05-ochrona-sygnalistow %}).

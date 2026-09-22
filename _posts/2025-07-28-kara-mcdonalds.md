@@ -19,6 +19,9 @@ faq:
     answer: "Firma 24/7 Communication, której McDonald's powierzył przetwarzanie danych w aplikacji do zarządzania grafikami pracowniczymi, otrzymała karę ponad 183 tysięcy złotych. UODO zarzucił jej brak analizy ryzyka, brak odpowiednich zabezpieczeń oraz korzystanie z podwykonawcy bez zawartej umowy podpowierzenia."
   - question: "Jakie błędy popełnił McDonald's przy wyborze i nadzorze nad podmiotem przetwarzającym?"
     answer: "McDonald's wybrał firmę PR-ową do zarządzania grafikami wyłącznie na podstawie wcześniejszej współpracy, bez weryfikacji jej kompetencji technicznych w ochronie danych. Nigdy nie przeprowadził audytu u tego podmiotu, mimo że umowa powierzenia to przewidywała, i nie miał nawet dostępu do panelu administracyjnego systemu."
+sources:
+  - name: "Rozporządzenie (UE) 2016/679 (RODO)"
+    url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
 ---
 
 > **W skrócie:** powierzenie przetwarzania nie przenosi odpowiedzialności na wykonawcę. McDonald's Polska zapłacił blisko 17 mln zł nie za włamanie, tylko za to, że wybrał procesora bez sprawdzenia jego kompetencji technicznych, nigdy go nie skontrolował, choć umowa na to pozwalała, i nie miał nawet dostępu do panelu administracyjnego systemu. Procesor dostał osobną karę ponad 183 tys. zł, bo obowiązki z RODO ciążą na nim niezależnie od treści umowy i budżetu.

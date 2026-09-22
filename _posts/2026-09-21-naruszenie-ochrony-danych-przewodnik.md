@@ -27,6 +27,19 @@ faq:
     answer: "Nie. Samo wystąpienie naruszenia nie stanowi naruszenia przepisów RODO. Karane jest niewykonanie obowiązków, które się z naruszeniem wiążą: brak adekwatnych zabezpieczeń dobranych na podstawie analizy ryzyka, brak zgłoszenia, brak zawiadomienia osób lub brak dokumentacji. W decyzjach UODO kara pada zwykle za to, co poprzedzało incydent, a nie za sam incydent."
   - question: "Czy zgłoszenie do CSIRT zastępuje zgłoszenie do UODO?"
     answer: "Nie. To dwa niezależne obowiązki wynikające z różnych ustaw, o różnych terminach i różnym zakresie. Podmiot kluczowy lub ważny w rozumieniu ustawy o krajowym systemie cyberbezpieczeństwa zgłasza incydent do właściwego CSIRT, a jako administrator danych osobowych zgłasza naruszenie do UODO. Jedno zdarzenie może uruchomić oba tryby naraz."
+sources:
+  - name: "Rozporządzenie (UE) 2016/679 (RODO)"
+    url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
+  - name: "Poradnik UODO dotyczący naruszeń ochrony danych osobowych"
+    url: https://uodo.gov.pl/pl/file/5686
+  - name: "UODO: W jaki sposób zgłosić Prezesowi UODO naruszenie ochrony danych osobowych"
+    url: https://uodo.gov.pl/pl/525/2582
+  - name: "Ustawa z 5 lipca 2018 r. o krajowym systemie cyberbezpieczeństwa"
+    url: https://eli.gov.pl/eli/DU/2018/1560/ogl
+  - name: "Ustawa z 23 stycznia 2026 r. o zmianie ustawy o krajowym systemie cyberbezpieczeństwa (Dz.U. 2026 poz. 252)"
+    url: https://eli.gov.pl/eli/DU/2026/252/ogl
+  - name: "Dyrektywa (UE) 2022/2555 (NIS2)"
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
 ---
 
 > **W skrócie:** 72 godziny liczą się od **stwierdzenia** naruszenia, nie od jego wystąpienia. Zgłoszenie do UODO jest obowiązkowe zawsze, gdy nie da się uznać za mało prawdopodobne, że naruszenie będzie skutkować ryzykiem dla osób. Zawiadomienie samych osób jest obowiązkowe dopiero przy **wysokim** ryzyku. Każde naruszenie, także to niezgłoszone, trafia do wewnętrznego rejestru z art. 33 ust. 5 RODO. UODO w swoich decyzjach karze nie za incydent, tylko za brak analizy ryzyka, zabezpieczeń, zgłoszenia lub dokumentacji.

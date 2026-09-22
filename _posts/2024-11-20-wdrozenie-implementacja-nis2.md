@@ -26,6 +26,17 @@ faq:
     answer: "Do właściwego CSIRT sektorowego: wczesne ostrzeżenie nie później niż w ciągu 24 godzin od wykrycia (art. 11 ust. 1 pkt 4 uksc), zgłoszenie incydentu poważnego nie później niż w ciągu 72 godzin od wykrycia (pkt 4a), sprawozdanie okresowe na wniosek CSIRT (pkt 4b) oraz sprawozdanie końcowe nie później niż w ciągu miesiąca od dnia zgłoszenia, a nie od wykrycia (pkt 4c). Podmiot ważny będący podmiotem publicznym składa samo zgłoszenie: art. 12c uksc wyłącza wobec niego wczesne ostrzeżenie i sprawozdania. Terminy te biegną niezależnie od 72-godzinnego terminu zgłoszenia naruszenia ochrony danych osobowych do UODO."
   - question: "Czy można zlecić obowiązki z ustawy o KSC firmie zewnętrznej?"
     answer: "Zadania można realizować przez wewnętrzne struktury albo na podstawie umowy z podmiotem zewnętrznym (art. 14 uksc). Odpowiedzialność za ich wykonanie pozostaje przy kierowniku podmiotu również wtedy, gdy obowiązki powierzono innej osobie (art. 8c ust. 3 uksc). Umowa przenosi pracę, nie odpowiedzialność."
+sources:
+  - name: "Ustawa z 5 lipca 2018 r. o krajowym systemie cyberbezpieczeństwa"
+    url: https://eli.gov.pl/eli/DU/2018/1560/ogl
+  - name: "Obwieszczenie Marszałka Sejmu z 29 grudnia 2025 r. - tekst jednolity ustawy o krajowym systemie cyberbezpieczeństwa (Dz.U. 2026 poz. 20)"
+    url: https://eli.gov.pl/eli/DU/2026/20/ogl
+  - name: "Ustawa z 23 stycznia 2026 r. o zmianie ustawy o krajowym systemie cyberbezpieczeństwa (Dz.U. 2026 poz. 252)"
+    url: https://eli.gov.pl/eli/DU/2026/252/ogl
+  - name: "Ustawa z 13 marca 2026 r. o zmianie ustawy o zbiorowym zaopatrzeniu w wodę i zbiorowym odprowadzaniu ścieków oraz niektórych innych ustaw (Dz.U. 2026 poz. 605)"
+    url: https://eli.gov.pl/eli/DU/2026/605/ogl
+  - name: "Dyrektywa (UE) 2022/2555 (NIS2)"
+    url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
 ---
 
 > **W skrócie:** w 2025 r. doszło do serii ataków na stacje uzdatniania wody i oczyszczalnie ścieków w Polsce, a NIK w sierpniu 2026 r. ocenił dotychczasowe zabezpieczenia operatorów jako niewystarczające. Pełnomocnik Rządu ds. Cyberbezpieczeństwa zalecił sektorowi wod-kan przede wszystkim odseparowanie urządzeń OT od internetu. Zalecenia nie są wiążące, ale ustawa o KSC wymaga środków adekwatnych do ryzyka, więc od ich publikacji milczenie w analizie ryzyka przestało być bezpieczną opcją. Jeżeli spółka jest podmiotem kluczowym albo ważnym, a przesłanki spełniała już w dniu wejścia w życie nowelizacji, wniosek o wpis do wykazu składa się **do 3 października 2026 r.**

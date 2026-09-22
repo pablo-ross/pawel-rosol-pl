@@ -19,6 +19,11 @@ faq:
     answer: "Poradnik UODO wskazuje jako główne przyczyny błędy ludzkie, niewystarczające zabezpieczenia lub procedury, działania cyberprzestępcze, zamierzone nadużycia wewnętrzne oraz czynniki fizyczne lub środowiskowe. Szkodliwe działania lub zaniechania pracowników pozostają jedną z najczęstszych przyczyn."
   - question: "Jaką dokumentację powinien gromadzić administrator, żeby wykazać prawidłowe wykonywanie obowiązków RODO?"
     answer: "Poradnik zaleca gromadzenie notatek, instrukcji korespondencji, wyciągów z systemów, raportów z audytów czy testów bezpieczeństwa. Taka dokumentacja pozwala administratorowi wykazać, że prawidłowo wykonywał swoje obowiązki, nawet jeśli mimo to doszło do naruszenia."
+sources:
+  - name: "Poradnik UODO dotyczący naruszeń ochrony danych osobowych"
+    url: https://uodo.gov.pl/pl/file/5686
+  - name: "Rozporządzenie (UE) 2016/679 (RODO)"
+    url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
 ---
 
 > **Szukasz całości obowiązków przy naruszeniu?** Terminy, próg zgłoszenia, zawiadomienie osób i rejestr naruszeń zebrałem w przewodniku: [Naruszenie ochrony danych osobowych - przewodnik dla administratora]({% post_url 2026-09-21-naruszenie-ochrony-danych-przewodnik %}). Ten wpis omawia sam poradnik UODO.

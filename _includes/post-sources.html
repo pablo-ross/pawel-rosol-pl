@@ -1,0 +1,22 @@
+{%- comment -%}
+  Visible source list, rendered from a post's `sources:` front matter and
+  appended by _plugins/post-footer-hook.rb. The same list is emitted as
+  BlogPosting.citation in metadata-hook.html, so the two cannot drift.
+
+    sources:
+      - name: Ustawa z 5 lipca 2018 r. o krajowym systemie cyberbezpieczeństwa
+        url: https://eli.gov.pl/eli/DU/2018/1560/ogl
+
+  Primary sources only: acts (ELI / EUR-Lex), decisions and guidance of the
+  supervisory authority, standards. Not blog posts, not news.
+{%- endcomment -%}
+{%- if page.sources -%}
+<section class="post-sources">
+  <h2 id="zrodla">Źródła</h2>
+  <ul>
+    {%- for src in page.sources %}
+    <li><a href="{{ src.url }}" rel="noopener">{{ src.name }}</a></li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif -%}

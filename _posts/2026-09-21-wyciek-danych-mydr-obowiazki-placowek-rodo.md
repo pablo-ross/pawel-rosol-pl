@@ -25,6 +25,15 @@ faq:
     answer: "Tak, na podstawie art. 82 RODO. Trzeba wykazać naruszenie przepisów, szkodę majątkową lub niemajątkową oraz związek przyczynowy między nimi. TSUE w sprawie C-340/21 uznał, że sama obawa przed niewłaściwym wykorzystaniem danych może być szkodą niemajątkową, ale musi zostać udowodniona. Polskie sądy zasądzają zwykle kwoty rzędu kilku tysięcy złotych."
   - question: "Co powinien zrobić pacjent, którego dane wyciekły z MyDr?"
     answer: "Zastrzec numer PESEL w aplikacji mObywatel lub w urzędzie, sprawdzić swój status na bezpiecznedane.gov.pl, zachować ostrożność wobec SMS-ów i e-maili nawiązujących do leczenia oraz wystąpić do placówki z pytaniem o zakres naruszenia. Lekarze korzystający z systemu powinni dodatkowo unieważnić i wygenerować na nowo certyfikaty używane do wystawiania e-recept."
+sources:
+  - name: "Rozporządzenie (UE) 2016/679 (RODO)"
+    url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
+  - name: "Komunikat UODO z 12 sierpnia w sprawie wycieku danych z systemu MyDr"
+    url: https://uodo.gov.pl/pl/138/4538
+  - name: "Komunikat UODO o kontroli w spółce MyDr"
+    url: https://uodo.gov.pl/pl/138/4540
+  - name: "Komunikat UODO „Wyciek danych - co dalej?”"
+    url: https://uodo.gov.pl/pl/138/4539
 ---
 
 **Wyciek danych z systemu MyDr to najpoważniejsze naruszenie ochrony danych w polskiej ochronie zdrowia i prawdopodobnie największy wyciek danych osobowych w historii Polski. Objął dane nawet 18,8 mln osób i ponad 12 tysięcy podmiotów leczniczych. Najciekawsze jest to, co dzieje się dalej: ciężar prawny incydentu spadł nie na dostawcę oprogramowania, lecz na tysiące przychodni i indywidualnych praktyk lekarskich, które w większości nie były przygotowane na taką sytuację.**
