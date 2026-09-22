@@ -56,7 +56,9 @@
   Business entity. Every value below is already published verbatim on /contact/
   and must stay character-identical with mornel.com and the Google Business
   Profile — inconsistent NAP is the usual reason local entities fail to merge.
-  `serviceType` / `OfferCatalog` list only services actually described on /about/.
+  The `OfferCatalog` lists only services actually described on /about/. Keep it
+  the only place they are listed: `serviceType` belongs to Service, not to
+  LocalBusiness, so putting it on this node is rejected by the validator.
 {%- endcomment -%}
 {%- capture organization_ld -%}
 {
@@ -89,13 +91,6 @@
     { "@type": "AdministrativeArea", "name": "Poznań i powiat poznański" },
     { "@type": "Country", "name": "Polska" }
   ],
-  "serviceType": [
-    "Inspektor Ochrony Danych (IOD) w modelu outsourcingu",
-    "Pełnomocnik ds. cyberbezpieczeństwa (KSC / NIS2)",
-    "Audyty i przeglądy ochrony danych osobowych",
-    "Wdrożenie systemu zarządzania bezpieczeństwem informacji (SZBI)",
-    "Szkolenia z ochrony danych osobowych i cyberhigieny"
-  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Usługi",
@@ -127,6 +122,16 @@
           "name": "Audyty i przeglądy ochrony danych osobowych",
           "description": "Przeglądy dokumentacji i bezpieczeństwa przetwarzania, rejestr czynności przetwarzania, analiza ryzyka, plan dojścia do zgodności.",
           "serviceType": "Ochrona danych osobowych",
+          "provider": { "@id": {{ '/#organization' | absolute_url | jsonify }} }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Wdrożenie systemu zarządzania bezpieczeństwem informacji (SZBI)",
+          "description": "Inwentaryzacja aktywów IT i OT, analiza ryzyka i plan postępowania z ryzykiem, polityki i procedury w oparciu o ISO/IEC 27001, ocena dostawców ICT i klauzule umowne.",
+          "serviceType": "Bezpieczeństwo informacji",
           "provider": { "@id": {{ '/#organization' | absolute_url | jsonify }} }
         }
       },
