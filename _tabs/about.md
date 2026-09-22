@@ -5,6 +5,7 @@ order: 4
 description: "Paweł Rosół - Inspektor Ochrony Danych (IOD) i pełnomocnik ds. cyberbezpieczeństwa. Wdrażanie wymagań RODO oraz ustawy o KSC i dyrektywy NIS2. Auditor wiodący ISO/IEC 27001."
 seo:
   type: ProfilePage
+date_created: 2020-11-22 # first commit of this page; ProfilePage.dateCreated
 ---
 
 Cześć, nazywam się **Paweł Rosół**. Pełnię funkcję **Inspektora Ochrony Danych** (IOD) oraz **pełnomocnika ds. cyberbezpieczeństwa** - pomagam organizacjom spełnić wymagania RODO i ustawy o krajowym systemie cyberbezpieczeństwa (KSC), która wdraża dyrektywę NIS2. Jestem auditorem wiodącym ISO/IEC 27001, a od kilkunastu lat zajmuję się rozwiązaniami internetowymi oraz bezpieczeństwem systemów informatycznych i webaplikacji.
@@ -117,5 +118,7 @@ Jeśli w danej organizacji takiego rozdziału nie da się utrzymać, właściwym
 ## Współpraca
 
 Pracuję przede wszystkim z jednostkami sektora publicznego, spółkami komunalnymi, placówkami oświatowymi oraz małymi i średnimi firmami. Zaczynam od rozmowy o tym, które obowiązki faktycznie dotyczą Twojej organizacji - zapraszam do [kontaktu](/contact "Kontakt - IOD i pełnomocnik ds. cyberbezpieczeństwa").
+
+To, jak powstają wpisy na tej stronie, skąd biorę źródła i co oznacza data stanu prawnego pod wpisem, opisałem w [zasadach publikacji](/zasady/ "Zasady publikacji").
 
 *Stan prawny: wrzesień 2026 r.*

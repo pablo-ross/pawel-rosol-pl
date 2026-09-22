@@ -22,6 +22,7 @@ webowych, a także sektor publiczny, samorząd i oświata. Autor i właściciel 
 - [Tagi]({{ '/tags/' | absolute_url }}): indeks tagów
 - [Archiwum]({{ '/archives/' | absolute_url }}): wszystkie wpisy chronologicznie
 - [Kontakt]({{ '/contact/' | absolute_url }}): dane kontaktowe, adres biura, klucz PGP
+- [Zasady publikacji]({{ '/zasady/' | absolute_url }}): kto pisze, źródła, użycie AI, znaczenie daty stanu prawnego, zgłaszanie błędów, zastrzeżenie o poradzie prawnej
 
 ## O autorze
 

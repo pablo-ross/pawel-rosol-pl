@@ -14,9 +14,11 @@
 {%- if page.legal_status_date -%}
 <p class="legal-status">
   Stan prawny sprawdzony: <time datetime="{{ page.legal_status_date | date_to_xmlschema }}">{{ page.legal_status_date | date: '%d.%m.%Y' }}</time>.
+  Wpis jest informacją ogólną, nie poradą prawną (<a href="{{ '/zasady/' | relative_url }}">zasady publikacji</a>).
 </p>
 {%- elsif page.legal -%}
 <p class="legal-status legal-status-unreviewed">
   Stan prawny na dzień publikacji: <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%d.%m.%Y' }}</time>. Wpis nie był od tego czasu weryfikowany pod kątem zmian w przepisach.
+  Wpis jest informacją ogólną, nie poradą prawną (<a href="{{ '/zasady/' | relative_url }}">zasady publikacji</a>).
 </p>
 {%- endif -%}
