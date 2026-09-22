@@ -30,7 +30,7 @@ Realistic effort: the code and template work in §3 is about 4 hours. The conten
 
 ## 0.1 Status - 22.09.2026 *(new in rev. 2)*
 
-Phases E0, E1 and E2 implemented in the repo. `bash tools/test.sh` green: 92 JSON-LD blocks on 92 pages, html-proofer clean. **Not deployed, not committed.** Two items in E1 need the owner's eyes before deploy (below).
+Phases E0, E1 and E2 implemented in the repo. `bash tools/test.sh` green: 92 JSON-LD blocks on 92 pages, html-proofer clean. **Committed and deployed on 22.09.2026**; the owner confirmed the `/zasady/` wording before deploy. Live checks: `/zasady/` 200, source list and `/about/` byline present on a post, `citation` in the post graph, `dateCreated` on the profile page, eleven Wikidata identifiers, `/about/` URI in the feed.
 
 | Item | Status |
 |---|---|
@@ -49,7 +49,7 @@ Phases E0, E1 and E2 implemented in the repo. `bash tools/test.sh` green: 92 JSO
 | A1 (a)-(c), A2, A4 | owner |
 | A3 ProfilePage completeness | done: `dateCreated` from `date_created:` in the tab (first commit, 2020-11-22), `dateModified` from git via the lastmod hook now covering `_tabs`, `Person.description` read from the tab's `description:`, `alternateName` for the two handles, `Person.url` → `/about/` |
 
-### Owner review before deploy
+### Owner review before deploy (done 22.09.2026)
 
 1. `/zasady/`, section *Czy korzystam z AI?* Is draft (b) accurate as written? Edit the paragraph if not.
 2. `/zasady/`, section *Czy to porada prawna?* The page does not state whether the author is a qualified lawyer, because the repo does not say. Add one sentence only if it is true.
