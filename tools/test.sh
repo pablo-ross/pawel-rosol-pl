@@ -68,6 +68,10 @@ main() {
   # structured data — html-proofer does not look inside JSON-LD
   ruby tools/check-jsonld.rb "$SITE_DIR"
 
+  # the CSP in .htaccess allows one inline script by hash; a theme upgrade that
+  # changes that script would break it silently in the browser
+  ruby tools/check-csp.rb "$SITE_DIR" .htaccess
+
   # A tab whose lower-cased title is missing from _data/locales/*.yml `tabs:`
   # renders as "<title> | Site name". The theme's head.html has no fallback.
   if grep -rlE '<title>[[:space:]]*\|' "$SITE_DIR" --include='*.html'; then

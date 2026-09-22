@@ -77,8 +77,52 @@ It sets:
 3. **Security headers** - `Strict-Transport-Security` (1 year, `includeSubDomains`, no
    `preload`), `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`,
    `Permissions-Policy`.
-4. **`Options -Indexes`**, so directories without an index file return 403 rather than a
+4. **Content-Security-Policy** - see below.
+5. **`Options -Indexes`**, so directories without an index file return 403 rather than a
    listing. `/posts/` is the visible case.
+
+### The Content-Security-Policy
+
+Derived from what the build actually loads, not from a template. The whole external
+surface is five hosts:
+
+| Directive | Allowed beyond `'self'` | Why |
+|---|---|---|
+| `script-src` | one `sha256-` hash, `cdn.jsdelivr.net`, `platform.twitter.com`, `cdn.syndication.twimg.com` | theme bundles; a tweet embed on two 2020 posts |
+| `style-src` | `'unsafe-inline'`, `cdn.jsdelivr.net`, `fonts.googleapis.com` | Google Fonts, Font Awesome; the Twitter widget injects styles at runtime |
+| `font-src` | `cdn.jsdelivr.net`, `fonts.gstatic.com` | the fonts those stylesheets pull |
+| `img-src` | `data:`, `pbs.twimg.com`, `abs.twimg.com`, `syndication.twitter.com` | one inline SVG in the theme CSS; tweet avatars |
+| `frame-src` | `platform.twitter.com`, `syndication.twitter.com`, `www.docdroid.net` | the tweet embeds and one embedded PDF viewer |
+
+`default-src 'self'`, `object-src 'none'`, `base-uri 'self'`, `form-action 'self'`,
+`frame-ancestors 'self'`, `connect-src 'self'`, `manifest-src 'self'` and
+`upgrade-insecure-requests` complete it.
+
+The build contains exactly **one** unique inline `<script>` - Chirpy's search
+initialiser, byte-identical on all 98 pages - so it is allowed by sha256 hash rather
+than by `'unsafe-inline'`. That is what makes the policy worth having: an injected
+`<script>` cannot run. `<script type="application/ld+json">` is data, not executable, and
+CSP does not apply to it.
+
+`style-src` keeps `'unsafe-inline'`, which is a real weakening but a far smaller one -
+the Twitter widget injects styles at runtime and there is no hash to give it.
+
+**The hash is the fragile part.** A theme upgrade that changes one character of that
+inline script leaves a hash that no longer matches; the browser silently refuses to run
+it and site search stops working, with nothing in the build log. `tools/check-csp.rb`
+exists for exactly that: it recomputes the hashes and the host list from the build and
+fails `tools/test.sh` if either has drifted from `.htaccess`. Run it alone with:
+
+```bash
+ruby tools/check-csp.rb _site .htaccess
+```
+
+#### Tightening it further
+
+Dropping the tweet embeds from the two 2020 posts would remove four hosts and let
+`style-src` lose `'unsafe-inline'`. The embeds already degrade to a plain quoted
+blockquote with a link when the script does not load. Worth considering on a DPO's site
+for a second reason: a Twitter embed loads third-party code into the visitor's browser.
 
 ### Constraints on editing it
 
@@ -114,10 +158,14 @@ headers - the curl checks above are manual.
 
 ## Outstanding
 
-- **Content-Security-Policy.** Not set. The site still loads fonts and scripts from
-  `googleapis`, `gstatic` and `jsdelivr`, so a useful CSP is not writable yet. It comes
-  after the `assets/lib` submodule is initialised and `assets.self_host.enabled` is
-  switched on in `_config.yml` - see the "Self-hosted assets" section of `CLAUDE.md`.
+- **Self-hosted assets.** `assets/lib` is still uninitialised and
+  `assets.self_host.enabled` is off, so the theme's CSS and JS come from `jsdelivr` and
+  Google Fonts. Switching it on would let `script-src`, `style-src` and `font-src` drop
+  to `'self'`, and would remove the third-party requests a privacy-conscious visitor can
+  see. It would also fix a real failure: in a browser with an ad or tracker blocker,
+  those CDN requests return 503, `dayjs` and `SimpleJekyllSearch` never define, and site
+  search and relative dates break. Observed in Chrome on 22 September 2026 - the CDNs
+  answer 200 from the server, so it is client-side blocking, not an outage.
 - **`security.txt` expiry.** `Expires:` is generated as `<build year + 1>-09-01`, so the
   site must be rebuilt and redeployed at least once a year or the file goes stale.
 - **HSTS preload.** Deliberately not set. Preloading is effectively irreversible and
@@ -131,7 +179,8 @@ headers - the curl checks above are manual.
 ## Change log
 
 - **22 September 2026** - added `/.htaccess`: HTTPS redirect, `AddDefaultCharset utf-8`,
-  five security headers, `Options -Indexes`. Rewrote `.production.sh` to build through
+  five security headers, a Content-Security-Policy, `Options -Indexes`. Added
+  `tools/check-csp.rb` and wired it into `tools/test.sh`. Rewrote `.production.sh` to build through
   `tools/test.sh` and to refuse to deploy an incomplete build. Bumped bundler to 4.0.21
   and replaced the deprecated `:mingw, :x64_mingw, :mswin` platform names with
   `:windows` in the `Gemfile`.

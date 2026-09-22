@@ -37,7 +37,7 @@ bash tools/run.sh --production
 ### Build & Test
 
 ```bash
-# Build for production + html-proofer + JSON-LD check  ← run this before every commit
+# Build for production + html-proofer + JSON-LD + CSP check  ← run this before every commit
 bash tools/test.sh
 
 # Build only
@@ -45,6 +45,9 @@ JEKYLL_ENV=production bundle exec jekyll b
 
 # Structured data only, against an existing build
 ruby tools/check-jsonld.rb _site
+
+# Content-Security-Policy vs what the build loads, against an existing build
+ruby tools/check-csp.rb _site .htaccess
 
 # Build and deploy to production server via rsync
 bash .production.sh
@@ -167,7 +170,7 @@ Both live under `assets/`, outside the do-not-fork list, and both are marked wit
 
 ### Self-hosted assets
 
-`assets/lib` is a git submodule pointing to [chirpy-static-assets](https://github.com/cotes2020/chirpy-static-assets) and is currently **uninitialised**, so `assets.self_host.enabled` in `_config.yml` must stay off. Enabling it without the submodule 404s every stylesheet and script. To switch over: init the submodule, flip the flag, build, then confirm no `googleapis`, `gstatic` or `jsdelivr` remains:
+`assets/lib` is a git submodule pointing to [chirpy-static-assets](https://github.com/cotes2020/chirpy-static-assets) and is currently **uninitialised**, so `assets.self_host.enabled` in `_config.yml` must stay off. This has a user-visible cost: in a browser with an ad or tracker blocker the `jsdelivr` and Google Fonts requests are blocked, `dayjs` and `SimpleJekyllSearch` never define, and site search and relative dates break. Switching it on would also let the CSP's `script-src`, `style-src` and `font-src` drop to `'self'`. Enabling it without the submodule 404s every stylesheet and script. To switch over: init the submodule, flip the flag, build, then confirm no `googleapis`, `gstatic` or `jsdelivr` remains:
 
 ```bash
 grep -rhoE '(href|src)="https?://[^/"]+' _site | sort -u
@@ -179,7 +182,9 @@ grep -rhoE '(href|src)="https?://[^/"]+' _site | sort -u
 
 **Server-side** - see `docs/mydevil-hosting.md` for the host's capabilities, the current `devil www` settings and what is still open.
 
-`.htaccess` at the repo root sets the HTTPS redirect, `AddDefaultCharset utf-8` and the security headers (`Strict-Transport-Security`, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, `Permissions-Policy`), plus `Options -Indexes`. Jekyll skips dotfiles, so it ships only because `include:` in `_config.yml` names it. mydevil implements `.htaccess` as an nginx module supporting a documented subset of Apache syntax, and **only on `php`-type sites** - a directive it does not implement returns 500 for the whole site, so check <https://pomoc.mydevil.net/htaccess/> before adding one, keep the file BOM-free with LF endings, and curl the site after deploying. Add a CSP only after the self-hosting switch above.
+`.htaccess` at the repo root sets the HTTPS redirect, `AddDefaultCharset utf-8`, the security headers (`Strict-Transport-Security`, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, `Permissions-Policy`), a `Content-Security-Policy`, plus `Options -Indexes`. Jekyll skips dotfiles, so it ships only because `include:` in `_config.yml` names it. mydevil implements `.htaccess` as an nginx module supporting a documented subset of Apache syntax, and **only on `php`-type sites** - a directive it does not implement returns 500 for the whole site, so check <https://pomoc.mydevil.net/htaccess/> before adding one, keep the file BOM-free with LF endings, and curl the site after deploying.
+
+The CSP allows the theme's single inline script **by sha256 hash** rather than by `'unsafe-inline'`, so an injected `<script>` cannot run. That hash is derived from the build, which makes it fragile: a theme upgrade that changes one character of that script leaves a hash the browser silently rejects, and site search stops working with nothing in the build log. `tools/check-csp.rb` recomputes the hashes and the external host list from `_site` and fails the build if either has drifted from `.htaccess` - so when it fails after a Chirpy upgrade, update the hash in `.htaccess`, do not switch to `'unsafe-inline'`. Adding an embed from a new third-party host will fail it too; add the host to the right directive rather than widening `default-src`.
 
 ## Language
 
