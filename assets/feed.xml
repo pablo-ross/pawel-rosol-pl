@@ -48,6 +48,9 @@ permalink: /feed.xml
     <author>
       {%- comment -%}override: resolve the author id to a display name{%- endcomment -%}
       <name>{{ site.data.authors[post.author].name | default: site.social.name }}</name>
+      {%- if site.data.authors[post.author].url %}
+      <uri>{{ site.data.authors[post.author].url }}</uri>
+      {%- endif %}
     </author>
 
   {% if post.categories %}
