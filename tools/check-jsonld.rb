@@ -13,8 +13,9 @@
 #      mean the jekyll-seo-tag strip plugin stopped matching). A node counts as
 #      a definition only if it carries a @type; bare {"@id": ...} stubs are
 #      references and are expected to repeat;
-#   3. every BreadcrumbList / ItemList "item"/"url" under site.url resolves to
-#      a file that actually exists in the built site.
+#   3. every "item"/"url"/"publishingPrinciples"/"correctionsPolicy" value
+#      under site.url resolves to a file that actually exists in the built
+#      site, and every BlogPosting citation[].url is an absolute http(s) URL.
 #
 # Usage: ruby tools/check-jsonld.rb [site_dir] [site_url]
 
@@ -84,7 +85,14 @@ Dir.glob(File.join(SITE_DIR, "**", "*.html")).sort.each do |file|
       ids << node["@id"] if node["@id"] && node["@type"]
       Array(node["@type"]).each { |t| types[t] += 1 }
 
-      %w[item url].each do |key|
+      Array(node["citation"]).each do |c|
+        u = c.is_a?(Hash) ? c["url"] : c
+        next if u.is_a?(String) && u.match?(%r{\Ahttps?://})
+
+        errors << "#{rel}: citation without an absolute url — #{c.inspect}"
+      end
+
+      %w[item url publishingPrinciples correctionsPolicy].each do |key|
         value = node[key]
         next unless value.is_a?(String) && value.start_with?(SITE_URL)
         next if resolves?(value)

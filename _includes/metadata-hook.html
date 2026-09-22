@@ -7,26 +7,40 @@
      Rule: every string value is emitted with `| jsonify`, which supplies its
      own quotes. Never use `| escape` — it HTML-encodes inside JSON. -->
 
-{%- comment -%} Reusable Person node for the site owner / author {%- endcomment -%}
+{%- comment -%}
+  Reusable Person node for the site owner / author. `description` is the
+  /about/ meta description, so the two cannot drift apart.
+{%- endcomment -%}
+{%- assign about_tab = site.tabs | where: 'url', '/about/' | first -%}
 {%- capture person_ld -%}
 {
   "@type": "Person",
   "@id": {{ '/#person' | absolute_url | jsonify }},
   "name": {{ site.social.name | jsonify }},
-  "url": {{ '/' | absolute_url | jsonify }},
+  "alternateName": ["pablo-ross", "pross.cc"],
+  "description": {{ about_tab.description | strip_newlines | strip | jsonify }},
+  "url": {{ '/about/' | absolute_url | jsonify }},
+  "mainEntityOfPage": {{ '/about/' | absolute_url | jsonify }},
   "image": {{ site.avatar | absolute_url | jsonify }},
   "jobTitle": ["Inspektor Ochrony Danych (IOD/DPO)", "Pełnomocnik ds. cyberbezpieczeństwa"],
   "knowsAbout": [
-    "RODO",
-    "Ochrona danych osobowych",
-    "Cyberbezpieczeństwo",
+    {%- comment -%}
+      Wikidata identifiers disambiguate the topic; the Polish name is what a
+      reader sees. IDs verified against the Wikidata API on 2026-09-22.
+      "Ustawa o KSC" has no Wikidata item, so it stays a plain string.
+    {%- endcomment %}
+    { "@type": "Thing", "name": "RODO", "sameAs": "https://www.wikidata.org/wiki/Q1172506" },
+    { "@type": "Thing", "name": "Ochrona danych osobowych", "sameAs": "https://www.wikidata.org/wiki/Q3702971" },
+    { "@type": "Thing", "name": "Inspektor Ochrony Danych", "sameAs": "https://www.wikidata.org/wiki/Q30682903" },
+    { "@type": "Thing", "name": "Cyberbezpieczeństwo", "sameAs": "https://www.wikidata.org/wiki/Q3510521" },
     "Krajowy system cyberbezpieczeństwa (KSC)",
-    "Dyrektywa NIS2",
-    "System zarządzania bezpieczeństwem informacji (SZBI)",
-    "Zarządzanie ryzykiem",
-    "Ciągłość działania",
-    "Bezpieczeństwo aplikacji webowych",
-    "ISO/IEC 27001"
+    { "@type": "Thing", "name": "Dyrektywa NIS2", "sameAs": "https://www.wikidata.org/wiki/Q130213702" },
+    { "@type": "Thing", "name": "System zarządzania bezpieczeństwem informacji (SZBI)", "sameAs": "https://www.wikidata.org/wiki/Q1662500" },
+    { "@type": "Thing", "name": "Bezpieczeństwo informacji", "sameAs": "https://www.wikidata.org/wiki/Q189900" },
+    { "@type": "Thing", "name": "Zarządzanie ryzykiem", "sameAs": "https://www.wikidata.org/wiki/Q189447" },
+    { "@type": "Thing", "name": "Ciągłość działania", "sameAs": "https://www.wikidata.org/wiki/Q831801" },
+    { "@type": "Thing", "name": "Bezpieczeństwo aplikacji webowych", "sameAs": "https://www.wikidata.org/wiki/Q1509541" },
+    { "@type": "Thing", "name": "ISO/IEC 27001", "sameAs": "https://www.wikidata.org/wiki/Q852641" }
   ],
   "hasCredential": {
     "@type": "EducationalOccupationalCredential",
@@ -51,6 +65,7 @@
   "name": "Mornel s.c.",
   "legalName": "Mornel s.c.",
   "url": "https://www.mornel.com",
+  "correctionsPolicy": {{ '/zasady/' | absolute_url | jsonify }},
   "telephone": "+48502706280",
   "vatID": "PL7772887283",
   "taxID": "7772887283",
@@ -152,6 +167,7 @@
       "name": {{ site.title | jsonify }},
       "description": {{ site.description | strip_newlines | strip | jsonify }},
       "inLanguage": {{ site.lang | jsonify }},
+      "publishingPrinciples": {{ '/zasady/' | absolute_url | jsonify }},
       "author": { "@id": {{ '/#person' | absolute_url | jsonify }} }
     },
     {{ person_ld }},
@@ -183,6 +199,14 @@
       "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
       "author": { "@id": {{ '/#person' | absolute_url | jsonify }} },
       "publisher": { "@id": {{ '/#person' | absolute_url | jsonify }} },
+      "publishingPrinciples": {{ '/zasady/' | absolute_url | jsonify }},
+      {%- if page.sources %}
+      "citation": [
+        {%- for src in page.sources -%}
+        { "@type": "CreativeWork", "name": {{ src.name | jsonify }}, "url": {{ src.url | jsonify }} }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ],
+      {%- endif %}
       {%- if page.categories.size > 0 %}
       "articleSection": {{ page.categories.last | jsonify }},
       {%- endif %}
@@ -272,12 +296,41 @@
       "description": {{ page.description | strip_newlines | strip | jsonify }},
       {%- endif %}
       "inLanguage": {{ site.lang | jsonify }},
+      {%- if page.date_created %}
+      "dateCreated": {{ page.date_created | date_to_xmlschema | jsonify }},
+      {%- endif %}
+      {%- if page.last_modified_at %}
+      "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},
+      {%- endif %}
       "isPartOf": { "@id": {{ '/#website' | absolute_url | jsonify }} },
       "mainEntity": { "@id": {{ '/#person' | absolute_url | jsonify }} }
     },
     {{ person_ld }},
     {{ organization_ld }}
   ]
+}
+</script>
+{%- endif -%}
+
+{%- comment -%} ---------------------------------------------- /zasady/ {%- endcomment -%}
+{%- if page.layout == 'page' and page.url == '/zasady/' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": {{ page.url | absolute_url | append: '#webpage' | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "name": {{ page.title | jsonify }},
+  {%- if page.description %}
+  "description": {{ page.description | strip_newlines | strip | jsonify }},
+  {%- endif %}
+  "inLanguage": {{ site.lang | jsonify }},
+  {%- if page.last_modified_at %}
+  "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},
+  {%- endif %}
+  "isPartOf": { "@id": {{ '/#website' | absolute_url | jsonify }} },
+  "about": { "@id": {{ '/#website' | absolute_url | jsonify }} },
+  "author": { "@id": {{ '/#person' | absolute_url | jsonify }} }
 }
 </script>
 {%- endif -%}
