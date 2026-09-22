@@ -220,6 +220,7 @@ exclude:
 
 include:
   - .well-known
+  - .htaccess
 
 jekyll-archives:
   enabled: [categories, tags]

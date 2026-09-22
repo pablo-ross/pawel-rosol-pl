@@ -60,6 +60,7 @@ bash .production.sh
 - `media/` — images and media assets (referenced via `/media/...` paths)
 - `assets/img/favicons/` — site-specific favicons
 - `docs/aeo-geo-seo-audit.md` — the AEO/GEO/SEO audit and phased action plan; the source of truth for what is done and what is outstanding. `docs/` is excluded from the build.
+- `docs/mydevil-hosting.md` — the production host: what mydevil supports, the current panel settings, what `.htaccess` does and how to roll it back.
 - `docs/eeat-plan.md` — the E-E-A-T programme (trust page, review dates, citations, identity graph); extends the audit's §5.2 and §11 and lists the owner decisions it is blocked on.
 
 ### Front matter for posts
@@ -174,9 +175,11 @@ grep -rhoE '(href|src)="https?://[^/"]+' _site | sort -u
 
 ### Deployment
 
-`.production.sh`: builds with `JEKYLL_ENV=production`, sets file permissions, then rsyncs `_site/` to the remote server over SSH on port 22. `rsync --delete` means removing a file from the build removes it from the server on the next deploy.
+`.production.sh`: builds and verifies through `tools/test.sh`, sets file permissions, then rsyncs `_site/` to the remote server over SSH on port 22. `rsync --delete` means removing a file from the build removes it from the server on the next deploy, so the script refuses to deploy a build with no `index.html` or fewer than 50 HTML files. It takes `--dry-run`, `--verbose`, `--skip-tests` and `--help`. The script is gitignored - it carries the server host and path - so changes to it are not version-controlled.
 
-**Server-side, outside this repo** (mydevil.net panel / `devil www`): the site still serves no `Strict-Transport-Security`, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options` or `Permissions-Policy`, and serves `.txt` as `text/plain` without `charset=utf-8` (which mangles Polish diacritics in `llms.txt`). Add a CSP only after the self-hosting switch above.
+**Server-side** - see `docs/mydevil-hosting.md` for the host's capabilities, the current `devil www` settings and what is still open.
+
+`.htaccess` at the repo root sets the HTTPS redirect, `AddDefaultCharset utf-8` and the security headers (`Strict-Transport-Security`, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, `Permissions-Policy`), plus `Options -Indexes`. Jekyll skips dotfiles, so it ships only because `include:` in `_config.yml` names it. mydevil implements `.htaccess` as an nginx module supporting a documented subset of Apache syntax, and **only on `php`-type sites** - a directive it does not implement returns 500 for the whole site, so check <https://pomoc.mydevil.net/htaccess/> before adding one, keep the file BOM-free with LF endings, and curl the site after deploying. Add a CSP only after the self-hosting switch above.
 
 ## Language
 

@@ -1,0 +1,38 @@
+# Server behaviour for pawel.rosol.pl on mydevil.net.
+#
+# mydevil serves PHP-type sites through nginx with an in-house .htaccess
+# module, so only the directives its documentation lists are safe here:
+# https://pomoc.mydevil.net/htaccess/
+# A syntax error in this file returns 500 for the whole site. To roll back,
+# delete it and redeploy.
+#
+# Jekyll skips dotfiles, so this file is deployed only because `include:` in
+# _config.yml names it.
+
+# --- Force HTTPS -----------------------------------------------------------
+# Plain HTTP used to answer 200, which left every page reachable unencrypted
+# and duplicated. The ACME exception keeps Let's Encrypt renewals working over
+# HTTP, which is where the http-01 challenge is fetched.
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# --- Character encoding ----------------------------------------------------
+# llms.txt and security.txt are served as text/plain with no charset, which
+# mangles Polish diacritics. HTML carries its own meta charset and is
+# unaffected.
+AddDefaultCharset utf-8
+
+# --- Security headers ------------------------------------------------------
+# No Content-Security-Policy yet: the site still loads fonts and scripts from
+# googleapis, gstatic and jsdelivr. CSP comes after the assets/lib submodule
+# is initialised and assets.self_host is switched on.
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=(), usb=()"
+
+# --- Directory listings ----------------------------------------------------
+Options -Indexes
