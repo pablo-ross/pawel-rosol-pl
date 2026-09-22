@@ -178,6 +178,16 @@ grep -rhoE '(href|src)="https?://[^/"]+' _site | sort -u
 
 **Server-side, outside this repo** (mydevil.net panel / `devil www`): the site still serves no `Strict-Transport-Security`, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options` or `Permissions-Policy`, and serves `.txt` as `text/plain` without `charset=utf-8` (which mangles Polish diacritics in `llms.txt`). Add a CSP only after the self-hosting switch above.
 
+## Language
+
+**Published content is Polish. Everything else is English.**
+
+Polish: `_posts/`, `_tabs/`, `zasady.md`, `llms.txt`, `_data/locales/pl-PL.yml`, front matter prose values (`title`, `description`, `faq`, `sources[].name`) and any other string a site visitor reads.
+
+English: commit messages, code and configuration comments, `tools/*` scripts and their output, `_plugins/*.rb`, `_includes/metadata-hook.html` comments, `README.md`, `CLAUDE.md`, `.claude/skills/**`, `docs/**`, and issue or PR text. The `humanizer` skill documents Polish prose patterns, so its examples stay Polish; its own instructions are English.
+
+Some older commits are in Polish. Leave them; write new ones in English.
+
 ## Commit conventions
 
-Commits follow [Conventional Commits](https://www.conventionalcommits.org/). Types: `feat`, `fix`, `docs`, `perf`, `refactor`, `chore`.
+Commits follow [Conventional Commits](https://www.conventionalcommits.org/). Types: `feat`, `fix`, `docs`, `perf`, `refactor`, `chore`. Subject and body in English, including for content commits about Polish posts.
