@@ -226,6 +226,14 @@
         "caption": {{ page.image.alt | jsonify }}
         {%- endif %}
       },
+      {%- elsif page.og_card %}
+      {%- comment %} the Open Graph card built by tools/og-cards.rb; set by _plugins/og-card-hook.rb {%- endcomment %}
+      "image": {
+        "@type": "ImageObject",
+        "url": {{ page.og_card | absolute_url | jsonify }},
+        "width": 1200,
+        "height": 630
+      },
       {%- endif %}
       {%- if page.faq %}
       "mainEntity": { "@id": {{ page.url | absolute_url | append: '#faq' | jsonify }} },

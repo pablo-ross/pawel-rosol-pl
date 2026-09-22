@@ -2,7 +2,8 @@
 #
 # Build and test the site content
 #
-# Requirement: html-proofer, jekyll
+# Requirement: html-proofer, jekyll, ruby (see docs/og-cards.md for the
+# Open Graph card generator, which additionally needs headless Chrome)
 #
 # Usage: See help information
 
@@ -59,6 +60,14 @@ main() {
   # build
   JEKYLL_ENV=production bundle exec jekyll b \
     -d "$SITE_DIR$_baseurl" -c "$_config"
+
+  # Open Graph cards are committed, not built by Jekyll: a post whose title
+  # changed would keep shipping a card with the old title on it.
+  if ! ruby tools/og-cards.rb --check; then
+    echo "ERROR: the Open Graph cards above are stale, missing or orphaned —" >&2
+    echo "       run 'ruby tools/og-cards.rb' and commit media/og/" >&2
+    exit 1
+  fi
 
   # test
   bundle exec htmlproofer "$SITE_DIR" \

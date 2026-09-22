@@ -51,6 +51,10 @@ ruby tools/check-csp.rb _site .htaccess
 
 # Build and deploy to production server via rsync
 bash .production.sh
+
+# Rebuild the Open Graph preview cards after editing a post title or category
+# (needs Chrome; commit media/og/ and tools/og-cards.digest)
+ruby tools/og-cards.rb
 ```
 
 ## Architecture
@@ -64,6 +68,7 @@ bash .production.sh
 - `assets/img/favicons/` — site-specific favicons
 - `docs/aeo-geo-seo-audit.md` — the AEO/GEO/SEO audit and phased action plan; the source of truth for what is done and what is outstanding. `docs/` is excluded from the build.
 - `docs/mydevil-hosting.md` — the production host: what mydevil supports, the current panel settings, what `.htaccess` does and how to roll it back.
+- `docs/og-cards.md` — the Open Graph preview cards: how `media/og/*.png` is generated, when to regenerate, and how the meta tags are set.
 - `docs/eeat-plan.md` — the E-E-A-T programme (trust page, review dates, citations, identity graph); extends the audit's §5.2 and §11 and lists the owner decisions it is blocked on.
 
 ### Front matter for posts
@@ -140,6 +145,7 @@ Rules when editing it:
 
 - `_plugins/posts-lastmod-hook.rb` — sets `last_modified_at` on every document (posts and `_tabs`) with more than one git commit, using `git log`. On `/about/` it feeds `ProfilePage.dateModified`; `dateCreated` comes from the tab's `date_created:` front matter.
 - `_plugins/post-footer-hook.rb` — appends `{% include post-sources.html %}`, `{% include legal-status.html %}` and `{% include author-box.html %}` to every post. It writes to `doc.content` in `:pre_render`, before Liquid and Markdown run, so the output lands inside the post's `.content` element; appending to `doc.output` would place it after the page footer. One include rather than a block pasted into 31 files.
+- `_plugins/og-card-hook.rb` — points `og:image`/`twitter:image` at the per-post card in `media/og/`, adds the image dimensions and alt text, and exposes `page.og_card` for `BlogPosting.image`. It rewrites the rendered meta tags rather than setting `page.image`, which would also print the card as a banner on the post and a thumbnail in the post list. See `docs/og-cards.md`.
 - `_plugins/strip-seo-tag-jsonld.rb` — removes the thin JSON-LD that jekyll-seo-tag emits, so `metadata-hook.html` is the only source. It matches the gem's *minified* output (`{"@context":"https://schema.org"`); `metadata-hook.html` pretty-prints with a space after each colon, which is what keeps the two apart. Everything else seo-tag produces (`<title>`, canonical, Open Graph, Twitter cards) is untouched. If a gem upgrade changes the formatting, `check-jsonld.rb` fails the build on the duplicate `BlogPosting`.
 
 ### Theme
@@ -188,7 +194,7 @@ Two consequences of the switch are easy to trip over:
 
 ### Deployment
 
-`.production.sh`: builds and verifies through `tools/test.sh`, sets file permissions, then rsyncs `_site/` to the remote server over SSH on port 22. `rsync --delete` means removing a file from the build removes it from the server on the next deploy, so the script refuses to deploy a build with no `index.html` or fewer than 50 HTML files. It takes `--dry-run`, `--verbose`, `--skip-tests` and `--help`. The script is gitignored - it carries the server host and path - so changes to it are not version-controlled.
+`.production.sh`: builds and verifies through `tools/test.sh`, sets file permissions, then rsyncs `_site/` to the remote server over SSH on port 22. `rsync --delete` means removing a file from the build removes it from the server on the next deploy, so the script refuses to deploy a build with no `index.html` or fewer than 50 HTML files. It takes `--dry-run`, `--verbose`, `--skip-tests` and `--help`. It checks its build-time requirements up front - `git`, `rsync`, `ssh`, RVM, bundler, the `assets/lib` submodule, and Chrome when an Open Graph card is stale - rather than failing half way through a build.
 
 **Server-side** - see `docs/mydevil-hosting.md` for the host's capabilities, the current `devil www` settings and what is still open.
 

@@ -1,0 +1,171 @@
+<!doctype html>
+<!--
+  Open Graph card template, rendered to media/og/*.png by tools/og-cards.rb.
+
+  Placeholders ({{ROOT}}, {{KICKER}}, {{TITLE}}, {{DATE}}) are substituted by
+  that script; everything else is fixed. The fonts and the avatar are the ones
+  the site itself serves, loaded over file:// from the repo, so a card cannot
+  drift from the site's typography.
+
+  Visitor-facing strings below are Polish on purpose - they are rendered into
+  an image that people see in Facebook, LinkedIn and X.
+-->
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      @font-face {
+        font-family: 'Source Sans Pro';
+        src: url('{{ROOT}}/assets/lib/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf');
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: 'Source Sans Pro';
+        src: url('{{ROOT}}/assets/lib/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf');
+        font-weight: 600;
+      }
+      @font-face {
+        font-family: 'Source Sans Pro';
+        src: url('{{ROOT}}/assets/lib/fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf');
+        font-weight: 700;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+      }
+
+      body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 62px 72px 54px;
+        background: #ffffff;
+        font-family: 'Source Sans Pro', sans-serif;
+        /* --heading-color of the light theme */
+        color: #2a2a2a;
+      }
+
+      /* the accent rail, in the theme's --link-color */
+      body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 14px;
+        background: linear-gradient(180deg, #0056b2 0%, #0b8fd4 100%);
+      }
+
+      .kicker {
+        margin-bottom: 26px;
+        color: #0056b2;
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      /* holds the title and absorbs the free space, so the footer stays put */
+      .body-main {
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+      }
+
+      .title {
+        font-size: 66px;
+        font-weight: 700;
+        line-height: 1.12;
+        letter-spacing: -0.01em;
+        overflow: hidden;
+      }
+
+      .foot {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-top: 24px;
+        border-top: 2px solid #eceff3;
+      }
+
+      .foot img {
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+      }
+
+      .who {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .name {
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .role {
+        color: #6b7280;
+        font-size: 24px;
+      }
+
+      .site {
+        margin-left: auto;
+        text-align: right;
+      }
+
+      .domain {
+        color: #0056b2;
+        font-size: 27px;
+        font-weight: 700;
+      }
+
+      .date {
+        margin-top: 3px;
+        color: #6b7280;
+        font-size: 23px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kicker">{{KICKER}}</div>
+    <div class="body-main">
+      <div class="title" id="title">{{TITLE}}</div>
+    </div>
+    <div class="foot">
+      <img src="{{ROOT}}/media/commons/avatar.jpg" alt="">
+      <div class="who">
+        <div class="name">Paweł Rosół</div>
+        <div class="role">Inspektor Ochrony Danych · Cyberbezpieczeństwo</div>
+      </div>
+      <div class="site">
+        <div class="domain">pawel.rosol.pl</div>
+        <div class="date">{{DATE}}</div>
+      </div>
+    </div>
+
+    <script>
+      // Shrink the title until it fits the space left above the footer, so a
+      // 110-character title is not clipped and a short one still fills the card.
+      (function () {
+        var title = document.getElementById('title');
+        var available = title.parentNode.clientHeight;
+        for (var size = 66; size > 34; size -= 2) {
+          title.style.fontSize = size + 'px';
+          if (title.scrollHeight <= available) {
+            break;
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
