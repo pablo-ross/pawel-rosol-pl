@@ -15,6 +15,7 @@ tags:
   - Jednostki samorządu terytorialnego
 description: "Ustawa o KSC nie stawia pełnomocnikowi ds. cyberbezpieczeństwa żadnych wymagań kwalifikacyjnych. Jedyny punkt odniesienia w ustawie to poprzeczka dla audytora z art. 15. Co z tego wynika dla zarządu, który szuka kogoś do wdrożenia NIS2: jakie akty prawne i normy ISO trzeba znać, co przenosi się z praktyki IOD i o co zapytać kandydata."
 legal: true
+legal_status_date: 2026-09-22
 faq:
   - question: "Jakie kwalifikacje musi mieć pełnomocnik ds. cyberbezpieczeństwa?"
     answer: "Formalnie żadnych. Ustawa o KSC nie zna takiej funkcji, więc nie określa dla niej wymagań. Nakłada tylko dwa warunki na osobę, która faktycznie realizuje zadania z art. 8 lub art. 11: informację z Krajowego Rejestru Karnego o niekaralności za przestępstwa przeciwko ochronie informacji przed dopuszczeniem do zadań (art. 8f ust. 1) oraz zakaz realizowania tych zadań przez osobę skazaną prawomocnie za takie przestępstwo (art. 8f ust. 4). Jedyna poprzeczka kompetencyjna zapisana w ustawie dotyczy audytora z art. 15 ust. 2 i 3 i to ją zarząd może wziąć jako punkt odniesienia."
@@ -37,12 +38,14 @@ sources:
     url: https://eli.gov.pl/eli/DU/2026/252/ogl
   - name: "Rozporządzenie Ministra Cyfryzacji z 12 października 2018 r. w sprawie wykazu certyfikatów uprawniających do przeprowadzenia audytu (Dz.U. 2018 poz. 1999)"
     url: https://eli.gov.pl/eli/DU/2018/1999/ogl
+  - name: "Rozporządzenie Rady Ministrów z 21 maja 2024 r. w sprawie Krajowych Ram Interoperacyjności (Dz.U. 2024 poz. 773)"
+    url: https://eli.gov.pl/eli/DU/2024/773/ogl
   - name: "Dyrektywa (UE) 2022/2555 (NIS2)"
     url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
   - name: "Rozporządzenie (UE) 2016/679 (RODO)"
     url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
-  - name: "Ustawa z 11 września 2019 r. - Prawo zamówień publicznych"
-    url: https://eli.gov.pl/eli/DU/2019/2019/ogl
+  - name: "Ustawa z 11 września 2019 r. - Prawo zamówień publicznych (tekst jednolity Dz.U. 2026 poz. 793)"
+    url: https://eli.gov.pl/eli/DU/2026/793/ogl
   - name: "Ustawa z 29 maja 2026 r. o zmianie ustawy o zarządzaniu kryzysowym oraz niektórych innych ustaw (Dz.U. 2026 poz. 815)"
     url: https://eli.gov.pl/eli/DU/2026/815/ogl
   - name: "ISO/IEC 27001:2022 - Information security management systems. Requirements"
@@ -118,7 +121,7 @@ Dyrektywa 2022/2555 przydaje się jako narzędzie wykładni. Polskie przepisy s�
 
 RODO wchodzi w grę w każdym incydencie dotyczącym danych osobowych i w każdej umowie z pełnomocnikiem, który zobaczy rejestry incydentów i listy szkoleń. Osobno trzeba znać art. 38 ust. 6 RODO, jeżeli w organizacji ta sama osoba ma być IOD i pełnomocnikiem.
 
-Ustawa o informatyzacji i rozporządzenie o Krajowych Ramach Interoperacyjności obowiązują podmioty realizujące zadania publiczne równolegle z ustawą o KSC. W urzędzie oznacza to dwa reżimy dokumentacyjne, które trzeba pogodzić, a nie prowadzić obok siebie.
+Ustawa o informatyzacji i [rozporządzenie o Krajowych Ramach Interoperacyjności](https://eli.gov.pl/eli/DU/2024/773/ogl) obowiązują podmioty realizujące zadania publiczne równolegle z ustawą o KSC. W urzędzie oznacza to dwa reżimy dokumentacyjne, które trzeba pogodzić, a nie prowadzić obok siebie.
 
 Prawo zamówień publicznych to obszar, o którym prawie nikt nie mówi, a który nowelizacja ruszyła wprost. Zmieniony art. 226 ust. 1 pkt 17 Pzp nakazuje odrzucić ofertę obejmującą produkt, usługę lub proces ICT wskazany w rekomendacji Pełnomocnika Rządu do Spraw Cyberbezpieczeństwa stwierdzającej ich negatywny wpływ na podstawowy interes bezpieczeństwa państwa. Dodany pkt 19 nakazuje odrzucić ofertę obejmującą produkt, usługę lub proces ICT określone w decyzji o uznaniu dostawcy za dostawcę wysokiego ryzyka (art. 67b ust. 15 uksc). Jeżeli pełnomocnik opiniuje postępowania na sprzęt i oprogramowanie, a zwykle opiniuje, musi te przepisy znać.
 
