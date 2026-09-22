@@ -119,8 +119,10 @@ used_hosts.each do |host, pages_using|
 end
 
 if errors.empty?
+  external = used_hosts.keys.reject { |h| h == SITE_HOST }
   puts "CSP OK — #{used_hashes.length} inline hash(es), " \
-       "#{used_hosts.length} external host(s) on #{pages} page(s)."
+       "#{external.length} external host(s) on #{pages} page(s)" \
+       "#{external.empty? ? '' : " (#{external.sort.join(', ')})"}."
   exit 0
 end
 

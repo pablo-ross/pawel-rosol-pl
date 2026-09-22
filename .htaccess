@@ -27,23 +27,24 @@ AddDefaultCharset utf-8
 # --- Content-Security-Policy -----------------------------------------------
 # Derived from what the build actually loads, not from a template. Re-derive it
 # after a theme upgrade or a new embed; tools/check-csp.rb fails the build if an
-# inline script appears whose hash is not listed here.
+# inline script appears whose hash is not listed here, or if a page starts
+# loading a host the policy does not name.
 #
-# Since assets.self_host was switched on, every stylesheet, font and script the
-# theme uses comes from this origin, so script-src, style-src and font-src are
-# 'self'. What is left external is two legacy embeds:
-#
-#   twitter/twimg  a tweet embedded in two 2020 posts
-#   docdroid       an embedded PDF viewer in one post
+# Since assets.self_host was switched on and the last two embeds were dropped,
+# the site loads nothing from a third party: every directive is 'self'.
 #
 #   script-src  one inline script (Chirpy's search init, identical on all pages)
 #               is allowed by hash, so 'unsafe-inline' is not needed and an
 #               injected <script> cannot run
-#   style-src   'unsafe-inline' is still needed: glightbox and the Twitter
-#               widget set style attributes at runtime. The build itself ships
-#               no <style> block and no style= attribute
+#   style-src   'unsafe-inline' is still required: glightbox sets style
+#               attributes and injects a <style> element at runtime. The build
+#               itself ships no <style> block and no style= attribute, so this
+#               is the one directive that could tighten if the lightbox ever
+#               stopped doing that
+#   frame-src   'none' - the site embeds nothing
+#   img-src     data: covers one inline SVG in the theme's stylesheet
 #   upgrade-insecure-requests  belt and braces next to the HTTPS redirect
-Header set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'sha256-kN/QDj91CKyOGZ/x3hqqrHGFh0tFZfLJ1vyeIbo7Cuo=' https://platform.twitter.com https://cdn.syndication.twimg.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://pbs.twimg.com https://abs.twimg.com https://syndication.twitter.com; frame-src https://platform.twitter.com https://syndication.twitter.com https://www.docdroid.net; connect-src 'self'; manifest-src 'self'; upgrade-insecure-requests"
+Header set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; frame-src 'none'; form-action 'self'; script-src 'self' 'sha256-kN/QDj91CKyOGZ/x3hqqrHGFh0tFZfLJ1vyeIbo7Cuo='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; upgrade-insecure-requests"
 
 # --- Other security headers ------------------------------------------------
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"

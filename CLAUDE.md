@@ -179,7 +179,7 @@ A clone without `git submodule update --init --recursive` 404s every stylesheet 
 grep -rhoE '(href|src)="https?://[^/"]+' _site | sort -u
 ```
 
-Only `platform.twitter.com` and `www.docdroid.net` should appear - two embeds in 2020 posts.
+Nothing should appear. The site loads no third-party resource at all, which is what lets every CSP directive stay `'self'`. `tools/check-csp.rb` fails the build if that stops being true - so when a post needs an embed, the host has to be added to the right directive in `.htaccess` deliberately.
 
 Two consequences of the switch are easy to trip over:
 

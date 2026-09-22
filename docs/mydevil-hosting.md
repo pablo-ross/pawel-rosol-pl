@@ -84,19 +84,16 @@ It sets:
 ### The Content-Security-Policy
 
 Derived from what the build actually loads, not from a template. Since
-`assets.self_host` was switched on, the only external hosts left are two legacy embeds:
+`assets.self_host` was switched on and the last two embeds were dropped, the site loads
+**nothing from a third party** - every directive is `'self'`:
 
-| Directive | Allowed beyond `'self'` | Why |
-|---|---|---|
-| `script-src` | one `sha256-` hash, `platform.twitter.com`, `cdn.syndication.twimg.com` | a tweet embedded in two 2020 posts |
-| `style-src` | `'unsafe-inline'` | glightbox and the Twitter widget set style attributes at runtime |
-| `font-src` | - | all fonts are self-hosted |
-| `img-src` | `data:`, `pbs.twimg.com`, `abs.twimg.com`, `syndication.twitter.com` | one inline SVG in the theme CSS; tweet avatars |
-| `frame-src` | `platform.twitter.com`, `syndication.twitter.com`, `www.docdroid.net` | the tweet embeds and one embedded PDF viewer |
-
-`default-src 'self'`, `object-src 'none'`, `base-uri 'self'`, `form-action 'self'`,
-`frame-ancestors 'self'`, `connect-src 'self'`, `manifest-src 'self'` and
-`upgrade-insecure-requests` complete it.
+```
+default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self';
+frame-src 'none'; form-action 'self';
+script-src 'self' 'sha256-kN/QDj91CKyOGZ/x3hqqrHGFh0tFZfLJ1vyeIbo7Cuo=';
+style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:;
+connect-src 'self'; manifest-src 'self'; upgrade-insecure-requests
+```
 
 The build contains exactly **one** unique inline `<script>` - Chirpy's search
 initialiser, byte-identical on all 98 pages - so it is allowed by sha256 hash rather
@@ -104,26 +101,26 @@ than by `'unsafe-inline'`. That is what makes the policy worth having: an inject
 `<script>` cannot run. `<script type="application/ld+json">` is data, not executable, and
 CSP does not apply to it.
 
-`style-src` keeps `'unsafe-inline'`, which is a real weakening but a far smaller one.
-The build itself ships no `<style>` block and no `style=` attribute; the need comes from
-scripts setting style attributes at runtime.
+`style-src` is the one directive that is not tight, and it cannot be. glightbox sets
+`style` attributes and injects a `<style>` element when an image is opened; both are
+blocked without `'unsafe-inline'`, and the lightbox simply stops working. Verified by
+opening one in Chrome: one injected `<style>` element, one `style=` attribute, console
+clean. The build itself ships no `<style>` block and no `style=` attribute, so if the
+lightbox ever stopped doing this, the directive could drop to `'self'`.
+
+`img-src` keeps `data:` for one inline SVG in the theme's stylesheet.
 
 **The hash is the fragile part.** A theme upgrade that changes one character of that
 inline script leaves a hash that no longer matches; the browser silently refuses to run
 it and site search stops working, with nothing in the build log. `tools/check-csp.rb`
 exists for exactly that: it recomputes the hashes and the host list from the build and
-fails `tools/test.sh` if either has drifted from `.htaccess`. Run it alone with:
+fails `tools/test.sh` if either has drifted from `.htaccess`. It also fails if a page
+starts loading a host the policy does not name, which is what would happen the moment a
+new embed is pasted into a post. Run it alone with:
 
 ```bash
 ruby tools/check-csp.rb _site .htaccess
 ```
-
-#### Tightening it further
-
-Dropping the tweet embeds from the two 2020 posts would remove four hosts and let
-`style-src` lose `'unsafe-inline'`. The embeds already degrade to a plain quoted
-blockquote with a link when the script does not load. Worth considering on a DPO's site
-for a second reason: a Twitter embed loads third-party code into the visitor's browser.
 
 ### Compression and caching
 
@@ -183,11 +180,6 @@ headers - the curl checks above are manual.
 
 ## Outstanding
 
-- **The two 2020 embeds.** A tweet in two posts and a docdroid PDF viewer in one are the
-  only third-party requests left. Dropping them would remove five hosts from the CSP and
-  let `style-src` lose `'unsafe-inline'`. The tweet already degrades to a quoted
-  blockquote with a link when the script does not load. Worth considering on a DPO's
-  site for a second reason: an embed loads third-party code into the visitor's browser.
 - **`security.txt` expiry.** `Expires:` is generated as `<build year + 1>-09-01`, so the
   site must be rebuilt and redeployed at least once a year or the file goes stale.
 - **HSTS preload.** Deliberately not set. Preloading is effectively irreversible and
@@ -204,7 +196,9 @@ headers - the curl checks above are manual.
   five security headers, a Content-Security-Policy, `Cache-Control` per file type,
   `Options -Indexes`. Added `tools/check-csp.rb` and wired it into `tools/test.sh`.
   Switched `assets.self_host` on, which removed every `jsdelivr`/`googleapis`/`gstatic`
-  request and let the CSP tighten to `'self'` for scripts, styles and fonts. Rewrote `.production.sh` to build through
+  request. Dropped the tweet embeds from two 2020 posts and the docdroid PDF viewer from
+  a third, keeping the quoted text and linking the source, which removed the last
+  third-party code from the site and let the CSP tighten to `'self'` throughout. Rewrote `.production.sh` to build through
   `tools/test.sh` and to refuse to deploy an incomplete build. Bumped bundler to 4.0.21
   and replaced the deprecated `:mingw, :x64_mingw, :mswin` platform names with
   `:windows` in the `Gemfile`.

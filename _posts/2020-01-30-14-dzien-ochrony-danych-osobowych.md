@@ -15,7 +15,9 @@ W ramach głównych obchodów XIV Dnia Ochrony Danych Osobowych odbył się Dzie
 
 Pierwsza debata tego dnia dotyczyła najczęstszych problemów z jakimi w swojej pracy spotykają się inspektorzy ochrony danych. Temat ten omówili Mirosław Sanek, Zastępca Prezesa Urzędu Ochrony Danych Osobowych, dr Grzegorz Sibiga z Instytutu Nauk Prawnych PAN, Monika Młotkiewicz, naczelnik Wydziału Współpracy z IOD w UODO oraz Piotr Drobek, radca, UODO.
 
-<blockquote class="twitter-tweet"><p lang="pl" dir="ltr">- Zadania inspektorów dynamicznie się zmieniają. Jesteśmy w sytuacji, gdzie każdy może być IOD, niektórzy administratorzy myślą, że może to być każdy dowolny. Na administratorze spoczywa wiele obowiązków w zakresie ochrony danych osobowych - M. Sanek <a href="https://twitter.com/UODOgov_pl?ref_src=twsrc%5Etfw">@UODOgov_pl</a> <a href="https://t.co/RvVBEoFHtk">pic.twitter.com/RvVBEoFHtk</a></p>&mdash; Urząd Ochrony Danych Osobowych (@UODOgov_pl) <a href="https://twitter.com/UODOgov_pl/status/1222092382159679489?ref_src=twsrc%5Etfw">January 28, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> Zadania inspektorów dynamicznie się zmieniają. Jesteśmy w sytuacji, gdzie każdy może być IOD, niektórzy administratorzy myślą, że może to być każdy dowolny. Na administratorze spoczywa wiele obowiązków w zakresie ochrony danych osobowych.
+>
+> Mirosław Sanek, Zastępca Prezesa UODO - za [relacją UODO z 28 stycznia 2020 r.](https://twitter.com/UODOgov_pl/status/1222092382159679489)
 
 Drugi panel dyskusyjny dotyczył kwestii udostępniania danych dzieci w Internecie. W tej rozmowie wiedzą i doświadczeniem podzielili się eksperci: dr Aleksandra Piotrowska, psycholog dziecięcy, pracownik naukowy Uniwersytetu Warszawskiego, dr Szymon Wójcik z Fundacji Dajemy Dzieciom Siłę, Anna Lewandowska ze Szkoły Podstawowej nr 360 w Warszawie oraz Paulina Dawidczyk, zastępca dyrektora Departament Skarg w UODO. Rozmowie przysłuchiwali się uczniowie jednej ze szkół uczestniczących w programie edukacyjnym „Twoje dane -Twoja sprawa”.
 

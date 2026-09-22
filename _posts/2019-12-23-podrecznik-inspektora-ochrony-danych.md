@@ -19,8 +19,6 @@ Publikacja ma charakter pomocniczy i zawiera wskazówki, których zastosowanie w
 
 Poradnik przygotowano jako element materiałów szkoleniowych dla trenerów w ramach międzynarodowego projektu „T4DATA”, a wraz z platformą edukacyjną z wykładami dla inspektorów ochrony danych stanowią rezultaty tego przedsięwzięcia, które będą dostępne, mimo że wspomniany projekt zakończy się na początku stycznia 2020 roku.
 
-<iframe width="600" height="500" src="https://www.docdroid.net/bWPOV4x/podrecznik-inspektora-ochrony-danych-wersja-polska.pdf"></iframe>
-
 - Podręcznik Inspektora Ochrony Danych - wersja polska ([PDF](https://archiwum.uodo.gov.pl/pl/file/2509))
 - Podręcznik Inspektora Ochrony Danych - wersja angielska ([PDF](https://archiwum.uodo.gov.pl/pl/file/2510))
 
