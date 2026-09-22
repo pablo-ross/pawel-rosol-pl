@@ -60,6 +60,7 @@ bash .production.sh
 - `media/` — images and media assets (referenced via `/media/...` paths)
 - `assets/img/favicons/` — site-specific favicons
 - `docs/aeo-geo-seo-audit.md` — the AEO/GEO/SEO audit and phased action plan; the source of truth for what is done and what is outstanding. `docs/` is excluded from the build.
+- `docs/eeat-plan.md` — the E-E-A-T programme (trust page, review dates, citations, identity graph); extends the audit's §5.2 and §11 and lists the owner decisions it is blocked on.
 
 ### Front matter for posts
 
@@ -84,9 +85,12 @@ Optional fields:
 - `faq:` — a list of `question:`/`answer:` pairs, rendered by `_includes/post-faq.html` and emitted as `FAQPage` JSON-LD
 - `legal: true` — the post makes claims about the law, so it carries a *Stan prawny* stamp
 - `legal_status_date: YYYY-MM-DD` — **the day the author last checked this post against the law as it stands.** Nothing sets it automatically and nothing may set it on the author's behalf. Without it, a `legal: true` post shows its publication date plus an explicit "nie był weryfikowany" warning, which is the honest output for a 2020 post about law that has since changed. Stamping a review that did not happen is worse than showing none.
-- `post_footer: false` — suppress the author box and *Stan prawny* stamp on this post
+- `sources:` — a list of `name:`/`url:` pairs, primary sources only (ELI, EUR-Lex, UODO decisions and guidance, standards). Rendered as a visible *Źródła* section by `_includes/post-sources.html` and emitted as `BlogPosting.citation`. Take the URL from the post body; do not add a source the post does not actually rely on
+- `post_footer: false` — suppress the source list, the author box and *Stan prawny* stamp on this post
 
 `_tabs/*.md` additionally carry `seo: type:` (`ProfilePage`, `ContactPage`, `CollectionPage`). Without it jekyll-seo-tag types them `BlogPosting` with the build time as `datePublished`.
+
+`zasady.md` at the repo root is `/zasady/` (*Zasady publikacji*): who writes, sources, AI use, what the *Stan prawny* stamp means, corrections, the not-legal-advice line. It is not a sidebar tab. `metadata-hook.html` points `publishingPrinciples` (Blog, BlogPosting) and `correctionsPolicy` (ProfessionalService) at it, and `check-jsonld.rb` fails the build if the URL stops resolving. The AI-use paragraph on that page is a factual claim about how the site is made; keep it true.
 
 ### Writing and editing content — use the `humanizer` skill
 
@@ -112,7 +116,7 @@ Always use `{% post_url YYYY-MM-DD-slug %}`, never a hand-written `/posts/slug/`
 | Page | Nodes |
 |---|---|
 | home | `WebSite` + `Blog` + `Person` + `ProfessionalService` |
-| post | `BlogPosting` + `BreadcrumbList` + `FAQPage` (if `faq:`) + `Person` |
+| post | `BlogPosting` (with `citation` if `sources:`) + `BreadcrumbList` + `FAQPage` (if `faq:`) + `Person` |
 | `/about/` | `ProfilePage` + `Person` + `ProfessionalService` |
 | `/contact/` | `ContactPage` + `ProfessionalService` + `Person` |
 | archives / categories / tags / generated archives | `CollectionPage` (+ `ItemList` when the page has posts) |
@@ -122,6 +126,7 @@ Rules when editing it:
 - **Every string value goes through `| jsonify`**, which supplies its own quotes. Never `| escape` — that HTML-encodes inside JSON, so consumers see literal `&#39;`.
 - Slugify a category name **in isolation** (`{% assign cat_slug = page.categories.last | slugify %}`); slugifying `'/categories/' | append: name` eats the slash and produces a 404 URL.
 - Stable `@id`s: `/#person`, `/#organization`, `/#website`, `/#blog`, `<post-url>#article`, `#breadcrumb`, `#faq`. Reference nodes elsewhere by `@id` rather than inlining a second copy.
+- `Person.knowsAbout` entries carry Wikidata `sameAs` identifiers for disambiguation. Verify an ID against the Wikidata API before adding one; a wrong Q-number points the entity at an unrelated topic. `Person.description` is read from the `/about/` tab's `description:`, so edit it there.
 - The `ProfessionalService` node duplicates data published on `/contact/`. Keep name, address and phone **character-identical** with mornel.com and the Google Business Profile — inconsistent NAP is the usual reason local entities fail to merge.
 - The file also emits `noindex, follow` on tag archives with fewer than three posts. Self-maintaining: a tag becomes indexable once it earns a third post.
 
@@ -129,8 +134,8 @@ Rules when editing it:
 
 ### Plugins
 
-- `_plugins/posts-lastmod-hook.rb` — sets `last_modified_at` on posts with more than one git commit, using `git log`.
-- `_plugins/post-footer-hook.rb` — appends `{% include legal-status.html %}` and `{% include author-box.html %}` to every post. It writes to `doc.content` in `:pre_render`, before Liquid and Markdown run, so the output lands inside the post's `.content` element; appending to `doc.output` would place it after the page footer. One include rather than a block pasted into 31 files.
+- `_plugins/posts-lastmod-hook.rb` — sets `last_modified_at` on every document (posts and `_tabs`) with more than one git commit, using `git log`. On `/about/` it feeds `ProfilePage.dateModified`; `dateCreated` comes from the tab's `date_created:` front matter.
+- `_plugins/post-footer-hook.rb` — appends `{% include post-sources.html %}`, `{% include legal-status.html %}` and `{% include author-box.html %}` to every post. It writes to `doc.content` in `:pre_render`, before Liquid and Markdown run, so the output lands inside the post's `.content` element; appending to `doc.output` would place it after the page footer. One include rather than a block pasted into 31 files.
 - `_plugins/strip-seo-tag-jsonld.rb` — removes the thin JSON-LD that jekyll-seo-tag emits, so `metadata-hook.html` is the only source. It matches the gem's *minified* output (`{"@context":"https://schema.org"`); `metadata-hook.html` pretty-prints with a space after each colon, which is what keeps the two apart. Everything else seo-tag produces (`<title>`, canonical, Open Graph, Twitter cards) is untouched. If a gem upgrade changes the formatting, `check-jsonld.rb` fails the build on the duplicate `BlogPosting`.
 
 ### Theme
