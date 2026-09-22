@@ -1,6 +1,6 @@
 # AEO / GEO / SEO audit & action plan — pawel.rosol.pl
 
-**Audit date:** 2026-09-21 · **Revision 4** (rev. 2: every claim re-verified against the repo, the production build and the live site — §9; rev. 3: second professional role, `/about/` rewritten — §11; rev. 4: phases 1–4 largely implemented and deployed — §0.1)
+**Audit date:** 2026-09-21 · **Revision 4** (rev. 2: every claim re-verified against the repo, the production build and the live site — §9; rev. 3: second professional role, `/about/` rewritten — §11; rev. 4: phases 1–4 largely implemented and deployed — §0.1; rev. 5: E-E-A-T split out into `docs/eeat-plan.md` — §0.2)
 **Scope at audit time:** Jekyll 4.4.1 + jekyll-theme-chirpy 7.6.0, jekyll-seo-tag 2.9.0, 31 posts, 13 categories, 132 tags, Polish-language content. Hosting: nginx on mydevil.net.
 **Method:** production build (`JEKYLL_ENV=production bundle exec jekyll b`) inspected offline — sitemap, robots, feed, rendered JSON-LD, meta tags, link graph, front matter — plus `curl` against the live site for status codes and response headers.
 
@@ -37,6 +37,7 @@ Phases 1–4 implemented and **deployed**; `curl` checks re-run against the live
 | 3 — Linking & taxonomy | Links, citations, tags, pillar #1 | §11.4 posts 2–6, then pillar #2 |
 | 4 — AEO content pass | Infrastructure, UODO cluster, 2 rewrites | AI cluster, 4 tables, 3 thin hubs |
 | 5 — Infrastructure | `llms.txt`, `security.txt`, identity signals | Self-hosting, OG images, IndexNow, media |
+| E-E-A-T (`docs/eeat-plan.md`) | Phases E0–E2: byline → `/about/`, `/zasady/`, source lists + `citation`, Wikidata `knowsAbout`, ProfilePage dates | E3–E4: review dates, credential facts, practice paragraphs, identity back-links — all owner-side |
 
 ### What moved
 
@@ -61,6 +62,7 @@ Phases 1–4 implemented and **deployed**; `curl` checks re-run against the live
 - `assets/feed.xml` and `assets/404.html` — the two theme-owned overrides, recorded in `CLAUDE.md`
 - `.well-known/security.txt`
 - `.claude/skills/humanizer/` — house style for Polish prose, adapted from blader/humanizer (MIT), now tracked in git and referenced from `CLAUDE.md`
+- *(rev. 5)* `zasady.md` (`/zasady/`), `_includes/post-sources.html`, the `sources:` front-matter key, `docs/eeat-plan.md` — see §0.2
 
 ### Found while implementing, not in the original audit
 
@@ -73,9 +75,21 @@ Phases 1–4 implemented and **deployed**; `curl` checks re-run against the live
 
 1. **Phase 0 never happened, and the site has now changed.** The pillar and the tag consolidation are the two changes most worth measuring, and both shipped without a "before" reading. Verify Search Console and Bing, then record the first reading as a post-change baseline. Bing matters disproportionately: Copilot and ChatGPT search retrieve through its index.
 2. **Security headers (§1.5)** — the last Phase 1 defect, and the one a technical prospect checks first.
-3. **`legal_status_date` is unset on all 22 `legal: true` posts**, so each displays "nie był weryfikowany pod kątem zmian w przepisach". That is the intended output (§5.2d) until the author reviews a post against current law, but it is visible on two thirds of the corpus.
+3. **`legal_status_date` is unset on all 22 `legal: true` posts**, so each displays "nie był weryfikowany pod kątem zmian w przepisach". That is the intended output (§5.2d) until the author reviews a post against current law, but it is visible on two thirds of the corpus. Tracked as T5 in `docs/eeat-plan.md`.
 4. **§10 decisions 4 (IBAN on `/contact/`) and 8 (`/about/` review)** remain open.
 5. The KSC post turns on whether the owner's own entry in the wykaz is under the water/sewage sector or under *podmioty publiczne*; that determines documentation scope, the art. 15 audit duty and the incident-reporting duties.
+6. **E-E-A-T owner items** — certificate issuing body and year, a practice sentence for the author box, "z praktyki" paragraphs, LinkedIn, `rel="me"` back-links from GitHub / Bluesky / mornel.com. Listed in `docs/eeat-plan.md` §6.
+
+## 0.2 E-E-A-T — moved to its own plan *(new in rev. 5, 22.09.2026)*
+
+Everything that touches Experience, Expertise, Authoritativeness and Trust now lives in **`docs/eeat-plan.md`**, which extends §5.2d, §5.2f and §11 of this audit rather than repeating them. Its phases E0–E2 shipped and were deployed on 22.09.2026:
+
+- the post byline and feed author link `/about/` instead of the home page (Google's "bylines lead to further information about the author");
+- `/zasady/` — publishing principles: who writes, primary sources, AI use, what the *Stan prawny* stamp means, corrections, not-legal-advice line. `publishingPrinciples` on `Blog`/`BlogPosting` and `correctionsPolicy` on `ProfessionalService` point at it; the legal stamp carries a one-line disclaimer;
+- `sources:` front matter → visible *Źródła* section + `BlogPosting.citation`, on 15 posts;
+- `Person.knowsAbout` with Wikidata identifiers, `Person.description` from the `/about/` tab, `ProfilePage.dateCreated`/`dateModified`.
+
+Where this audit and the plan overlap, this audit's status lines stay authoritative for what is done; the plan is authoritative for what E-E-A-T work remains and why.
 
 ---
 
@@ -526,8 +540,8 @@ Do **not** do all 31. Order: the 7 posts of the UODO cluster → the 5 AI posts 
 - [x] `wdrozenie-implementacja-nis2` (full rewrite) and the pillar
 - [x] House style enforced: no em/en dashes in post-2022 posts; every question heading ends with `?` (humanizer §8, §20)
 - [ ] Same pass on the 5 AI posts, then whatever Search Console shows
-- [x] `legal_status_date` include (§5.2d) — opt-in via `legal: true`, set on 21 posts. **No date stamped on any post:** that field means "the author checked this post against current law on this day", and that review has not happened. Unreviewed posts show their publication date plus an explicit warning, which is the intended output
-- [x] Author-box include (§5.2f) — appended to every post by `_plugins/post-footer-hook.rb`
+- [x] `legal_status_date` include (§5.2d) — opt-in via `legal: true`, set on 21 posts. **No date stamped on any post:** that field means "the author checked this post against current law on this day", and that review has not happened. Unreviewed posts show their publication date plus an explicit warning, which is the intended output. Since rev. 5 the stamp also carries the not-legal-advice line and links `/zasady/` (`docs/eeat-plan.md` T4)
+- [x] Author-box include (§5.2f) — appended to every post by `_plugins/post-footer-hook.rb`; since rev. 5 it links `/zasady/` and is preceded by the *Źródła* list where a post has `sources:` (`docs/eeat-plan.md` P2)
 - [x] One table added: causes of naruszenia mapped to decisions, in `poradnik-uodo-naruszenia`
 - [x] Two more tables: CSIRT reporting chain and RODO-vs-KSC, in `wdrozenie-implementacja-nis2`; three in the pillar
 - [ ] Remaining tables (§5.2e): `kara-mcdonalds`, `rekordowa-kara-poczta-polska`, `decyzja-uodo-ops`, `kanal-zewnetrzny`
@@ -544,6 +558,9 @@ Do **not** do all 31. Order: the 7 posts of the UODO cluster → the 5 AI posts 
 - [ ] Media conversion (§6.4)
 - [x] `tagline` → "Inspektor Ochrony Danych · Cyberbezpieczeństwo", site `description` rewritten, `llms.txt` and `/contact/` lead → both roles (§11.3)
 - [x] Update `CLAUDE.md`: site scope (both roles), feed + 404 overrides, new plugin, submodule init, JSON-LD check, server-side gaps
+
+### Phase 6 — E-E-A-T
+Tracked in `docs/eeat-plan.md` (§4 there). E0–E2 done and deployed 22.09.2026; E3–E4 are owner-side content and identity work.
 
 ---
 
