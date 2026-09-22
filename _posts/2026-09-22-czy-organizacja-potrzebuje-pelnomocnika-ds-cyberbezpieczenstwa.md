@@ -1,6 +1,6 @@
 ---
 title: "Czy moja organizacja potrzebuje pełnomocnika ds. cyberbezpieczeństwa?"
-date: 2026-09-22T10:00:00.00Z
+date: 2026-09-22T06:00:00.00Z
 categories:
   - Bezpieczeństwo
 tags:
