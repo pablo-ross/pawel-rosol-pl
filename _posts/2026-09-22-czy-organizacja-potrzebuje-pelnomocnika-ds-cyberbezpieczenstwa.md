@@ -122,7 +122,7 @@ Jest potrzebny, gdy spełniony jest jeden z poniższych warunków, a w spółkac
 4. **Nikt nie pilnuje kalendarza**: wezwanie do uzupełnienia danych leży w skrzynce e-Doręczeń, nikt nie wie, kto będzie administratorem konta w S46, a osoby kontaktowe z art. 9 nie zostały wyznaczone.
 5. **Kierownik nie ma z kim porozmawiać o ryzyku** w języku, który pozwala podjąć decyzję. Art. 8d wymaga od niego decyzji i planowania środków finansowych. Bez kogoś, kto przedstawi warianty i koszty, decyzja nie zapadnie albo zapadnie na podstawie oferty sprzedawcy.
 
-W takiej organizacji pełnomocnik wykonuje pracę, którą ustawa i tak nakazuje wykonać: kwalifikację i wykaz, inwentaryzację IT i OT, analizę ryzyka z planem postępowania, przegląd i urealnienie dokumentacji, procedurę incydentową z dwiema ścieżkami zgłoszeń, plan ciągłości działania, ocenę dostawców, szkolenie zarządu z art. 8e i pracowników, raport dla kierownika. Ustawa nie wymaga, żeby robiła to jedna osoba z zewnątrz. Wymaga, żeby to zostało zrobione i żeby dało się to wykazać.
+W takiej organizacji pełnomocnik wykonuje pracę, którą ustawa i tak nakazuje wykonać: kwalifikację i wykaz, inwentaryzację IT i OT, analizę ryzyka z planem postępowania, przegląd i urealnienie dokumentacji, procedurę incydentową z dwiema ścieżkami zgłoszeń, plan ciągłości działania, ocenę dostawców, szkolenie zarządu z art. 8e i pracowników, raport dla kierownika. Ustawa nie wymaga, żeby robiła to jedna osoba z zewnątrz. Wymaga, żeby to zostało zrobione i żeby dało się to wykazać. O tym, jakiej wiedzy i jakiego doświadczenia wymaga ta praca oraz o co zapytać kandydata, pisałem we wpisie o [kompetencjach pełnomocnika ds. cyberbezpieczeństwa]({% post_url 2026-09-02-kompetencje-pelnomocnika-ds-cyberbezpieczenstwa %}).
 
 ## Co powinno znaleźć się w umowie z pełnomocnikiem?
 
@@ -160,7 +160,7 @@ Projektu kolejnej nowelizacji samej ustawy o KSC w wykazie prac legislacyjnych n
 2. Ustal status na tekście ustawy, z uwzględnieniem art. 5 ust. 3, i zapisz uzasadnienie. Sprawdź, czy wpis obejmuje całą działalność.
 3. Wyznacz osoby kontaktowe z art. 9 i administratora konta w S46. Bez tego nie zgłosisz incydentu.
 4. Zdecyduj, kto w organizacji odpowiada za cyberbezpieczeństwo z imienia i nazwiska, i czy kierownik powierza obowiązki komuś na podstawie art. 8c ust. 3. Zapisz to uchwałą albo zarządzeniem.
-5. Dopiero teraz odpowiedz na pytanie z tytułu. Jeżeli osoba z punktu czwartego zna ustawę, infrastrukturę i ma czas, pełnomocnik zewnętrzny nie jest potrzebny. Jeżeli nie, poszukaj kogoś, kto potrafi przeczytać zarówno art. 8 ust. 1, jak i konfigurację routera, i zapisz w umowie to, co wyżej.
+5. Dopiero teraz odpowiedz na pytanie z tytułu. Jeżeli osoba z punktu czwartego zna ustawę, infrastrukturę i ma czas, pełnomocnik zewnętrzny nie jest potrzebny. Jeżeli nie, poszukaj kogoś, kto potrafi przeczytać zarówno art. 8 ust. 1, jak i konfigurację routera ([o co go zapytać]({% post_url 2026-09-02-kompetencje-pelnomocnika-ds-cyberbezpieczenstwa %})), i zapisz w umowie to, co wyżej.
 6. Zaplanuj szkolenie kierownika z art. 8e jeszcze w tym roku kalendarzowym.
 
 Punkt czwarty jest tym, od którego wszystko zależy, i tym, który organizacje najchętniej odkładają. Rozmowa o tym, kto odpowiada, jest niewygodna, ale ustawa i tak ją rozstrzyga: odpowiada kierownik. Pełnomocnik może mu tylko pomóc tę odpowiedzialność unieść.
