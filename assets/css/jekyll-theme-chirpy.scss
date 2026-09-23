@@ -91,10 +91,23 @@
   border-radius: var(--radius-lg, 10px);
   background: var(--card-bg);
 
-  .author-box-avatar {
+  // The avatar is wrapped in an <a>, so the anchor is the flex item, not the
+  // image. Without this it keeps the default `flex: 0 1 auto` and Firefox
+  // shrinks it against the text column; the theme's `max-width: 100%` on
+  // content images then narrows the avatar while `height` stays 72px, which
+  // renders it as an egg. Chrome happens not to shrink it, so it looks fine
+  // there. Pin the anchor, not just the image.
+  > a {
     flex: 0 0 auto;
+    display: block;
     width: 72px;
     height: 72px;
+  }
+
+  .author-box-avatar {
+    width: 72px;
+    height: 72px;
+    max-width: none;
     border-radius: 50%;
     object-fit: cover;
   }
