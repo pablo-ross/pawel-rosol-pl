@@ -63,7 +63,7 @@ Nowelizacja ustawy o krajowym systemie cyberbezpieczeństwa ([Dz.U. 2026 poz. 25
 
 „Pełnomocnik ds. cyberbezpieczeństwa" **nie jest funkcją ustawową** - to przyjęta w praktyce nazwa roli, która koordynuje wykonywanie obowiązków z ustawy. Ustawa pozwala realizować te zadania przez wewnętrzne struktury odpowiedzialne za cyberbezpieczeństwo albo na podstawie umowy z podmiotem zewnętrznym (art. 14). Jedno się nie zmienia: **odpowiedzialność pozostaje przy kierowniku podmiotu**, również wtedy, gdy obowiązki powierzono innej osobie (art. 8c ust. 3). Pełnomocnik jest wsparciem kierownictwa, a nie sposobem na przeniesienie odpowiedzialności.
 
-O tym, dlaczego te wymagania są potrzebne, pisałem we wpisie [o implementacji NIS2 w przedsiębiorstwie]({% post_url 2024-11-20-wdrozenie-implementacja-nis2 %}).
+O tym, dlaczego te wymagania są potrzebne, pisałem we wpisie [o implementacji NIS2 w przedsiębiorstwie]({% post_url 2024-11-20-wdrozenie-implementacja-nis2 %}). Ustawie o KSC i NIS2 z perspektywy pełnomocnika poświęciłem też osobny serwis, [pelnomocnikcyber.pl](https://pelnomocnikcyber.pl/ "Pełnomocnik ds. cyberbezpieczeństwa - ustawa o KSC i NIS2").
 
 ### Zakres wsparcia
 
