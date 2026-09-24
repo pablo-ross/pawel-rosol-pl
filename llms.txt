@@ -30,7 +30,9 @@ Paweł Rosół pełni funkcję **Inspektora Ochrony Danych (IOD/DPO)** w modelu
 outsourcingu oraz **pełnomocnika ds. cyberbezpieczeństwa** — roli, która
 koordynuje wykonywanie obowiązków z ustawy o KSC. Posiada certyfikat auditora
 wiodącego ISO/IEC 27001 i wieloletnie doświadczenie techniczne (infrastruktura,
-poczta elektroniczna, sieci, bezpieczeństwo aplikacji webowych).
+poczta elektroniczna, sieci, bezpieczeństwo aplikacji webowych). Ustawie o KSC
+i NIS2 z perspektywy pełnomocnika poświęcił osobny serwis:
+[pelnomocnikcyber.pl](https://pelnomocnikcyber.pl/).
 
 Pracuje przede wszystkim z jednostkami sektora publicznego, spółkami komunalnymi,
 placówkami oświatowymi oraz małymi i średnimi firmami. Tam, gdzie obie funkcje
