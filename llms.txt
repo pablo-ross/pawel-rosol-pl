@@ -2,7 +2,7 @@
 permalink: /llms.txt
 sitemap: false
 ---
-# {{ site.title }} — {{ site.tagline }}
+# {{ site.title }} - {{ site.tagline }}
 
 > {{ site.description | strip_newlines | strip }}
 
@@ -27,7 +27,7 @@ webowych, a także sektor publiczny, samorząd i oświata. Autor i właściciel 
 ## O autorze
 
 Paweł Rosół pełni funkcję **Inspektora Ochrony Danych (IOD/DPO)** w modelu
-outsourcingu oraz **pełnomocnika ds. cyberbezpieczeństwa** — roli, która
+outsourcingu oraz **pełnomocnika ds. cyberbezpieczeństwa**, czyli roli, która
 koordynuje wykonywanie obowiązków z ustawy o KSC. Posiada certyfikat auditora
 wiodącego ISO/IEC 27001 i wieloletnie doświadczenie techniczne (infrastruktura,
 poczta elektroniczna, sieci, bezpieczeństwo aplikacji webowych). Ustawie o KSC
@@ -46,8 +46,8 @@ wykonawczych w systemach klienta, a skuteczność rekomendowanych przez siebie
 
 Usługi świadczy w ramach Mornel s.c., ul. Działkowa 32, 60-185 Skórzewo
 (powiat poznański, województwo wielkopolskie), NIP 7772887283, REGON 300232439,
-telefon +48 502-706-280. Obszar działania: Poznań i powiat poznański oraz — w
-modelu zdalnym — cała Polska.
+telefon +48 502-706-280. Obszar działania: Poznań i powiat poznański oraz, w
+modelu zdalnym, cała Polska.
 
 Zakres usług:
 

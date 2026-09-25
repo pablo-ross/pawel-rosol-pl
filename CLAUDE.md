@@ -43,6 +43,11 @@ bash tools/test.sh
 # Build only
 JEKYLL_ENV=production bundle exec jekyll b
 
+# The mechanical humanizer rules (dashes, "?" on question headings, H1 in a body,
+# chatbot residue) on the prose files, or on one post while drafting
+ruby tools/check-prose.rb
+ruby tools/check-prose.rb _posts/YYYY-MM-DD-slug.md
+
 # Structured data only, against an existing build
 ruby tools/check-jsonld.rb _site
 
@@ -103,14 +108,16 @@ Optional fields:
 
 ### Writing and editing content — use the `humanizer` skill
 
-**Invoke the project-local `humanizer` skill (`.claude/skills/humanizer/SKILL.md`) whenever you write or edit prose in `_posts/`, `_tabs/`, `llms.txt`, or a post's `description:` / `faq:` values — and always before committing a new or rewritten post.** Posts are in Polish and the author is a practising DPO; text that reads as machine-written undermines the site's whole premise, and a plausible-sounding but wrong article number is worse than no post at all.
+**Invoke the project-local `humanizer` skill (`.claude/skills/humanizer/SKILL.md`) every time you write, edit or review prose in `_posts/`, `_tabs/`, `zasady.md`, `llms.txt`, `_data/locales/pl-PL.yml`, or a post's `description:` / `faq:` values - and always before committing a new or rewritten post.** Load the skill itself rather than working from memory of it; it has a review mode for "does this post need a rewrite?" that reports tells without changing the file. Posts are in Polish and the author is a practising DPO and pełnomocnik ds. cyberbezpieczeństwa; text that reads as machine-written undermines the site's whole premise, and a plausible-sounding but wrong article number is worse than no post at all.
 
-The skill is adapted from [blader/humanizer](https://github.com/blader/humanizer) (MIT) for this repo: Polish-language tells, this blog's voice, and a set of hard rules that override everything else in it —
+The skill is adapted from [blader/humanizer](https://github.com/blader/humanizer) (MIT) for this repo: Polish-language tells, this blog's voice for both roles, and a set of hard rules that override everything else in it -
 
-- never invent or alter an article number, act name, Dz.U./ELI reference, decision signature, fine amount, date or statutory deadline;
-- never touch YAML keys, Liquid tags, `{: .prompt-* }` blocks, code, paths or link targets;
-- no em dashes (`—`) or en dashes (`–`) in prose — the house style is a spaced hyphen (` - `);
-- Polish typographic quotes `„…"` are correct and must be preserved.
+- never invent or alter an article number, act name, Dz.U./ELI reference, decision signature, case number, fine amount, date or statutory deadline; a citation that cannot be confirmed against the post's `sources:` or the ELI/ISAP text does not go in;
+- never write that the KSC act "requires a pełnomocnik" or "defines the pełnomocnik's duties"; the act assigns duties to the kierownik podmiotu (art. 8d) and tasks to whoever performs them (art. 8, art. 11). "Pełnomocnik ds. cyberbezpieczeństwa" is a practice name;
+- never touch YAML keys, Liquid tags, `{: .prompt-* }` blocks, code, paths or link targets, and never set `legal_status_date`;
+- no em dashes (`—`) or en dashes (`–`) in prose - the house style is a spaced hyphen (` - `);
+- Polish typographic quotes `„…”` are correct and must be preserved;
+- a question-shaped heading ends with `?`.
 
 It does not apply to posts published before 30 November 2022: those carry the author's own habits, and normalising them makes the corpus more uniform, not more human. Edit those for links, citations and dated notes only.
 

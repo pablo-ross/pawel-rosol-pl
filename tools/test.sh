@@ -57,6 +57,11 @@ main() {
 
   read_baseurl
 
+  # The mechanical part of .claude/skills/humanizer/SKILL.md: dashes in prose,
+  # question headings without "?", an H1 in a body, chatbot residue. Runs
+  # before the build because it needs no build and fails in a second.
+  ruby tools/check-prose.rb
+
   # build
   JEKYLL_ENV=production bundle exec jekyll b \
     -d "$SITE_DIR$_baseurl" -c "$_config"
