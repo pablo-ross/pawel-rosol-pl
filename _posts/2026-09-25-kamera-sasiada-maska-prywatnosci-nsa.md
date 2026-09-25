@@ -12,6 +12,7 @@ tags:
   - RODO
 description: "NSA orzekł, że zaczernienie fragmentu obrazu nie wyłącza RODO, gdy kamera obejmuje cudzą działkę. Co z tego wynika dla właścicieli domowego monitoringu i dronów i jak ten sam problem widzą regulatorzy w Irlandii, Francji, Niemczech, Holandii i Wielkiej Brytanii."
 legal: true
+legal_status_date: 2026-09-25
 faq:
   - question: "Czy maska prywatności w kamerze wyłącza stosowanie RODO?"
     answer: "Nie. W wyroku z 8 września 2026 r. (III OSK 649/24) NSA uznał, że kamera obejmująca cudzą nieruchomość przetwarza dane osób, które z niej korzystają, także wtedy, gdy urządzenie cyfrowo zaczernia ten fragment obrazu. Kamera najpierw rejestruje obraz, potem go modyfikuje i zapisuje, a każda z tych operacji jest przetwarzaniem w rozumieniu art. 4 pkt 2 RODO. Nie ma znaczenia, czy zaczernienie jest trwałe czy odwracalne. Sąd wskazał, że maska jest ustawieniem programowym, które można zmienić w każdej chwili, więc jej stałe działanie jest trudne albo wręcz niemożliwe do zweryfikowania. Właściciel powinien przestawić kamery albo częściowo fizycznie zasłonić obiektyw."
