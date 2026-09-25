@@ -215,6 +215,7 @@ exclude:
   - assets/lib/mathjax
   - assets/lib/mermaid
   - docs
+  - tmp
   - tools
   - README.md
   - LICENSE

@@ -20,3 +20,6 @@ _sass/vendors
 # Claude Code: track shared project skills, ignore local settings
 .claude/*
 !.claude/skills/
+
+# tmp
+tmp/
