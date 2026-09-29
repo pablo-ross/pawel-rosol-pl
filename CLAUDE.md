@@ -96,7 +96,7 @@ description: "SEO description"
 Optional fields:
 
 - `image`, `pin: true` (pin to home), `toc: false` (disable TOC)
-- `faq:` — a list of `question:`/`answer:` pairs, rendered by `_includes/post-faq.html` and emitted as `FAQPage` JSON-LD
+- `faq:` — a list of `question:`/`answer:` pairs, emitted as `FAQPage` JSON-LD. The visible section is **not** automatic: the post body must end with a `## Najczęściej zadawane pytania` heading followed by `{% include post-faq.html %}`, as every existing post with `faq:` does. Without that line the JSON-LD claims a FAQ the reader never sees
 - `legal: true` — the post makes claims about the law, so it carries a *Stan prawny* stamp
 - `legal_status_date: YYYY-MM-DD` — **the day the author last checked this post against the law as it stands.** Nothing sets it automatically and nothing may set it on the author's behalf. Without it, a `legal: true` post shows its publication date plus an explicit "nie był weryfikowany" warning, which is the honest output for a 2020 post about law that has since changed. Stamping a review that did not happen is worse than showing none.
 - `sources:` — a list of `name:`/`url:` pairs, primary sources only (ELI, EUR-Lex, UODO decisions and guidance, standards). Rendered as a visible *Źródła* section by `_includes/post-sources.html` and emitted as `BlogPosting.citation`. Take the URL from the post body; do not add a source the post does not actually rely on

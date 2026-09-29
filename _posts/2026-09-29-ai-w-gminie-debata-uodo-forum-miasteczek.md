@@ -130,3 +130,7 @@ Z tego, co wyżej, składa mi się dość prosta kolejność. Nie jest to zalece
 Uczciwie dodam, że dla większości gmin punkt trzeci jest dziś pytaniem o przyszłość. AI HUB ma harmonogram do 2029 r., PLLuM działa w kilku dużych miastach, a pakiet „AI Compliance Starter” z UODO jest zapowiedzią. Gmina, która nie chce czekać, ma do wyboru komercyjne narzędzia z umową powierzenia i pełną analizą albo świadome poczekanie na infrastrukturę państwową. Obie drogi są w porządku. Nie jest w porządku trzecia, najczęstsza: nie robić nic formalnie i pozwolić, żeby pracownicy załatwili to sami w publicznym chatbocie.
 
 O tym, jak sam używam modeli językowych w pracy IOD bez wysyłania danych osobowych na zewnątrz, pisałem we wpisie o [Claude Code w pracy IOD]({% post_url 2026-06-11-claude-code-w-pracy-iod %}), a ogólniej o [AI w pracy inspektora]({% post_url 2025-10-30-ai-w-pracy-iod %}). Jeśli masz nagranie albo relację z samej debaty na Forum Miasteczek, daj znać, zaktualizuję wpis.
+
+## Najczęściej zadawane pytania
+
+{% include post-faq.html %}
