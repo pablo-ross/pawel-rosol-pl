@@ -54,7 +54,7 @@ Organ nie badał jednak głównie samej straty sprzętu. Badał, czy administrat
 
 ## Dlaczego zabrakło szyfrowania?
 
-Szyfrowanie dysku w laptopie wychodzącym poza siedzibę organizacji nie jest zabezpieczeniem egzotycznym ani kosztownym. Jest wbudowane w systemy operacyjne, a jego włączenie zajmuje kilkanaście minut na urządzenie. Administrator nie zastosował go nie dlatego, że uznał je za nieadekwatne po analizie, tylko dlatego, że takiej analizy nie przeprowadził. Właśnie w tym miejscu art. 32 RODO różni się od listy kontrolnej: przepis nie wymienia konkretnych środków, tylko każe dobrać je do ryzyka, a więc najpierw to ryzyko rozpoznać i opisać.
+Szyfrowanie dysku w laptopie wychodzącym poza siedzibę organizacji nie jest zabezpieczeniem egzotycznym ani kosztownym. Jest wbudowane w systemy operacyjne, a jego włączenie zajmuje kilkanaście minut na urządzenie. Administrator nie zastosował go nie dlatego, że uznał je za nieadekwatne po analizie, tylko dlatego, że takiej analizy nie przeprowadził. Właśnie w tym miejscu art. 32 RODO różni się od listy kontrolnej: przepis nie wymienia konkretnych środków, tylko nakazuje dobrać je do ryzyka, a więc najpierw to ryzyko rozpoznać i opisać.
 
 Praktyczny wniosek dla administratora: jeżeli dane wychodzą poza siedzibę, na laptopie, pendrivie albo w teczce, w analizie ryzyka musi istnieć scenariusz utraty tego nośnika wraz z decyzją, co go równoważy. Jeżeli takiego zapisu nie ma, każda kontrola zaczyna się od tego samego pytania.
 
